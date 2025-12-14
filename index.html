@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSS News Feeder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .article-content img {
+            display: none !important;
+        }
+        .btn-filter {
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-filter:hover {
+            transform: translateY(-2px);
+        }
+        .btn-filter.active {
+            background-color: #1a73e8;
+            color: white;
+        }
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 50;
+        }
+        .modal-content {
+            background-color: #1f2937; /* gray-800 */
+            padding: 2rem;
+            border-radius: 0.5rem;
+            width: 90%;
+            max-width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // --- HELPERS (from utils/helpers.ts) ---
+        const stripHtml = (html) => {
+            const doc = new DOMParser().parseFromString(html, 'text/html');
+            return doc.body.textContent || "";
+        };
+
+        const stripImagesFromContent = (html) => {
+            if (!html) return '';
+            return html.replace(/<img[^>]*>/g, "");
+        };
+        
+        // --- CONSTANTS (from constants.ts) ---
+        const defaultFeedUrls = [
+            { url: 'https://pap-mediaroom.pl/kategoria/biznes-i-finanse/rss.xml', language: 'pl', name: 'PAP Biznes' },
+            { url: 'https://pap-mediaroom.pl/kategoria/nauka-i-technologie/rss.xml', language: 'pl', name: 'PAP Nauka' },
+            { url: 'https://pap-mediaroom.pl/kategoria/polityka-i-spo%C5%82eczenstwo/rss.xml', language: 'pl', name: 'PAP Polityka' },
+            { url: 'https://pap-mediaroom.pl/kategoria/zdrowie-i-styl-zycia/rss.xml', language: 'pl', name: 'PAP Zdrowie' },
+            { url: 'https://www.tvn24.pl/najnowsze.xml', language: 'pl', name: 'TVN24' },
+            { url: 'https://wiadomosci.wp.pl/rss.xml', language: 'pl', name: 'Wirtualna Polska' },
+            { url: 'https://www.rmf24.pl/feed', language: 'pl', name: 'RMF24' },
+            { url: 'https://www.money.pl/rss/main.xml', language: 'pl', name: 'Money.pl' },
+            { url: 'https://www.bankier.pl/rss/wiadomosci.xml', language: 'pl', name: 'Bankier.pl' },
+            { url: 'https://www.polsatnews.pl/rss/wszystkie.xml', language: 'pl', name: 'Polsat News' },
+            { url: 'https://sportowefakty.wp.pl/rss.xml', language: 'pl', name: 'Sportowe Fakty WP' },
+            { url: 'https://wyborcza.pl/pub/rss/najnowsze_wyborcza.xml', language: 'pl', name: 'Gazeta Wyborcza' },
+            { url: 'https://www.rp.pl/rss_main?unknown-old-rss', language: 'pl', name: 'Rzeczpospolita' },
+            { url: 'https://dziennik.com/feed/', language: 'pl', name: 'Nowy Dziennik' },
+            { url: 'https://pap-mediaroom.pl/rss.xml', language: 'pl', name: 'PAP Mediaroom' },
+
+            { url: 'https://feeds.bbci.co.uk/news/rss.xml', language: 'en', name: 'BBC News' },
+            { url: 'https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml', language: 'en', name: 'The New York Times' },
+            { url: 'https://www.theguardian.com/world/rss', language: 'en', name: 'The Guardian' },
+            { url: 'http://feeds.reuters.com/reuters/topNews', language: 'en', name: 'Reuters' },
+            { url: 'https://apnews.com/apf-topnews/rss.xml', language: 'en', name: 'Associated Press' },
+            { url: 'https://notesfrompoland.com/feed/', language: 'en', name: 'Notes from Poland' },
+            
+            { url: 'https://www.ft.com/?format=rss', language: 'ft', name: 'Financial Times' },
+            
+            { url: 'https://www.lefigaro.fr/rss/figaro_actualites.xml', language: 'fr', name: 'Le Figaro' },
+            { url: 'https://www.lemonde.fr/rss/une.xml', language: 'fr', name: 'Le Monde' },
+        ];
+        
+        // --- API SERVICE (from services/rssService.ts) ---
+        const fetchFeed = async (feed) => {
+            const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}`;
+            try {
+                const response = await fetch(API_URL);
+                if (!response.ok) throw new Error(`Network response was not ok for ${feed.name}`);
+                const data = await response.json();
+                if (data.status !== 'ok') {
+                    console.error(`API Error for ${feed.name}:`, data.message);
+                    return [];
+                }
+                return data.items.map((item) => ({ ...item, sourceName: data.feed.title || feed.name, language: feed.language }));
+            } catch (error) {
+                console.error(`Error fetching RSS feed ${feed.name}:`, error);
+                return [];
+            }
+        };
+        
+        // --- COMPONENTS ---
+        const Spinner = () => (
+            <div className="flex justify-center items-center p-8">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+            </div>
+        );
+
+        const ArticleCard = ({ article }) => {
+            // Safari on iOS has issues parsing date strings like 'YYYY-MM-DD HH:mm:ss'.
+            // Converting to ISO 8601 format 'YYYY-MM-DDTHH:mm:ssZ' for better compatibility.
+            const pubDate = new Date(article.pubDate.replace(' ', 'T') + 'Z').toLocaleString();
+            let cleanContent = article.description || article.content || '';
+
+            if (article.language === 'pl') {
+                cleanContent = stripImagesFromContent(article.content || article.description);
+            }
+
+            cleanContent = stripHtml(cleanContent);
+
+            return (
+                <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden my-4 border border-gray-700 hover:border-blue-500 transition-colors duration-300">
+                    <div className="p-6 flex flex-col md:flex-row gap-6">
+                        {article.thumbnail && (
+                            <div className="md:w-1/4 flex-shrink-0">
+                                <img src={article.thumbnail} alt="Article thumbnail" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                            </div>
+                        )}
+                        <div className="flex-grow">
+                            <h2 className="text-xl font-bold text-blue-300 mb-2">
+                                <a href={article.link} target="_blank" rel="noopener noreferrer" className="hover:underline">{article.title}</a>
+                            </h2>
+                            <div className="text-xs text-gray-400 mb-4 flex items-center gap-4 flex-wrap">
+                                <span>{pubDate}</span>
+                                <span className="font-semibold">{article.sourceName}</span>
+                            </div>
+                            <p className="text-gray-300 text-sm leading-relaxed">{cleanContent.substring(0, 400)}...</p>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        const Header = ({ onManageFeedsClick }) => (
+            <header className="bg-gray-900 text-white p-4">
+                <div className="container mx-auto flex items-center justify-between">
+                    <div className="flex items-center">
+                        <svg className="w-8 h-8 mr-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 12h6m-1-5h.01"></path></svg>
+                        <h1 className="text-2xl font-bold tracking-wider">Today's News Feed</h1>
+                    </div>
+                    <button
+                        onClick={onManageFeedsClick}
+                        className="p-2 rounded-full hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        aria-label="Manage Feeds"
+                    >
+                        <svg className="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </button>
+                </div>
+            </header>
+        );
+        
+        const LanguageFilter = ({ selectedLanguage, onSelectLanguage }) => {
+            const languages = ['All', 'pl', 'en', 'fr', 'ft'];
+            const langDisplay = { All: 'All', pl: 'Polish', en: 'English', fr: 'French', ft: 'FT' };
+
+            return (
+                <div className="bg-gray-800 p-4">
+                    <div className="container mx-auto flex justify-center items-center space-x-2 sm:space-x-4">
+                        {languages.map(lang => (
+                            <button
+                                key={lang}
+                                onClick={() => onSelectLanguage(lang)}
+                                className={`btn-filter px-3 py-2 sm:px-4 text-sm sm:text-base font-semibold rounded-full focus:outline-none ${selectedLanguage === lang ? 'active bg-blue-600 text-white shadow-lg' : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}
+                            >
+                                {langDisplay[lang]}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            );
+        };
+
+        const ArticleList = ({ articles, loading, selectedLanguage }) => {
+            if (loading && articles.length === 0) {
+                return <Spinner />;
+            }
+            if (articles.length === 0) {
+                const langDisplay = { All: 'All', pl: 'Polish', en: 'English', fr: 'French', ft: 'FT' };
+                return (
+                    <div className="text-center p-8 text-gray-500">
+                        <h2 className="text-xl font-semibold">No Articles Found</h2>
+                        <p>There are no articles from the last 24 hours matching the "{langDisplay[selectedLanguage] || selectedLanguage}" filter.</p>
+                    </div>
+                );
+            }
+
+            return (
+                <div className="container mx-auto px-4">
+                    {articles.map((article, index) => (
+                         <React.Fragment key={article.guid || `${article.link}-${index}`}>
+                            <ArticleCard article={article} />
+                        </React.Fragment>
+                    ))}
+                </div>
+            );
+        };
+        
+        const FeedManager = ({ feeds, onClose, onAddFeed, onRemoveFeed }) => {
+            const { useState } = React;
+            const [name, setName] = useState('');
+            const [url, setUrl] = useState('');
+            const [language, setLanguage] = useState('en');
+
+            const handleSubmit = (e) => {
+                e.preventDefault();
+                if (name && url) {
+                    onAddFeed({ name, url, language });
+                    setName('');
+                    setUrl('');
+                    setLanguage('en');
+                }
+            };
+
+            return (
+                <div className="modal-overlay" onClick={onClose}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                        <div className="flex justify-between items-center mb-6">
+                            <h2 className="text-2xl font-bold text-white">Manage Feeds</h2>
+                            <button onClick={onClose} className="text-gray-400 hover:text-white text-3xl leading-none">&times;</button>
+                        </div>
+
+                        <div className="space-y-3 mb-8 max-h-60 overflow-y-auto pr-2">
+                            {feeds.map(feed => (
+                                <div key={feed.url} className="bg-gray-700 p-3 rounded-lg flex justify-between items-center">
+                                    <div>
+                                        <p className="font-semibold text-blue-300">{feed.name}</p>
+                                        <p className="text-xs text-gray-400 truncate max-w-xs">{feed.url}</p>
+                                    </div>
+                                    <button
+                                        onClick={() => onRemoveFeed(feed.url)}
+                                        className="bg-red-500 text-white px-3 py-1 text-sm rounded-md hover:bg-red-600"
+                                    >
+                                        Remove
+                                    </button>
+                                </div>
+                            ))}
+                        </div>
+
+                        <form onSubmit={handleSubmit} className="space-y-4">
+                            <h3 className="text-xl font-semibold text-white border-t border-gray-600 pt-4">Add New Feed</h3>
+                            <div>
+                                <label htmlFor="feed-name" className="block text-sm font-medium text-gray-300 mb-1">Feed Name</label>
+                                <input
+                                    id="feed-name"
+                                    type="text"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                    placeholder="e.g., TechCrunch"
+                                    required
+                                    className="w-full bg-gray-900 border border-gray-600 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"
+                                />
+                            </div>
+                            <div>
+                                <label htmlFor="feed-url" className="block text-sm font-medium text-gray-300 mb-1">Feed URL</label>
+                                <input
+                                    id="feed-url"
+                                    type="url"
+                                    value={url}
+                                    onChange={(e) => setUrl(e.target.value)}
+                                    placeholder="https://example.com/rss.xml"
+                                    required
+                                    className="w-full bg-gray-900 border border-gray-600 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"
+                                />
+                            </div>
+                            <div>
+                                <label htmlFor="feed-lang" className="block text-sm font-medium text-gray-300 mb-1">Language</label>
+                                <select
+                                    id="feed-lang"
+                                    value={language}
+                                    onChange={(e) => setLanguage(e.target.value)}
+                                    className="w-full bg-gray-900 border border-gray-600 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"
+                                >
+                                    <option value="en">English</option>
+                                    <option value="pl">Polish</option>
+                                    <option value="fr">French</option>
+                                    <option value="ft">FT</option>
+                                </select>
+                            </div>
+                            <button type="submit" className="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-700">
+                                Add Feed
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            );
+        };
+        
+        // --- MAIN APP COMPONENT ---
+        const App = () => {
+            const { useState, useEffect, useCallback } = React;
+            
+            const [articles, setArticles] = useState([]);
+            const [loading, setLoading] = useState(true);
+            const [selectedLanguage, setSelectedLanguage] = useState('All');
+            const [isFeedManagerOpen, setIsFeedManagerOpen] = useState(false);
+
+            const [feeds, setFeeds] = useState(() => {
+                try {
+                    const storedFeeds = localStorage.getItem('rssFeeds');
+                    return storedFeeds ? JSON.parse(storedFeeds) : defaultFeedUrls;
+                } catch (error) {
+                    console.error('Error parsing feeds from localStorage', error);
+                    return defaultFeedUrls;
+                }
+            });
+
+            useEffect(() => {
+                localStorage.setItem('rssFeeds', JSON.stringify(feeds));
+            }, [feeds]);
+
+            const addFeed = (newFeed) => {
+                if (!feeds.some(feed => feed.url === newFeed.url)) {
+                    setFeeds(prevFeeds => [...prevFeeds, newFeed]);
+                } else {
+                    alert('This feed URL already exists.');
+                }
+            };
+
+            const removeFeed = (urlToRemove) => {
+                setFeeds(prevFeeds => prevFeeds.filter(feed => feed.url !== urlToRemove));
+            };
+
+            const fetchAllFeeds = useCallback(async (isInitialLoad = false) => {
+                if (isInitialLoad) setLoading(true);
+
+                const promises = feeds.map(feed => fetchFeed(feed));
+                const results = await Promise.all(promises);
+                const allArticles = results.flat();
+
+                const twentyFourHoursAgo = new Date(Date.now() - 24 * 60 * 60 * 1000);
+
+                const recentArticles = allArticles.filter(article => {
+                    try {
+                        // Safari on iOS has issues parsing date strings like 'YYYY-MM-DD HH:mm:ss'.
+                        // Converting to ISO 8601 format 'YYYY-MM-DDTHH:mm:ssZ' for better compatibility.
+                        return new Date(article.pubDate.replace(' ', 'T') + 'Z') > twentyFourHoursAgo;
+                    } catch (e) {
+                        console.error(`Error parsing date for article:`, article, e);
+                        return false;
+                    }
+                });
+
+                recentArticles.sort((a, b) => {
+                    const dateB = new Date(b.pubDate.replace(' ', 'T') + 'Z').getTime();
+                    const dateA = new Date(a.pubDate.replace(' ', 'T') + 'Z').getTime();
+                    // Handle potential invalid dates gracefully
+                    return (isNaN(dateB) ? 0 : dateB) - (isNaN(dateA) ? 0 : dateA);
+                });
+
+                setArticles(recentArticles);
+                if (isInitialLoad) setLoading(false);
+            }, [feeds]);
+
+            useEffect(() => {
+                fetchAllFeeds(true);
+                const interval = setInterval(() => fetchAllFeeds(false), 3 * 60 * 1000);
+                return () => clearInterval(interval);
+            }, [fetchAllFeeds]);
+
+            const filteredArticles = selectedLanguage === 'All'
+                ? articles
+                : articles.filter(article => article.language === selectedLanguage);
+
+            return (
+                <div className="min-h-screen flex flex-col">
+                    <div className="sticky top-0 z-10 shadow-lg">
+                        <Header onManageFeedsClick={() => setIsFeedManagerOpen(true)} />
+                        <LanguageFilter selectedLanguage={selectedLanguage} onSelectLanguage={setSelectedLanguage} />
+                    </div>
+                    <main className="flex-grow py-6">
+                        <ArticleList articles={filteredArticles} loading={loading} selectedLanguage={selectedLanguage} />
+                    </main>
+                    {isFeedManagerOpen && (
+                        <FeedManager
+                            feeds={feeds}
+                            onClose={() => setIsFeedManagerOpen(false)}
+                            onAddFeed={addFeed}
+                            onRemoveFeed={removeFeed}
+                        />
+                    )}
+                </div>
+            );
+        };
+
+        // --- RENDER THE APP ---
+        const rootElement = document.getElementById('root');
+        if (rootElement) {
+            const root = ReactDOM.createRoot(rootElement);
+            root.render(<App />);
+        }
+    </script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
