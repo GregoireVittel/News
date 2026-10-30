@@ -8,6 +8,7 @@
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="./feed-utils.js"></script>
     <style>
         body {
             background-color: #121212;
@@ -48,16 +49,7 @@
             overflow-y: auto;
         }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
-    "react/": "https://aistudiocdn.com/react@^19.1.1/",
-    "react": "https://aistudiocdn.com/react@^19.1.1"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
+
 </head>
 <body>
     <div id="root"></div>
@@ -69,11 +61,6 @@
             return doc.body.textContent || "";
         };
 
-        const stripImagesFromContent = (html) => {
-            if (!html) return '';
-            return html.replace(/<img[^>]*>/g, "");
-        };
-        
         // --- CONSTANTS (from constants.ts) ---
         const defaultFeedUrls = [
             { url: 'https://pap-mediaroom.pl/kategoria/biznes-i-finanse/rss.xml', language: 'pl', name: 'PAP Biznes' },
@@ -112,14 +99,11 @@
                 const response = await fetch(API_URL);
                 if (!response.ok) throw new Error(`Network response was not ok for ${feed.name}`);
                 const data = await response.json();
-                if (data.status !== 'ok') {
-                    console.error(`API Error for ${feed.name}:`, data.message);
-                    return [];
-                }
-                return data.items.map((item) => ({ ...item, sourceName: data.feed.title || feed.name, language: feed.language }));
+                if (data.status !== 'ok' || !Array.isArray(data.items)) throw new Error(data.message || `Invalid feed: ${feed.name}`);
+                return { items: data.items.map((item) => ({ ...item, sourceName: data.feed?.title || feed.name, language: feed.language })), failed: false };
             } catch (error) {
                 console.error(`Error fetching RSS feed ${feed.name}:`, error);
-                return [];
+                return { items: [], failed: true };
             }
         };
         
@@ -131,16 +115,14 @@
         );
 
         const ArticleCard = ({ article }) => {
-            // Safari on iOS has issues parsing date strings like 'YYYY-MM-DD HH:mm:ss'.
-            // Converting to ISO 8601 format 'YYYY-MM-DDTHH:mm:ssZ' for better compatibility.
-            const pubDate = new Date(article.pubDate.replace(' ', 'T') + 'Z').toLocaleString();
+            const pubDate = new Date(parseFeedDate(article.pubDate)).toLocaleString();
             let cleanContent = article.description || article.content || '';
 
             if (article.language === 'pl') {
-                cleanContent = stripImagesFromContent(article.content || article.description);
+                cleanContent = article.content || article.description || '';
             }
 
-            cleanContent = stripHtml(cleanContent);
+            cleanContent = stripHtml(cleanContent).trim();
 
             return (
                 <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden my-4 border border-gray-700 hover:border-blue-500 transition-colors duration-300">
@@ -158,7 +140,7 @@
                                 <span>{pubDate}</span>
                                 <span className="font-semibold">{article.sourceName}</span>
                             </div>
-                            <p className="text-gray-300 text-sm leading-relaxed">{cleanContent.substring(0, 400)}...</p>
+                            {cleanContent && <p className="text-gray-300 text-sm leading-relaxed">{cleanContent.substring(0, 400)}{cleanContent.length > 400 ? '…' : ''}</p>}
                         </div>
                     </div>
                 </div>
@@ -325,13 +307,17 @@
             
             const [articles, setArticles] = useState([]);
             const [loading, setLoading] = useState(true);
+            const [refreshing, setRefreshing] = useState(false);
+            const [failedFeeds, setFailedFeeds] = useState(0);
+            const [lastUpdated, setLastUpdated] = useState(null);
             const [selectedLanguage, setSelectedLanguage] = useState('All');
             const [isFeedManagerOpen, setIsFeedManagerOpen] = useState(false);
 
             const [feeds, setFeeds] = useState(() => {
                 try {
                     const storedFeeds = localStorage.getItem('rssFeeds');
-                    return storedFeeds ? JSON.parse(storedFeeds) : defaultFeedUrls;
+                    const parsed = storedFeeds ? JSON.parse(storedFeeds) : defaultFeedUrls;
+                    return Array.isArray(parsed) ? parsed : defaultFeedUrls;
                 } catch (error) {
                     console.error('Error parsing feeds from localStorage', error);
                     return defaultFeedUrls;
@@ -339,7 +325,8 @@
             });
 
             useEffect(() => {
-                localStorage.setItem('rssFeeds', JSON.stringify(feeds));
+                try { localStorage.setItem('rssFeeds', JSON.stringify(feeds)); }
+                catch (error) { console.warn('Could not save feeds locally', error); }
             }, [feeds]);
 
             const addFeed = (newFeed) => {
@@ -356,33 +343,14 @@
 
             const fetchAllFeeds = useCallback(async (isInitialLoad = false) => {
                 if (isInitialLoad) setLoading(true);
+                else setRefreshing(true);
 
-                const promises = feeds.map(feed => fetchFeed(feed));
-                const results = await Promise.all(promises);
-                const allArticles = results.flat();
-
-                const twentyFourHoursAgo = new Date(Date.now() - 24 * 60 * 60 * 1000);
-
-                const recentArticles = allArticles.filter(article => {
-                    try {
-                        // Safari on iOS has issues parsing date strings like 'YYYY-MM-DD HH:mm:ss'.
-                        // Converting to ISO 8601 format 'YYYY-MM-DDTHH:mm:ssZ' for better compatibility.
-                        return new Date(article.pubDate.replace(' ', 'T') + 'Z') > twentyFourHoursAgo;
-                    } catch (e) {
-                        console.error(`Error parsing date for article:`, article, e);
-                        return false;
-                    }
-                });
-
-                recentArticles.sort((a, b) => {
-                    const dateB = new Date(b.pubDate.replace(' ', 'T') + 'Z').getTime();
-                    const dateA = new Date(a.pubDate.replace(' ', 'T') + 'Z').getTime();
-                    // Handle potential invalid dates gracefully
-                    return (isNaN(dateB) ? 0 : dateB) - (isNaN(dateA) ? 0 : dateA);
-                });
-
-                setArticles(recentArticles);
-                if (isInitialLoad) setLoading(false);
+                const results = await Promise.all(feeds.map(feed => fetchFeed(feed)));
+                setFailedFeeds(results.filter(result => result.failed).length);
+                setArticles(recentUniqueArticles(results.flatMap(result => result.items)));
+                setLastUpdated(new Date());
+                setLoading(false);
+                setRefreshing(false);
             }, [feeds]);
 
             useEffect(() => {
@@ -400,6 +368,11 @@
                     <div className="sticky top-0 z-10 shadow-lg">
                         <Header onManageFeedsClick={() => setIsFeedManagerOpen(true)} />
                         <LanguageFilter selectedLanguage={selectedLanguage} onSelectLanguage={setSelectedLanguage} />
+                    </div>
+                    <div className="container mx-auto px-4 pt-4 flex flex-wrap items-center gap-3 text-sm text-gray-400" role="status" aria-live="polite">
+                        <span>{filteredArticles.length} articles in the last 24 hours{lastUpdated ? ` · Updated ${lastUpdated.toLocaleTimeString()}` : ''}</span>
+                        <button onClick={() => fetchAllFeeds(false)} disabled={loading || refreshing} className="rounded bg-gray-700 text-white px-3 py-1 hover:bg-gray-600 disabled:opacity-50">{refreshing ? 'Refreshing…' : 'Refresh'}</button>
+                        {failedFeeds > 0 && <span className="text-amber-300">{failedFeeds} {failedFeeds === 1 ? 'feed' : 'feeds'} unavailable</span>}
                     </div>
                     <main className="flex-grow py-6">
                         <ArticleList articles={filteredArticles} loading={loading} selectedLanguage={selectedLanguage} />
@@ -423,6 +396,6 @@
             root.render(<App />);
         }
     </script>
-<script type="module" src="/index.tsx"></script>
+
 </body>
 </html>
