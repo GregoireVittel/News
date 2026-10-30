@@ -70,6 +70,51 @@
         .modal-content { background:#1f2937; padding:2rem; border-radius:.5rem; width:90%; max-width:600px; max-height:90vh; overflow-y:auto; color:#fff; }
         @media(max-width:750px) { .shell { padding:0 16px; } .brand { font-size:39px; } .masthead-row { min-height:86px; } .edition { display:none; } .portal-grid { grid-template-columns:1fr; gap:30px; } .rail { border-left:0; padding-left:0; } .story-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .edition-label { align-items:flex-start; flex-direction:column; } }
         @media(max-width:480px) { .topline .shell { font-size:10px; } .story-grid { grid-template-columns:1fr; } .story { border-bottom:1px solid var(--line); padding-bottom:16px; } .lead h2 { font-size:30px; } .nav-button { padding:14px 12px 12px; } }
+        /* Dark, data-forward editorial edition: high contrast, compact typography and fine rules. */
+        :root { --ink:#f2f2ef; --muted:#aaaeb0; --red:#f7ad26; --paper:#090b0e; --line:#34383d; }
+        body { background:var(--paper); color:var(--ink); }
+        a { color:inherit; }
+        a:hover { color:var(--red); }
+        button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible { outline:2px solid var(--red); outline-offset:3px; }
+        .shell { max-width:1400px; }
+        .topline { background:var(--red); color:#111; font-weight:700; }
+        .masthead,.navwrap { background:#090b0e; }
+        .masthead-row { min-height:90px; }
+        .brand { color:#fff; font-family:'DM Sans',Arial,sans-serif; font-size:clamp(36px,5vw,64px); letter-spacing:-.08em; }
+        .brand-sub { color:#c5c7c9; }
+        .edition { color:#c5c7c9; }
+        .navwrap { border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+        .nav-button { color:#b9bdc0; border-bottom-width:2px; font-size:11px; }
+        .nav-button.active { color:var(--red); }
+        .manage-button,.refresh-button { background:#191c20; border-color:#54585d; color:#f4f4f0; border-radius:0; }
+        .manage-button:hover,.refresh-button:hover { background:#29231a; }
+        .edition-label { padding-top:22px; border-bottom:2px solid var(--red); }
+        .edition-label h1,.lead h2,.rail-item h3,.story h3,.serif { font-family:'DM Sans',Arial,sans-serif; }
+        .edition-label h1 { text-transform:uppercase; font-size:16px; letter-spacing:.12em; }
+        .statusline { color:#c3c5c7; }
+        .portal-grid { grid-template-columns:minmax(0,1.7fr) minmax(280px,1fr); gap:0; }
+        .lead { padding-right:26px; }
+        .lead-image,.story-image { background:#24282d; filter:saturate(.72); }
+        .lead-placeholder { background:#1b1e22; color:var(--red); }
+        .lead h2 { font-size:clamp(30px,3.5vw,50px); line-height:1.08; letter-spacing:-.045em; }
+        .lead p,.story p { color:#c5c7c9; }
+        .meta { color:#aeb3b6; }
+        .meta .source { color:#f1f1eb; }
+        .rail { padding-left:26px; }
+        .rail-title { border-bottom-color:var(--red); }
+        .rail-item { padding:13px 0; }
+        .rail-item h3 { font-size:17px; line-height:1.32; }
+        .section { margin-top:36px; }
+        .section-heading { border-top-color:var(--red); }
+        .section-heading span { color:#b6babd; }
+        .story-grid { gap:0; padding-top:0; border-left:1px solid var(--line); }
+        .story { border-right:1px solid var(--line); border-bottom:1px solid var(--line); padding:18px; }
+        .story h3 { font-size:19px; line-height:1.3; letter-spacing:-.03em; }
+        .footer { color:#bec1c3; }
+        .modal-content { background:#171a1e; border:1px solid #52575c; border-radius:0; }
+        .modal-content input,.modal-content select { color:#fff; }
+        @media(max-width:750px) { .portal-grid { grid-template-columns:1fr; } .lead { padding-right:0; } .rail { border-left:0; padding-left:0; border-top:2px solid var(--red); padding-top:18px; } }
+        @media(max-width:480px) { .story-grid { border-top:1px solid var(--line); } .story { border-left:0; border-right:0; } .masthead-row { gap:8px; } .manage-button { padding:8px; } }
     </style>
 
 </head>
@@ -109,7 +154,9 @@
             { url: 'https://www.polsatnews.pl/rss/wszystkie.xml', language: 'pl', name: 'Polsat News' },
             { url: 'https://sportowefakty.wp.pl/rss.xml', language: 'pl', name: 'Sportowe Fakty WP' },
             { url: 'https://wyborcza.pl/pub/rss/najnowsze_wyborcza.xml', language: 'pl', name: 'Gazeta Wyborcza' },
-            { url: 'https://www.rp.pl/rss_main?unknown-old-rss', language: 'pl', name: 'Rzeczpospolita' },
+            { url: 'https://www.rp.pl/rss/1', language: 'pl', name: 'Rzeczpospolita' },
+            { url: 'https://www.polsatnews.pl/rss/polska.xml', language: 'pl', name: 'Polsat News · Polska' },
+            { url: 'https://www.rmf24.pl/fakty/polska/feed', language: 'pl', name: 'RMF24 · Polska' },
             { url: 'https://dziennik.com/feed/', language: 'pl', name: 'Nowy Dziennik' },
             { url: 'https://pap-mediaroom.pl/rss.xml', language: 'pl', name: 'PAP Mediaroom' },
 
@@ -118,27 +165,66 @@
             { url: 'https://www.theguardian.com/world/rss', language: 'en', name: 'The Guardian' },
             { url: 'http://feeds.reuters.com/reuters/topNews', language: 'en', name: 'Reuters' },
             { url: 'https://apnews.com/apf-topnews/rss.xml', language: 'en', name: 'Associated Press' },
+            { url: 'https://feeds.bbci.co.uk/news/business/rss.xml', language: 'en', name: 'BBC Business', category: 'Business' },
+            { url: 'https://feeds.npr.org/1001/rss.xml', language: 'en', name: 'NPR News' },
             { url: 'https://notesfrompoland.com/feed/', language: 'en', name: 'Notes from Poland' },
             
-            { url: 'https://www.ft.com/?format=rss', language: 'ft', name: 'Financial Times' },
+            { url: 'https://www.ft.com/?format=rss', language: 'en', name: 'Financial Times', category: 'Business' },
             
             { url: 'https://www.lefigaro.fr/rss/figaro_actualites.xml', language: 'fr', name: 'Le Figaro' },
             { url: 'https://www.lemonde.fr/rss/une.xml', language: 'fr', name: 'Le Monde' },
+            { url: 'https://www.lemonde.fr/international/rss_full.xml', language: 'fr', name: 'Le Monde · International' },
+            { url: 'https://www.france24.com/fr/rss', language: 'fr', name: 'France 24' },
+            { url: 'https://www.rfi.fr/fr/rss', language: 'fr', name: 'RFI' },
+            { url: 'https://www.francetvinfo.fr/titres.rss', language: 'fr', name: 'Franceinfo' },
         ];
+        const retiredFeedUrls = { 'https://www.rp.pl/rss_main?unknown-old-rss': 'https://www.rp.pl/rss/1' };
+        const newlyShippedUrls = new Set([
+            'https://www.bankier.pl/rss/gielda.xml', 'https://www.bankier.pl/rss/waluty.xml',
+            'https://www.polsatnews.pl/rss/polska.xml', 'https://www.rmf24.pl/fakty/polska/feed',
+            'https://feeds.bbci.co.uk/news/business/rss.xml', 'https://feeds.npr.org/1001/rss.xml',
+            'https://www.lemonde.fr/international/rss_full.xml', 'https://www.france24.com/fr/rss',
+            'https://www.rfi.fr/fr/rss', 'https://www.francetvinfo.fr/titres.rss'
+        ]);
         
         // --- API SERVICE (from services/rssService.ts) ---
+        const parseXmlFeed = (xml) => {
+            const doc = new DOMParser().parseFromString(xml, 'application/xml');
+            if (doc.querySelector('parsererror')) throw new Error('Invalid RSS XML');
+            const nodes = [...doc.getElementsByTagName('item')];
+            if (!nodes.length) throw new Error('No RSS items');
+            const field = (node, tag) => node.getElementsByTagName(tag)[0]?.textContent?.trim() || '';
+            return nodes.map(item => ({
+                title: field(item, 'title'), link: field(item, 'link'),
+                guid: field(item, 'guid') || field(item, 'link'),
+                pubDate: field(item, 'pubDate') || field(item, 'dc:date'),
+                description: field(item, 'description'),
+                thumbnail: item.getElementsByTagName('media:thumbnail')[0]?.getAttribute('url') ||
+                    item.getElementsByTagName('media:content')[0]?.getAttribute('url') || '',
+                enclosure: { link: item.getElementsByTagName('enclosure')[0]?.getAttribute('url') || '' }
+            }));
+        };
         const fetchFeed = async (feed) => {
-            const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}`;
+            let items;
             try {
-                const response = await fetch(API_URL, { signal: AbortSignal.timeout(12000) });
-                if (!response.ok) throw new Error(`Network response was not ok for ${feed.name}`);
+                const api = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}`;
+                const response = await fetch(api, { signal: AbortSignal.timeout(12000) });
+                if (!response.ok) throw new Error(`RSS API HTTP ${response.status}`);
                 const data = await response.json();
-                if (data.status !== 'ok' || !Array.isArray(data.items)) throw new Error(data.message || `Invalid feed: ${feed.name}`);
-                return { items: data.items.map((item) => ({ ...item, sourceName: feed.name, language: feed.language, category: categoryForFeed(feed) })), failed: false };
-            } catch (error) {
-                console.error(`Error fetching RSS feed ${feed.name}:`, error);
-                return { items: [], failed: true };
+                if (data.status !== 'ok' || !Array.isArray(data.items)) throw new Error(data.message || 'Invalid RSS API response');
+                items = data.items;
+            } catch (primaryError) {
+                try {
+                    const proxy = `https://api.allorigins.win/raw?url=${encodeURIComponent(feed.url)}`;
+                    const response = await fetch(proxy, { signal: AbortSignal.timeout(22000) });
+                    if (!response.ok) throw new Error(`RSS fallback HTTP ${response.status}`);
+                    items = parseXmlFeed(await response.text());
+                } catch (fallbackError) {
+                    console.error(`RSS feed ${feed.name} failed via both providers:`, primaryError, fallbackError);
+                    return { items: [], failed: true };
+                }
             }
+            return { items: items.map(item => ({ ...item, sourceName: feed.name, language: feed.language, category: categoryForFeed(feed) })), failed: false };
         };
         
         // --- COMPONENTS ---
@@ -162,8 +248,8 @@
         );
 
         const LanguageFilter = ({ selectedLanguage, onSelectLanguage }) => {
-            const languages = ['All', 'pl', 'en', 'fr', 'ft'];
-            const langDisplay = { All: 'Front page', pl: 'Polski', en: 'English', fr: 'Français', ft: 'FT' };
+            const languages = ['All', 'pl', 'en', 'fr'];
+            const langDisplay = { All: 'Front page', pl: 'Polski', en: 'English', fr: 'Français' };
             return <nav className="navwrap" aria-label="News language"><div className="shell navrow">
                 {languages.map(lang => <button key={lang} onClick={() => onSelectLanguage(lang)} aria-pressed={selectedLanguage === lang} className={'nav-button ' + (selectedLanguage === lang ? 'active' : '')}>{langDisplay[lang]}</button>)}
             </div></nav>;
@@ -282,7 +368,6 @@
                                     <option value="en">English</option>
                                     <option value="pl">Polish</option>
                                     <option value="fr">French</option>
-                                    <option value="ft">FT</option>
                                 </select>
                             </div>
                             <button type="submit" className="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-700">
@@ -312,8 +397,7 @@
                     if (stored) { const parsed = JSON.parse(stored); return Array.isArray(parsed) ? parsed : []; }
                     const legacy = localStorage.getItem('rssFeeds');
                     const saved = legacy ? JSON.parse(legacy) : null;
-                    const newlyAdded = new Set(['https://www.bankier.pl/rss/gielda.xml', 'https://www.bankier.pl/rss/waluty.xml']);
-                    return Array.isArray(saved) ? defaultFeedUrls.filter(feed => !newlyAdded.has(feed.url) && !saved.some(old => old.url === feed.url)).map(feed => feed.url) : [];
+                    return Array.isArray(saved) ? defaultFeedUrls.filter(feed => !newlyShippedUrls.has(feed.url) && !saved.some(old => (retiredFeedUrls[old.url] || old.url) === feed.url)).map(feed => feed.url) : [];
                 } catch { return []; }
             });
             const [feeds, setFeeds] = useState(() => {
@@ -321,11 +405,10 @@
                     const stored = localStorage.getItem('rssFeeds');
                     const saved = stored ? JSON.parse(stored) : [];
                     const removed = JSON.parse(localStorage.getItem('rssRemovedDefaults') || '[]');
-                    const newlyAdded = new Set(['https://www.bankier.pl/rss/gielda.xml', 'https://www.bankier.pl/rss/waluty.xml']);
                     const legacyRemoved = stored && !localStorage.getItem('rssRemovedDefaults') && Array.isArray(saved)
-                        ? defaultFeedUrls.filter(feed => !newlyAdded.has(feed.url) && !saved.some(old => old.url === feed.url)).map(feed => feed.url)
+                        ? defaultFeedUrls.filter(feed => !newlyShippedUrls.has(feed.url) && !saved.some(old => (retiredFeedUrls[old.url] || old.url) === feed.url)).map(feed => feed.url)
                         : [];
-                    return reconcileFeeds(defaultFeedUrls, saved, [...(Array.isArray(removed) ? removed : []), ...legacyRemoved]);
+                    return reconcileFeeds(defaultFeedUrls, saved, [...(Array.isArray(removed) ? removed : []), ...legacyRemoved], retiredFeedUrls);
                 } catch (error) {
                     console.error('Error parsing feeds from localStorage', error);
                     return defaultFeedUrls;
@@ -379,10 +462,10 @@
                     <LanguageFilter selectedLanguage={selectedLanguage} onSelectLanguage={setSelectedLanguage} />
                     <main className="shell" id="main-content">
                         <div className="edition-label">
-                            <h1>{selectedLanguage === 'All' ? 'The Front Page' : `${{pl:'Polski',en:'English',fr:'Français',ft:'Financial Times'}[selectedLanguage]} Edition`}</h1>
+                            <h1>{selectedLanguage === 'All' ? 'The Front Page' : `${{pl:'Polski',en:'English',fr:'Français'}[selectedLanguage]} Edition`}</h1>
                             <div className="statusline" role="status" aria-live="polite">
                                 <span>{filteredArticles.length} stories · past 24 hours{lastUpdated ? ` · Updated ${lastUpdated.toLocaleTimeString()}` : ''}</span>
-                                {failedFeeds > 0 && <span style={{color:'#a85114'}}>{failedFeeds} {failedFeeds === 1 ? 'feed' : 'feeds'} unavailable</span>}
+                                {failedFeeds > 0 && <span style={{color:'#f7ad26'}}>{failedFeeds} {failedFeeds === 1 ? 'feed' : 'feeds'} unavailable</span>}
                                 <button onClick={() => fetchAllFeeds(false)} disabled={loading || refreshing} className="refresh-button">{refreshing ? 'Refreshing…' : '↻ Refresh'}</button>
                             </div>
                         </div>
