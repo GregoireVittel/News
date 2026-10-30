@@ -3,51 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RSS News Feeder</title>
+    <title>Przegląd — Your daily news edition</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="./feed-utils.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-color: #121212;
-            color: #e0e0e0;
-        }
-        .article-content img {
-            display: none !important;
-        }
-        .btn-filter {
-            transition: all 0.2s ease-in-out;
-        }
-        .btn-filter:hover {
-            transform: translateY(-2px);
-        }
-        .btn-filter.active {
-            background-color: #1a73e8;
-            color: white;
-        }
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 50;
-        }
-        .modal-content {
-            background-color: #1f2937; /* gray-800 */
-            padding: 2rem;
-            border-radius: 0.5rem;
-            width: 90%;
-            max-width: 600px;
-            max-height: 90vh;
-            overflow-y: auto;
-        }
+        :root { --ink:#171b20; --muted:#687078; --red:#b82928; --paper:#f7f6f2; --line:#deded9; }
+        * { box-sizing:border-box; }
+        body { margin:0; background:var(--paper); color:var(--ink); font-family:'DM Sans',Arial,sans-serif; }
+        a { text-decoration:none; }
+        a:hover { color:var(--red); }
+        .shell { width:100%; max-width:1220px; margin:0 auto; padding:0 28px; }
+        .eyebrow { text-transform:uppercase; letter-spacing:.16em; font-size:11px; font-weight:700; color:var(--red); }
+        .serif { font-family:'Playfair Display',Georgia,serif; }
+        .topline { background:#161a1e; color:#e9e8e3; font-size:11px; letter-spacing:.06em; }
+        .topline .shell { display:flex; align-items:center; justify-content:space-between; padding-top:10px; padding-bottom:10px; gap:12px; }
+        .masthead { background:#fff; border-bottom:1px solid var(--line); }
+        .masthead-row { display:flex; align-items:center; justify-content:space-between; min-height:104px; gap:16px; }
+        .brand { font-family:'Playfair Display',Georgia,serif; font-weight:800; letter-spacing:-.065em; font-size:53px; line-height:1; color:var(--ink); }
+        .brand-mark { color:var(--red); }
+        .brand-sub { font-size:10px; letter-spacing:.22em; color:var(--muted); text-transform:uppercase; margin-top:7px; }
+        .edition { color:var(--muted); font-size:12px; text-align:right; line-height:1.6; }
+        .navwrap { border-bottom:1px solid var(--line); background:#fff; }
+        .navrow { display:flex; align-items:center; gap:5px; overflow-x:auto; scrollbar-width:none; }
+        .navrow::-webkit-scrollbar { display:none; }
+        .nav-button { border:0; border-bottom:3px solid transparent; background:transparent; color:#52595f; font:600 12px 'DM Sans',sans-serif; letter-spacing:.06em; text-transform:uppercase; padding:17px 17px 15px; white-space:nowrap; cursor:pointer; }
+        .nav-button.active { border-color:var(--red); color:var(--red); }
+        .nav-button:hover { color:var(--red); }
+        .manage-button,.refresh-button { border:1px solid var(--line); background:#fff; color:var(--ink); padding:9px 13px; border-radius:3px; cursor:pointer; font:600 12px 'DM Sans',sans-serif; white-space:nowrap; }
+        .manage-button:hover,.refresh-button:hover { border-color:var(--red); color:var(--red); }
+        .refresh-button:disabled { opacity:.5; cursor:wait; }
+        .edition-label { display:flex; align-items:center; justify-content:space-between; border-bottom:2px solid var(--ink); padding:28px 0 13px; gap:12px; }
+        .edition-label h1 { font:700 22px 'Playfair Display',Georgia,serif; margin:0; }
+        .statusline { display:flex; align-items:center; flex-wrap:wrap; gap:12px; color:var(--muted); font-size:12px; }
+        .portal-grid { display:grid; grid-template-columns:minmax(0,1.75fr) minmax(265px,1fr); gap:34px; padding-top:24px; }
+        .lead { min-width:0; }
+        .lead-image,.story-image { display:block; object-fit:cover; width:100%; background:#e4e3df; }
+        .lead-image { aspect-ratio:16/9; }
+        .lead-placeholder { aspect-ratio:16/9; background:#232c33; color:#f6f1e7; display:flex; align-items:center; justify-content:center; font:700 64px 'Playfair Display',Georgia,serif; }
+        .lead h2 { font:700 clamp(28px,3.2vw,43px)/1.17 'Playfair Display',Georgia,serif; letter-spacing:-.035em; margin:13px 0; }
+        .lead p { font-size:14px; line-height:1.75; color:#555e64; margin:0 0 14px; }
+        .meta { color:var(--muted); font-size:11px; display:flex; gap:9px; flex-wrap:wrap; align-items:center; margin-top:10px; }
+        .meta .source { color:var(--ink); font-weight:700; }
+        .rail { border-left:1px solid var(--line); padding-left:28px; }
+        .rail-title,.section-title { text-transform:uppercase; font-size:13px; letter-spacing:.12em; font-weight:700; margin:0; }
+        .rail-title { border-bottom:2px solid var(--ink); padding-bottom:12px; }
+        .rail-item { border-bottom:1px solid var(--line); padding:17px 0; }
+        .rail-item h3 { font:600 18px/1.35 'Playfair Display',Georgia,serif; margin:7px 0; }
+        .section { margin-top:47px; }
+        .section-heading { border-top:2px solid var(--ink); border-bottom:1px solid var(--line); padding:13px 0; display:flex; align-items:center; justify-content:space-between; }
+        .section-heading span { color:var(--muted); font-size:11px; }
+        .story-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; padding:22px 0 5px; }
+        .story { min-width:0; }
+        .story-image { aspect-ratio:16/10; }
+        .story h3 { font:600 20px/1.32 'Playfair Display',Georgia,serif; letter-spacing:-.025em; margin:9px 0; }
+        .story p { color:#5e666b; font-size:12px; line-height:1.65; margin:8px 0 0; }
+        .more-link { display:inline-block; color:var(--red); font-size:12px; font-weight:700; margin-top:12px; }
+        .empty { padding:65px 0; text-align:center; color:var(--muted); }
+        .footer { border-top:1px solid var(--line); margin-top:60px; padding:26px 0; color:var(--muted); font-size:12px; }
+        .modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,.7); display:flex; justify-content:center; align-items:center; z-index:50; }
+        .modal-content { background:#1f2937; padding:2rem; border-radius:.5rem; width:90%; max-width:600px; max-height:90vh; overflow-y:auto; color:#fff; }
+        @media(max-width:750px) { .shell { padding:0 16px; } .brand { font-size:39px; } .masthead-row { min-height:86px; } .edition { display:none; } .portal-grid { grid-template-columns:1fr; gap:30px; } .rail { border-left:0; padding-left:0; } .story-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .edition-label { align-items:flex-start; flex-direction:column; } }
+        @media(max-width:480px) { .topline .shell { font-size:10px; } .story-grid { grid-template-columns:1fr; } .story { border-bottom:1px solid var(--line); padding-bottom:16px; } .lead h2 { font-size:30px; } .nav-button { padding:14px 12px 12px; } }
     </style>
 
 </head>
@@ -61,17 +83,29 @@
             return doc.body.textContent || "";
         };
 
+        const categoryForFeed = (feed) => feed.category || (/biznes|money|bankier|financial|ft\.com/i.test(feed.name + feed.url) ? 'Business' : /nauka|technolog/i.test(feed.name + feed.url) ? 'Technology' : /sport/i.test(feed.name + feed.url) ? 'Sports' : /zdrowie/i.test(feed.name + feed.url) ? 'Lifestyle' : 'World');
+        const getSummary = (article, length = 185) => {
+            const text = stripHtml(article.description || article.content || '').trim();
+            return text.length > length ? text.slice(0, length).trimEnd() + '…' : text;
+        };
+        const articleImage = (article) => article.thumbnail || article.enclosure?.link || '';
+        const articleDate = (article) => {
+            const timestamp = parseFeedDate(article.pubDate);
+            return timestamp === null ? '' : new Date(timestamp).toLocaleString(undefined, { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+        };
         // --- CONSTANTS (from constants.ts) ---
         const defaultFeedUrls = [
-            { url: 'https://pap-mediaroom.pl/kategoria/biznes-i-finanse/rss.xml', language: 'pl', name: 'PAP Biznes' },
-            { url: 'https://pap-mediaroom.pl/kategoria/nauka-i-technologie/rss.xml', language: 'pl', name: 'PAP Nauka' },
+            { url: 'https://pap-mediaroom.pl/kategoria/biznes-i-finanse/rss.xml', language: 'pl', name: 'PAP Biznes', category: 'Business' },
+            { url: 'https://pap-mediaroom.pl/kategoria/nauka-i-technologie/rss.xml', language: 'pl', name: 'PAP Nauka', category: 'Technology' },
             { url: 'https://pap-mediaroom.pl/kategoria/polityka-i-spo%C5%82eczenstwo/rss.xml', language: 'pl', name: 'PAP Polityka' },
             { url: 'https://pap-mediaroom.pl/kategoria/zdrowie-i-styl-zycia/rss.xml', language: 'pl', name: 'PAP Zdrowie' },
             { url: 'https://www.tvn24.pl/najnowsze.xml', language: 'pl', name: 'TVN24' },
             { url: 'https://wiadomosci.wp.pl/rss.xml', language: 'pl', name: 'Wirtualna Polska' },
             { url: 'https://www.rmf24.pl/feed', language: 'pl', name: 'RMF24' },
             { url: 'https://www.money.pl/rss/main.xml', language: 'pl', name: 'Money.pl' },
-            { url: 'https://www.bankier.pl/rss/wiadomosci.xml', language: 'pl', name: 'Bankier.pl' },
+            { url: 'https://www.bankier.pl/rss/wiadomosci.xml', language: 'pl', name: 'Bankier.pl', category: 'Business' },
+            { url: 'https://www.bankier.pl/rss/gielda.xml', language: 'pl', name: 'Bankier Giełda', category: 'Business' },
+            { url: 'https://www.bankier.pl/rss/waluty.xml', language: 'pl', name: 'Bankier Waluty', category: 'Business' },
             { url: 'https://www.polsatnews.pl/rss/wszystkie.xml', language: 'pl', name: 'Polsat News' },
             { url: 'https://sportowefakty.wp.pl/rss.xml', language: 'pl', name: 'Sportowe Fakty WP' },
             { url: 'https://wyborcza.pl/pub/rss/najnowsze_wyborcza.xml', language: 'pl', name: 'Gazeta Wyborcza' },
@@ -96,11 +130,11 @@
         const fetchFeed = async (feed) => {
             const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}`;
             try {
-                const response = await fetch(API_URL);
+                const response = await fetch(API_URL, { signal: AbortSignal.timeout(12000) });
                 if (!response.ok) throw new Error(`Network response was not ok for ${feed.name}`);
                 const data = await response.json();
                 if (data.status !== 'ok' || !Array.isArray(data.items)) throw new Error(data.message || `Invalid feed: ${feed.name}`);
-                return { items: data.items.map((item) => ({ ...item, sourceName: data.feed?.title || feed.name, language: feed.language })), failed: false };
+                return { items: data.items.map((item) => ({ ...item, sourceName: feed.name, language: feed.language, category: categoryForFeed(feed) })), failed: false };
             } catch (error) {
                 console.error(`Error fetching RSS feed ${feed.name}:`, error);
                 return { items: [], failed: true };
@@ -114,103 +148,62 @@
             </div>
         );
 
-        const ArticleCard = ({ article }) => {
-            const pubDate = new Date(parseFeedDate(article.pubDate)).toLocaleString();
-            let cleanContent = article.description || article.content || '';
-
-            if (article.language === 'pl') {
-                cleanContent = article.content || article.description || '';
-            }
-
-            cleanContent = stripHtml(cleanContent).trim();
-
-            return (
-                <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden my-4 border border-gray-700 hover:border-blue-500 transition-colors duration-300">
-                    <div className="p-6 flex flex-col md:flex-row gap-6">
-                        {article.thumbnail && (
-                            <div className="md:w-1/4 flex-shrink-0">
-                                <img src={article.thumbnail} alt="Article thumbnail" className="w-full h-auto object-cover rounded-lg shadow-md" />
-                            </div>
-                        )}
-                        <div className="flex-grow">
-                            <h2 className="text-xl font-bold text-blue-300 mb-2">
-                                <a href={article.link} target="_blank" rel="noopener noreferrer" className="hover:underline">{article.title}</a>
-                            </h2>
-                            <div className="text-xs text-gray-400 mb-4 flex items-center gap-4 flex-wrap">
-                                <span>{pubDate}</span>
-                                <span className="font-semibold">{article.sourceName}</span>
-                            </div>
-                            {cleanContent && <p className="text-gray-300 text-sm leading-relaxed">{cleanContent.substring(0, 400)}{cleanContent.length > 400 ? '…' : ''}</p>}
-                        </div>
-                    </div>
-                </div>
-            );
-        };
+        const Meta = ({ article }) => <div className="meta"><span className="source">{article.sourceName}</span><span>·</span><time>{articleDate(article)}</time></div>;
 
         const Header = ({ onManageFeedsClick }) => (
-            <header className="bg-gray-900 text-white p-4">
-                <div className="container mx-auto flex items-center justify-between">
-                    <div className="flex items-center">
-                        <svg className="w-8 h-8 mr-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 12h6m-1-5h.01"></path></svg>
-                        <h1 className="text-2xl font-bold tracking-wider">Today's News Feed</h1>
-                    </div>
-                    <button
-                        onClick={onManageFeedsClick}
-                        className="p-2 rounded-full hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        aria-label="Manage Feeds"
-                    >
-                        <svg className="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                    </button>
-                </div>
-            </header>
+            <>
+                <div className="topline"><div className="shell"><span>THE DAILY BRIEFING · STORIES FROM AROUND THE WORLD</span><span>INDEPENDENT NEWS AGGREGATOR</span></div></div>
+                <header className="masthead"><div className="shell masthead-row">
+                    <div><a href="./" className="brand" aria-label="Przegląd home">Przegląd<span className="brand-mark">.</span></a><div className="brand-sub">The world, in perspective</div></div>
+                    <div className="edition"><strong>{new Date().toLocaleDateString(undefined, { weekday:'long', month:'long', day:'numeric', year:'numeric' })}</strong><br/>A curated window on the last 24 hours</div>
+                    <button className="manage-button" onClick={onManageFeedsClick} aria-label="Manage feeds">⚙ &nbsp;Manage feeds</button>
+                </div></header>
+            </>
         );
-        
+
         const LanguageFilter = ({ selectedLanguage, onSelectLanguage }) => {
             const languages = ['All', 'pl', 'en', 'fr', 'ft'];
-            const langDisplay = { All: 'All', pl: 'Polish', en: 'English', fr: 'French', ft: 'FT' };
-
-            return (
-                <div className="bg-gray-800 p-4">
-                    <div className="container mx-auto flex justify-center items-center space-x-2 sm:space-x-4">
-                        {languages.map(lang => (
-                            <button
-                                key={lang}
-                                onClick={() => onSelectLanguage(lang)}
-                                className={`btn-filter px-3 py-2 sm:px-4 text-sm sm:text-base font-semibold rounded-full focus:outline-none ${selectedLanguage === lang ? 'active bg-blue-600 text-white shadow-lg' : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}
-                            >
-                                {langDisplay[lang]}
-                            </button>
-                        ))}
-                    </div>
-                </div>
-            );
+            const langDisplay = { All: 'Front page', pl: 'Polski', en: 'English', fr: 'Français', ft: 'FT' };
+            return <nav className="navwrap" aria-label="News language"><div className="shell navrow">
+                {languages.map(lang => <button key={lang} onClick={() => onSelectLanguage(lang)} aria-pressed={selectedLanguage === lang} className={'nav-button ' + (selectedLanguage === lang ? 'active' : '')}>{langDisplay[lang]}</button>)}
+            </div></nav>;
         };
+
+        const Story = ({ article }) => <article className="story">
+            {articleImage(article) && <a href={article.link} target="_blank" rel="noopener noreferrer"><img className="story-image" src={articleImage(article)} alt="" loading="lazy" onError={e => { e.currentTarget.style.display='none'; }} /></a>}
+            <div className="eyebrow" style={{marginTop:12}}>{article.category || 'World'}</div>
+            <h3><a href={article.link} target="_blank" rel="noopener noreferrer">{article.title}</a></h3>
+            <Meta article={article}/>
+            {getSummary(article, 115) && <p>{getSummary(article, 115)}</p>}
+        </article>;
 
         const ArticleList = ({ articles, loading, selectedLanguage }) => {
-            if (loading && articles.length === 0) {
-                return <Spinner />;
-            }
-            if (articles.length === 0) {
-                const langDisplay = { All: 'All', pl: 'Polish', en: 'English', fr: 'French', ft: 'FT' };
-                return (
-                    <div className="text-center p-8 text-gray-500">
-                        <h2 className="text-xl font-semibold">No Articles Found</h2>
-                        <p>There are no articles from the last 24 hours matching the "{langDisplay[selectedLanguage] || selectedLanguage}" filter.</p>
-                    </div>
-                );
-            }
-
-            return (
-                <div className="container mx-auto px-4">
-                    {articles.map((article, index) => (
-                         <React.Fragment key={article.guid || `${article.link}-${index}`}>
-                            <ArticleCard article={article} />
-                        </React.Fragment>
-                    ))}
+            const [expanded, setExpanded] = React.useState({});
+            if (loading && !articles.length) return <div className="empty" role="status">Gathering today's stories…</div>;
+            if (!articles.length) return <div className="empty"><h2 className="serif">No stories yet</h2><p>No articles from the past 24 hours match this language. Try another edition or refresh.</p></div>;
+            const { lead, latest, sections } = groupPortalArticles(articles);
+            const sectionOrder = ['World', 'Business', 'Technology', 'Sports', 'Lifestyle'];
+            return <>
+                <div className="portal-grid">
+                    <article className="lead">
+                        {articleImage(lead) ? <a href={lead.link} target="_blank" rel="noopener noreferrer"><img className="lead-image" src={articleImage(lead)} alt="" onError={e => { e.currentTarget.style.display='none'; }} /></a> : <div className="lead-placeholder" aria-hidden="true">P.</div>}
+                        <div className="eyebrow" style={{marginTop:20}}>Top story · {lead.category || 'World'}</div>
+                        <h2><a href={lead.link} target="_blank" rel="noopener noreferrer">{lead.title}</a></h2>
+                        {getSummary(lead, 240) && <p>{getSummary(lead, 240)}</p>}
+                        <Meta article={lead}/>
+                    </article>
+                    <aside className="rail" aria-label="Latest headlines"><h2 className="rail-title">The latest <span style={{color:'var(--red)'}}>●</span></h2>
+                        {latest.map(article => <article className="rail-item" key={article.link || article.guid}><div className="eyebrow">{article.category || 'World'}</div><h3><a href={article.link} target="_blank" rel="noopener noreferrer">{article.title}</a></h3><Meta article={article}/></article>)}
+                    </aside>
                 </div>
-            );
+                {sectionOrder.filter(category => sections[category]?.length).map(category => <section className="section" key={category} aria-label={category}>
+                    <div className="section-heading"><h2 className="section-title">{category}</h2><span>{sections[category].length} stories</span></div>
+                    <div className="story-grid">{(expanded[category] ? sections[category] : sections[category].slice(0, 6)).map(article => <Story key={article.link || article.guid} article={article}/>)}</div>
+                    {sections[category].length > 6 && <button className="manage-button" style={{marginTop:18}} onClick={() => setExpanded(prev => ({...prev, [category]: !prev[category]}))}>{expanded[category] ? 'Show fewer' : `View all ${sections[category].length} ${category.toLowerCase()} stories →`}</button>}
+                </section>)}
+            </>;
         };
-        
+
         const FeedManager = ({ feeds, onClose, onAddFeed, onRemoveFeed }) => {
             const { useState } = React;
             const [name, setName] = useState('');
@@ -313,11 +306,26 @@
             const [selectedLanguage, setSelectedLanguage] = useState('All');
             const [isFeedManagerOpen, setIsFeedManagerOpen] = useState(false);
 
+            const [removedDefaults, setRemovedDefaults] = useState(() => {
+                try {
+                    const stored = localStorage.getItem('rssRemovedDefaults');
+                    if (stored) { const parsed = JSON.parse(stored); return Array.isArray(parsed) ? parsed : []; }
+                    const legacy = localStorage.getItem('rssFeeds');
+                    const saved = legacy ? JSON.parse(legacy) : null;
+                    const newlyAdded = new Set(['https://www.bankier.pl/rss/gielda.xml', 'https://www.bankier.pl/rss/waluty.xml']);
+                    return Array.isArray(saved) ? defaultFeedUrls.filter(feed => !newlyAdded.has(feed.url) && !saved.some(old => old.url === feed.url)).map(feed => feed.url) : [];
+                } catch { return []; }
+            });
             const [feeds, setFeeds] = useState(() => {
                 try {
-                    const storedFeeds = localStorage.getItem('rssFeeds');
-                    const parsed = storedFeeds ? JSON.parse(storedFeeds) : defaultFeedUrls;
-                    return Array.isArray(parsed) ? parsed : defaultFeedUrls;
+                    const stored = localStorage.getItem('rssFeeds');
+                    const saved = stored ? JSON.parse(stored) : [];
+                    const removed = JSON.parse(localStorage.getItem('rssRemovedDefaults') || '[]');
+                    const newlyAdded = new Set(['https://www.bankier.pl/rss/gielda.xml', 'https://www.bankier.pl/rss/waluty.xml']);
+                    const legacyRemoved = stored && !localStorage.getItem('rssRemovedDefaults') && Array.isArray(saved)
+                        ? defaultFeedUrls.filter(feed => !newlyAdded.has(feed.url) && !saved.some(old => old.url === feed.url)).map(feed => feed.url)
+                        : [];
+                    return reconcileFeeds(defaultFeedUrls, saved, [...(Array.isArray(removed) ? removed : []), ...legacyRemoved]);
                 } catch (error) {
                     console.error('Error parsing feeds from localStorage', error);
                     return defaultFeedUrls;
@@ -325,12 +333,13 @@
             });
 
             useEffect(() => {
-                try { localStorage.setItem('rssFeeds', JSON.stringify(feeds)); }
+                try { localStorage.setItem('rssFeeds', JSON.stringify(feeds)); localStorage.setItem('rssRemovedDefaults', JSON.stringify(removedDefaults)); }
                 catch (error) { console.warn('Could not save feeds locally', error); }
-            }, [feeds]);
+            }, [feeds, removedDefaults]);
 
             const addFeed = (newFeed) => {
                 if (!feeds.some(feed => feed.url === newFeed.url)) {
+                    setRemovedDefaults(prev => prev.filter(url => url !== newFeed.url));
                     setFeeds(prevFeeds => [...prevFeeds, newFeed]);
                 } else {
                     alert('This feed URL already exists.');
@@ -338,6 +347,7 @@
             };
 
             const removeFeed = (urlToRemove) => {
+                if (defaultFeedUrls.some(feed => feed.url === urlToRemove)) setRemovedDefaults(prev => [...new Set([...prev, urlToRemove])]);
                 setFeeds(prevFeeds => prevFeeds.filter(feed => feed.url !== urlToRemove));
             };
 
@@ -365,18 +375,20 @@
 
             return (
                 <div className="min-h-screen flex flex-col">
-                    <div className="sticky top-0 z-10 shadow-lg">
-                        <Header onManageFeedsClick={() => setIsFeedManagerOpen(true)} />
-                        <LanguageFilter selectedLanguage={selectedLanguage} onSelectLanguage={setSelectedLanguage} />
-                    </div>
-                    <div className="container mx-auto px-4 pt-4 flex flex-wrap items-center gap-3 text-sm text-gray-400" role="status" aria-live="polite">
-                        <span>{filteredArticles.length} articles in the last 24 hours{lastUpdated ? ` · Updated ${lastUpdated.toLocaleTimeString()}` : ''}</span>
-                        <button onClick={() => fetchAllFeeds(false)} disabled={loading || refreshing} className="rounded bg-gray-700 text-white px-3 py-1 hover:bg-gray-600 disabled:opacity-50">{refreshing ? 'Refreshing…' : 'Refresh'}</button>
-                        {failedFeeds > 0 && <span className="text-amber-300">{failedFeeds} {failedFeeds === 1 ? 'feed' : 'feeds'} unavailable</span>}
-                    </div>
-                    <main className="flex-grow py-6">
+                    <Header onManageFeedsClick={() => setIsFeedManagerOpen(true)} />
+                    <LanguageFilter selectedLanguage={selectedLanguage} onSelectLanguage={setSelectedLanguage} />
+                    <main className="shell" id="main-content">
+                        <div className="edition-label">
+                            <h1>{selectedLanguage === 'All' ? 'The Front Page' : `${{pl:'Polski',en:'English',fr:'Français',ft:'Financial Times'}[selectedLanguage]} Edition`}</h1>
+                            <div className="statusline" role="status" aria-live="polite">
+                                <span>{filteredArticles.length} stories · past 24 hours{lastUpdated ? ` · Updated ${lastUpdated.toLocaleTimeString()}` : ''}</span>
+                                {failedFeeds > 0 && <span style={{color:'#a85114'}}>{failedFeeds} {failedFeeds === 1 ? 'feed' : 'feeds'} unavailable</span>}
+                                <button onClick={() => fetchAllFeeds(false)} disabled={loading || refreshing} className="refresh-button">{refreshing ? 'Refreshing…' : '↻ Refresh'}</button>
+                            </div>
+                        </div>
                         <ArticleList articles={filteredArticles} loading={loading} selectedLanguage={selectedLanguage} />
                     </main>
+                    <footer className="footer"><div className="shell">Przegląd · Independent headlines, linked to their original publishers. © {new Date().getFullYear()}</div></footer>
                     {isFeedManagerOpen && (
                         <FeedManager
                             feeds={feeds}

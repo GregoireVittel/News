@@ -23,6 +23,28 @@ function recentUniqueArticles(articles, now = Date.now()) {
     .map(({ article }) => article);
 }
 
+function reconcileFeeds(defaults, saved, removedUrls = []) {
+  const removed = new Set(removedUrls);
+  const byUrl = new Map();
+  for (const feed of defaults) if (!removed.has(feed.url)) byUrl.set(feed.url, feed);
+  for (const feed of Array.isArray(saved) ? saved : []) {
+    if (feed && typeof feed.url === 'string' && !removed.has(feed.url)) {
+      byUrl.set(feed.url, { ...byUrl.get(feed.url), ...feed });
+    }
+  }
+  return [...byUrl.values()];
+}
+
+function groupPortalArticles(articles) {
+  const lead = articles[0] || null;
+  const sections = {};
+  for (const article of articles.slice(4)) {
+    const category = article.category || 'World';
+    (sections[category] ||= []).push(article);
+  }
+  return { lead, latest: articles.slice(1, 4), sections };
+}
+
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { parseFeedDate, recentUniqueArticles };
+  module.exports = { parseFeedDate, recentUniqueArticles, reconcileFeeds, groupPortalArticles };
 }
