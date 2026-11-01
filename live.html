@@ -157,32 +157,43 @@
                 guid: field(item, 'guid') || field(item, 'link'),
                 pubDate: field(item, 'pubDate') || field(item, 'dc:date'),
                 description: field(item, 'description'),
+                source: field(item, 'source'),
                 thumbnail: item.getElementsByTagName('media:thumbnail')[0]?.getAttribute('url') ||
                     item.getElementsByTagName('media:content')[0]?.getAttribute('url') || '',
                 enclosure: { link: item.getElementsByTagName('enclosure')[0]?.getAttribute('url') || '' }
             }));
         };
         const fetchFeed = async (feed) => {
-            let items;
-            try {
+            const jsonItems = async () => {
                 const api = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}`;
                 const response = await fetch(api, { signal: AbortSignal.timeout(12000) });
                 if (!response.ok) throw new Error(`RSS API HTTP ${response.status}`);
                 const data = await response.json();
                 if (data.status !== 'ok' || !Array.isArray(data.items)) throw new Error(data.message || 'Invalid RSS API response');
-                items = data.items;
+                return data.items;
+            };
+            const xmlItems = async () => {
+                const proxy = `https://api.allorigins.win/raw?url=${encodeURIComponent(feed.url)}`;
+                const response = await fetch(proxy, { signal: AbortSignal.timeout(22000) });
+                if (!response.ok) throw new Error(`RSS XML HTTP ${response.status}`);
+                return parseXmlFeed(await response.text());
+            };
+            let items;
+            let limited = false;
+            try {
+                // Google search results are not date-ordered; rss2json's ten-item
+                // subset can omit today's bank stories. Prefer the complete XML.
+                items = await (feed.aggregator ? xmlItems() : jsonItems());
             } catch (primaryError) {
                 try {
-                    const proxy = `https://api.allorigins.win/raw?url=${encodeURIComponent(feed.url)}`;
-                    const response = await fetch(proxy, { signal: AbortSignal.timeout(22000) });
-                    if (!response.ok) throw new Error(`RSS fallback HTTP ${response.status}`);
-                    items = parseXmlFeed(await response.text());
+                    items = await (feed.aggregator ? jsonItems() : xmlItems());
+                    limited = Boolean(feed.aggregator);
                 } catch (fallbackError) {
                     console.error(`RSS feed ${feed.name} failed via both providers:`, primaryError, fallbackError);
                     return { items: [], failed: true };
                 }
             }
-            return { items: items.map(item => ({ ...item, sourceName: feed.name, language: feed.language, category: portalSectionForCategory(categoryForFeed(feed)) })), failed: false };
+            return { items: normalizeFeedItems(items, { ...feed, category: categoryForFeed(feed) }), failed: false, limited };
         };
 
         // --- COMPONENTS ---
@@ -219,14 +230,15 @@
             {getSummary(article, 115) && <p>{getSummary(article, 115)}</p>}
         </article>;
 
-        const ArticleList = ({ articles, loading }) => {
+        const ArticleList = ({ articles, loading, selectedSection }) => {
             const [expanded, setExpanded] = React.useState({});
             if (loading && !articles.length) return <div className="empty" role="status">Gathering today's stories…</div>;
-            if (!articles.length) return <div className="empty"><h2 className="serif">No stories yet</h2><p>No articles from the past 24 hours match this section. Try another section or refresh.</p></div>;
-            const { lead, latest, sections } = groupPortalArticles(articles);
+            if (!articles.length && selectedSection !== 'Financial') return <div className="empty"><h2 className="serif">No stories yet</h2><p>No articles from the past 24 hours match this section. Try another section or refresh.</p></div>;
+            const { general, financial, bnp } = partitionFinancialArticles(articles);
+            const { lead, latest, sections } = groupPortalArticles(general);
             const sectionOrder = [...new Set(sourceCatalog.map(feed => portalSectionForCategory(feed.category)))];
             return <>
-                <div className="portal-grid">
+                {lead && <div className="portal-grid">
                     <article className="lead">
                         {articleImage(lead) ? <a href={lead.link} target="_blank" rel="noopener noreferrer"><img className="lead-image" src={articleImage(lead)} alt="" onError={e => { e.currentTarget.style.display='none'; }} /></a> : <div className="lead-placeholder" aria-hidden="true">W.</div>}
                         <div className="eyebrow" style={{marginTop:20}}>Top story · {lead.category || 'World'}</div>
@@ -237,12 +249,24 @@
                     <aside className="rail" aria-label="Latest headlines"><h2 className="rail-title">The latest <span style={{color:'var(--red)'}}>●</span></h2>
                         {latest.map(article => <article className="rail-item" key={article.link || article.guid}><div className="eyebrow">{article.category || 'World'}</div><h3><a href={article.link} target="_blank" rel="noopener noreferrer">{article.title}</a></h3><Meta article={article}/></article>)}
                     </aside>
-                </div>
+                </div>}
                 {sectionOrder.filter(category => sections[category]?.length).map(category => <section className="section" key={category} aria-label={category}>
                     <div className="section-heading"><h2 className="section-title">{category}</h2><span>{sections[category].length} stories</span></div>
                     <div className="story-grid">{(expanded[category] ? sections[category] : sections[category].slice(0, 6)).map(article => <Story key={article.link || article.guid} article={article}/>)}</div>
                     {sections[category].length > 6 && <button className="manage-button" style={{marginTop:18}} onClick={() => setExpanded(prev => ({...prev, [category]: !prev[category]}))}>{expanded[category] ? 'Show fewer' : `View all ${sections[category].length} ${category.toLowerCase()} stories →`}</button>}
                 </section>)}
+                {(selectedSection === 'Financial' || selectedSection === 'All') && <section className="section" id="financial" aria-label="Financial News">
+                    <div className="section-heading"><h2 className="section-title">Financial News</h2><span>{financial.length + bnp.length} stories</span></div>
+                    <p><a href="#bnp-paribas" className="more-link">BNP Paribas →</a></p>
+                    <div className="story-grid">{financial.map(article => <Story key={article.link || article.guid} article={article}/>)}</div>
+                    {!financial.length && <p>No general financial stories in the past 24 hours.</p>}
+                    <section className="section" id="bnp-paribas" aria-label="BNP Paribas">
+                        <div className="section-heading"><h3 className="section-title">BNP Paribas</h3><span>{bnp.length} stories</span></div>
+                        <p>Bank news via Google News RSS (French, English and Polish) and publisher feeds. Google News links redirect to publishers.</p>
+                        <div className="story-grid">{bnp.map(article => <Story key={article.link || article.guid} article={article}/>)}</div>
+                        {!bnp.length && <p>No BNP Paribas bank stories in the past 24 hours.</p>}
+                    </section>
+                </section>}
             </>;
         };
 
@@ -292,6 +316,7 @@
             const [loading, setLoading] = useState(true);
             const [refreshing, setRefreshing] = useState(false);
             const [failedFeeds, setFailedFeeds] = useState(0);
+            const [limitedFeeds, setLimitedFeeds] = useState(0);
             const [lastUpdated, setLastUpdated] = useState(null);
             const [selectedSection, setSelectedSection] = useState('All');
             const [isFeedManagerOpen, setIsFeedManagerOpen] = useState(false);
@@ -348,6 +373,7 @@
 
                 const results = await Promise.all(feeds.map(feed => fetchFeed(feed)));
                 setFailedFeeds(results.filter(result => result.failed).length);
+                setLimitedFeeds(results.filter(result => result.limited).length);
                 setArticles(recentUniqueArticles(results.flatMap(result => result.items)));
                 setLastUpdated(new Date());
                 setLoading(false);
@@ -372,10 +398,11 @@
                             <div className="statusline" role="status" aria-live="polite">
                                 <span>{filteredArticles.length} stories · past 24 hours{lastUpdated ? ` · Updated ${lastUpdated.toLocaleTimeString()}` : ''}</span>
                                 {failedFeeds > 0 && <span style={{color:'#f7ad26'}}>{failedFeeds} {failedFeeds === 1 ? 'feed' : 'feeds'} unavailable</span>}
+                                {limitedFeeds > 0 && <span style={{color:'#f7ad26'}}>{limitedFeeds} Google News {limitedFeeds === 1 ? 'search' : 'searches'} limited to fallback results</span>}
                                 <button onClick={() => fetchAllFeeds(false)} disabled={loading || refreshing} className="refresh-button">{refreshing ? 'Refreshing…' : '↻ Refresh'}</button>
                             </div>
                         </div>
-                        <ArticleList articles={filteredArticles} loading={loading} />
+                        <ArticleList articles={filteredArticles} loading={loading} selectedSection={selectedSection} />
                     </main>
                     <footer className="footer"><div className="shell">What's happening in the World · Independent headlines, linked to their original publishers. © {new Date().getFullYear()}</div></footer>
                     {isFeedManagerOpen && (

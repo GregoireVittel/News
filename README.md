@@ -3,10 +3,10 @@
 The default portal serves real article HTML without JavaScript, React, Babel,
 Tailwind or CDN scripts. Its dark editorial CSS is retained.
 The masthead is **What's happening in the World** with the subtitle **What’s happening now…**.
-Primary navigation is **Front Page** plus four topic anchors: **Polish News / French News / World News / Technology**.
+Primary navigation is **Front Page** plus five topic anchors: **Polish News / French News / World News / Technology / Financial News**.
 These select story subjects, not feed languages. Legacy language URLs remain available.
-Stories appear once in four sections, stored as **Poland / France / World / Technology**,
-with a lead story inside each section. Technology takes precedence over geography.
+Stories appear once in five sections, stored as **Poland / France / World / Technology / Financial**,
+with **BNP Paribas** nested under Financial News. Technology and financial subjects take precedence over geography.
 Publisher catalog categories remain provenance, not final story sections.
 `pl/`, `en/` and `fr/` are ordinary static language pages; dated
 editions have their own language pages. All sections' stories are available
@@ -50,8 +50,9 @@ and work from dated pages. Article URLs must be absolute HTTP(S); text and XML
 are escaped and publisher HTML is reduced to plain-text snippets.
 
 The source of truth is **`sources.js`**, shared by both static builders and the
-live reader: exactly 27 category entries and 26 publishers (Reuters appears twice).
-Only approved publishers are allowed; saved browser preferences cannot restore
+live reader: the original 27 category entries and 26 publishers (Reuters appears twice),
+plus three explicitly approved Google News RSS searches for BNP Paribas (FR/EN/PL).
+Only approved feeds are allowed; saved browser preferences cannot restore
 excluded feeds. Unavailable approved publishers remain listed with `url: null`
 and an explanatory status rather than being replaced with other publishers.
 No `sources.yaml` or proxy services are used by the static builder. It fetches
@@ -62,6 +63,23 @@ across sources. Distinct publisher count is the primary importance signal,
 followed by publication time and URL as a stable tie-break. Repeated entries
 from the same publisher do not inflate coverage. Individual failures are logged to stderr and included in the
 JSON report; an empty edition is rejected. There is no fixture fallback.
+
+### Financial News / BNP Paribas
+
+Financial News includes the existing financial markets and economics feeds. Its
+BNP Paribas subgroup combines matching publisher-feed stories with Google News
+RSS searches for `"BNP Paribas" -tennis -"Indian Wells"` in French, English and
+Polish, including BNP Paribas Bank Polska. This scoped search is an explicit
+exception to the original publisher-only list: Google results may introduce
+other publishers, but arbitrary saved/custom feeds remain disallowed.
+
+The existing **past 24 hours** window applies to the subgroup too; an empty state
+does not imply a broken feed. Google controls indexing/results (up to 100 RSS
+entries per locale), so this is not a guarantee of exhaustive coverage. Obvious
+tournament-only headlines are excluded. Stories retain their actual RSS publisher
+names; Google is not counted as an additional publisher. Google News article URLs
+are retained as supplied and redirect to publishers; no full articles are scraped.
+BNP stories appear once, inside the subgroup, and count toward Financial totals.
 
 ### Story data and classification v1
 

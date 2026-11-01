@@ -21,7 +21,7 @@ class EditionTests(unittest.TestCase):
             generate(root, [entry], now)
             data = json.loads((root / 'articles.json').read_text())
             self.assertEqual(data['schemaVersion'], 2)
-            self.assertEqual(data['sections'], ['Poland', 'France', 'World', 'Technology'])
+            self.assertEqual(data['sections'], ['Poland', 'France', 'World', 'Technology', 'Financial'])
             self.assertEqual(data['generatedAt'], now.isoformat())
             self.assertEqual(data['articles'][0]['date'], now.isoformat())
             self.assertEqual(data['articles'][0]['section'], 'Technology')
@@ -64,7 +64,7 @@ class EditionTests(unittest.TestCase):
 
                 self.assertIn('Coverage sources', page)
                 self.assertEqual(page.count('<article '), 1)
-                for section in ('Poland', 'France', 'World', 'Technology'):
+                for section in ('Poland', 'France', 'World', 'Technology', 'Financial'):
                     self.assertIn(f'aria-label="{section}"', page)
                 self.assertIn('<div class="eyebrow">Technology</div>', page)
                 self.assertIn('https://example.test/News/assets/portal.css', page)

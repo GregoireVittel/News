@@ -44,6 +44,8 @@ def safe_url(value):
 
 
 def parse_date(value):
+    if not value:
+        return None
     try:
         date = datetime.fromisoformat(value.replace('Z', '+00:00'))
     except (ValueError, TypeError):
@@ -85,7 +87,16 @@ def parse_feed(data, feed):
         title = plain(fields.get('title', ''))
         if not link or not title:
             continue
-        articles.append({'title': title, 'link': link, 'description': plain(fields.get('description') or fields.get('summary') or fields.get('encoded') or fields.get('content', '')), 'date': parse_date(fields.get('pubDate') or fields.get('published') or fields.get('updated') or fields.get('date')), 'image': safe_url(image), 'sourceName': feed['name'], 'language': feed['language'], 'category': category(feed)})
+        article = {'title': title, 'link': link, 'description': plain(fields.get('description') or fields.get('summary') or fields.get('encoded') or fields.get('content', '')), 'date': parse_date(fields.get('pubDate') or fields.get('published') or fields.get('updated') or fields.get('date')), 'image': safe_url(image), 'sourceName': feed['name'], 'language': feed['language'], 'category': category(feed)}
+        google = urlsplit(feed.get('url', '')).hostname == 'news.google.com' or feed['name'].startswith('Google News')
+        if feed.get('aggregator') or google:
+            article['aggregator'] = True
+            article['sourceName'] = plain(fields.get('source', '')) or 'Publisher unknown (aggregated feed)'
+        if feed.get('subgroup') == 'BNP Paribas':
+            if not bnp_bank_article(article):
+                continue
+            article['subgroup'] = 'BNP Paribas'
+        articles.append(article)
     return articles
 
 
@@ -105,23 +116,23 @@ import sys
 
 if __package__ in (None, ''):
     sys.path.insert(0, str(Path(__file__).resolve().parent))
-    from story_classification import enrich_articles
+    from story_classification import enrich_articles, bnp_bank_article
 else:
-    from .story_classification import enrich_articles
+    from .story_classification import enrich_articles, bnp_bank_article
 
 ROOT = Path(__file__).resolve().parents[1]
 PARIS = ZoneInfo('Europe/Paris')
 LOG = logging.getLogger('edition')
-SECTIONS = ('Poland', 'France', 'World', 'Technology')
+SECTIONS = ('Poland', 'France', 'World', 'Technology', 'Financial')
 SITE_TITLE = "What's happening in the World"
-SECTION_LABELS = dict(zip(SECTIONS, ('Polish News', 'French News', 'World News', 'Technology')))
+SECTION_LABELS = dict(zip(SECTIONS, ('Polish News', 'French News', 'World News', 'Technology', 'Financial News')))
 
 
 def default_feeds():
     """Use the same approved publisher catalog as the live reader."""
     text = (ROOT / 'sources.js').read_text()
     catalog, _ = json.JSONDecoder().raw_decode(text.split('const sourceCatalog = ', 1)[1].lstrip())
-    return [{key: feed[key] for key in ('url', 'name', 'language', 'category')}
+    return [{key: feed[key] for key in ('url', 'name', 'language', 'category', 'subgroup', 'aggregator') if key in feed}
             for feed in catalog if feed.get('url')]
 
 
@@ -181,6 +192,8 @@ def story(article, kind='story'):
             + f'<div class="meta">{a["sourceCount"]} {"source" if a["sourceCount"] == 1 else "sources"}</div>'
             + '<details class="source-list"><summary>Coverage sources</summary><ul>'
             + ''.join(f'<li><a href="{escape(s["url"], quote=True)}" rel="noopener noreferrer">{escape(s["name"])}</a></li>' for s in a['sources']) + '</ul></details>'
+            + ('<p class="meta">Google News RSS aggregation; Google News links redirect to publisher coverage. Snippets are supplied RSS text, not original summaries.</p>'
+               if any(urlsplit(s['url']).hostname == 'news.google.com' for s in a['sources']) else '')
             + (f'<p>{snippet(a, 240 if kind == "lead" else 115)}</p>' if kind != 'rail-item' and a['description'] else '') + '</article>')
 
 
@@ -195,7 +208,7 @@ def page(base, canonical, title, body, now):
 <meta name="generated-at" content="{stamp}"><link rel="canonical" href="{escape(canonical, quote=True)}"><link rel="alternate" type="application/rss+xml" title="{escape(SITE_TITLE, quote=True)} RSS" href="{base}rss.xml"><link rel="stylesheet" href="{base}assets/portal.css"></head>
 <body><div class="topline"><div class="shell"><span>THE DAILY BRIEFING · STORIES FROM AROUND THE WORLD</span><span>INDEPENDENT NEWS AGGREGATOR</span></div></div>
 <header class="masthead"><div class="shell masthead-row"><div><a class="brand" href="{base}">{escape(SITE_TITLE)}</a><div class="brand-sub">What’s happening now…</div></div><div class="edition">{now.astimezone(PARIS).strftime('%d.%m.%Y')}<br>Wygenerowano: <time datetime="{stamp}">{stamp}</time> · Europe/Paris</div><a class="manage-button" href="{base}live.html">Live (opcjonalnie)</a></div></header>
-{body}<footer class="footer"><div class="shell"><a href="{base}archive/">Archiwum</a> · <a href="{base}rss.xml">RSS</a><p>Opisy to fragmenty z kanałów RSS wydawców — dotychczasowe zachowanie, nie autorskie streszczenia. Linki prowadzą do oryginalnych wydawców.</p><p>Wygenerowano {stamp} · Europe/Paris</p></div></footer></body></html>'''
+{body}<footer class="footer"><div class="shell"><a href="{base}archive/">Archiwum</a> · <a href="{base}rss.xml">RSS</a><p>Opisy to fragmenty z kanałów RSS wydawców lub agregatorów, nie autorskie streszczenia. Linki prowadzą do wydawców bezpośrednio lub przez Google News.</p><p>Wygenerowano {stamp} · Europe/Paris</p></div></footer></body></html>'''
 
 
 def edition_page(articles, base, prefix, language, now, failures):
@@ -211,11 +224,20 @@ def edition_page(articles, base, prefix, language, now, failures):
     for section in SECTIONS:
         items = [a for a in selected if a['section'] == section]
         body += f'<section class="section" id="{section.lower()}" aria-label="{section}"><div class="section-heading"><h2 class="section-title">{SECTION_LABELS[section]}</h2><span>{len(items)} stories</span></div>'
+        subgroup = [a for a in items if a.get('subgroup') == 'BNP Paribas'] if section == 'Financial' else []
+        if section == 'Financial':
+            body += '<p><a href="#bnp-paribas">BNP Paribas</a></p>'
+            items = [a for a in items if a.get('subgroup') != 'BNP Paribas']
         if items:
             body += '<div class="portal-grid section-lead">' + story(items[0], 'lead')
             body += '<div class="story-grid">' + ''.join(story(a) for a in items[1:]) + '</div></div>'
-        else:
+        elif not subgroup:
             body += '<p class="empty">No stories in this section for this edition.</p>'
+        if section == 'Financial':
+            body += '<section id="bnp-paribas" aria-label="BNP Paribas"><div class="section-heading"><h3 class="section-title">BNP Paribas</h3>' + f'<span>{len(subgroup)} stories</span></div>'
+            body += ('<div class="story-grid">' + ''.join(story(a) for a in subgroup) + '</div>'
+                     if subgroup else '<p class="empty">No BNP Paribas stories in this edition.</p>')
+            body += '</section>'
         body += '</section>'
     body += '<p class="language-links">Read by language: ' + ' · '.join(
         f'<a href="{base}{prefix}{lang}/">{labels[lang]}</a>' for lang in ('pl', 'fr', 'en')) + '</p>'

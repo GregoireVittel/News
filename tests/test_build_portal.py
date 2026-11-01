@@ -54,7 +54,7 @@ class PortalTests(unittest.TestCase):
             ('Deux hommes écroués après un incendie ayant tué quatre personnes', 'France', 'fr', 'France'),
             ('Un sapeur-pompier blessé par balle près de Marseille', 'France', 'fr', 'France'),
             ('Szokujące akty przemocy na proteście we Frankfurcie', 'Poland', 'pl', 'World'),
-            ("Midterms : l’économie américaine avant le scrutin", 'France', 'fr', 'World'),
+            ("Midterms : l’économie américaine avant le scrutin", 'France', 'fr', 'Financial'),
             ('Atak w Niemczech. Nie żyją cztery osoby', 'Poland', 'pl', 'World'),
             ('Apple’s HomeView could add security camera features', 'Technology, AI and science', 'en', 'Technology'),
             ('Le plus grand data center au monde au Texas', 'France', 'fr', 'Technology'),
@@ -83,7 +83,7 @@ class PortalTests(unittest.TestCase):
         self.assertIn("<title>What's happening in the World</title>", unescape(html))
         self.assertNotIn('brand-mark', html)
         self.assertEqual(html.count('<article '), 5)
-        for section in ('Poland', 'France', 'World', 'Technology'):
+        for section in ('Poland', 'France', 'World', 'Technology', 'Financial'):
             self.assertIn(f'aria-label="{section}"', html)
             self.assertIn(f'href="#{section.lower()}"', html)
 
@@ -91,7 +91,7 @@ class PortalTests(unittest.TestCase):
         self.assertNotIn('<script', html)
         self.assertIn('portal-grid', html)
 
-    def test_primary_navigation_is_front_page_plus_four_topics(self):
+    def test_primary_navigation_is_front_page_plus_five_topics(self):
         import re
         from html import unescape
         module = builder()
@@ -104,9 +104,10 @@ class PortalTests(unittest.TestCase):
                     ('https://example.test/News/' + prefix, 'Front Page'),
                     ('#poland', 'Polish News'), ('#france', 'French News'),
                     ('#world', 'World News'), ('#technology', 'Technology'),
+                    ('#financial', 'Financial News'),
                 ])
                 self.assertNotIn('Przegląd', unescape(html))
-                for anchor in ('poland', 'france', 'world', 'technology'):
+                for anchor in ('poland', 'france', 'world', 'technology', 'financial'):
                     self.assertIn(f'id="{anchor}"', html)
 
     def test_build_persists_enrichment_and_legacy_aliases(self):
@@ -118,7 +119,7 @@ class PortalTests(unittest.TestCase):
                          fetcher=lambda feed: RSS, history_root=Path(temp) / 'empty')
             data = json.loads((output / 'articles.json').read_text())
             self.assertEqual(data['schemaVersion'], 2)
-            self.assertEqual(data['sections'], ['Poland', 'France', 'World', 'Technology'])
+            self.assertEqual(data['sections'], ['Poland', 'France', 'World', 'Technology', 'Financial'])
             self.assertEqual(len(data['articles']), 1)
             article = data['articles'][0]
             self.assertIn(article['section'], data['sections'])

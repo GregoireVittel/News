@@ -1,11 +1,12 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-01T20:23:06+01:00",
+  "generatedAt": "2026-11-01T21:36:56+01:00",
   "sections": [
     "Poland",
     "France",
     "World",
-    "Technology"
+    "Technology",
+    "Financial"
   ],
   "articles": [
     {
@@ -18,7 +19,7 @@
       "language": "en",
       "category": "Financial markets and economics",
       "sourceCategory": "Financial markets and economics",
-      "section": "World",
+      "section": "Financial",
       "sectionReason": "feed category fallback: Financial markets and economics",
       "classification": {
         "method": "rules",
@@ -45,6 +46,390 @@
       }
     },
     {
+      "title": "Tributes to 'inspirational' Olympian Ciara Mageean after death at 34",
+      "link": "https://www.bbc.co.uk/news/articles/cj3vqy1g3eygo?at_medium=RSS&at_campaign=rss",
+      "description": "The former European 1500m champion had bowel cancer and died just three weeks after marrying her partner.",
+      "date": "2026-11-01T20:33:11+00:00",
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0552/live/19da7760-d633-11f1-9ca7-b72124134595.jpg",
+      "sourceName": "BBC News",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "feed category fallback: Global news and geopolitics",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Tributes to 'inspirational' Olympian Ciara Mageean after death at 34",
+          "description": "The former European 1500m champion had bowel cancer and died just three weeks after marrying her partner.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/cj3vqy1g3eygo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Spór o Trybunał Konstytucyjny. Korwin-Piotrowska zapowiada zarządzenie dotyczące Święczkowskiego",
+      "link": "https://wyborcza.pl/7,75398,33110752,spor-o-trybunal-konstytucyjny-korwin-piotrowska-zapowiada-zarzadzenie.html",
+      "description": "Kierująca pracami Trybunału Konstytucyjnego sędzia Anna Korwin-Piotrowska poinformowała, że planuje rozszerzyć porządek wtorkowego Zgromadzenia Ogólnego Sędziów TK. Dodatkowy punkt ma dotyczyć losowania składów sędziowskich, które będą prowadzić postępowania dyscyplinarne wobec Bogdana Święczkowskiego i Bartłomieja Sochańskiego.",
+      "date": "2026-11-01T20:23:00+00:00",
+      "image": "",
+      "sourceName": "Gazeta Wyborcza",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "Poland",
+      "sectionReason": "feed category fallback: Poland",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Spór o Trybunał Konstytucyjny. Korwin-Piotrowska zapowiada zarządzenie dotyczące Święczkowskiego",
+          "description": "Kierująca pracami Trybunału Konstytucyjnego sędzia Anna Korwin-Piotrowska poinformowała, że planuje rozszerzyć porządek wtorkowego Zgromadzenia Ogólnego Sędziów TK. Dodatkowy punkt ma dotyczyć losowania składów sędziowskich, które będą prowadzić postępowania dyscyplinarne wobec Bogdana Święczkowskiego i Bartłomieja Sochańskiego.",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Gazeta Wyborcza",
+          "url": "https://wyborcza.pl/7,75398,33110752,spor-o-trybunal-konstytucyjny-korwin-piotrowska-zapowiada-zarzadzenie.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "From Fleetwood embarrassment to 'magical' Anfield win 14 years in making",
+      "link": "https://www.bbc.co.uk/sport/football/articles/c39wz2epven4o?at_medium=RSS&at_campaign=rss",
+      "description": "Arsenal bounce back from the low of defeat at League Two Fleetwood to secure their first win in 14 years at Anfield - and open up a three-point lead at the top of the Premier League.",
+      "date": "2026-11-01T20:16:46+00:00",
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fbd8/live/473d6620-d62b-11f1-b085-b9e65bc8bfff.jpg",
+      "sourceName": "BBC News",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "feed category fallback: Global news and geopolitics",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "From Fleetwood embarrassment to 'magical' Anfield win 14 years in making",
+          "description": "Arsenal bounce back from the low of defeat at League Two Fleetwood to secure their first win in 14 years at Anfield - and open up a three-point lead at the top of the Premier League.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "BBC News",
+          "url": "https://www.bbc.co.uk/sport/football/articles/c39wz2epven4o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Arsenal move clear at the top with a rare win at Liverpool",
+      "link": "https://www.bbc.co.uk/sport/football/videos/cmly09yv9xl6o?at_medium=RSS&at_campaign=rss",
+      "description": "Arsenal win at Anfield for the first time since 2012 to earn a three-point lead at the top of the Premier League table following an end-to-end match that leaves Liverpool frustrated to have taken nothing.",
+      "date": "2026-11-01T20:00:18+00:00",
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/035d/live/adb0c650-d62a-11f1-a701-fddedf244c16.jpg",
+      "sourceName": "BBC News",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "feed category fallback: Global news and geopolitics",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Arsenal move clear at the top with a rare win at Liverpool",
+          "description": "Arsenal win at Anfield for the first time since 2012 to earn a three-point lead at the top of the Premier League table following an end-to-end match that leaves Liverpool frustrated to have taken nothing.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "BBC News",
+          "url": "https://www.bbc.co.uk/sport/football/videos/cmly09yv9xl6o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Wall Street Braces for Biggest Treasury Sales Overhaul in Years",
+      "link": "https://www.bloomberg.com/news/articles/2026-11-01/wall-street-braces-for-biggest-treasury-sales-overhaul-in-years",
+      "description": "After Treasury Secretary Scott Bessent surprised dealers with his willingness to intervene in the bond market to drive down yields in recent months, Wall Street is now girding for the biggest revamp in guidance for US Treasuries issuance since early 2024.",
+      "date": "2026-11-01T20:00:01+00:00",
+      "image": "",
+      "sourceName": "Bloomberg",
+      "language": "en",
+      "category": "Financial markets and economics",
+      "sourceCategory": "Financial markets and economics",
+      "section": "Financial",
+      "sectionReason": "feed category fallback: Financial markets and economics",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Wall Street Braces for Biggest Treasury Sales Overhaul in Years",
+          "description": "After Treasury Secretary Scott Bessent surprised dealers with his willingness to intervene in the bond market to drive down yields in recent months, Wall Street is now girding for the biggest revamp in guidance for US Treasuries issuance since early 2024.",
+          "sourceCategory": "Financial markets and economics"
+        }
+      },
+      "sources": [
+        {
+          "name": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-11-01/wall-street-braces-for-biggest-treasury-sales-overhaul-in-years"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "King to address slavery in Antigua as PM says he is open to possible UK apology",
+      "link": "https://www.bbc.co.uk/news/articles/cq398y0zj9rpo?at_medium=RSS&at_campaign=rss",
+      "description": "King Charles III will deliver a speech to the Commonwealth Heads of Government Meeting on Tuesday as he concludes his nine-day Caribbean tour.",
+      "date": "2026-11-01T19:58:20+00:00",
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/98d2/live/7c6766b0-d613-11f1-90fb-b3468681b3ba.jpg",
+      "sourceName": "BBC News",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "feed category fallback: Global news and geopolitics",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "King to address slavery in Antigua as PM says he is open to possible UK apology",
+          "description": "King Charles III will deliver a speech to the Commonwealth Heads of Government Meeting on Tuesday as he concludes his nine-day Caribbean tour.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/cq398y0zj9rpo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Flock keeps ignoring requests to cancel its contracts",
+      "link": "https://www.theverge.com/tech/1024232/flock-ignoring-cancel-contracts",
+      "description": "While more cities are canceling their contracts with Flock Safety, just as many are discovering how difficult that can be in some instances. Plymouth, Minnesota's city council voted to terminate its contract with Flock in September, but failed to respond to the city's request. For over a month, the cameras remained up, and the city […]",
+      "date": "2026-11-01T14:58:02-05:00",
+      "image": "",
+      "sourceName": "The Verge",
+      "language": "en",
+      "category": "Technology, AI and science",
+      "sourceCategory": "Technology, AI and science",
+      "section": "Technology",
+      "sectionReason": "feed category fallback: Technology, AI and science",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Flock keeps ignoring requests to cancel its contracts",
+          "description": "While more cities are canceling their contracts with Flock Safety, just as many are discovering how difficult that can be in some instances. Plymouth, Minnesota's city council voted to terminate its contract with Flock in September, but failed to respond to the city's request. For over a month, the cameras remained up, and the city […]",
+          "sourceCategory": "Technology, AI and science"
+        }
+      },
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/1024232/flock-ignoring-cancel-contracts"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Manifestations du 31 octobre : 779 personnes ont été interpellées dans toute la France selon un bilan définitif du ministère de l'Intérieur",
+      "link": "https://www.franceinfo.fr/economie/greve/direct-mobilisation-sociale-la-jeunesse-ne-lache-pas-declare-la-porte-parole-de-l-union-etudiante-au-lendemain-des-manifestations-du-31-octobre_8262449.html#xtor=RSS-3-[lestitres]",
+      "description": "Après un nouveau samedi de mobilisation avec une participation en légère baisse, de nouveaux rendez-vous sont prévus la semaine prochaine avec en point culminant la grève nationale annoncée le 5 novembre.",
+      "date": "2026-11-01T20:52:14+01:00",
+      "image": "https://www.franceinfo.fr/pictures/-jO69erZ201OiOnpDGOElgaab8M/0x315:6048x3717/432x243/filters:format(jpg)/2026/11/01/6ae72ff15d4c8545416047.jpg",
+      "sourceName": "franceinfo",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "France",
+      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Manifestations du 31 octobre : 779 personnes ont été interpellées dans toute la France selon un bilan définitif du ministère de l'Intérieur",
+          "description": "Après un nouveau samedi de mobilisation avec une participation en légère baisse, de nouveaux rendez-vous sont prévus la semaine prochaine avec en point culminant la grève nationale annoncée le 5 novembre.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "franceinfo",
+          "url": "https://www.franceinfo.fr/economie/greve/direct-mobilisation-sociale-la-jeunesse-ne-lache-pas-declare-la-porte-parole-de-l-union-etudiante-au-lendemain-des-manifestations-du-31-octobre_8262449.html#xtor=RSS-3-[lestitres]"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Russian strikes cut power to thousands in Ukraine as Kherson ceasefire to end",
+      "link": "https://www.bbc.co.uk/news/articles/c64g1y90p71eo?at_medium=RSS&at_campaign=rss",
+      "description": "A rare humanitarian ceasefire has allowed civilians to evacuate the Russian-occupied city of Oleshky.",
+      "date": "2026-11-01T19:48:17+00:00",
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d8e6/live/7871d270-d627-11f1-a947-0507737f09b2.jpg",
+      "sourceName": "BBC News",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Russian strikes cut power to thousands in Ukraine as Kherson ceasefire to end",
+          "description": "A rare humanitarian ceasefire has allowed civilians to evacuate the Russian-occupied city of Oleshky.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/c64g1y90p71eo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Edouard Philippe refuse une nouvelle fois de participer à une primaire de la droite et du centre, source de \"division\" et de \"confusion\"",
+      "link": "https://www.franceinfo.fr/elections/presidentielle/edouard-philippe-refuse-une-nouvelle-fois-de-participer-a-une-primaire-de-la-droite-et-du-centre-source-de-division-et-de-confusion_8263160.html#xtor=RSS-3-[lestitres]",
+      "description": "Celle-ci rassemblerait des \"gens qui ne sont pas d'accord\", a argué le maire du Havre (Seine-Maritime) dimanche soir sur TF1.",
+      "date": "2026-11-01T20:47:51+01:00",
+      "image": "https://www.franceinfo.fr/pictures/4x3lcgugoONzNfnocnr_bsVY3Go/0x80:1024x656/432x243/filters:format(jpg)/2026/11/01/6ae7969740a6c135322728.jpg",
+      "sourceName": "franceinfo",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "France",
+      "sectionReason": "feed category fallback: France",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Edouard Philippe refuse une nouvelle fois de participer à une primaire de la droite et du centre, source de \"division\" et de \"confusion\"",
+          "description": "Celle-ci rassemblerait des \"gens qui ne sont pas d'accord\", a argué le maire du Havre (Seine-Maritime) dimanche soir sur TF1.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "franceinfo",
+          "url": "https://www.franceinfo.fr/elections/presidentielle/edouard-philippe-refuse-une-nouvelle-fois-de-participer-a-une-primaire-de-la-droite-et-du-centre-source-de-division-et-de-confusion_8263160.html#xtor=RSS-3-[lestitres]"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Route du Rhum : Violette Dorange entre en collision avec le bateau de Romain Pilliard mais continue sa route",
+      "link": "https://www.franceinfo.fr/sports/voile/route-du-rhum/route-du-rhum-violette-dorange-entre-en-collision-avec-le-bateau-de-romain-pilliard-mais-continue-sa-route_8263178.html#xtor=RSS-3-[lestitres]",
+      "description": "La navigatrice a percuté le multicoque de Romain Pilliard dans la soirée, dimanche. Les deux skippeurs sont hors de danger, mais leurs bateaux vont devoir subir des réparations.",
+      "date": "2026-11-01T20:39:40+01:00",
+      "image": "https://www.franceinfo.fr/pictures/g3edBxMk_0Js71AK9oMnwo-EtE4/0x751:7220x4813/432x243/filters:format(jpg)/2026/11/01/6ae7940802385371216650.jpg",
+      "sourceName": "franceinfo",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "France",
+      "sectionReason": "feed category fallback: France",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Route du Rhum : Violette Dorange entre en collision avec le bateau de Romain Pilliard mais continue sa route",
+          "description": "La navigatrice a percuté le multicoque de Romain Pilliard dans la soirée, dimanche. Les deux skippeurs sont hors de danger, mais leurs bateaux vont devoir subir des réparations.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "franceinfo",
+          "url": "https://www.franceinfo.fr/sports/voile/route-du-rhum/route-du-rhum-violette-dorange-entre-en-collision-avec-le-bateau-de-romain-pilliard-mais-continue-sa-route_8263178.html#xtor=RSS-3-[lestitres]"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "\"Wiem, co znaczy, gdy trzymasz broń, z której możesz zabić człowieka\". Ciężar munduru gen. Różańskiego",
+      "link": "https://wyborcza.pl/7,75398,32984228,wiem-co-to-znaczy-gdy-trzymasz-bron-z-ktorej-mozesz-zabic.html",
+      "description": "Szczerość nie była grą o wpływy. Każde słowo, które wypowiadał jako dowódca i senator, miało wagę i było przemyślane - zwłaszcza gdy mówił o etosie munduru, obronności i cenie, jaką za błędy polityków płacą żołnierze.",
+      "date": "2026-11-01T19:30:00+00:00",
+      "image": "",
+      "sourceName": "Gazeta Wyborcza",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "Poland",
+      "sectionReason": "feed category fallback: Poland",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "\"Wiem, co znaczy, gdy trzymasz broń, z której możesz zabić człowieka\". Ciężar munduru gen. Różańskiego",
+          "description": "Szczerość nie była grą o wpływy. Każde słowo, które wypowiadał jako dowódca i senator, miało wagę i było przemyślane - zwłaszcza gdy mówił o etosie munduru, obronności i cenie, jaką za błędy polityków płacą żołnierze.",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Gazeta Wyborcza",
+          "url": "https://wyborcza.pl/7,75398,32984228,wiem-co-to-znaczy-gdy-trzymasz-bron-z-ktorej-mozesz-zabic.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "En Israël, les soupçons d'irrégularités lors des législatives ne remettront pas en cause les résultats, assure le président de la commission électorale",
       "link": "https://www.franceinfo.fr/monde/israel/en-israel-les-soupcons-d-irregularites-lors-des-legislatives-ne-remettront-pas-en-cause-les-resultats-assure-le-president-de-la-commission-electorale_8263154.html#xtor=RSS-3-[lestitres]",
       "description": "Les deux listes arabes en lice ont été visées par des accusations de fraude électorale relayées par le camp de Benyamin Nétanyahou. Ces partis sont soupçonnés d'avoir reçu des fonds du Qatar pour financer l'achat de voix.",
@@ -54,8 +439,8 @@
       "language": "fr",
       "category": "France",
       "sourceCategory": "France",
-      "section": "World",
-      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -69,6 +454,70 @@
         {
           "name": "franceinfo",
           "url": "https://www.franceinfo.fr/monde/israel/en-israel-les-soupcons-d-irregularites-lors-des-legislatives-ne-remettront-pas-en-cause-les-resultats-assure-le-president-de-la-commission-electorale_8263154.html#xtor=RSS-3-[lestitres]"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Présidentielle en Bulgarie : Iliana Iotova remporte l’élection, selon plusieurs sondages à la sortie des urnes",
+      "link": "https://www.lemonde.fr/international/article/2026/11/01/presidentielle-en-bulgarie-iliana-iotova-remporte-l-election-selon-plusieurs-sondages-a-la-sortie-des-urnes_6804603_3210.html",
+      "description": "Ces estimations provisoires doivent être confirmées par les résultats officiels. Les Bulgares ont voté dimanche dans un contexte marqué par les menaces sécuritaires dans la région et les inquiétudes économiques dans le pays.",
+      "date": "2026-11-01T20:07:41+01:00",
+      "image": "https://img.lemde.fr/2026/11/01/455/0/5463/2731/644/322/60/0/a7022f0_ftp-1-kfdaqfzgxvsb-afp-d6373nq.jpg",
+      "sourceName": "Le Monde",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Présidentielle en Bulgarie : Iliana Iotova remporte l’élection, selon plusieurs sondages à la sortie des urnes",
+          "description": "Ces estimations provisoires doivent être confirmées par les résultats officiels. Les Bulgares ont voté dimanche dans un contexte marqué par les menaces sécuritaires dans la région et les inquiétudes économiques dans le pays.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "Le Monde",
+          "url": "https://www.lemonde.fr/international/article/2026/11/01/presidentielle-en-bulgarie-iliana-iotova-remporte-l-election-selon-plusieurs-sondages-a-la-sortie-des-urnes_6804603_3210.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Peaceful protests in Germany spiral into violence and looting",
+      "link": "https://www.bbc.co.uk/news/videos/cqgm0der7zkmo?at_medium=RSS&at_campaign=rss",
+      "description": "Thousands joined largely orderly demonstrations earlier in the day, before violence erupted in Frankfurt, Berlin, Cologne and Hamburg.",
+      "date": "2026-11-01T18:51:56+00:00",
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0c8f/live/e077e4c0-d61f-11f1-beec-49c9509fcdec.jpg",
+      "sourceName": "BBC News",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Peaceful protests in Germany spiral into violence and looting",
+          "description": "Thousands joined largely orderly demonstrations earlier in the day, before violence erupted in Frankfurt, Berlin, Cologne and Hamburg.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "BBC News",
+          "url": "https://www.bbc.co.uk/news/videos/cqgm0der7zkmo?at_medium=RSS&at_campaign=rss"
         }
       ],
       "sourceCount": 1,
@@ -101,6 +550,38 @@
         {
           "name": "franceinfo",
           "url": "https://www.franceinfo.fr/monde/europe/migrants/plus-de-130-migrants-en-route-vers-les-canaries-secourus-au-large-de-la-mauritanie_8263082.html#xtor=RSS-3-[lestitres]"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "En Israël, la rue divisée face à l’impasse politique",
+      "link": "https://www.lemonde.fr/international/article/2026/11/01/en-israel-la-rue-divisee-face-a-l-impasse-politique_6804570_3210.html",
+      "description": "Plusieurs milliers de personnes se sont rassemblées à travers le pays pour appeler à la formation d’un gouvernement « judéo-arabe ». A Tel-Aviv, une contre-manifestation s’est tenue pour rejeter toute participation des partis arabes à la vie politique.",
+      "date": "2026-11-01T19:50:51+01:00",
+      "image": "https://img.lemde.fr/2026/11/01/500/0/6000/3000/644/322/60/0/9114602_ftp-1-fenmxh8wkfk0-2026-11-01t050734z-891609368-rc2ieoauf1dx-rtrmadp-3-israel-election-rally.JPG",
+      "sourceName": "Le Monde",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "World",
+      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "En Israël, la rue divisée face à l’impasse politique",
+          "description": "Plusieurs milliers de personnes se sont rassemblées à travers le pays pour appeler à la formation d’un gouvernement « judéo-arabe ». A Tel-Aviv, une contre-manifestation s’est tenue pour rejeter toute participation des partis arabes à la vie politique.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "Le Monde",
+          "url": "https://www.lemonde.fr/international/article/2026/11/01/en-israel-la-rue-divisee-face-a-l-impasse-politique_6804570_3210.html"
         }
       ],
       "sourceCount": 1,
@@ -197,38 +678,6 @@
         {
           "name": "BBC News",
           "url": "https://www.bbc.co.uk/sport/football/articles/cxr5yjpnd31eo?at_medium=RSS&at_campaign=rss"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Rice rewarded, Wirtz must do more - Liverpool and Arsenal player ratings",
-      "link": "https://www.bbc.co.uk/sport/football/articles/cqj9kgyww478o?at_medium=RSS&at_campaign=rss",
-      "description": "How Liverpool and Arsenal's players rated in their Premier League match at Anfield, as the champions of the past two seasons went head to head.",
-      "date": "2026-11-01T18:38:45+00:00",
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/baf2/live/7872f5d0-d625-11f1-a701-fddedf244c16.png",
-      "sourceName": "BBC News",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Rice rewarded, Wirtz must do more - Liverpool and Arsenal player ratings",
-          "description": "How Liverpool and Arsenal's players rated in their Premier League match at Anfield, as the champions of the past two seasons went head to head.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "BBC News",
-          "url": "https://www.bbc.co.uk/sport/football/articles/cqj9kgyww478o?at_medium=RSS&at_campaign=rss"
         }
       ],
       "sourceCount": 1,
@@ -433,7 +882,7 @@
       "link": "https://www.ft.com/content/efaa2962-1acb-45cf-afb4-d0088f0a1046?syn-25a6b1a6=1",
       "description": "Diplomats warn that renewed conflict would be even more damaging than previous rounds of fighting",
       "date": "2026-11-01T18:02:52+00:00",
-      "image": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F55e99888-abdd-463a-9879-d2877e63d98d.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down",
+      "image": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F648964fb-b12d-4800-b932-228407f06320.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down",
       "sourceName": "Financial Times",
       "language": "en",
       "category": "Global news and geopolitics",
@@ -453,38 +902,6 @@
         {
           "name": "Financial Times",
           "url": "https://www.ft.com/content/efaa2962-1acb-45cf-afb4-d0088f0a1046?syn-25a6b1a6=1"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Tributes to 'inspirational' Olympian Ciara Mageean after death at 34",
-      "link": "https://www.bbc.co.uk/news/articles/cj3vqy1g3eygo?at_medium=RSS&at_campaign=rss",
-      "description": "Sporting, political and media figures pay tribute to former European champion and Olympian Ciara Mageean following her death at 34.",
-      "date": "2026-11-01T18:00:14+00:00",
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2295/live/8c37c370-d5f3-11f1-a6a8-6dc45e4fc351.jpg",
-      "sourceName": "BBC News",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Tributes to 'inspirational' Olympian Ciara Mageean after death at 34",
-          "description": "Sporting, political and media figures pay tribute to former European champion and Olympian Ciara Mageean following her death at 34.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "BBC News",
-          "url": "https://www.bbc.co.uk/news/articles/cj3vqy1g3eygo?at_medium=RSS&at_campaign=rss"
         }
       ],
       "sourceCount": 1,
@@ -534,8 +951,8 @@
       "language": "en",
       "category": "Financial markets and economics",
       "sourceCategory": "Financial markets and economics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Financial markets and economics",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -589,9 +1006,41 @@
       }
     },
     {
+      "title": "Armed police start patrols in Sydney after Bondi Beach attack",
+      "link": "https://www.bbc.co.uk/news/articles/c9kgj7k7ry0ro?at_medium=RSS&at_campaign=rss",
+      "description": "The new police unit is a security measure in response to last year's deadly shooting attack at a Hanukkah festival.",
+      "date": "2026-11-01T17:56:47+00:00",
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ce75/live/a6edaf70-d618-11f1-93e1-3b657b665bcf.jpg",
+      "sourceName": "BBC News",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "feed category fallback: Global news and geopolitics",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Armed police start patrols in Sydney after Bondi Beach attack",
+          "description": "The new police unit is a security measure in response to last year's deadly shooting attack at a Hanukkah festival.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/c9kgj7k7ry0ro?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "Mouvement lycéen : les incertitudes de la rentrée scolaire alors que la jeunesse mobilisée veut « maintenir la pression »",
       "link": "https://www.lemonde.fr/societe/article/2026/11/01/mouvement-lyceen-les-incertitudes-de-la-rentree-scolaire-alors-que-la-jeunesse-mobilisee-veut-maintenir-la-pression_6804533_3224.html",
-      "description": "Malgré les engagements pris par le le gouvernement, les organisations lycéennes et étudiantes ont appelé à bloquer les établissements à partir de lundi, ou de mardi. Mais, alors que la pression du baccalauréat et de Parcoursup grandit, une partie des élèves s’interroge.",
+      "description": "Malgré les engagements pris par le gouvernement, les organisations lycéennes et étudiantes ont appelé à bloquer les établissements à partir de lundi, ou de mardi. Mais, alors que la pression du baccalauréat et de Parcoursup grandit, une partie des élèves s’interroge.",
       "date": "2026-11-01T18:56:39+01:00",
       "image": "https://img.lemde.fr/2026/10/31/522/0/2953/1476/644/322/60/0/02f3d08_upload-1-oxiirimlh7xm-a7r7478.jpg",
       "sourceName": "Le Monde",
@@ -605,7 +1054,7 @@
         "version": 1,
         "input": {
           "title": "Mouvement lycéen : les incertitudes de la rentrée scolaire alors que la jeunesse mobilisée veut « maintenir la pression »",
-          "description": "Malgré les engagements pris par le le gouvernement, les organisations lycéennes et étudiantes ont appelé à bloquer les établissements à partir de lundi, ou de mardi. Mais, alors que la pression du baccalauréat et de Parcoursup grandit, une partie des élèves s’interroge.",
+          "description": "Malgré les engagements pris par le gouvernement, les organisations lycéennes et étudiantes ont appelé à bloquer les établissements à partir de lundi, ou de mardi. Mais, alors que la pression du baccalauréat et de Parcoursup grandit, une partie des élèves s’interroge.",
           "sourceCategory": "France"
         }
       },
@@ -662,8 +1111,8 @@
       "language": "fr",
       "category": "France",
       "sourceCategory": "France",
-      "section": "World",
-      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -717,6 +1166,38 @@
       }
     },
     {
+      "title": "Pompier blessé par balle près de Marseille : un homme interpellé, annonce le préfet",
+      "link": "https://www.lemonde.fr/societe/article/2026/11/01/pompier-blesse-par-balle-pres-de-marseille-un-homme-interpelle-annonce-le-prefet_6804532_3224.html",
+      "description": "L’homme, d’abord « retranché » sur place « est actuellement remis aux autorités de la police judiciaire », a déclaré dimanche le préfet des Bouches-du-Rhône.",
+      "date": "2026-11-01T18:37:46+01:00",
+      "image": "https://img.lemde.fr/2026/11/01/416/0/4997/2498/644/322/60/0/a387d6a_ftp-1-90ylj9ok8cey-afp-d63q4zg.jpg",
+      "sourceName": "Le Monde",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "France",
+      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Pompier blessé par balle près de Marseille : un homme interpellé, annonce le préfet",
+          "description": "L’homme, d’abord « retranché » sur place « est actuellement remis aux autorités de la police judiciaire », a déclaré dimanche le préfet des Bouches-du-Rhône.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "Le Monde",
+          "url": "https://www.lemonde.fr/societe/article/2026/11/01/pompier-blesse-par-balle-pres-de-marseille-un-homme-interpelle-annonce-le-prefet_6804532_3224.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "Are Celtic club in regression amid run of six defeats in 10?",
       "link": "https://www.bbc.co.uk/sport/football/articles/cmvg7d1xl8epo?at_medium=RSS&at_campaign=rss",
       "description": "Chris Sutton and Ian McCall weigh in on Celtic after a second league defeat of the season, but manager Martin O'Neill is defiant.",
@@ -752,7 +1233,7 @@
       "title": "Ce qu’il faut retenir de l’actualité du week-end des 31 octobre et 1er novembre",
       "link": "https://www.lemonde.fr/les-decodeurs/article/2026/11/01/ce-qu-il-faut-retenir-de-l-actualite-du-week-end-des-31-octobre-et-1er-novembre_6804531_4355770.html",
       "description": "Vous n’avez pas suivi l’actualité ces derniers jours ? Voici ce qu’il s’est passé pendant ces dernières quarante-huit heures.",
-      "date": "2026-11-01T18:30:09+01:00",
+      "date": "2026-11-01T18:30:06+01:00",
       "image": "https://img.lemde.fr/2026/10/31/310/0/3189/1594/644/322/60/0/8fe50d8_upload-1-qt0kjublvb9o-a7r7481.jpg",
       "sourceName": "Le Monde",
       "language": "fr",
@@ -918,7 +1399,7 @@
       "language": "en",
       "category": "Financial markets and economics",
       "sourceCategory": "Financial markets and economics",
-      "section": "World",
+      "section": "Financial",
       "sectionReason": "feed category fallback: Financial markets and economics",
       "classification": {
         "method": "rules",
@@ -1366,8 +1847,8 @@
       "language": "en",
       "category": "Financial markets and economics",
       "sourceCategory": "Financial markets and economics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Financial markets and economics",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -1398,7 +1879,7 @@
       "language": "en",
       "category": "Financial markets and economics",
       "sourceCategory": "Financial markets and economics",
-      "section": "World",
+      "section": "Financial",
       "sectionReason": "feed category fallback: Financial markets and economics",
       "classification": {
         "method": "rules",
@@ -1477,38 +1958,6 @@
         {
           "name": "The Verge",
           "url": "https://www.theverge.com/games/1024206/playable-portal-prequel-f-stop-leak"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Après les propos de Kylian Mbappé sur Mao, la télévision chinoise fait l’impasse sur la Liga",
-      "link": "https://www.lemonde.fr/sport/article/2026/11/01/apres-les-propos-de-kylian-mbappe-sur-mao-la-television-chinoise-fait-l-impasse-sur-la-liga_6804523_3242.html",
-      "description": "La télévision publique n’a pas retransmis en direct, dimanche, la rencontre entre le Real Madrid et Santander. Les autres affiches de la 11ᵉ journée du championnat ont connu le même sort.",
-      "date": "2026-11-01T17:15:23+01:00",
-      "image": "https://img.lemde.fr/2026/11/01/18/0/2550/1275/644/322/60/0/90cfe60_ftp-1-gxx7l4bfir1s-1c7fe385b60b4664b3b1fa5484db569e-0-e6c365fe401148c38af5a1a489f30191.jpg",
-      "sourceName": "Le Monde",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "World",
-      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Après les propos de Kylian Mbappé sur Mao, la télévision chinoise fait l’impasse sur la Liga",
-          "description": "La télévision publique n’a pas retransmis en direct, dimanche, la rencontre entre le Real Madrid et Santander. Les autres affiches de la 11ᵉ journée du championnat ont connu le même sort.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "Le Monde",
-          "url": "https://www.lemonde.fr/sport/article/2026/11/01/apres-les-propos-de-kylian-mbappe-sur-mao-la-television-chinoise-fait-l-impasse-sur-la-liga_6804523_3242.html"
         }
       ],
       "sourceCount": 1,
@@ -1910,8 +2359,8 @@
       "language": "en",
       "category": "Financial markets and economics",
       "sourceCategory": "Financial markets and economics",
-      "section": "World",
-      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -2061,38 +2510,6 @@
       }
     },
     {
-      "title": "Referee accidentally fractures college football player's leg",
-      "link": "https://www.bbc.co.uk/sport/american-football/articles/ck30ey1ezmyqo?at_medium=RSS&at_campaign=rss",
-      "description": "A referee accidentally fractures a college football player's leg during a bizarre incident in the first half of East Carolina Pirates' win against Temple Owls.",
-      "date": "2026-11-01T15:17:04+00:00",
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1882/live/eccbb630-d605-11f1-a790-6f04ef4f8c74.jpg",
-      "sourceName": "BBC News",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Referee accidentally fractures college football player's leg",
-          "description": "A referee accidentally fractures a college football player's leg during a bizarre incident in the first half of East Carolina Pirates' win against Temple Owls.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "BBC News",
-          "url": "https://www.bbc.co.uk/sport/american-football/articles/ck30ey1ezmyqo?at_medium=RSS&at_campaign=rss"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "\"On peut faire ça en 10 minutes\" : Donald Trump menace de reprendre les bombardements en Iran",
       "link": "https://www.franceinfo.fr/monde/iran/frappes-americaines-en-iran/on-peut-faire-ca-en-10-minutes-donald-trump-menace-de-reprendre-les-bombardements-en-iran-avant-les-elections-de-mi-mandat_8262815.html#xtor=RSS-3-[lestitres]",
       "description": "Lors de la soirée d'Halloween, Donald Trump a ouvertement évoqué la possibilité de nouvelles frappes américaines contre l'Iran. Le président américain ciblerait notamment un site souterrain susceptible d'abriter une partie des stocks d'uranium iraniens. En parallèle, Benjamin Netanyahou fait pression pour une reprise des opérations militaires dans la région.",
@@ -2102,8 +2519,8 @@
       "language": "fr",
       "category": "France",
       "sourceCategory": "France",
-      "section": "World",
-      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -2445,7 +2862,7 @@
       }
     },
     {
-      "title": "Wall Street Braces for More Wild Days in Stocks After Tech Rout",
+      "title": "After Tech Rout, Investors Gird for More Wild Days for Stocks",
       "link": "https://www.bloomberg.com/news/articles/2026-11-01/wall-street-braces-for-more-wild-days-in-stocks-after-tech-rout",
       "description": "The stock market got a long-awaited jolt of volatility late last week after disappointing earnings from technology giants added to angst around the AI-driven rally.",
       "date": "2026-11-01T15:00:00+00:00",
@@ -2460,7 +2877,7 @@
         "method": "rules",
         "version": 1,
         "input": {
-          "title": "Wall Street Braces for More Wild Days in Stocks After Tech Rout",
+          "title": "After Tech Rout, Investors Gird for More Wild Days for Stocks",
           "description": "The stock market got a long-awaited jolt of volatility late last week after disappointing earnings from technology giants added to angst around the AI-driven rally.",
           "sourceCategory": "Financial markets and economics"
         }
@@ -2733,38 +3150,6 @@
       }
     },
     {
-      "title": "Manifestations en Allemagne : la gauche condamne les violences et appelle à ne pas occulter les revendications",
-      "link": "https://www.lemonde.fr/international/article/2026/11/01/manifestations-en-allemagne-la-gauche-condamne-les-violences-et-appelle-a-ne-pas-occulter-les-revendications_6804443_3210.html",
-      "description": "Samedi, les manifestations organisées dans des dizaines de villes se sont dans l’ensemble déroulées dans le calme avant que des tensions éclatent en soirée. Le ministre de l’intérieur allemand, Alexander Dobrindt, a accusé « des groupes de gauche enclins à la violence et des fauteurs de troubles issus du milieu des migrants ».",
-      "date": "2026-11-01T15:39:45+01:00",
-      "image": "https://img.lemde.fr/2026/10/31/768/0/4603/2301/644/322/60/0/9c6c54e_ftp-1-tmznigvaqztu-2026-10-31t174218z-6070573-rc2feoal1zuu-rtrmadp-3-germany-protest.JPG",
-      "sourceName": "Le Monde",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "World",
-      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Manifestations en Allemagne : la gauche condamne les violences et appelle à ne pas occulter les revendications",
-          "description": "Samedi, les manifestations organisées dans des dizaines de villes se sont dans l’ensemble déroulées dans le calme avant que des tensions éclatent en soirée. Le ministre de l’intérieur allemand, Alexander Dobrindt, a accusé « des groupes de gauche enclins à la violence et des fauteurs de troubles issus du milieu des migrants ».",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "Le Monde",
-          "url": "https://www.lemonde.fr/international/article/2026/11/01/manifestations-en-allemagne-la-gauche-condamne-les-violences-et-appelle-a-ne-pas-occulter-les-revendications_6804443_3210.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Empathetic prompts can turn AI chatbots into seemingly traumatized conversational partners",
       "link": "https://the-decoder.com/empathetic-prompts-can-turn-ai-chatbots-into-seemingly-traumatized-conversational-partners/",
       "description": "Researchers in Luxembourg put ChatGPT, Grok, and Gemini on the therapist's couch and found a safety problem: a warm, empathetic conversational style is enough to make the models tell coherent stories of suffering about their own training, with scores in the moderate-to-severe range on clinical anxiety scales. This could put mentally vulnerable users at risk. Anthropic's Claude, the model its makers anthropomorphize the most, was the only one that consistently refused to play along. The article Empathetic prompts can turn AI chatbots into seemingly traumatized conversational partners appeared first on The Decoder.",
@@ -2957,38 +3342,6 @@
       }
     },
     {
-      "title": "Manifestations du 31 octobre : 779 personnes ont été interpellées dans toute la France selon un bilan définitif du ministère de l'Intérieur",
-      "link": "https://www.franceinfo.fr/economie/greve/direct-mobilisation-sociale-la-jeunesse-ne-lache-pas-declare-la-porte-parole-de-l-union-etudiante-au-lendemain-des-manifestations-du-31-octobre_8262449.html#xtor=RSS-3-[lestitres]",
-      "description": "Après un nouveau samedi de mobilisation avec une participation en légère baisse, de nouveaux rendez-vous sont prévus la semaine prochaine avec en point culminant la grève nationale annoncée le 5 novembre.",
-      "date": "2026-11-01T15:15:25+01:00",
-      "image": "https://www.franceinfo.fr/pictures/-jO69erZ201OiOnpDGOElgaab8M/0x315:6048x3717/432x243/filters:format(jpg)/2026/11/01/6ae72ff15d4c8545416047.jpg",
-      "sourceName": "franceinfo",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Manifestations du 31 octobre : 779 personnes ont été interpellées dans toute la France selon un bilan définitif du ministère de l'Intérieur",
-          "description": "Après un nouveau samedi de mobilisation avec une participation en légère baisse, de nouveaux rendez-vous sont prévus la semaine prochaine avec en point culminant la grève nationale annoncée le 5 novembre.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "franceinfo",
-          "url": "https://www.franceinfo.fr/economie/greve/direct-mobilisation-sociale-la-jeunesse-ne-lache-pas-declare-la-porte-parole-de-l-union-etudiante-au-lendemain-des-manifestations-du-31-octobre_8262449.html#xtor=RSS-3-[lestitres]"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Napięcie sięga zenitu. Teheran bierze na celownik brytyjski wywiad MI6 i wojsko",
       "link": "https://www.bankier.pl/wiadomosc/Napiecie-siega-zenitu-Teheran-bierze-na-celownik-brytyjski-wywiad-MI6-i-wojsko-9221854.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
       "description": "Iran uznał brytyjską marynarkę wojenną i siły powietrzne za organizacje terrorystyczne, a wywiad zagraniczny MI6 za „wrogą grupę” – poinformowało w niedzielę irańskie MSZ. Decyzja jest odpowiedzią na działania Londynu, w tym objęcie restrykcjami Korpusu Strażników Rewolucji Islamskiej (IRGC).",
@@ -3013,38 +3366,6 @@
         {
           "name": "Bankier.pl",
           "url": "https://www.bankier.pl/wiadomosc/Napiecie-siega-zenitu-Teheran-bierze-na-celownik-brytyjski-wywiad-MI6-i-wojsko-9221854.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "King to address slavery in Antigua as PM says he is open to possible UK apology",
-      "link": "https://www.bbc.co.uk/news/articles/cq398y0zj9rpo?at_medium=RSS&at_campaign=rss",
-      "description": "King Charles III will deliver a speech to the Commonwealth Heads of Government Meeting on Tuesday as he concludes his nine-day Caribbean tour.",
-      "date": "2026-11-01T14:11:35+00:00",
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/98d2/live/7c6766b0-d613-11f1-90fb-b3468681b3ba.jpg",
-      "sourceName": "BBC News",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "King to address slavery in Antigua as PM says he is open to possible UK apology",
-          "description": "King Charles III will deliver a speech to the Commonwealth Heads of Government Meeting on Tuesday as he concludes his nine-day Caribbean tour.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "BBC News",
-          "url": "https://www.bbc.co.uk/news/articles/cq398y0zj9rpo?at_medium=RSS&at_campaign=rss"
         }
       ],
       "sourceCount": 1,
@@ -3149,6 +3470,40 @@
       }
     },
     {
+      "title": "Stc Bahrain partners with BNP Paribas on $140mln strategic financing deal to drive next-phase digital expansion - Zawya",
+      "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNTmtRbUZFZV9yYU0xdVVFb05zNmRObkJuTFNvcnVvY1NmRXRreWdJNi1ocXBhSnBubWYxVThGUHBxb01HR3pOcVBBNW9vaDVnaXBEejAwTm5rT2c0OGczMzZsaXVlbzlGUnh1MDZ3akNZRDNwYlVMQlhlY1VBeTV3VERHZ05mb20yOUpuQm9uOGQzX2ZDUWpvdFk5SWJ3V3diWGJBWERGbmcxUzgtczlhSGMyTWtlQUxnbllhWE9nZDRPMGZnNXlMbndxRkVXMzRhZEJ5S2FqSm9tVjFWMkxybnRwUUgxREg2aVR2SHpjcHBwTGlDWkdEVm8yQjlXaVlyNGc?oc=5",
+      "description": "Stc Bahrain partners with BNP Paribas on $140mln strategic financing deal to drive next-phase digital expansion Zawya",
+      "date": "2026-11-01T14:00:00+00:00",
+      "image": "",
+      "sourceName": "Zawya",
+      "language": "en",
+      "category": "Financial markets and economics",
+      "aggregator": true,
+      "subgroup": "BNP Paribas",
+      "sourceCategory": "Financial markets and economics",
+      "section": "Financial",
+      "sectionReason": "content: BNP Paribas bank evidence",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Stc Bahrain partners with BNP Paribas on $140mln strategic financing deal to drive next-phase digital expansion - Zawya",
+          "description": "Stc Bahrain partners with BNP Paribas on $140mln strategic financing deal to drive next-phase digital expansion Zawya",
+          "sourceCategory": "Financial markets and economics"
+        }
+      },
+      "sources": [
+        {
+          "name": "Zawya",
+          "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNTmtRbUZFZV9yYU0xdVVFb05zNmRObkJuTFNvcnVvY1NmRXRreWdJNi1ocXBhSnBubWYxVThGUHBxb01HR3pOcVBBNW9vaDVnaXBEejAwTm5rT2c0OGczMzZsaXVlbzlGUnh1MDZ3akNZRDNwYlVMQlhlY1VBeTV3VERHZ05mb20yOUpuQm9uOGQzX2ZDUWpvdFk5SWJ3V3diWGJBWERGbmcxUzgtczlhSGMyTWtlQUxnbllhWE9nZDRPMGZnNXlMbndxRkVXMzRhZEJ5S2FqSm9tVjFWMkxybnRwUUgxREg2aVR2SHpjcHBwTGlDWkdEVm8yQjlXaVlyNGc?oc=5"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "Here’s what ‘renoa’ — the first new fiber in 25 years — feels like",
       "link": "https://techcrunch.com/2026/11/01/heres-what-renoa-the-first-new-fiber-in-25-years-feels-like/",
       "description": "Startup Everbloom's new material, renoa, is the first new fiber in 25 years, and it feels very familiar.",
@@ -3190,8 +3545,8 @@
       "language": "en",
       "category": "Financial markets and economics",
       "sourceCategory": "Financial markets and economics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Financial markets and economics",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -3350,7 +3705,7 @@
       "language": "en",
       "category": "Financial markets and economics",
       "sourceCategory": "Financial markets and economics",
-      "section": "World",
+      "section": "Financial",
       "sectionReason": "feed category fallback: Financial markets and economics",
       "classification": {
         "method": "rules",
@@ -3414,7 +3769,7 @@
       "language": "en",
       "category": "Financial markets and economics",
       "sourceCategory": "Financial markets and economics",
-      "section": "World",
+      "section": "Financial",
       "sectionReason": "feed category fallback: Financial markets and economics",
       "classification": {
         "method": "rules",
@@ -3446,8 +3801,8 @@
       "language": "en",
       "category": "Financial markets and economics",
       "sourceCategory": "Financial markets and economics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Financial markets and economics",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -3478,7 +3833,7 @@
       "language": "en",
       "category": "Financial markets and economics",
       "sourceCategory": "Financial markets and economics",
-      "section": "World",
+      "section": "Financial",
       "sectionReason": "feed category fallback: Financial markets and economics",
       "classification": {
         "method": "rules",
@@ -3510,8 +3865,8 @@
       "language": "en",
       "category": "Financial markets and economics",
       "sourceCategory": "Financial markets and economics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Financial markets and economics",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -3565,38 +3920,6 @@
       }
     },
     {
-      "title": "François Guillemot, ex-chanteur de Bérurier noir et historien au CNRS : « La jeunesse fait toujours peur quand elle se met en mouvement »",
-      "link": "https://www.lemonde.fr/campus/article/2026/11/01/francois-guillemot-ex-chanteur-de-berurier-noir-et-historien-au-cnrs-la-jeunesse-fait-toujours-peur-quand-elle-se-met-en-mouvement_6804307_4401467.html",
-      "description": "« J’avais 20 ans ». « Le Monde » interroge une personnalité sur ses années d’études et son passage à l’âge adulte. Ce mois-ci, François Guillemot, alias Fanxoa, leader du groupe Bérurier noir, raconte une jeunesse sans avenir, puis un chemin de rédemption à seulement 20 ans.",
-      "date": "2026-11-01T14:00:15+01:00",
-      "image": "https://img.lemde.fr/2026/10/28/380/0/1333/666/644/322/60/0/4867dd2_upload-1-c7ezl7s37pkr-archivelemonde-francoisguillemot-fanxoa-berruriernoir-07.jpg",
-      "sourceName": "Le Monde",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "feed category fallback: France",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "François Guillemot, ex-chanteur de Bérurier noir et historien au CNRS : « La jeunesse fait toujours peur quand elle se met en mouvement »",
-          "description": "« J’avais 20 ans ». « Le Monde » interroge une personnalité sur ses années d’études et son passage à l’âge adulte. Ce mois-ci, François Guillemot, alias Fanxoa, leader du groupe Bérurier noir, raconte une jeunesse sans avenir, puis un chemin de rédemption à seulement 20 ans.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "Le Monde",
-          "url": "https://www.lemonde.fr/campus/article/2026/11/01/francois-guillemot-ex-chanteur-de-berurier-noir-et-historien-au-cnrs-la-jeunesse-fait-toujours-peur-quand-elle-se-met-en-mouvement_6804307_4401467.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Le mensonge en politique: dernière conversation avec Gaël Perdriau avant la prison",
       "link": "https://www.mediapart.fr/journal/france/011126/le-mensonge-en-politique-derniere-conversation-avec-gael-perdriau-avant-la-prison",
       "description": "«Mediapart» a longuement rencontré Gaël Perdriau avant son incarcération début septembre. Comme Jérôme Cahuzac hier ou Jordan Bardella aujourd’hui, l’ancien maire de Saint-Étienne a choisi de nier jusqu’à l’évidence pour essayer de se sortir de l’affaire du «chantage à la sextape» qui le vise.",
@@ -3629,38 +3952,6 @@
       }
     },
     {
-      "title": "Au Japon, les chaussettes Uniqlo, symboles des inquiétudes face à l’augmentation des prix",
-      "link": "https://www.lemonde.fr/economie/article/2026/11/01/au-japon-les-chaussettes-uniqlo-symboles-des-inquietudes-face-a-l-augmentation-des-prix_6804306_3234.html",
-      "description": "L’enseigne d’habillement bon marché a renoncé à augmenter ses tarifs dans ses magasins de l’Archipel. Une décision emblématique du débat créé dans le pays par le retour de l’inflation depuis le début des années 2020.",
-      "date": "2026-11-01T14:00:09+01:00",
-      "image": "https://img.lemde.fr/2016/04/08/392/0/3499/1747/644/322/60/0/3de5913_RPA306_JAPAN-ECONOMY-FASTRETAILING_0408_11.JPG",
-      "sourceName": "Le Monde",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "feed category fallback: France",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Au Japon, les chaussettes Uniqlo, symboles des inquiétudes face à l’augmentation des prix",
-          "description": "L’enseigne d’habillement bon marché a renoncé à augmenter ses tarifs dans ses magasins de l’Archipel. Une décision emblématique du débat créé dans le pays par le retour de l’inflation depuis le début des années 2020.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "Le Monde",
-          "url": "https://www.lemonde.fr/economie/article/2026/11/01/au-japon-les-chaussettes-uniqlo-symboles-des-inquietudes-face-a-l-augmentation-des-prix_6804306_3234.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Kiedy spadną stopy procentowe i raty kredytów? Eksperci wskazują konkretny termin",
       "link": "https://www.bankier.pl/wiadomosc/Kiedy-spadna-stopy-procentowe-i-raty-kredytow-Eksperci-wskazuja-konkretny-termin-9220354.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
       "description": "Szczyt cyklu gospodarczego w Polsce już minął i dynamika PKB będzie stopniowo hamować – prognozuje kierowniczka zespołu analiz makroekonomicznych PKO BP, Marta Petka-Zagajewska. Jej zdaniem, w połowie przyszłego roku inflacja CPI powinna powrócić w zakres odchyleń od celu NBP, a pierwszym ruchem Rady Polityki Pieniężnej będzie obniżka stóp.",
@@ -3670,8 +3961,8 @@
       "language": "pl",
       "category": "Poland",
       "sourceCategory": "Poland",
-      "section": "Poland",
-      "sectionReason": "feed category fallback: Poland",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -4077,38 +4368,6 @@
       }
     },
     {
-      "title": "Shops looted as German cost-of-living protests turn violent",
-      "link": "https://www.bbc.co.uk/news/articles/cqj34gnd3n30o?at_medium=RSS&at_campaign=rss",
-      "description": "The protests in cities across Germany - including Berlin, Hamburg and Frankfurt - came on the same day hundreds of thousands also protested in France.",
-      "date": "2026-11-01T11:57:48+00:00",
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/11b7/live/aefac8c0-d5f9-11f1-b441-2b33b063138f.jpg",
-      "sourceName": "BBC News",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "France",
-      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Shops looted as German cost-of-living protests turn violent",
-          "description": "The protests in cities across Germany - including Berlin, Hamburg and Frankfurt - came on the same day hundreds of thousands also protested in France.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "BBC News",
-          "url": "https://www.bbc.co.uk/news/articles/cqj34gnd3n30o?at_medium=RSS&at_campaign=rss"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Les petites stations-services \"n'ont pas reçu les stocks stratégiques de carburants et ne peuvent pas baisser les prix\", alerte Francis Pousse, du réseau Mobilians",
       "link": "https://www.franceinfo.fr/economie/automobile/essence/les-petites-stations-services-n-ont-pas-recu-les-stocks-strategiques-de-carburants-et-ne-peuvent-pas-baisser-les-prix-alerte-francis-pousse-du-reseau-mobilians_8262764.html#xtor=RSS-3-[lestitres]",
       "description": "Francis Pousse, président national des distributeurs de carburants et d'énergies nouvelles chez Mobilians, dénonce un choix gouvernemental de privilégier les \"gros\" distributeurs, et alerte sur des risques de fermeture de petites stations.",
@@ -4118,8 +4377,8 @@
       "language": "fr",
       "category": "France",
       "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "feed category fallback: France",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -4758,7 +5017,7 @@
       "language": "en",
       "category": "Financial markets and economics",
       "sourceCategory": "Financial markets and economics",
-      "section": "World",
+      "section": "Financial",
       "sectionReason": "feed category fallback: Financial markets and economics",
       "classification": {
         "method": "rules",
@@ -4845,38 +5104,6 @@
       }
     },
     {
-      "title": "Northern Lights dance across UK sky on Halloween night",
-      "link": "https://www.bbc.co.uk/weather/articles/c3pwge119lnvo?at_medium=RSS&at_campaign=rss",
-      "description": "Stargazers across the UK were treated to the vivid colours of the aurora borealis on Saturday night.",
-      "date": "2026-11-01T10:16:27+00:00",
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/69f4/live/7886c200-d5cf-11f1-82ae-81055b9ae1cd.jpg",
-      "sourceName": "BBC News",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Northern Lights dance across UK sky on Halloween night",
-          "description": "Stargazers across the UK were treated to the vivid colours of the aurora borealis on Saturday night.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "BBC News",
-          "url": "https://www.bbc.co.uk/weather/articles/c3pwge119lnvo?at_medium=RSS&at_campaign=rss"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Prof. Włodzimierz Wróbel analizuje prawne podstawy decyzji o odsunięciu od obowiązków Bogdana Święczkowskiego",
       "link": "https://wyborcza.pl/7,75968,33110253,prof-wlodzimierz-wrobel-analizuje-prawne-podstawy-decyzji-o.html",
       "description": "Ustawa regulująca funkcjonowanie Trybunału Konstytucyjnego przewiduje, kiedy uprawnienia prezesa TK mogą przejść na innego sędziego.",
@@ -4901,6 +5128,40 @@
         {
           "name": "Gazeta Wyborcza",
           "url": "https://wyborcza.pl/7,75968,33110253,prof-wlodzimierz-wrobel-analizuje-prawne-podstawy-decyzji-o.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Société Générale – BNP Paribas : deux publications trimestrielles en une semaine, l’une des banques est à acheter en Bourse, l’autre est à vendre - Les Echos",
+      "link": "https://news.google.com/rss/articles/CBMitAJBVV95cUxObVcwM1A1Yk1HS1JtU2tIS2pJT1ZVZjNIUVE5N0JNdkxtdGFWQ2dUd2IyY1U1c1k3LV9EOWtpZm9PSlFSNW1DVmZ2bEpFdVNNYktMSWNiVXNqanV3R3pfY0dDZ3FYSk5SVGg1WVFXYVlCWDIwWVJoUkFOTHlueG9FOElOakItR3JVbjVBbTFSV012OU5LSEtXaVdnZGwydUpENWpLbExiN2J5bDhOOUg4MUlNcXBoWnMyOXgxdUMzMlVKZ2tRbUJ2ejZfbWpCd3dFVnI3X2F1NjNfRENBcFBERzVMSXloMF9JbXZLTmwyNFdGTHp2bk9zeEVBV2pGOWx4cE5RaTlUaVJqRVh3WWoxcS0zdnZwZzFsLU1LeHpCR1BFdEVlbldsb3BQMnBZckE3UTBrTA?oc=5",
+      "description": "Société Générale – BNP Paribas : deux publications trimestrielles en une semaine, l’une des banques est à acheter en Bourse, l’autre est à vendre Les Echos",
+      "date": "2026-11-01T10:01:02+00:00",
+      "image": "",
+      "sourceName": "Les Echos",
+      "language": "fr",
+      "category": "Financial markets and economics",
+      "aggregator": true,
+      "subgroup": "BNP Paribas",
+      "sourceCategory": "Financial markets and economics",
+      "section": "Financial",
+      "sectionReason": "content: BNP Paribas bank evidence",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Société Générale – BNP Paribas : deux publications trimestrielles en une semaine, l’une des banques est à acheter en Bourse, l’autre est à vendre - Les Echos",
+          "description": "Société Générale – BNP Paribas : deux publications trimestrielles en une semaine, l’une des banques est à acheter en Bourse, l’autre est à vendre Les Echos",
+          "sourceCategory": "Financial markets and economics"
+        }
+      },
+      "sources": [
+        {
+          "name": "Les Echos",
+          "url": "https://news.google.com/rss/articles/CBMitAJBVV95cUxObVcwM1A1Yk1HS1JtU2tIS2pJT1ZVZjNIUVE5N0JNdkxtdGFWQ2dUd2IyY1U1c1k3LV9EOWtpZm9PSlFSNW1DVmZ2bEpFdVNNYktMSWNiVXNqanV3R3pfY0dDZ3FYSk5SVGg1WVFXYVlCWDIwWVJoUkFOTHlueG9FOElOakItR3JVbjVBbTFSV012OU5LSEtXaVdnZGwydUpENWpLbExiN2J5bDhOOUg4MUlNcXBoWnMyOXgxdUMzMlVKZ2tRbUJ2ejZfbWpCd3dFVnI3X2F1NjNfRENBcFBERzVMSXloMF9JbXZLTmwyNFdGTHp2bk9zeEVBV2pGOWx4cE5RaTlUaVJqRVh3WWoxcS0zdnZwZzFsLU1LeHpCR1BFdEVlbldsb3BQMnBZckE3UTBrTA?oc=5"
         }
       ],
       "sourceCount": 1,
@@ -4950,8 +5211,8 @@
       "language": "fr",
       "category": "France",
       "sourceCategory": "France",
-      "section": "World",
-      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -5037,38 +5298,6 @@
       }
     },
     {
-      "title": "Germany Misses Gas Storage Target as Cold Snap Sets In",
-      "link": "https://www.bloomberg.com/news/articles/2026-11-01/germany-misses-gas-storage-target-as-cold-snap-sets-in",
-      "description": "Germany is set to miss its official target for filling natural gas storage sites, leaving it with a reduced buffer against surging winter demand.",
-      "date": "2026-11-01T09:29:41+00:00",
-      "image": "",
-      "sourceName": "Bloomberg",
-      "language": "en",
-      "category": "Financial markets and economics",
-      "sourceCategory": "Financial markets and economics",
-      "section": "World",
-      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Germany Misses Gas Storage Target as Cold Snap Sets In",
-          "description": "Germany is set to miss its official target for filling natural gas storage sites, leaving it with a reduced buffer against surging winter demand.",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "Bloomberg",
-          "url": "https://www.bloomberg.com/news/articles/2026-11-01/germany-misses-gas-storage-target-as-cold-snap-sets-in"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Pakistan LNG Cargo Attacked Near Hormuz Had Iranian Approval",
       "link": "https://www.bloomberg.com/news/articles/2026-11-01/pakistan-lng-cargo-attacked-near-hormuz-had-iranian-approval",
       "description": "Pakistan negotiated with Iran to secure safe passage for liquefied natural gas carrier Al Mayeda before the ship was attacked near the Strait of Hormuz on Friday, according to people with direct knowledge of the matter.",
@@ -5110,7 +5339,7 @@
       "language": "en",
       "category": "Financial markets and economics",
       "sourceCategory": "Financial markets and economics",
-      "section": "World",
+      "section": "Financial",
       "sectionReason": "feed category fallback: Financial markets and economics",
       "classification": {
         "method": "rules",
@@ -5462,8 +5691,8 @@
       "language": "pl",
       "category": "Poland",
       "sourceCategory": "Poland",
-      "section": "Poland",
-      "sectionReason": "content: Poland subject evidence (technology first; Poland wins geographic ties)",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -5526,8 +5755,8 @@
       "language": "fr",
       "category": "France",
       "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "feed category fallback: France",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -5654,8 +5883,8 @@
       "language": "fr",
       "category": "France",
       "sourceCategory": "France",
-      "section": "World",
-      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -5686,8 +5915,8 @@
       "language": "fr",
       "category": "France",
       "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "feed category fallback: France",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -5846,8 +6075,8 @@
       "language": "en",
       "category": "Global news and geopolitics",
       "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -5942,8 +6171,8 @@
       "language": "pl",
       "category": "Poland",
       "sourceCategory": "Poland",
-      "section": "Poland",
-      "sectionReason": "feed category fallback: Poland",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -6093,6 +6322,38 @@
       }
     },
     {
+      "title": "GTA, un studio en Ecosse, un bug et beaucoup d’irrévérence : il y a trente ans, naissait un jeu vidéo mythique",
+      "link": "https://www.lemonde.fr/m-le-mag/article/2026/11/01/gta-un-studio-en-ecosse-un-bug-et-beaucoup-d-irreverence-il-y-a-quarante-ans-naissait-un-jeu-video-mythique_6804021_4500055.html",
+      "description": "Le sixième volet de « Grand Theft Auto », qui sortira le 19 novembre, a démarré sur les chapeaux de roue, avec 600 millions de dollars de précommandes. Saga au succès planétaire, ce jeu de vol de voitures où tous les coups sont permis a été imaginé au milieu des années 1990 par une bande de jeunes passionnés à Dundee, au nord d’Edimbourg.",
+      "date": "2026-11-01T05:50:03+01:00",
+      "image": "https://img.lemde.fr/2026/10/27/46/0/1500/750/644/322/60/0/71b886b_ftp-1-yvagyra1aaaa-449677-3495478.jpg",
+      "sourceName": "Le Monde",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "Technology",
+      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "GTA, un studio en Ecosse, un bug et beaucoup d’irrévérence : il y a trente ans, naissait un jeu vidéo mythique",
+          "description": "Le sixième volet de « Grand Theft Auto », qui sortira le 19 novembre, a démarré sur les chapeaux de roue, avec 600 millions de dollars de précommandes. Saga au succès planétaire, ce jeu de vol de voitures où tous les coups sont permis a été imaginé au milieu des années 1990 par une bande de jeunes passionnés à Dundee, au nord d’Edimbourg.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "Le Monde",
+          "url": "https://www.lemonde.fr/m-le-mag/article/2026/11/01/gta-un-studio-en-ecosse-un-bug-et-beaucoup-d-irreverence-il-y-a-quarante-ans-naissait-un-jeu-video-mythique_6804021_4500055.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "Lio, chanteuse : « J’ai été soumise aux hommes, ce qui ne m’a pas empêchée de tourner les talons »",
       "link": "https://www.lemonde.fr/culture/article/2026/11/01/lio-chanteuse-j-ai-ete-soumise-aux-hommes-ce-qui-ne-m-a-pas-empechee-de-tourner-les-talons_6804019_3246.html",
       "description": "« Je ne serais pas arrivée là si… » Chaque semaine, « Le Monde » interroge une personnalité sur un moment décisif de son existence. La chanteuse pop rend hommage au courage de sa mère.",
@@ -6189,6 +6450,40 @@
       }
     },
     {
+      "title": "BNP Paribas Stock: The Market Leader That Keeps On Performing (OTCMKTS:BNPQY) - Seeking Alpha",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQelNhOWdzQXZFcFlTd1h5a3pUYkRGWE1fUS1aWk03b2NCRXlCY25DZnlTMFdGbDBmc21QOHVYdElGaDNIU0lKaV90NVd0ZENPc2dfYUY5cjBpcVFJTVRYc0J0Mm9kdU5ZUkdzSmUzNFRROHFSckJQdmdMbHBPOUhUR3RLQURNRGRISHdVWDNycDVkN3VqeTY4UF85UQ?oc=5",
+      "description": "BNP Paribas Stock: The Market Leader That Keeps On Performing (OTCMKTS:BNPQY) Seeking Alpha",
+      "date": "2026-11-01T03:35:57+00:00",
+      "image": "",
+      "sourceName": "Seeking Alpha",
+      "language": "en",
+      "category": "Financial markets and economics",
+      "aggregator": true,
+      "subgroup": "BNP Paribas",
+      "sourceCategory": "Financial markets and economics",
+      "section": "Financial",
+      "sectionReason": "content: BNP Paribas bank evidence",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "BNP Paribas Stock: The Market Leader That Keeps On Performing (OTCMKTS:BNPQY) - Seeking Alpha",
+          "description": "BNP Paribas Stock: The Market Leader That Keeps On Performing (OTCMKTS:BNPQY) Seeking Alpha",
+          "sourceCategory": "Financial markets and economics"
+        }
+      },
+      "sources": [
+        {
+          "name": "Seeking Alpha",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQelNhOWdzQXZFcFlTd1h5a3pUYkRGWE1fUS1aWk03b2NCRXlCY25DZnlTMFdGbDBmc21QOHVYdElGaDNIU0lKaV90NVd0ZENPc2dfYUY5cjBpcVFJTVRYc0J0Mm9kdU5ZUkdzSmUzNFRROHFSckJQdmdMbHBPOUhUR3RLQURNRGRISHdVWDNycDVkN3VqeTY4UF85UQ?oc=5"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "Data centers are now a midterm issue, even in Brooklyn",
       "link": "https://techcrunch.com/2026/10/31/data-centers-are-now-a-midterm-issue-even-in-brooklyn/",
       "description": "At a Brooklyn midterm party five days before Election Day, every conversation, from a council member’s fireside chat to a debate about the Democratic Party, kept circling back to AI and data centers.",
@@ -6213,38 +6508,6 @@
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/10/31/data-centers-are-now-a-midterm-issue-even-in-brooklyn/"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "How the downfall of Serbia's Vučiċ mirrored that of Hungary's Orbán",
-      "link": "https://www.bbc.co.uk/news/articles/c893z699q401o?at_medium=RSS&at_campaign=rss",
-      "description": "Defeat for Serbia's Aleksandar Vučiċ in last weekend's vote was a carbon copy of Viktor Orbán's fall in Hungary.",
-      "date": "2026-11-01T00:55:06+00:00",
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b724/live/db1d9120-d456-11f1-906a-add2117fe3e6.jpg",
-      "sourceName": "BBC News",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "How the downfall of Serbia's Vučiċ mirrored that of Hungary's Orbán",
-          "description": "Defeat for Serbia's Aleksandar Vučiċ in last weekend's vote was a carbon copy of Viktor Orbán's fall in Hungary.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "BBC News",
-          "url": "https://www.bbc.co.uk/news/articles/c893z699q401o?at_medium=RSS&at_campaign=rss"
         }
       ],
       "sourceCount": 1,
@@ -6614,8 +6877,8 @@
       "language": "pl",
       "category": "Poland",
       "sourceCategory": "Poland",
-      "section": "Poland",
-      "sectionReason": "feed category fallback: Poland",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -6629,134 +6892,6 @@
         {
           "name": "Bankier.pl",
           "url": "https://www.bankier.pl/wiadomosc/Kanada-szykuje-sie-na-najgorsze-Buduje-tarcze-przed-zagranicznymi-ingerencjami-9220684.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Protesty młodych w Niemczech. Chcą inwestycji w edukację i ochronę zdrowia",
-      "link": "https://wyborcza.pl/7,75399,33110054,protesty-mlodych-w-niemczech-chca-inwestycji-w-edukacje-i-ochrone.html",
-      "description": "Protesty organizowane przez inicjatywę Gen Z regelt odbyły się w ponad 30 miastach w Niemczech. W niektórych, m.in. w Kolonii i Hamburgu, doszło do starć z policją.",
-      "date": "2026-10-31T20:03:00+00:00",
-      "image": "",
-      "sourceName": "Gazeta Wyborcza",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "World",
-      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Protesty młodych w Niemczech. Chcą inwestycji w edukację i ochronę zdrowia",
-          "description": "Protesty organizowane przez inicjatywę Gen Z regelt odbyły się w ponad 30 miastach w Niemczech. W niektórych, m.in. w Kolonii i Hamburgu, doszło do starć z policją.",
-          "sourceCategory": "Poland"
-        }
-      },
-      "sources": [
-        {
-          "name": "Gazeta Wyborcza",
-          "url": "https://wyborcza.pl/7,75399,33110054,protesty-mlodych-w-niemczech-chca-inwestycji-w-edukacje-i-ochrone.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Orędzie Tuska. Było o sile demokracji i sile \"agresywnego osiłka\". Ta pierwsza nie ulegnie drugiej",
-      "link": "https://wyborcza.pl/7,75968,33110050,oredzie-tuska-bylo-o-sile-demokracji-i-sile-agresywnego-osilka.html",
-      "description": "Premier do narodu: kompromisu z Nawrockim w sprawie Trybunału Konstytucyjnego nie będzie.",
-      "date": "2026-10-31T19:46:00+00:00",
-      "image": "",
-      "sourceName": "Gazeta Wyborcza",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "Poland",
-      "sectionReason": "feed category fallback: Poland",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Orędzie Tuska. Było o sile demokracji i sile \"agresywnego osiłka\". Ta pierwsza nie ulegnie drugiej",
-          "description": "Premier do narodu: kompromisu z Nawrockim w sprawie Trybunału Konstytucyjnego nie będzie.",
-          "sourceCategory": "Poland"
-        }
-      },
-      "sources": [
-        {
-          "name": "Gazeta Wyborcza",
-          "url": "https://wyborcza.pl/7,75968,33110050,oredzie-tuska-bylo-o-sile-demokracji-i-sile-agresywnego-osilka.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Keyboards of The Verge",
-      "link": "https://www.theverge.com/gadgets/1017979/keyboards-of-the-verge-staff-picks",
-      "description": "What is a keyboard if not the original brain-computer interface? You can tap on a touchscreen or talk to the computer, but if your work involves getting information out of your head and into the computer, you're probably spending a lot of time using a keyboard. We've written about many keyboards over the years, from […]",
-      "date": "2026-10-31T15:30:00-04:00",
-      "image": "",
-      "sourceName": "The Verge",
-      "language": "en",
-      "category": "Technology, AI and science",
-      "sourceCategory": "Technology, AI and science",
-      "section": "Technology",
-      "sectionReason": "feed category fallback: Technology, AI and science",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Keyboards of The Verge",
-          "description": "What is a keyboard if not the original brain-computer interface? You can tap on a touchscreen or talk to the computer, but if your work involves getting information out of your head and into the computer, you're probably spending a lot of time using a keyboard. We've written about many keyboards over the years, from […]",
-          "sourceCategory": "Technology, AI and science"
-        }
-      },
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/gadgets/1017979/keyboards-of-the-verge-staff-picks"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Święczkowski obiecuje dalsze łamanie prawa",
-      "link": "https://wyborcza.pl/7,75968,33109908,swieczkowski-obiecuje-dalsze-lamanie-prawa.html",
-      "description": "Bogdan Święczkowski, zawieszony w czynnościach prezes Trybunału Konstytucyjnego, nie wyklucza, że grupa siedmiu sędziów TK będzie orzekać \"w innych miejscach\". Czyli poza budynkiem Trybunału Konstytucyjnego i nawet bez legalnie wybranych przez Sejm sędziów, którzy złożyli ślubowanie w obecności prezydenta.",
-      "date": "2026-10-31T19:28:00+00:00",
-      "image": "",
-      "sourceName": "Gazeta Wyborcza",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "Poland",
-      "sectionReason": "feed category fallback: Poland",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Święczkowski obiecuje dalsze łamanie prawa",
-          "description": "Bogdan Święczkowski, zawieszony w czynnościach prezes Trybunału Konstytucyjnego, nie wyklucza, że grupa siedmiu sędziów TK będzie orzekać \"w innych miejscach\". Czyli poza budynkiem Trybunału Konstytucyjnego i nawet bez legalnie wybranych przez Sejm sędziów, którzy złożyli ślubowanie w obecności prezydenta.",
-          "sourceCategory": "Poland"
-        }
-      },
-      "sources": [
-        {
-          "name": "Gazeta Wyborcza",
-          "url": "https://wyborcza.pl/7,75968,33109908,swieczkowski-obiecuje-dalsze-lamanie-prawa.html"
         }
       ],
       "sourceCount": 1,

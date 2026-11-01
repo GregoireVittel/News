@@ -57,7 +57,8 @@ class ParsingTests(unittest.TestCase):
         feeds = builder().default_feeds()
         from build import configured_feeds
         expected = configured_feeds((ROOT / 'sources.js').read_text())
-        self.assertEqual(feeds, [dict(url=f['url'], name=f['source'], language=f['language'], category=f['category']) for f in expected])
+        self.assertEqual(feeds, [dict(url=f['url'], name=f['source'], language=f['language'], category=f['category'],
+                                     **{key: f[key] for key in ('subgroup', 'aggregator') if key in f}) for f in expected])
         self.assertNotIn('PAP Biznes', [f['name'] for f in feeds])
         self.assertIn('3 * 60 * 1000', (ROOT / 'live.html').read_text())
         self.assertFalse((ROOT / 'sources.yaml').exists())

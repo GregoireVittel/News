@@ -121,7 +121,7 @@ class EnrichmentTests(unittest.TestCase):
             ('Deux hommes écroués après un incendie ayant tué quatre personnes', 'France', 'France'),
             ('Un sapeur-pompier blessé par balle près de Marseille', 'France', 'France'),
             ('Szokujące akty przemocy na proteście we Frankfurcie', 'Poland', 'World'),
-            ('Midterms : l’économie américaine avant le scrutin', 'France', 'World'),
+            ('Midterms : l’économie américaine avant le scrutin', 'France', 'Financial'),
             ('Atak w Niemczech. Nie żyją cztery osoby', 'Poland', 'World'),
             ('Apple’s HomeView could add security camera features', 'World', 'Technology'),
             ('Le plus grand data center au monde au Texas', 'France', 'Technology'),

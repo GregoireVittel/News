@@ -46,8 +46,39 @@ function reconcileFeeds(defaults, saved, removedUrls = [], retiredUrls = {}, exc
 
 function portalSectionForCategory(category) {
   if (category === 'Technology, AI and science') return 'Technology';
-  if (category === 'Global news and geopolitics' || category === 'Financial markets and economics') return 'World';
+  if (category === 'Financial markets and economics') return 'Financial';
+  if (category === 'Global news and geopolitics') return 'World';
   return category || 'World';
+}
+
+function normalizeFeedItems(items, feed) {
+  return items.flatMap(item => {
+    const title = item.title || '';
+    const text = title + ' ' + (item.description || '').replace(/<[^>]*>/g, ' ');
+    const mentionsBnp = /\bbnp\s+paribas\b/i.test(text);
+    const tournament = /\b(?:tennis|indian wells|roland.garros|bnp paribas open)\b/i.test(title);
+    const banking = /\b(?:bank\w*|banqu\w*|bancair\w*|stock\w*|buyback|dividend\w*|profit\w*|financ\w*|invest\w*|benefice\w*|bourse|zysk\w*|gield\w*)\b/i.test(title);
+    const bnp = mentionsBnp && (!tournament || banking);
+    if (feed.subgroup === 'BNP Paribas' && !bnp) return [];
+    const publisher = typeof item.source === 'string' ? item.source : item.source?.title;
+    const titlePublisher = title.includes(' - ') ? title.slice(title.lastIndexOf(' - ') + 3) : '';
+    return [{ ...item,
+      sourceName: feed.aggregator ? (publisher || titlePublisher || feed.name) : feed.name,
+      language: feed.language,
+      category: bnp ? 'Financial' : portalSectionForCategory(feed.category),
+      ...(bnp ? { subgroup: 'BNP Paribas' } : {}),
+    }];
+  });
+}
+
+function partitionFinancialArticles(articles) {
+  const general = [], financial = [], bnp = [];
+  for (const article of articles) {
+    if (article.subgroup === 'BNP Paribas') bnp.push(article);
+    else if (portalSectionForCategory(article.category) === 'Financial') financial.push(article);
+    else general.push(article);
+  }
+  return { general, financial, bnp };
 }
 
 function groupPortalArticles(articles) {
@@ -66,6 +97,7 @@ const portalSections = [
   { value: 'France', label: 'French News' },
   { value: 'World', label: 'World News' },
   { value: 'Technology', label: 'Technology' },
+  { value: 'Financial', label: 'Financial News' },
 ];
 
 function filterPortalArticles(articles, selectedSection) {
@@ -75,5 +107,5 @@ function filterPortalArticles(articles, selectedSection) {
 }
 
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { parseFeedDate, recentUniqueArticles, reconcileFeeds, groupPortalArticles, portalSections, filterPortalArticles, portalSectionForCategory };
+  module.exports = { parseFeedDate, recentUniqueArticles, reconcileFeeds, groupPortalArticles, portalSections, filterPortalArticles, portalSectionForCategory, normalizeFeedItems, partitionFinancialArticles };
 }

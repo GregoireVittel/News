@@ -43,28 +43,22 @@ def parse_date(value):
     return date.replace(tzinfo=UTC) if date.tzinfo is None else date.astimezone(UTC)
 
 
-def parse_feed(data, source, language, category='World'):
-    root = ET.fromstring(data)
-    items = [n for n in root.iter() if n.tag.rsplit('}', 1)[-1] in ('item', 'entry')]
-    result = []
-    for item in items:
-        link = text(item, 'link')
-        if not link:
-            link = next((n.get('href', '') for n in item if n.tag.rsplit('}', 1)[-1] == 'link' and n.get('rel', 'alternate') == 'alternate'), '')
-        published = parse_date(text(item, 'pubDate', 'published', 'updated', 'date'))
-        if not published or urllib.parse.urlsplit(link).scheme not in ('https', 'http'):
-            continue
-        description = text(item, 'description', 'summary')
-        description = html.unescape(re.sub(r'<[^>]*>', ' ', description))
-        result.append(dict(title=text(item, 'title'), link=link, published=published, source=source,
-                           language=language, category=category, summary=' '.join(description.split())[:240]))
-    return result
+def parse_feed(data, source, language, category='World', *, subgroup=None, aggregator=False):
+    """Compatible legacy adapter; publisher parsing is shared with the static builder."""
+    from scripts.build_edition import parse_feed as parse_shared
+    feed = dict(name=source, language=language, category=category,
+                subgroup=subgroup, aggregator=aggregator)
+    return [dict(title=a['title'], link=a['link'], published=a['date'], source=a['sourceName'],
+                 language=a['language'], category=a['category'], summary=a['description'],
+                 **{key: a[key] for key in ('subgroup', 'aggregator') if key in a})
+            for a in parse_shared(data, feed) if a['date'] is not None]
 
 
 def configured_feeds(catalog):
     block = catalog.split('const sourceCatalog = ', 1)[1]
     sources, _ = json.JSONDecoder().raw_decode(block.lstrip())
-    return [dict(url=feed['url'], language=feed['language'], source=feed['name'], category=feed['category'])
+    return [dict(url=feed['url'], language=feed['language'], source=feed['name'], category=feed['category'],
+                 **{key: feed[key] for key in ('subgroup', 'aggregator') if key in feed})
             for feed in sources if feed.get('url')]
 
 
@@ -75,7 +69,8 @@ def fetch_one(feed):
             data = response.read(3_000_001)
         if len(data) > 3_000_000:
             raise ValueError('feed exceeds size limit')
-        return parse_feed(data, feed['source'], feed['language'], feed['category']), None
+        return parse_feed(data, feed['source'], feed['language'], feed['category'],
+                          **{key: feed[key] for key in ('subgroup', 'aggregator') if key in feed}), None
     except Exception as exc:
         return [], f"{feed['source']}: {exc}"
 
@@ -119,7 +114,8 @@ def generate(root, entries, now, base_url=BASE_URL):
     articles = enrich_articles([dict(title=a['title'], link=a['link'],
                                     description=a['summary'], date=a['published'],
                                     image=a.get('image', ''), sourceName=a['source'],
-                                    language=a['language'], category=a['category']) for a in current])
+                                    language=a['language'], category=a['category'],
+                                    **{key: a[key] for key in ('subgroup', 'aggregator') if key in a}) for a in current])
     articles.sort(key=lambda article: (article['sourceCount'], article['date']), reverse=True)
     data = dict(schemaVersion=2, generatedAt=now.isoformat(), sections=list(SECTIONS),
                 articles=articles)

@@ -8,8 +8,19 @@ test('exclusive policy discards unapproved saved feeds and restores canonical pu
   assert.deepEqual(reconcileFeeds(approved, saved, [], {}, true), approved);
 });
 
-test('catalog exactly matches the requested 27 category entries and 26 publishers', () => {
-  const catalog = require('../sources.js');
+test('catalog retains original publishers and only adds scoped Google News BNP Paribas feeds', () => {
+  const all = require('../sources.js');
+  const google = all.filter(s=>s.aggregator);
+  const catalog = all.filter(s=>!s.aggregator);
+  assert.equal(google.length,3);
+  assert.deepEqual(google.map(s=>s.language).sort(), ['en','fr','pl']);
+  for (const feed of google) {
+    const url = new URL(feed.url);
+    assert.equal(url.origin + url.pathname, 'https://news.google.com/rss/search');
+    assert.equal(url.searchParams.get('q'), '"BNP Paribas" -tennis -"Indian Wells"');
+    assert.equal(feed.subgroup, 'BNP Paribas');
+    assert.equal(feed.category, 'Financial markets and economics');
+  }
   const expected = {
     Poland: ['Reuters','Notes from Poland','Gazeta Wyborcza','PAP','Bankier.pl'],
     France: ['AFP','Le Monde','Les Échos','franceinfo','Mediapart'],

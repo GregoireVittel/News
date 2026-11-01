@@ -1,4 +1,4 @@
-// Exclusive publisher catalog shared by the static builder and live reader.
+// Approved publisher catalog and scoped Google News searches shared by both readers.
 const sourceCatalog = [
   {
     "name": "Reuters",
@@ -188,6 +188,33 @@ const sourceCatalog = [
     "category": "Financial markets and economics",
     "url": null,
     "status": "Public RSS endpoint currently inaccessible (HTTP 403)"
+  },
+  {
+    "name": "Google News — BNP Paribas (FR)",
+    "language": "fr",
+    "category": "Financial markets and economics",
+    "subgroup": "BNP Paribas",
+    "aggregator": true,
+    "url": "https://news.google.com/rss/search?q=%22BNP+Paribas%22+-tennis+-%22Indian+Wells%22&hl=fr&gl=FR&ceid=FR%3Afr",
+    "status": "Google News RSS verified; BNP Paribas bank search; original publishers retained"
+  },
+  {
+    "name": "Google News — BNP Paribas (EN)",
+    "language": "en",
+    "category": "Financial markets and economics",
+    "subgroup": "BNP Paribas",
+    "aggregator": true,
+    "url": "https://news.google.com/rss/search?q=%22BNP+Paribas%22+-tennis+-%22Indian+Wells%22&hl=en-GB&gl=GB&ceid=GB%3Aen",
+    "status": "Google News RSS verified; BNP Paribas bank search; original publishers retained"
+  },
+  {
+    "name": "Google News — BNP Paribas (PL)",
+    "language": "pl",
+    "category": "Financial markets and economics",
+    "subgroup": "BNP Paribas",
+    "aggregator": true,
+    "url": "https://news.google.com/rss/search?q=%22BNP+Paribas%22+-tennis+-%22Indian+Wells%22&hl=pl&gl=PL&ceid=PL%3Apl",
+    "status": "Google News RSS verified; BNP Paribas bank search; original publishers retained"
   }
 ];
 if (typeof module !== "undefined" && module.exports) module.exports = sourceCatalog;
