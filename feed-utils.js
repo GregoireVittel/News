@@ -23,7 +23,7 @@ function recentUniqueArticles(articles, now = Date.now()) {
     .map(({ article }) => article);
 }
 
-function reconcileFeeds(defaults, saved, removedUrls = [], retiredUrls = {}) {
+function reconcileFeeds(defaults, saved, removedUrls = [], retiredUrls = {}, exclusive = false) {
   const removed = new Set(removedUrls);
   for (const [oldUrl, newUrl] of Object.entries(retiredUrls)) {
     if (removed.has(oldUrl)) removed.add(newUrl);
@@ -37,7 +37,7 @@ function reconcileFeeds(defaults, saved, removedUrls = [], retiredUrls = {}) {
     if (byUrl.has(url)) {
       const current = byUrl.get(url);
       byUrl.set(url, { ...feed, ...current });
-    } else if (!retiredUrls[feed.url]) {
+    } else if (!exclusive && !retiredUrls[feed.url]) {
       byUrl.set(url, feed);
     }
   }
