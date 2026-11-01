@@ -217,6 +217,42 @@ def story(article, kind='story'):
             + (f'<p>{snippet(a, 240 if kind == "lead" else 115)}</p>' if kind != 'rail-item' and a['description'] else '') + '</article>')
 
 
+TOP_STORIES = 7
+
+
+def top_stories(articles):
+    """Front-page digest: the highest-ranked stories across all sections.
+
+    Rendered as a ranked list of links, not as story cards, so each story still
+    has exactly one card in its own section.
+    """
+    picks = articles[:TOP_STORIES]
+    if not picks:
+        return ''
+
+    def item(a, lead):
+        when = a['date']
+        image = ''
+        if lead and a['image']:
+            image = f'<img class="lead-image" src="{escape(a["image"], quote=True)}" alt="" loading="lazy">'
+        meta = (f'<div class="meta"><span class="source">{escape(a["sourceName"])}</span> · '
+                f'<time datetime="{when.isoformat()}">{when.astimezone(PARIS).strftime("%d.%m %H:%M")}</time> · '
+                f'{plural(a["sourceCount"], "source", "sources")}</div>')
+        heading = 'h3'
+        text = f'<p>{snippet(a, 240)}</p>' if lead and a['description'] else ''
+        return (f'<li class="{"lead top-lead" if lead else "rail-item"}" lang="{escape(a["language"], quote=True)}">{image}'
+                f'<a class="eyebrow" href="#{a["section"].lower()}">{escape(SECTION_LABELS.get(a["section"], a["section"]))}</a>'
+                f'<{heading}><a href="{escape(a["link"], quote=True)}" rel="noopener noreferrer">{escape(a["title"])}</a></{heading}>'
+                f'{meta}{text}</li>')
+
+    rail = ''.join(item(a, False) for a in picks[1:])
+    return ('<section class="top-stories" aria-labelledby="top-stories-title">'
+            '<div class="section-heading"><h2 class="section-title" id="top-stories-title">Top stories</h2>'
+            '<span>most publishers, then most recent</span></div>'
+            '<div class="portal-grid"><ol class="top-lead-list">' + item(picks[0], True) + '</ol>'
+            + (f'<ol class="rail top-rail" start="2">{rail}</ol>' if rail else '') + '</div></section>')
+
+
 def page(base, canonical, title, body, now):
     stamp = now.astimezone(PARIS).isoformat(timespec='seconds')
     document_title = SITE_TITLE if title == 'Front Page' else title + ' — ' + SITE_TITLE
@@ -244,6 +280,8 @@ def edition_page(articles, base, prefix, language, now, failures):
         body += ('<details class="feed-failures"><summary>Unavailable feeds</summary><ul>'
                  + ''.join(f'<li>{escape(failure.split(" (", 1)[0])}</li>' for failure in failures) + '</ul></details>')
     body += '<p class="classification-note">Ordered by distinct publisher count, then recency.</p>'
+    if language == 'All':
+        body += top_stories(selected)
     for section in SECTIONS:
         items = [a for a in selected if a['section'] == section]
         body += f'<section class="section" id="{section.lower()}" aria-label="{section}"><div class="section-heading"><h2 class="section-title">{SECTION_LABELS[section]}</h2><span>{plural(len(items), "story", "stories")}</span></div>'
