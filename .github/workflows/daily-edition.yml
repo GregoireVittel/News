@@ -28,13 +28,17 @@ jobs:
           python-version: '3.13'
       - name: Test and generate edition
         run: |
-          python -m unittest discover -s tests -p 'test_build.py'
+          python -m unittest discover -s tests -p 'test_build*.py'
+          node --test tests/*.test.cjs
           python build.py
+          python scripts/build_edition.py --output "$RUNNER_TEMP/news-edition" --base-url https://gregoirevittel.github.io/News/ --history-root .
+          python -c 'import os, shutil; shutil.copytree(os.environ["RUNNER_TEMP"] + "/news-edition", ".", dirs_exist_ok=True)'
       - name: Commit edition and archive
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add index.html archive lang feed.xml sitemap.xml
+          git add index.html archive lang feed.xml sitemap.xml pl en fr rss.xml build-info.json assets
+          git add --all -- '20*/index.html' '20*/pl/index.html' '20*/en/index.html' '20*/fr/index.html'
           if ! git diff --cached --quiet; then
             git commit -m "news: generate daily edition"
             git push origin HEAD:main
