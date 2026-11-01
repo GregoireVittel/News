@@ -118,8 +118,10 @@ from urllib.error import HTTPError, URLError
 if __package__ in (None, ''):
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     from story_classification import enrich_articles, bnp_bank_article
+    import dashboard
 else:
     from .story_classification import enrich_articles, bnp_bank_article
+    from . import dashboard
 
 ROOT = Path(__file__).resolve().parents[1]
 PARIS = ZoneInfo('Europe/Paris')
@@ -197,8 +199,9 @@ def snippet(article, length):
     return escape(value[:length].rstrip() + ('…' if len(value) > length else ''))
 
 
-def story(article, kind='story'):
+def story(article, kind='story', now=None):
     a = article
+    badge = dashboard.new_badge(a, now) if now else ''
     heading = 'h2' if kind == 'lead' else 'h3'
     image = ''
     if kind != 'rail-item':
@@ -208,7 +211,7 @@ def story(article, kind='story'):
             image = '<div class="lead-placeholder" aria-hidden="true">W.</div>'
     return (f'<article class="{kind}" lang="{escape(a["language"], quote=True)}">{image}'
             f'<div class="eyebrow">{escape(a["section"])}</div><{heading}><a href="{escape(a["link"], quote=True)}" rel="noopener noreferrer">{escape(a["title"])}</a></{heading}>'
-            f'<div class="meta"><span class="source">{escape(a["sourceName"])}</span> · <time datetime="{a["date"].isoformat()}">{a["date"].astimezone(PARIS).strftime("%d.%m %H:%M")}</time></div>'
+            f'<div class="meta"><span class="source">{escape(a["sourceName"])}</span> · <time datetime="{a["date"].isoformat()}">{a["date"].astimezone(PARIS).strftime("%d.%m %H:%M")}</time>{badge}</div>'
             + f'<div class="meta">{a["sourceCount"]} {"source" if a["sourceCount"] == 1 else "sources"}</div>'
             + '<details class="source-list"><summary>Coverage sources</summary><ul>'
             + ''.join(f'<li><a href="{escape(s["url"], quote=True)}" rel="noopener noreferrer">{escape(s["name"])}</a></li>' for s in a['sources']) + '</ul></details>'
@@ -220,7 +223,7 @@ def story(article, kind='story'):
 TOP_STORIES = 7
 
 
-def top_stories(articles):
+def top_stories(articles, now=None):
     """Front-page digest: the highest-ranked stories across all sections.
 
     Rendered as a ranked list of links, not as story cards, so each story still
@@ -237,7 +240,7 @@ def top_stories(articles):
             image = f'<img class="lead-image" src="{escape(a["image"], quote=True)}" alt="" loading="lazy">'
         meta = (f'<div class="meta"><span class="source">{escape(a["sourceName"])}</span> · '
                 f'<time datetime="{when.isoformat()}">{when.astimezone(PARIS).strftime("%d.%m %H:%M")}</time> · '
-                f'{plural(a["sourceCount"], "source", "sources")}</div>')
+                f'{plural(a["sourceCount"], "source", "sources")}{dashboard.new_badge(a, now) if now else ""}</div>')
         heading = 'h3'
         text = f'<p>{snippet(a, 240)}</p>' if lead and a['description'] else ''
         return (f'<li class="{"lead top-lead" if lead else "rail-item"}" lang="{escape(a["language"], quote=True)}">{image}'
@@ -253,18 +256,18 @@ def top_stories(articles):
             + (f'<ol class="rail top-rail" start="2">{rail}</ol>' if rail else '') + '</div></section>')
 
 
-def page(base, canonical, title, body, now):
+def page(base, canonical, title, body, now, lang='en'):
     stamp = now.astimezone(PARIS).isoformat(timespec='seconds')
     document_title = SITE_TITLE if title == 'Front Page' else title + ' — ' + SITE_TITLE
     return f'''<!DOCTYPE html>
-<html lang="pl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="{lang}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
 <title>{escape(document_title)}</title><meta name="description" content="What’s happening now… Publisher feed headlines and snippets.">
-<meta property="og:type" content="website"><meta property="og:locale" content="pl_PL"><meta property="og:title" content="{escape(document_title, quote=True)}"><meta property="og:description" content="What’s happening now…"><meta property="og:url" content="{escape(canonical, quote=True)}">
+<meta property="og:type" content="website"><meta property="og:locale" content="en_GB"><meta property="og:title" content="{escape(document_title, quote=True)}"><meta property="og:description" content="What’s happening now…"><meta property="og:url" content="{escape(canonical, quote=True)}">
 <meta name="color-scheme" content="dark"><meta name="theme-color" content="#090b0e"><meta name="generated-at" content="{stamp}"><link rel="canonical" href="{escape(canonical, quote=True)}"><link rel="alternate" type="application/rss+xml" title="{escape(SITE_TITLE, quote=True)} RSS" href="{base}rss.xml"><link rel="stylesheet" href="{base}assets/portal.css"></head>
 <body><a class="skip-link" href="#main-content">Skip to content</a><div class="topline"><div class="shell"><span>THE DAILY BRIEFING · STORIES FROM AROUND THE WORLD</span><span>INDEPENDENT NEWS AGGREGATOR</span></div></div>
-<header class="masthead"><div class="shell masthead-row"><div><a class="brand" href="{base}">{escape(SITE_TITLE)}</a><div class="brand-sub">What’s happening now…</div></div><div class="edition">{now.astimezone(PARIS).strftime('%d.%m.%Y')}<br>Wygenerowano: <time datetime="{stamp}">{stamp}</time> · Europe/Paris</div><a class="manage-button" href="{base}live.html">Live (opcjonalnie)</a></div></header>
-{body}<footer class="footer"><div class="shell"><a href="{base}archive/">Archiwum</a> · <a href="{base}rss.xml">RSS</a><p>Opisy to fragmenty z kanałów RSS wydawców lub agregatorów, nie autorskie streszczenia. Linki prowadzą do wydawców bezpośrednio lub przez Google News.</p><p>Wygenerowano {stamp} · Europe/Paris</p></div></footer></body></html>'''
+<header class="masthead"><div class="shell masthead-row"><div><a class="brand" href="{base}">{escape(SITE_TITLE)}</a><div class="brand-sub">What’s happening now…</div></div><div class="edition">{now.astimezone(PARIS).strftime('%d.%m.%Y')}<br>Updated <time datetime="{stamp}">{stamp}</time> · Europe/Paris</div><a class="manage-button" href="{base}live.html">Live reader</a></div></header>
+{body}<footer class="footer"><div class="shell"><a href="{base}sources/">By source</a> · <a href="{base}trending/">Trending</a> · <a href="{base}archive/">Archive</a> · <a href="{base}rss.xml">RSS</a><p>Descriptions are snippets from the publishers' or aggregators' RSS feeds, not original summaries. Links go to publishers directly or via Google News.</p><p>Updated {stamp} · Europe/Paris</p></div></footer></body></html>'''
 
 
 def edition_page(articles, base, prefix, language, now, failures):
@@ -274,6 +277,7 @@ def edition_page(articles, base, prefix, language, now, failures):
     nav += f'<a class="nav-button {"active" if language == "All" else ""}" href="{base}{prefix}"' + (' aria-current="page"' if language == 'All' else '') + '>Front Page</a>'
     for section in SECTIONS:
         nav += f'<a class="nav-button" href="#{section.lower()}">{SECTION_LABELS[section]}</a>'
+    nav += f'<span class="nav-extras"><a class="nav-extra" href="{base}sources/">By source</a><a class="nav-extra" href="{base}trending/">Trending</a></span>'
     body = nav + '</div></nav><main class="shell" id="main-content"><div class="edition-label">'
     body += f'<h1>{"Front Page" if language == "All" else labels[language] + " Edition"}</h1><div class="statusline">{plural(len(selected), "story", "stories")} · past 24 hours · {plural(len(failures), "feed", "feeds")} unavailable</div></div>'
     if failures:
@@ -281,7 +285,12 @@ def edition_page(articles, base, prefix, language, now, failures):
                  + ''.join(f'<li>{escape(failure.split(" (", 1)[0])}</li>' for failure in failures) + '</ul></details>')
     body += '<p class="classification-note">Ordered by distinct publisher count, then recency.</p>'
     if language == 'All':
-        body += top_stories(selected)
+        body += dashboard.numbers_bar(selected, SECTIONS, SECTION_LABELS, now)
+        body += top_stories(selected, now)
+        body += dashboard.section_previews(selected, SECTIONS, SECTION_LABELS, now)
+        body += ('<div class="panel-pair">' + dashboard.most_covered(selected, SECTION_LABELS)
+                 + dashboard.trending_panel(dashboard.trending(selected), base) + '</div>')
+        body += dashboard.pulse(selected, SECTIONS, SECTION_LABELS, now, PARIS)
     for section in SECTIONS:
         items = [a for a in selected if a['section'] == section]
         body += f'<section class="section" id="{section.lower()}" aria-label="{section}"><div class="section-heading"><h2 class="section-title">{SECTION_LABELS[section]}</h2><span>{plural(len(items), "story", "stories")}</span></div>'
@@ -290,20 +299,31 @@ def edition_page(articles, base, prefix, language, now, failures):
             body += '<p><a href="#bnp-paribas">BNP Paribas</a></p>'
             items = [a for a in items if a.get('subgroup') != 'BNP Paribas']
         if items:
-            body += '<div class="portal-grid section-lead">' + story(items[0], 'lead')
-            body += '<div class="story-grid">' + ''.join(story(a) for a in items[1:]) + '</div></div>'
+            body += '<div class="portal-grid section-lead">' + story(items[0], 'lead', now)
+            body += '<div class="story-grid">' + ''.join(story(a, now=now) for a in items[1:]) + '</div></div>'
         elif not subgroup:
             body += '<p class="empty">No stories in this section for this edition.</p>'
         if section == 'Financial':
             body += '<section id="bnp-paribas" aria-label="BNP Paribas"><div class="section-heading"><h3 class="section-title">BNP Paribas</h3>' + f'<span>{plural(len(subgroup), "story", "stories")}</span></div>'
-            body += ('<div class="story-grid">' + ''.join(story(a) for a in subgroup) + '</div>'
+            body += ('<div class="story-grid">' + ''.join(story(a, now=now) for a in subgroup) + '</div>'
                      if subgroup else '<p class="empty">No BNP Paribas stories in this edition.</p>')
             body += '</section>'
         body += '</section>'
     body += '<p class="language-links">Read by language: ' + ' · '.join(
         f'<a href="{base}{prefix}{lang}/">{labels[lang]}</a>' for lang in ('pl', 'fr', 'en')) + '</p>'
     suffix = '' if language == 'All' else language + '/'
-    return page(base, base + prefix + suffix, labels[language], body + '</main>', now)
+    return page(base, base + prefix + suffix, labels[language], body + '</main>', now,
+                'en' if language == 'All' else language)
+
+
+def load_stats(history):
+    """Daily counts carried over from the previously published site."""
+    try:
+        days = json.loads((history / 'stats.json').read_text(encoding='utf-8'))['days']
+        return {day: value for day, value in days.items() if re.fullmatch(r'\d{4}-\d{2}-\d{2}', day)
+                and isinstance(value, dict) and isinstance(value.get('sections'), dict)}
+    except (OSError, ValueError, KeyError, TypeError):
+        return {}
 
 
 def build(output, base_url, *, now=None, feeds=None, fetcher=None, history_root=None):
@@ -362,12 +382,22 @@ def build(output, base_url, *, now=None, feeds=None, fetcher=None, history_root=
         for language in ('pl', 'en', 'fr'):
             shutil.copy2(stage / language / 'index.html', stage / 'lang' / f'{language}.html')
         editions = sorted((p.name for p in stage.iterdir() if re.fullmatch(r'\d{4}-\d{2}-\d{2}', p.name) and (p / 'index.html').is_file()), reverse=True)
-        archive = '<main class="shell"><div class="edition-label"><h1>Archiwum wydań</h1></div><ul>' + ''.join(f'<li><a href="{html_base}{date}/">{date}</a></li>' for date in editions) + '</ul></main>'
+        stats = load_stats(history)
+        stats[edition] = dashboard.day_stats(articles, SECTIONS)
+        (stage / 'stats.json').write_text(json.dumps({'schemaVersion': 1, 'days': stats}, ensure_ascii=False, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+        archive = dashboard.archive_page(html_base, editions, stats, SECTIONS, SECTION_LABELS)
         (stage / 'archive').mkdir()
-        (stage / 'archive/index.html').write_text(page(html_base, html_base + 'archive/', 'Archiwum', archive, now), encoding='utf-8')
+        (stage / 'archive/index.html').write_text(page(html_base, html_base + 'archive/', 'Archive', archive, now), encoding='utf-8')
+        for folder, title, content in (
+                ('sources', 'By source', dashboard.sources_page(articles, SECTION_LABELS, now)),
+                ('trending', 'Trending', dashboard.trending_page(dashboard.trending(articles), SECTION_LABELS, now))):
+            (stage / folder).mkdir()
+            body = (f'<main class="shell" id="main-content"><div class="edition-label"><h1>{title}</h1>'
+                    f'<div class="statusline"><a href="{html_base}">← Front Page</a></div></div>{content}</main>')
+            (stage / folder / 'index.html').write_text(page(html_base, f'{html_base}{folder}/', title, body, now), encoding='utf-8')
         rss = ET.Element('rss', version='2.0')
         channel = ET.SubElement(rss, 'channel')
-        for tag, value in [('title', SITE_TITLE), ('link', base), ('description', 'Fragmenty opisów z kanałów RSS wydawców; nie autorskie streszczenia.'), ('language', 'pl')]:
+        for tag, value in [('title', SITE_TITLE), ('link', base), ('description', "Snippets from publishers' RSS feeds, not original summaries."), ('language', 'en')]:
             ET.SubElement(channel, tag).text = value
         ET.SubElement(channel, 'lastBuildDate').text = format_datetime(now)
         for a in articles:

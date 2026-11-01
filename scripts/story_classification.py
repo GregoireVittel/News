@@ -37,7 +37,7 @@ FRANCE = r'\b(?:france|french|francais\w*|francj\w*|francusk\w*|paris|paryz\w*|l
 WORLD = r'\b(?:ukrain\w*|russi\w*|russie|rosj\w*|china|chinese|chine|chin\w*|german\w*|allemagne|niem\w*|israel\w*|gaza|united states|etats-unis|usa|britain|british|london|londres|londyn\w*|india|iran\w*|frankfurt\w*|frankfur\w*|american\w*|americain\w*|amerykan\w*)\b'
 
 
-FINANCE = r'\b(?:banks?|banking|banki|bankow\w*|banqu\w*|financ\w*|financial\w*|econom\w*|ekonom\w*|gospodark\w*|stock markets?|stocks?|share prices?|equities|bond yields?|government bonds?|interest rates?|taux d.interet|stop\w* procent\w*|inflation|inflacja|gield\w*|bourse\w*|earnings|profits?|dividends?|credit (?:market|risk|rating|card)\w*|kredyt\w*)\b'
+FINANCE = r'\b(?:banks?|banking|banki|bankow\w*|banqu\w*|financ\w*|financial\w*|econom\w*|ekonom\w*|gospodark\w*|stock markets?|stocks?|share prices?|equities|bond yields?|government bonds?|interest rates?|taux d.interet|stop\w* procent\w*|inflation|inflacja|gield\w*|bourse\w*|earnings|profits?|dividends?|credit (?:market|risk|rating|card)\w*|kredyt\w*|ipos?|initial public offerings?|(?:plans?|planning|set|seeks?|aims?) to float|flotation|stock market listing|listing on|mergers?|acquisitions?|takeovers?|buyouts?|shareholders?|share (?:sale|buyback)s?|valuation|investors?|fusions?|rachat\w*|introduction en bourse|actionnaires?|investisseurs?|fuzj\w*|przejeci\w* (?:spolki|firmy|banku)|debiut\w* (?:na )?gieldo?w\w*|akcjonariusz\w*|inwestor\w*)\b'
 
 
 def bnp_bank_article(article):

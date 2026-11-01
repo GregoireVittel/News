@@ -36,7 +36,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add index.html archive lang feed.xml sitemap.xml pl en fr rss.xml build-info.json articles.json assets
+          git add index.html archive lang feed.xml sitemap.xml pl en fr rss.xml build-info.json articles.json stats.json sources trending assets
           # Stage whole dated edition folders; listing individual files fails when one is missing.
           git add --all -- '20[0-9][0-9]-[0-9][0-9]-[0-9][0-9]/*'
           if ! git diff --cached --quiet; then

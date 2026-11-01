@@ -139,7 +139,7 @@ class EditionTests(unittest.TestCase):
             self.assertIn('https://example.com/one?q=1&amp;x=2', front)
             self.assertNotIn('Old', front)
             self.assertNotIn('<script', front)
-            self.assertIn('<html lang="pl">', front)
+            self.assertIn('<html lang="en">', front)
             self.assertIn('rel="alternate" type="application/rss+xml"', front)
             self.assertIn('property="og:title"', front)
             self.assertIn('2026-10-31T10:00:00+00:00', front)

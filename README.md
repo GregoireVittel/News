@@ -16,6 +16,18 @@ Descriptions are **snippets supplied by the existing publishers' feeds**, as in
 the original reader, not original/editorial/AI summaries. No automatic translation
 is performed. PAP Mediaroom is not used as a substitute for PAP domestic news.
 
+## Dashboard
+
+The Front Page (`scripts/dashboard.py`) adds, above the five sections: a
+*Today in numbers* bar, *Top stories*, *At a glance* (top 3 per section),
+*Most covered* (stories from several outlets), *Trending* keywords and a
+*News pulse* chart of stories per hour. Stories published within 3 hours of the
+build carry a **New** badge. These panels link to stories; each story still has
+exactly one card. Extra pages: `sources/` (stories grouped by publisher),
+`trending/` (stories per keyword) and `archive/` (editions plus daily trend
+sparklines from `stats.json`, which each build carries forward from history).
+Page text is English; language pages declare their own `lang`.
+
 ## Build (standard-library Python)
 
 ```sh
