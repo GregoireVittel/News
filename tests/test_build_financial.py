@@ -24,7 +24,7 @@ class FinancialTests(unittest.TestCase):
         self.assertIn('id="bnp-paribas"', rendered)
         financial = rendered.split('id="financial"', 1)[1]
         self.assertIn('2 stories', financial)
-        self.assertIn('1 stories', financial.split('id="bnp-paribas"', 1)[1])
+        self.assertIn('1 story', financial.split('id="bnp-paribas"', 1)[1])
         self.assertEqual(rendered.count('<article '), 2)
         self.assertLess(financial.index('French banks'), financial.index('id="bnp-paribas"'))
         self.assertIn('BNP Paribas invests', financial.split('id="bnp-paribas"', 1)[1])

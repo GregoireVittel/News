@@ -114,3 +114,8 @@ body { line-height:1.5; }
 .section-lead { grid-template-columns:minmax(0,1fr); }
 .section-lead > .lead { padding:24px 0; max-width:850px; }
 @media(min-width:751px) { .section-lead > .story-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+        .skip-link { position:absolute; left:-9999px; top:0; z-index:100; background:var(--red); color:#111; padding:10px 14px; font-weight:700; }
+        .skip-link:focus { left:16px; top:12px; }
+        .feed-failures { color:var(--muted); font-size:12px; margin-top:10px; }
+        .feed-failures summary { cursor:pointer; }
+        .feed-failures ul { margin:6px 0 0; padding-left:18px; }
