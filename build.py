@@ -7,12 +7,15 @@ import email.utils
 import html
 import json
 import re
+import shutil
 import sys
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from xml.sax.saxutils import escape as xml_escape
+from scripts.build_edition import SECTIONS, edition_page, page as portal_page
+from scripts.story_classification import enrich_articles
 
 BASE_URL = 'https://gregoirevittel.github.io/News/'
 CATEGORIES = ('Poland', 'France', 'Global news and geopolitics', 'Technology, AI and science', 'Financial markets and economics')
@@ -90,9 +93,10 @@ def clean(entries, now):
     seen = set()
     valid = []
     for item in sorted(entries, key=lambda a: a['published'], reverse=True):
-        if not now - dt.timedelta(days=1) <= item['published'] <= now or item['link'] in seen:
+        key = (item['link'], item['source'].casefold())
+        if not now - dt.timedelta(days=1) <= item['published'] <= now or key in seen:
             continue
-        seen.add(item['link'])
+        seen.add(key)
         valid.append(item)
     return valid
 
@@ -112,65 +116,55 @@ def generate(root, entries, now, base_url=BASE_URL):
     archive_names = list(dict.fromkeys(archive_names))
     archive_links = ' · '.join(f'<a href="{base_url}archive/{name}.html">{name}</a>' for name in archive_names)
 
-    def article(item, tag='h3', klass='story'):
-        link = html.escape(item['link'], quote=True)
-        title = html.escape(item['title'])
-        summary = html.escape(item['summary'])
-        source = html.escape(item['source'])
-        published = item['published'].isoformat()
-        return (f'<article class="{klass}"><div class="eyebrow">{html.escape(item["category"])}</div>'
-                f'<{tag}><a href="{link}" rel="noopener noreferrer">{title}</a></{tag}>'
-                f'<div class="meta"><span class="source">{source}</span> · <time datetime="{published}">{item["published"].strftime("%d %b %Y %H:%M UTC")}</time></div>'
-                f'{"<p>" + summary + "</p>" if summary else ""}</article>')
+    articles = enrich_articles([dict(title=a['title'], link=a['link'],
+                                    description=a['summary'], date=a['published'],
+                                    image=a.get('image', ''), sourceName=a['source'],
+                                    language=a['language'], category=a['category']) for a in current])
+    articles.sort(key=lambda article: (article['sourceCount'], article['date']), reverse=True)
+    data = dict(schemaVersion=2, generatedAt=now.isoformat(), sections=list(SECTIONS),
+                articles=articles)
+    (root / 'articles.json').write_text(
+        json.dumps(data, ensure_ascii=False, indent=2,
+                   default=lambda value: value.isoformat()) + '\n', encoding='utf-8')
+    html_base = html.escape(base_url, quote=True)
+    (root / 'assets').mkdir(exist_ok=True)
+    portal_css = Path(__file__).resolve().parent / 'assets/portal.css'
+    target_css = root / 'assets/portal.css'
+    if portal_css.resolve() != target_css.resolve():
+        shutil.copy2(portal_css, target_css)
 
-    def page(items, title, canonical, page_lang='pl'):
-        head = (f'<!doctype html><html lang="{page_lang}"><head><meta charset="utf-8">'
-                f'<meta name="viewport" content="width=device-width, initial-scale=1">'
-                f'<title>{html.escape(title)} · Przegląd</title>'
-                f'<meta name="description" content="Przegląd — news edition for {date}, linked to original publishers.">'
-                f'<link rel="canonical" href="{html.escape(canonical, quote=True)}">'
-                f'<link rel="alternate" type="application/rss+xml" title="Przegląd RSS" href="{base_url}feed.xml">'
-                f'<meta property="og:type" content="website"><meta property="og:title" content="{html.escape(title, quote=True)} · Przegląd">'
-                f'<meta property="og:url" content="{html.escape(canonical, quote=True)}">'
-                f'<meta property="og:description" content="Independent headlines linked to their publishers.">'
-                f'<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">'
-                f'<style>{css}</style></head><body>')
-        nav = ' '.join(f'<a class="nav-button" href="{base_url}{path}">{label}</a>' for path, label in
-                       (('', 'Front page'), ('lang/pl.html', 'Polski'), ('lang/en.html', 'English'), ('lang/fr.html', 'Français'), ('archive/', 'Archive'), ('live.html', 'Live reader')))
-        body = (f'<div class="topline"><div class="shell">THE DAILY BRIEFING · STORIES FROM AROUND THE WORLD</div></div>'
-                f'<header class="masthead"><div class="shell masthead-row"><a class="brand" href="{base_url}">Przegląd<span class="brand-mark">.</span></a>'
-                f'<div class="edition">Edition {date}<br>Generated <time datetime="{now.isoformat()}">{now.strftime("%d %b %Y %H:%M UTC")}</time></div></div></header>'
-                f'<nav class="navwrap" aria-label="News navigation"><div class="shell navrow">{nav}</div></nav>'
-                f'<main class="shell" id="main-content"><div class="edition-label"><h1>{html.escape(title)}</h1><span class="statusline">{len(items)} stories · past 24 hours</span></div>')
-        if items:
-            lead, latest = items[0], items[1:4]
-            body += (f'<div class="portal-grid"><div class="lead">{article(lead, "h2", "lead")}</div>'
-                     f'<aside class="rail" aria-label="Latest headlines"><h2 class="rail-title">The latest</h2>'
-                     f'{"".join(article(item, klass="rail-item") for item in latest)}</aside></div>')
-            for category in CATEGORIES:
-                selected = [item for item in items[4:] if item['category'] == category]
-                if selected:
-                    body += (f'<section class="section" aria-label="{category}"><div class="section-heading"><h2 class="section-title">{category}</h2>'
-                             f'<span>{len(selected)} stories</span></div><div class="story-grid">'
-                             f'{"".join(article(item) for item in selected)}</div></section>')
-        else:
-            body += '<p class="empty">No stories in this language for this edition.</p>'
-        body += (f'<footer class="footer"><p>Archive: {archive_links}</p><p>Independent headlines linked to their original publishers.</p></footer></main></body></html>')
-        return head + body
+    def compatibility_page(rendered, canonical, language='pl'):
+        # Retain legacy URLs and UTC build metadata while sharing all story markup.
+        rendered = re.sub(r'(<link rel="canonical" href=")[^"]*',
+                          lambda match: match[1] + html.escape(canonical, quote=True), rendered)
+        rendered = re.sub(r'(<meta property="og:url" content=")[^"]*',
+                          lambda match: match[1] + html.escape(canonical, quote=True), rendered)
+        rendered = rendered.replace('<html lang="pl">', f'<html lang="{language}">')
+        for lang in ('pl', 'en', 'fr'):
+            rendered = rendered.replace(f'href="{html_base}{lang}/"',
+                                        f'href="{html_base}lang/{lang}.html"')
+        rendered = rendered.replace(f'href="{html_base}rss.xml"', f'href="{html_base}feed.xml"')
+        return rendered.replace('</head>', f'<style>{css}</style>'
+                                f'<meta name="legacy-generated-at" content="{now.isoformat()}"></head>')
 
-    (root / 'index.html').write_text(page(current, f'The Front Page · {date}', base_url), encoding='utf-8')
-    (archive_dir / f'{date}.html').write_text(page(current, f'Edition {date}', base_url + f'archive/{date}.html'), encoding='utf-8')
-    for language, label in [('pl', 'Polski'), ('en', 'English'), ('fr', 'Français')]:
-        (root / 'lang' / f'{language}.html').write_text(page([a for a in current if a['language'] == language], label, base_url + f'lang/{language}.html', language), encoding='utf-8')
-    archive_page = page([], 'Archive', base_url + 'archive/')
-    archive_page = archive_page.replace('<p class="empty">No stories in this language for this edition.</p>',
-                                        f'<section class="section"><h2 class="section-title">Previous editions</h2><p>{archive_links}</p></section>')
+    def legacy_edition(language, canonical):
+        return compatibility_page(edition_page(articles, html_base, '', language, now, []),
+                                  canonical, 'pl' if language == 'All' else language)
+
+    (root / 'index.html').write_text(legacy_edition('All', base_url), encoding='utf-8')
+    archive_target = archive_dir / f'{date}.html'
+    if not archive_target.exists():
+        archive_target.write_text(legacy_edition('All', base_url + f'archive/{date}.html'), encoding='utf-8')
+    for language in ('pl', 'en', 'fr'):
+        (root / 'lang' / f'{language}.html').write_text(legacy_edition(language, base_url + f'lang/{language}.html'), encoding='utf-8')
+    body = f'<main class="shell"><h1>Previous editions</h1><p>{archive_links}</p></main>'
+    archive_page = compatibility_page(portal_page(html_base, html_base + 'archive/', 'Archive', body, now), base_url + 'archive/')
     (archive_dir / 'index.html').write_text(archive_page, encoding='utf-8')
-    rss_items = ''.join(f'<item><title>{xml_escape(a["title"])}</title><link>{xml_escape(a["link"])}</link><guid isPermaLink="true">{xml_escape(a["link"])}</guid><pubDate>{email.utils.format_datetime(a["published"])}</pubDate><description>{xml_escape(a["source"] + ": " + a["summary"])}</description></item>' for a in current)
+    rss_items = ''.join(f'<item><title>{xml_escape(a["title"])}</title><link>{xml_escape(a["link"])}</link><guid isPermaLink="true">{xml_escape(a["link"])}</guid><pubDate>{email.utils.format_datetime(a["date"])}</pubDate><description>{xml_escape(a["sourceName"] + ": " + a["description"])}</description></item>' for a in articles)
     (root / 'feed.xml').write_text(f'<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Przegląd</title><link>{xml_escape(base_url)}</link><description>Daily headlines</description>{rss_items}</channel></rss>', encoding='utf-8')
     urls = [base_url, base_url + 'archive/', base_url + 'feed.xml'] + [base_url + f'lang/{lang}.html' for lang in ('pl', 'en', 'fr')] + [base_url + f'archive/{name}.html' for name in archive_names]
     (root / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{xml_escape(url)}</loc></url>' for url in urls) + '</urlset>', encoding='utf-8')
-    return len(current)
+    return len(articles)
 
 
 def main():

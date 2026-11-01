@@ -101,11 +101,18 @@ import os
 import re
 import shutil
 import tempfile
+import sys
+
+if __package__ in (None, ''):
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from story_classification import enrich_articles
+else:
+    from .story_classification import enrich_articles
 
 ROOT = Path(__file__).resolve().parents[1]
 PARIS = ZoneInfo('Europe/Paris')
 LOG = logging.getLogger('edition')
-SECTIONS = ('Poland', 'France', 'Global news and geopolitics', 'Technology, AI and science', 'Financial markets and economics')
+SECTIONS = ('Poland', 'France', 'World', 'Technology')
 
 
 def default_feeds():
@@ -143,8 +150,9 @@ def collect(feeds, fetcher, now):
     seen = set()
     unique = []
     for article in articles:
-        if article['link'] not in seen:
-            seen.add(article['link'])
+        key = (article['link'], article['sourceName'].casefold())
+        if key not in seen:
+            seen.add(key)
             unique.append(article)
     if not unique:
         raise ValueError('Empty edition: no valid articles from the past 24 hours; publication refused')
@@ -166,21 +174,25 @@ def story(article, kind='story'):
         elif kind == 'lead':
             image = '<div class="lead-placeholder" aria-hidden="true">P.</div>'
     return (f'<article class="{kind}" lang="{escape(a["language"], quote=True)}">{image}'
-            f'<div class="eyebrow">{escape(a["category"])}</div><{heading}><a href="{escape(a["link"], quote=True)}" rel="noopener noreferrer">{escape(a["title"])}</a></{heading}>'
+            f'<div class="eyebrow">{escape(a["section"])}</div><{heading}><a href="{escape(a["link"], quote=True)}" rel="noopener noreferrer">{escape(a["title"])}</a></{heading}>'
             f'<div class="meta"><span class="source">{escape(a["sourceName"])}</span> · <time datetime="{a["date"].isoformat()}">{a["date"].astimezone(PARIS).strftime("%d.%m %H:%M")}</time></div>'
+            + f'<div class="meta">{a["sourceCount"]} {"source" if a["sourceCount"] == 1 else "sources"}</div>'
+            + '<details class="source-list"><summary>Coverage sources</summary><ul>'
+            + ''.join(f'<li><a href="{escape(s["url"], quote=True)}" rel="noopener noreferrer">{escape(s["name"])}</a></li>' for s in a['sources']) + '</ul></details>'
             + (f'<p>{snippet(a, 240 if kind == "lead" else 115)}</p>' if kind != 'rail-item' and a['description'] else '') + '</article>')
 
 
 def page(base, canonical, title, body, now):
     stamp = now.astimezone(PARIS).isoformat(timespec='seconds')
+    document_title = 'Przegląd' if title == 'Front page' else title + ' — Przegląd'
     return f'''<!DOCTYPE html>
 <html lang="pl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
-<title>{escape(title)} — Przegląd</title><meta name="description" content="Przegląd wiadomości z kanałów RSS wydawców. Opisy pochodzą z kanałów źródłowych.">
-<meta property="og:type" content="website"><meta property="og:locale" content="pl_PL"><meta property="og:title" content="{escape(title, quote=True)} — Przegląd"><meta property="og:description" content="Przegląd wiadomości z kanałów RSS wydawców."><meta property="og:url" content="{escape(canonical, quote=True)}">
+<title>{escape(document_title)}</title><meta name="description" content="What’s happening now… Publisher feed headlines and snippets.">
+<meta property="og:type" content="website"><meta property="og:locale" content="pl_PL"><meta property="og:title" content="{escape(document_title, quote=True)}"><meta property="og:description" content="What’s happening now…"><meta property="og:url" content="{escape(canonical, quote=True)}">
 <meta name="generated-at" content="{stamp}"><link rel="canonical" href="{escape(canonical, quote=True)}"><link rel="alternate" type="application/rss+xml" title="Przegląd RSS" href="{base}rss.xml"><link rel="stylesheet" href="{base}assets/portal.css"></head>
 <body><div class="topline"><div class="shell"><span>THE DAILY BRIEFING · STORIES FROM AROUND THE WORLD</span><span>INDEPENDENT NEWS AGGREGATOR</span></div></div>
-<header class="masthead"><div class="shell masthead-row"><div><a class="brand" href="{base}">Przegląd<span class="brand-mark">.</span></a><div class="brand-sub">The world, in perspective</div></div><div class="edition">{now.astimezone(PARIS).strftime('%d.%m.%Y')}<br>Wygenerowano: <time datetime="{stamp}">{stamp}</time> · Europe/Paris</div><a class="manage-button" href="{base}live.html">Live (opcjonalnie)</a></div></header>
+<header class="masthead"><div class="shell masthead-row"><div><a class="brand" href="{base}">Przegląd</a><div class="brand-sub">What’s happening now…</div></div><div class="edition">{now.astimezone(PARIS).strftime('%d.%m.%Y')}<br>Wygenerowano: <time datetime="{stamp}">{stamp}</time> · Europe/Paris</div><a class="manage-button" href="{base}live.html">Live (opcjonalnie)</a></div></header>
 {body}<footer class="footer"><div class="shell"><a href="{base}archive/">Archiwum</a> · <a href="{base}rss.xml">RSS</a><p>Opisy to fragmenty z kanałów RSS wydawców — dotychczasowe zachowanie, nie autorskie streszczenia. Linki prowadzą do oryginalnych wydawców.</p><p>Wygenerowano {stamp} · Europe/Paris</p></div></footer></body></html>'''
 
 
@@ -193,15 +205,17 @@ def edition_page(articles, base, prefix, language, now, failures):
         nav += f'<a class="nav-button {"active" if lang == language else ""}" href="{href}"' + (' aria-current="page"' if lang == language else '') + f'>{label}</a>'
     body = nav + '</div></nav><main class="shell" id="main-content"><div class="edition-label">'
     body += f'<h1>{"The Front Page" if language == "All" else labels[language] + " Edition"}</h1><div class="statusline">{len(selected)} stories · past 24 hours · {len(failures)} feeds unavailable</div></div>'
-    if selected:
-        body += '<div class="portal-grid">' + story(selected[0], 'lead') + '<aside class="rail" aria-label="Latest headlines"><h2 class="rail-title">The latest <span style="color:var(--red)">●</span></h2>'
-        body += ''.join(story(a, 'rail-item') for a in selected[1:4]) + '</aside></div>'
-        for section in SECTIONS:
-            items = [a for a in selected[4:] if a['category'] == section]
-            if items:
-                body += f'<section class="section" aria-label="{section}"><div class="section-heading"><h2 class="section-title">{section}</h2><span>{len(items)} stories</span></div><div class="story-grid">' + ''.join(story(a) for a in items) + '</div></section>'
-    else:
-        body += '<div class="empty">Brak wiadomości w tym języku w tym wydaniu.</div>'
+    body += '<nav class="section-nav" aria-label="Sections">' + ' · '.join(f'<a href="#{s.lower()}">{s}</a>' for s in SECTIONS) + '</nav>'
+    body += '<p class="classification-note">Ordered by distinct publisher count, then recency.</p>'
+    for section in SECTIONS:
+        items = [a for a in selected if a['section'] == section]
+        body += f'<section class="section" id="{section.lower()}" aria-label="{section}"><div class="section-heading"><h2 class="section-title">{section}</h2><span>{len(items)} stories</span></div>'
+        if items:
+            body += '<div class="portal-grid section-lead">' + story(items[0], 'lead')
+            body += '<div class="story-grid">' + ''.join(story(a) for a in items[1:]) + '</div></div>'
+        else:
+            body += '<p class="empty">No stories in this section for this edition.</p>'
+        body += '</section>'
     suffix = '' if language == 'All' else language + '/'
     return page(base, base + prefix + suffix, labels[language], body + '</main>', now)
 
@@ -228,6 +242,11 @@ def build(output, base_url, *, now=None, feeds=None, fetcher=None, history_root=
         raise ValueError('now must be timezone-aware')
     edition = now.astimezone(PARIS).date().isoformat()
     articles, failures = collect(default_feeds() if feeds is None else feeds, fetcher or fetch_feed, now)
+    articles = enrich_articles(articles)
+    data = {'schemaVersion': 2, 'generatedAt': now.astimezone(PARIS).isoformat(timespec='seconds'),
+            'sections': list(SECTIONS),
+            'articles': [dict(a, date=a['date'].isoformat()) for a in articles]}
+    serialized = json.dumps(data, ensure_ascii=False, indent=2) + '\n'
     output.parent.mkdir(parents=True, exist_ok=True)
     stage = Path(tempfile.mkdtemp(prefix='.edition-', dir=output.parent))
     try:
@@ -238,6 +257,7 @@ def build(output, base_url, *, now=None, feeds=None, fetcher=None, history_root=
                     datetime.strptime(path.name, '%Y-%m-%d')
                     shutil.copytree(path, stage / path.name, symlinks=False)
         (stage / 'assets').mkdir()
+        (stage / 'articles.json').write_text(serialized, encoding='utf-8')
         shutil.copy2(ROOT / 'assets/portal.css', stage / 'assets/portal.css')
         shutil.copy2(ROOT / 'live.html', stage / 'live.html')
         shutil.copy2(ROOT / 'feed-utils.js', stage / 'feed-utils.js')
@@ -250,6 +270,11 @@ def build(output, base_url, *, now=None, feeds=None, fetcher=None, history_root=
                 target = stage / relative
                 target.parent.mkdir(parents=True, exist_ok=True)
                 target.write_text(edition_page(articles, html_base, prefix, language, now, failures), encoding='utf-8')
+            if prefix:
+                (stage / edition / 'articles.json').write_text(serialized, encoding='utf-8')
+        (stage / 'lang').mkdir()
+        for language in ('pl', 'en', 'fr'):
+            shutil.copy2(stage / language / 'index.html', stage / 'lang' / f'{language}.html')
         editions = sorted((p.name for p in stage.iterdir() if re.fullmatch(r'\d{4}-\d{2}-\d{2}', p.name) and (p / 'index.html').is_file()), reverse=True)
         archive = '<main class="shell"><div class="edition-label"><h1>Archiwum wydań</h1></div><ul>' + ''.join(f'<li><a href="{html_base}{date}/">{date}</a></li>' for date in editions) + '</ul></main>'
         (stage / 'archive').mkdir()
@@ -265,6 +290,7 @@ def build(output, base_url, *, now=None, feeds=None, fetcher=None, history_root=
             for tag, value in [('title', a['title']), ('link', a['link']), ('guid', a['link']), ('description', a['description'][:240]), ('pubDate', format_datetime(a['date']))]:
                 ET.SubElement(item, tag).text = value
         ET.ElementTree(rss).write(stage / 'rss.xml', encoding='utf-8', xml_declaration=True)
+        shutil.copy2(stage / 'rss.xml', stage / 'feed.xml')
         sitemap = ET.Element('urlset', xmlns='http://www.sitemaps.org/schemas/sitemap/0.9')
         for relative in sorted(p.relative_to(stage).as_posix() for p in stage.rglob('index.html')):
             url = ET.SubElement(sitemap, 'url')

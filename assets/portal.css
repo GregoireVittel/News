@@ -104,3 +104,12 @@
 /* Preserve the original Tailwind base defaults without loading JavaScript. */
 a { color:inherit; }
 body { line-height:1.5; }
+.brand-sub { text-transform:none; letter-spacing:.06em; font-size:12px; }
+.section-nav { padding:18px 0 0; font-size:14px; }
+.classification-note,.source-list { font-size:12px; color:var(--muted); }
+.source-list { margin-top:8px; }
+.source-list summary { cursor:pointer; }
+
+.section-lead { grid-template-columns:minmax(0,1fr); }
+.section-lead > .lead { padding:24px 0; max-width:850px; }
+@media(min-width:751px) { .section-lead > .story-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }

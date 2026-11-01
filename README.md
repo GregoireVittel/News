@@ -1,10 +1,12 @@
 # Przegląd — static news editions
 
 The default portal serves real article HTML without JavaScript, React, Babel,
-Tailwind or CDN scripts. Its original dark editorial CSS, lead/latest layout,
-layout and language choices are retained. The sections now follow the approved
-Poland / France / Global news and geopolitics / Technology, AI and science /
-Financial markets and economics catalog. `pl/`, `en/` and `fr/` are ordinary static language pages; dated
+Tailwind or CDN scripts. Its dark editorial CSS and language choices are retained.
+The masthead is **Przegląd** with the subtitle **What’s happening now…**.
+Stories appear once in four sections: **Poland / France / World / Technology**,
+with a lead story inside each section. Technology takes precedence over geography.
+Publisher catalog categories remain provenance, not final story sections.
+`pl/`, `en/` and `fr/` are ordinary static language pages; dated
 editions have their own language pages. All sections' stories are available
 without a JavaScript “View all” control.
 
@@ -38,7 +40,7 @@ every production build. Do not pass test output as production history.
 
 Output includes `/index.html`, `/pl/`, `/en/`, `/fr/`,
 `/YYYY-MM-DD/index.html` and its language pages, `/archive/index.html`,
-`/assets/portal.css`, `/rss.xml`, `/sitemap.xml`, `/build-info.json`,
+`/assets/portal.css`, `/rss.xml`, `/sitemap.xml`, `/build-info.json`, `/articles.json`,
 `/live.html`, `/feed-utils.js` and `/sources.js`. Generated HTML has `lang="pl"`, Open Graph
 metadata, canonical URLs and an explicit generated-at timestamp in Europe/Paris.
 Articles carry their own language. Asset/navigation URLs include the base path
@@ -54,8 +56,38 @@ No `sources.yaml` or proxy services are used by the static builder. It fetches
 the catalog's enabled URLs directly with `urllib`
 (eight workers, 15-second socket timeout per request, 4 MiB response cap), parses
 RSS/Atom, keeps valid timestamps from the previous 24 hours, sorts and deduplicates
-by article URL. Individual failures are logged to stderr and included in the
+across sources. Distinct publisher count is the primary importance signal,
+followed by publication time and URL as a stable tie-break. Repeated entries
+from the same publisher do not inflate coverage. Individual failures are logged to stderr and included in the
 JSON report; an empty edition is rejected. There is no fixture fallback.
+
+### Story data and classification v1
+
+`articles.json` is the generation-time data used to render the page; JavaScript
+does not load it. It has `schemaVersion: 2`, `generatedAt`, `sections` and
+`articles`. Each article retains publisher fields and adds:
+
+- `sourceCategory`: the original catalog category (provenance).
+- `section`, `sectionReason`: exactly one final section and its rule explanation.
+- `classification`: versioned method and the text/category inputs used.
+- `sources`: original publisher names and article URLs for the story cluster.
+- `sourceCount`, `importance.sourceCount`: distinct publisher coverage, not an
+  editorial impact score.
+
+Source counts measure coverage, not independent corroboration: publishers can
+syndicate the same reporting. Stories are ordered by distinct publisher count,
+then publication time, with the URL as a deterministic tie-break.
+
+Clustering is deliberately conservative to avoid merging different events about
+the same subject: canonical URLs, near-identical substantive title tokens, or
+narrow service-resumption signatures with the same entity/action/object/cause
+and no conflicting numbers. Supported phrase variants include English, French
+and Polish; arbitrary multilingual paraphrases may remain separate. Semantic
+query parameters are retained; known tracking parameters do not distinguish
+stories. There is no automatic translation or external classifier service.
+The dated edition also stores its own `articles.json` when first generated;
+historical snapshots are not retroactively reclassified. `/lang/*.html` and
+`/feed.xml` are generated aliases of the canonical language pages and RSS.
 
 ### Python API used by the publisher
 
