@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Direct-feed static editions. Standard library only; see README for build API."""
 from datetime import datetime, timedelta, timezone
-from email.utils import parsedate_to_datetime
+from email.utils import format_datetime, parsedate_to_datetime
 from html.parser import HTMLParser
+import re
 from urllib.parse import urlsplit
 import xml.etree.ElementTree as ET
 
@@ -57,7 +58,6 @@ def parse_date(value):
 
 
 def category(feed):
-    import re
     if feed.get('category'):
         return feed['category']
     text = feed['name'] + feed['url']
@@ -109,10 +109,11 @@ import argparse
 import json
 import logging
 import os
-import re
 import shutil
 import tempfile
+import time
 import sys
+from urllib.error import HTTPError, URLError
 
 if __package__ in (None, ''):
     sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -136,10 +137,25 @@ def default_feeds():
             for feed in catalog if feed.get('url')]
 
 
-def fetch_feed(feed):
+def _transient(error):
+    """Network hiccups, timeouts, rate limits and server errors are worth one retry."""
+    if isinstance(error, HTTPError):
+        return error.code == 429 or error.code >= 500
+    return isinstance(error, (URLError, TimeoutError, ConnectionError))
+
+
+def fetch_feed(feed, attempts=2, backoff=2.0):
     request = Request(feed['url'], headers={'User-Agent': 'WorldNewsStatic/1.0 (RSS reader)', 'Accept': 'application/rss+xml, application/atom+xml, application/xml, text/xml'})
-    with urlopen(request, timeout=15) as response:
-        data = response.read(4 * 1024 * 1024 + 1)
+    for attempt in range(1, attempts + 1):
+        try:
+            with urlopen(request, timeout=15) as response:
+                data = response.read(4 * 1024 * 1024 + 1)
+            break
+        except Exception as error:
+            if attempt == attempts or not _transient(error):
+                raise
+            LOG.info('Retrying %s after %s', feed['name'], type(error).__name__)
+            time.sleep(backoff * attempt)
     if len(data) > 4 * 1024 * 1024:
         raise ValueError('Feed exceeds 4 MiB limit')
     return data
@@ -170,6 +186,10 @@ def collect(feeds, fetcher, now):
     if not unique:
         raise ValueError('Empty edition: no valid articles from the past 24 hours; publication refused')
     return unique, [failure for _, failure in results if failure]
+
+
+def plural(count, one, many):
+    return f'{count} {one if count == 1 else many}'
 
 
 def snippet(article, length):
@@ -205,8 +225,8 @@ def page(base, canonical, title, body, now):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
 <title>{escape(document_title)}</title><meta name="description" content="What’s happening now… Publisher feed headlines and snippets.">
 <meta property="og:type" content="website"><meta property="og:locale" content="pl_PL"><meta property="og:title" content="{escape(document_title, quote=True)}"><meta property="og:description" content="What’s happening now…"><meta property="og:url" content="{escape(canonical, quote=True)}">
-<meta name="generated-at" content="{stamp}"><link rel="canonical" href="{escape(canonical, quote=True)}"><link rel="alternate" type="application/rss+xml" title="{escape(SITE_TITLE, quote=True)} RSS" href="{base}rss.xml"><link rel="stylesheet" href="{base}assets/portal.css"></head>
-<body><div class="topline"><div class="shell"><span>THE DAILY BRIEFING · STORIES FROM AROUND THE WORLD</span><span>INDEPENDENT NEWS AGGREGATOR</span></div></div>
+<meta name="color-scheme" content="dark"><meta name="theme-color" content="#090b0e"><meta name="generated-at" content="{stamp}"><link rel="canonical" href="{escape(canonical, quote=True)}"><link rel="alternate" type="application/rss+xml" title="{escape(SITE_TITLE, quote=True)} RSS" href="{base}rss.xml"><link rel="stylesheet" href="{base}assets/portal.css"></head>
+<body><a class="skip-link" href="#main-content">Skip to content</a><div class="topline"><div class="shell"><span>THE DAILY BRIEFING · STORIES FROM AROUND THE WORLD</span><span>INDEPENDENT NEWS AGGREGATOR</span></div></div>
 <header class="masthead"><div class="shell masthead-row"><div><a class="brand" href="{base}">{escape(SITE_TITLE)}</a><div class="brand-sub">What’s happening now…</div></div><div class="edition">{now.astimezone(PARIS).strftime('%d.%m.%Y')}<br>Wygenerowano: <time datetime="{stamp}">{stamp}</time> · Europe/Paris</div><a class="manage-button" href="{base}live.html">Live (opcjonalnie)</a></div></header>
 {body}<footer class="footer"><div class="shell"><a href="{base}archive/">Archiwum</a> · <a href="{base}rss.xml">RSS</a><p>Opisy to fragmenty z kanałów RSS wydawców lub agregatorów, nie autorskie streszczenia. Linki prowadzą do wydawców bezpośrednio lub przez Google News.</p><p>Wygenerowano {stamp} · Europe/Paris</p></div></footer></body></html>'''
 
@@ -219,11 +239,14 @@ def edition_page(articles, base, prefix, language, now, failures):
     for section in SECTIONS:
         nav += f'<a class="nav-button" href="#{section.lower()}">{SECTION_LABELS[section]}</a>'
     body = nav + '</div></nav><main class="shell" id="main-content"><div class="edition-label">'
-    body += f'<h1>{"Front Page" if language == "All" else labels[language] + " Edition"}</h1><div class="statusline">{len(selected)} stories · past 24 hours · {len(failures)} feeds unavailable</div></div>'
+    body += f'<h1>{"Front Page" if language == "All" else labels[language] + " Edition"}</h1><div class="statusline">{plural(len(selected), "story", "stories")} · past 24 hours · {plural(len(failures), "feed", "feeds")} unavailable</div></div>'
+    if failures:
+        body += ('<details class="feed-failures"><summary>Unavailable feeds</summary><ul>'
+                 + ''.join(f'<li>{escape(failure.split(" (", 1)[0])}</li>' for failure in failures) + '</ul></details>')
     body += '<p class="classification-note">Ordered by distinct publisher count, then recency.</p>'
     for section in SECTIONS:
         items = [a for a in selected if a['section'] == section]
-        body += f'<section class="section" id="{section.lower()}" aria-label="{section}"><div class="section-heading"><h2 class="section-title">{SECTION_LABELS[section]}</h2><span>{len(items)} stories</span></div>'
+        body += f'<section class="section" id="{section.lower()}" aria-label="{section}"><div class="section-heading"><h2 class="section-title">{SECTION_LABELS[section]}</h2><span>{plural(len(items), "story", "stories")}</span></div>'
         subgroup = [a for a in items if a.get('subgroup') == 'BNP Paribas'] if section == 'Financial' else []
         if section == 'Financial':
             body += '<p><a href="#bnp-paribas">BNP Paribas</a></p>'
@@ -234,7 +257,7 @@ def edition_page(articles, base, prefix, language, now, failures):
         elif not subgroup:
             body += '<p class="empty">No stories in this section for this edition.</p>'
         if section == 'Financial':
-            body += '<section id="bnp-paribas" aria-label="BNP Paribas"><div class="section-heading"><h3 class="section-title">BNP Paribas</h3>' + f'<span>{len(subgroup)} stories</span></div>'
+            body += '<section id="bnp-paribas" aria-label="BNP Paribas"><div class="section-heading"><h3 class="section-title">BNP Paribas</h3>' + f'<span>{plural(len(subgroup), "story", "stories")}</span></div>'
             body += ('<div class="story-grid">' + ''.join(story(a) for a in subgroup) + '</div>'
                      if subgroup else '<p class="empty">No BNP Paribas stories in this edition.</p>')
             body += '</section>'
@@ -308,7 +331,6 @@ def build(output, base_url, *, now=None, feeds=None, fetcher=None, history_root=
         channel = ET.SubElement(rss, 'channel')
         for tag, value in [('title', SITE_TITLE), ('link', base), ('description', 'Fragmenty opisów z kanałów RSS wydawców; nie autorskie streszczenia.'), ('language', 'pl')]:
             ET.SubElement(channel, tag).text = value
-        from email.utils import format_datetime
         ET.SubElement(channel, 'lastBuildDate').text = format_datetime(now)
         for a in articles:
             item = ET.SubElement(channel, 'item')
