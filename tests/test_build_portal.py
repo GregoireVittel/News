@@ -79,7 +79,8 @@ class PortalTests(unittest.TestCase):
             articles.append(article)
         html = module.edition_page(articles, 'https://example.test/News/', '', 'All', now, [])
         self.assertIn('What’s happening now…', html)
-        self.assertIn('<title>Przegląd</title>', html)
+        from html import unescape
+        self.assertIn("<title>What's happening in the World</title>", unescape(html))
         self.assertNotIn('brand-mark', html)
         self.assertEqual(html.count('<article '), 5)
         for section in ('Poland', 'France', 'World', 'Technology'):
@@ -89,6 +90,24 @@ class PortalTests(unittest.TestCase):
         self.assertIn('2 sources', html)
         self.assertNotIn('<script', html)
         self.assertIn('portal-grid', html)
+
+    def test_primary_navigation_is_front_page_plus_four_topics(self):
+        import re
+        from html import unescape
+        module = builder()
+        now = datetime(2026, 11, 1, 12, tzinfo=timezone.utc)
+        for prefix in ('', '2026-11-01/'):
+            for language in ('All', 'pl', 'fr', 'en'):
+                html = module.edition_page([], 'https://example.test/News/', prefix, language, now, [])
+                links = re.findall(r'<a class="nav-button[^"]*" href="([^"]+)"[^>]*>([^<]+)</a>', html)
+                self.assertEqual(links, [
+                    ('https://example.test/News/' + prefix, 'Front Page'),
+                    ('#poland', 'Polish News'), ('#france', 'French News'),
+                    ('#world', 'World News'), ('#technology', 'Technology'),
+                ])
+                self.assertNotIn('Przegląd', unescape(html))
+                for anchor in ('poland', 'france', 'world', 'technology'):
+                    self.assertIn(f'id="{anchor}"', html)
 
     def test_build_persists_enrichment_and_legacy_aliases(self):
         module = builder()

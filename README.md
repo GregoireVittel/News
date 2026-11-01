@@ -1,9 +1,11 @@
-# Przegląd — static news editions
+# What's happening in the World — static news editions
 
 The default portal serves real article HTML without JavaScript, React, Babel,
-Tailwind or CDN scripts. Its dark editorial CSS and language choices are retained.
-The masthead is **Przegląd** with the subtitle **What’s happening now…**.
-Stories appear once in four sections: **Poland / France / World / Technology**,
+Tailwind or CDN scripts. Its dark editorial CSS is retained.
+The masthead is **What's happening in the World** with the subtitle **What’s happening now…**.
+Primary navigation is **Front Page** plus four topic anchors: **Polish News / French News / World News / Technology**.
+These select story subjects, not feed languages. Legacy language URLs remain available.
+Stories appear once in four sections, stored as **Poland / France / World / Technology**,
 with a lead story inside each section. Technology takes precedence over geography.
 Publisher catalog categories remain provenance, not final story sections.
 `pl/`, `en/` and `fr/` are ordinary static language pages; dated

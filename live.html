@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Przegląd — Your daily news edition</title>
+    <title>What's happening in the World — Live news</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
@@ -81,7 +81,8 @@
         .topline { background:var(--red); color:#111; font-weight:700; }
         .masthead,.navwrap { background:#090b0e; }
         .masthead-row { min-height:90px; }
-        .brand { color:#fff; font-family:'DM Sans',Arial,sans-serif; font-size:clamp(36px,5vw,64px); letter-spacing:-.08em; }
+        .brand { display:block; max-width:24ch; color:#fff; font-family:'DM Sans',Arial,sans-serif; font-size:clamp(26px,3.6vw,46px); letter-spacing:-.04em; overflow-wrap:break-word; }
+        .masthead-row > div:first-child { flex:1; min-width:0; padding:14px 0; }
         .brand-sub { color:#c5c7c9; }
         .edition { color:#c5c7c9; }
         .navwrap { border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
@@ -197,7 +198,7 @@
             <>
                 <div className="topline"><div className="shell"><span>THE DAILY BRIEFING · STORIES FROM AROUND THE WORLD</span><span>INDEPENDENT NEWS AGGREGATOR</span></div></div>
                 <header className="masthead"><div className="shell masthead-row">
-                    <div><a href="./" className="brand" aria-label="Przegląd home">Przegląd<span className="brand-mark">.</span></a><div className="brand-sub">The world, in perspective</div></div>
+                    <div><a href="./" className="brand" aria-label="What's happening in the World home">What's happening in the World</a><div className="brand-sub">The world, in perspective</div></div>
                     <div className="edition"><strong>{new Date().toLocaleDateString(undefined, { weekday:'long', month:'long', day:'numeric', year:'numeric' })}</strong><br/>A curated window on the last 24 hours</div>
                     <button className="manage-button" onClick={onManageFeedsClick} aria-label="Manage feeds">⚙ &nbsp;Manage feeds</button>
                 </div></header>

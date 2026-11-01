@@ -14,7 +14,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from xml.sax.saxutils import escape as xml_escape
-from scripts.build_edition import SECTIONS, edition_page, page as portal_page
+from scripts.build_edition import SECTIONS, SITE_TITLE, edition_page, page as portal_page
 from scripts.story_classification import enrich_articles
 
 BASE_URL = 'https://gregoirevittel.github.io/News/'
@@ -70,7 +70,7 @@ def configured_feeds(catalog):
 
 def fetch_one(feed):
     try:
-        request = urllib.request.Request(feed['url'], headers={'User-Agent': 'PrzegladNews/1.0 (+https://gregoirevittel.github.io/News/)'})
+        request = urllib.request.Request(feed['url'], headers={'User-Agent': 'WorldNews/1.0 (+https://gregoirevittel.github.io/News/)'})
         with urllib.request.urlopen(request, timeout=12) as response:
             data = response.read(3_000_001)
         if len(data) > 3_000_000:
@@ -161,7 +161,7 @@ def generate(root, entries, now, base_url=BASE_URL):
     archive_page = compatibility_page(portal_page(html_base, html_base + 'archive/', 'Archive', body, now), base_url + 'archive/')
     (archive_dir / 'index.html').write_text(archive_page, encoding='utf-8')
     rss_items = ''.join(f'<item><title>{xml_escape(a["title"])}</title><link>{xml_escape(a["link"])}</link><guid isPermaLink="true">{xml_escape(a["link"])}</guid><pubDate>{email.utils.format_datetime(a["date"])}</pubDate><description>{xml_escape(a["sourceName"] + ": " + a["description"])}</description></item>' for a in articles)
-    (root / 'feed.xml').write_text(f'<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Przegląd</title><link>{xml_escape(base_url)}</link><description>Daily headlines</description>{rss_items}</channel></rss>', encoding='utf-8')
+    (root / 'feed.xml').write_text(f'<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>{xml_escape(SITE_TITLE)}</title><link>{xml_escape(base_url)}</link><description>Daily headlines</description>{rss_items}</channel></rss>', encoding='utf-8')
     urls = [base_url, base_url + 'archive/', base_url + 'feed.xml'] + [base_url + f'lang/{lang}.html' for lang in ('pl', 'en', 'fr')] + [base_url + f'archive/{name}.html' for name in archive_names]
     (root / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{xml_escape(url)}</loc></url>' for url in urls) + '</urlset>', encoding='utf-8')
     return len(articles)
