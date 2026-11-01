@@ -44,11 +44,17 @@ function reconcileFeeds(defaults, saved, removedUrls = [], retiredUrls = {}, exc
   return [...byUrl.values()];
 }
 
+function portalSectionForCategory(category) {
+  if (category === 'Technology, AI and science') return 'Technology';
+  if (category === 'Global news and geopolitics' || category === 'Financial markets and economics') return 'World';
+  return category || 'World';
+}
+
 function groupPortalArticles(articles) {
   const lead = articles[0] || null;
   const sections = {};
   for (const article of articles.slice(4)) {
-    const category = article.category || 'World';
+    const category = portalSectionForCategory(article.category);
     (sections[category] ||= []).push(article);
   }
   return { lead, latest: articles.slice(1, 4), sections };
@@ -65,9 +71,9 @@ const portalSections = [
 function filterPortalArticles(articles, selectedSection) {
   return selectedSection === 'All'
     ? articles
-    : articles.filter(article => article.category === selectedSection);
+    : articles.filter(article => portalSectionForCategory(article.category) === selectedSection);
 }
 
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { parseFeedDate, recentUniqueArticles, reconcileFeeds, groupPortalArticles, portalSections, filterPortalArticles };
+  module.exports = { parseFeedDate, recentUniqueArticles, reconcileFeeds, groupPortalArticles, portalSections, filterPortalArticles, portalSectionForCategory };
 }

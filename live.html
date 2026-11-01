@@ -182,7 +182,7 @@
                     return { items: [], failed: true };
                 }
             }
-            return { items: items.map(item => ({ ...item, sourceName: feed.name, language: feed.language, category: categoryForFeed(feed) })), failed: false };
+            return { items: items.map(item => ({ ...item, sourceName: feed.name, language: feed.language, category: portalSectionForCategory(categoryForFeed(feed)) })), failed: false };
         };
 
         // --- COMPONENTS ---
@@ -224,7 +224,7 @@
             if (loading && !articles.length) return <div className="empty" role="status">Gathering today's stories…</div>;
             if (!articles.length) return <div className="empty"><h2 className="serif">No stories yet</h2><p>No articles from the past 24 hours match this section. Try another section or refresh.</p></div>;
             const { lead, latest, sections } = groupPortalArticles(articles);
-            const sectionOrder = [...new Set(sourceCatalog.map(feed => feed.category))];
+            const sectionOrder = [...new Set(sourceCatalog.map(feed => portalSectionForCategory(feed.category)))];
             return <>
                 <div className="portal-grid">
                     <article className="lead">
