@@ -205,11 +205,9 @@
             </>
         );
 
-        const LanguageFilter = ({ selectedLanguage, onSelectLanguage }) => {
-            const languages = ['All', 'pl', 'en', 'fr'];
-            const langDisplay = { All: 'Front page', pl: 'Polski', en: 'English', fr: 'Français' };
-            return <nav className="navwrap" aria-label="News language"><div className="shell navrow">
-                {languages.map(lang => <button key={lang} onClick={() => onSelectLanguage(lang)} aria-pressed={selectedLanguage === lang} className={'nav-button ' + (selectedLanguage === lang ? 'active' : '')}>{langDisplay[lang]}</button>)}
+        const SectionFilter = ({ selectedSection, onSelectSection }) => {
+            return <nav className="navwrap" aria-label="News sections"><div className="shell navrow">
+                {portalSections.map(section => <button key={section.value} onClick={() => onSelectSection(section.value)} aria-pressed={selectedSection === section.value} className={'nav-button ' + (selectedSection === section.value ? 'active' : '')}>{section.label}</button>)}
             </div></nav>;
         };
 
@@ -221,16 +219,16 @@
             {getSummary(article, 115) && <p>{getSummary(article, 115)}</p>}
         </article>;
 
-        const ArticleList = ({ articles, loading, selectedLanguage }) => {
+        const ArticleList = ({ articles, loading }) => {
             const [expanded, setExpanded] = React.useState({});
             if (loading && !articles.length) return <div className="empty" role="status">Gathering today's stories…</div>;
-            if (!articles.length) return <div className="empty"><h2 className="serif">No stories yet</h2><p>No articles from the past 24 hours match this language. Try another edition or refresh.</p></div>;
+            if (!articles.length) return <div className="empty"><h2 className="serif">No stories yet</h2><p>No articles from the past 24 hours match this section. Try another section or refresh.</p></div>;
             const { lead, latest, sections } = groupPortalArticles(articles);
             const sectionOrder = [...new Set(sourceCatalog.map(feed => feed.category))];
             return <>
                 <div className="portal-grid">
                     <article className="lead">
-                        {articleImage(lead) ? <a href={lead.link} target="_blank" rel="noopener noreferrer"><img className="lead-image" src={articleImage(lead)} alt="" onError={e => { e.currentTarget.style.display='none'; }} /></a> : <div className="lead-placeholder" aria-hidden="true">P.</div>}
+                        {articleImage(lead) ? <a href={lead.link} target="_blank" rel="noopener noreferrer"><img className="lead-image" src={articleImage(lead)} alt="" onError={e => { e.currentTarget.style.display='none'; }} /></a> : <div className="lead-placeholder" aria-hidden="true">W.</div>}
                         <div className="eyebrow" style={{marginTop:20}}>Top story · {lead.category || 'World'}</div>
                         <h2><a href={lead.link} target="_blank" rel="noopener noreferrer">{lead.title}</a></h2>
                         {getSummary(lead, 240) && <p>{getSummary(lead, 240)}</p>}
@@ -295,7 +293,7 @@
             const [refreshing, setRefreshing] = useState(false);
             const [failedFeeds, setFailedFeeds] = useState(0);
             const [lastUpdated, setLastUpdated] = useState(null);
-            const [selectedLanguage, setSelectedLanguage] = useState('All');
+            const [selectedSection, setSelectedSection] = useState('All');
             const [isFeedManagerOpen, setIsFeedManagerOpen] = useState(false);
 
             const [removedDefaults, setRemovedDefaults] = useState(() => {
@@ -362,26 +360,24 @@
                 return () => clearInterval(interval);
             }, [fetchAllFeeds]);
 
-            const filteredArticles = selectedLanguage === 'All'
-                ? articles
-                : articles.filter(article => article.language === selectedLanguage);
+            const filteredArticles = filterPortalArticles(articles, selectedSection);
 
             return (
                 <div className="min-h-screen flex flex-col">
                     <Header onManageFeedsClick={() => setIsFeedManagerOpen(true)} />
-                    <LanguageFilter selectedLanguage={selectedLanguage} onSelectLanguage={setSelectedLanguage} />
+                    <SectionFilter selectedSection={selectedSection} onSelectSection={setSelectedSection} />
                     <main className="shell" id="main-content">
                         <div className="edition-label">
-                            <h1>{selectedLanguage === 'All' ? 'The Front Page' : `${{pl:'Polski',en:'English',fr:'Français'}[selectedLanguage]} Edition`}</h1>
+                            <h1>{portalSections.find(section => section.value === selectedSection).label}</h1>
                             <div className="statusline" role="status" aria-live="polite">
                                 <span>{filteredArticles.length} stories · past 24 hours{lastUpdated ? ` · Updated ${lastUpdated.toLocaleTimeString()}` : ''}</span>
                                 {failedFeeds > 0 && <span style={{color:'#f7ad26'}}>{failedFeeds} {failedFeeds === 1 ? 'feed' : 'feeds'} unavailable</span>}
                                 <button onClick={() => fetchAllFeeds(false)} disabled={loading || refreshing} className="refresh-button">{refreshing ? 'Refreshing…' : '↻ Refresh'}</button>
                             </div>
                         </div>
-                        <ArticleList articles={filteredArticles} loading={loading} selectedLanguage={selectedLanguage} />
+                        <ArticleList articles={filteredArticles} loading={loading} />
                     </main>
-                    <footer className="footer"><div className="shell">Przegląd · Independent headlines, linked to their original publishers. © {new Date().getFullYear()}</div></footer>
+                    <footer className="footer"><div className="shell">What's happening in the World · Independent headlines, linked to their original publishers. © {new Date().getFullYear()}</div></footer>
                     {isFeedManagerOpen && (
                         <FeedManager
                             feeds={feeds}

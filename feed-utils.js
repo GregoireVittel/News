@@ -54,6 +54,20 @@ function groupPortalArticles(articles) {
   return { lead, latest: articles.slice(1, 4), sections };
 }
 
+const portalSections = [
+  { value: 'All', label: 'Front Page' },
+  { value: 'Poland', label: 'Polish News' },
+  { value: 'France', label: 'French News' },
+  { value: 'World', label: 'World News' },
+  { value: 'Technology', label: 'Technology' },
+];
+
+function filterPortalArticles(articles, selectedSection) {
+  return selectedSection === 'All'
+    ? articles
+    : articles.filter(article => article.category === selectedSection);
+}
+
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { parseFeedDate, recentUniqueArticles, reconcileFeeds, groupPortalArticles };
+  module.exports = { parseFeedDate, recentUniqueArticles, reconcileFeeds, groupPortalArticles, portalSections, filterPortalArticles };
 }
