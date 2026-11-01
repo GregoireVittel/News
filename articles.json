@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-01T22:11:57+01:00",
+  "generatedAt": "2026-11-01T22:21:53+01:00",
   "sections": [
     "Poland",
     "France",
@@ -46,6 +46,38 @@
       }
     },
     {
+      "title": "King to address slavery in Antigua as PM says he is open to possible UK apology",
+      "link": "https://www.bbc.co.uk/news/articles/cq398y0zj9rpo?at_medium=RSS&at_campaign=rss",
+      "description": "King Charles III will deliver a speech to the Commonwealth Heads of Government Meeting on Tuesday as he concludes his nine-day Caribbean tour.",
+      "date": "2026-11-01T21:18:12+00:00",
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/98d2/live/7c6766b0-d613-11f1-90fb-b3468681b3ba.jpg",
+      "sourceName": "BBC News",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "feed category fallback: Global news and geopolitics",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "King to address slavery in Antigua as PM says he is open to possible UK apology",
+          "description": "King Charles III will deliver a speech to the Commonwealth Heads of Government Meeting on Tuesday as he concludes his nine-day Caribbean tour.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/cq398y0zj9rpo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "NASA hopes the commercial space industry can help save Hubble",
       "link": "https://www.theverge.com/science/1024239/nasa-commercial-space-save-hubble",
       "description": "Gravity is a cruel mistress, slowly dragging the famed telescope ever closer to its ultimate demise with every day. Hubble is in no immediate danger of burning up in the Earth's atmosphere, but its time will run out in the early to mid 2030s unless its orbit is boosted. So NASA is taking proposals from […]",
@@ -78,7 +110,7 @@
       }
     },
     {
-      "title": "Russian strikes cut power to thousands in Ukraine as Kherson ceasefire expires",
+      "title": "Russian strikes cut power to thousands in Ukraine as Kherson ceasefire ends",
       "link": "https://www.bbc.co.uk/news/articles/c64g1y90p71eo?at_medium=RSS&at_campaign=rss",
       "description": "A rare humanitarian ceasefire allowed civilians to evacuate the Russian-occupied city of Oleshky.",
       "date": "2026-11-01T21:01:58+00:00",
@@ -93,7 +125,7 @@
         "method": "rules",
         "version": 1,
         "input": {
-          "title": "Russian strikes cut power to thousands in Ukraine as Kherson ceasefire expires",
+          "title": "Russian strikes cut power to thousands in Ukraine as Kherson ceasefire ends",
           "description": "A rare humanitarian ceasefire allowed civilians to evacuate the Russian-occupied city of Oleshky.",
           "sourceCategory": "Global news and geopolitics"
         }
@@ -166,6 +198,38 @@
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/11/01/ai-can-make-tech-ceos-lives-easier-what-about-everyone-else/"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "A Lesson From Germany",
+      "link": "https://www.nytimes.com/2026/11/01/world/germany-russia-putin-deals-us-midterms.html",
+      "description": "Trump is betting on economic incentives to stop Putin in Ukraine. Germany’s experience shows why that strategy is risky.",
+      "date": "2026-11-01T20:45:44+00:00",
+      "image": "https://static01.nyt.com/images/2026/11/02/multimedia/02int-theworld-trump-ostpolitik-02-mltw-promo/02int-theworld-trump-ostpolitik-02-mltw-promo-mediumSquareAt3X.jpg",
+      "sourceName": "The New York Times",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "A Lesson From Germany",
+          "description": "Trump is betting on economic incentives to stop Putin in Ukraine. Germany’s experience shows why that strategy is risky.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "The New York Times",
+          "url": "https://www.nytimes.com/2026/11/01/world/germany-russia-putin-deals-us-midterms.html"
         }
       ],
       "sourceCount": 1,
@@ -366,6 +430,38 @@
       }
     },
     {
+      "title": "Syria Weighs Joining Saudi Mutual Defense Pact as Yemen War Rages",
+      "link": "https://www.nytimes.com/2026/10/31/world/middleeast/syria-saudi-defense-pact.html",
+      "description": "A move to join Saudi Arabia’s agreement with Turkey and Pakistan could entangle more countries in the kingdom’s escalating conflict between the Iran-backed Houthis.",
+      "date": "2026-11-01T20:08:50+00:00",
+      "image": "https://static01.nyt.com/images/2026/10/31/multimedia/31int-syria-mecca-pact-tfhp/31int-syria-mecca-pact-tfhp-mediumSquareAt3X.jpg",
+      "sourceName": "The New York Times",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Syria Weighs Joining Saudi Mutual Defense Pact as Yemen War Rages",
+          "description": "A move to join Saudi Arabia’s agreement with Turkey and Pakistan could entangle more countries in the kingdom’s escalating conflict between the Iran-backed Houthis.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "The New York Times",
+          "url": "https://www.nytimes.com/2026/10/31/world/middleeast/syria-saudi-defense-pact.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "Edouard Philippe juge la primaire à droite et au centre synonyme de « division » et de « confusion »",
       "link": "https://www.lemonde.fr/election-presidentielle-2027/article/2026/11/01/edouard-philippe-juge-la-primaire-a-droite-et-au-centre-synonyme-de-division-et-de-confusion_6804637_6205049.html",
       "description": "Le maire du Havre a estimé, dimanche, au journal de 20 heures de TF1, que la primaire envisagée à droite et au centre en vue de la présidentielle de 2027 « n’aura[it] pas lieu » et « n’a pas beaucoup de sens ».",
@@ -454,38 +550,6 @@
         {
           "name": "Bloomberg",
           "url": "https://www.bloomberg.com/news/articles/2026-11-01/wall-street-braces-for-biggest-treasury-sales-overhaul-in-years"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "King to address slavery in Antigua as PM says he is open to possible UK apology",
-      "link": "https://www.bbc.co.uk/news/articles/cq398y0zj9rpo?at_medium=RSS&at_campaign=rss",
-      "description": "King Charles III will deliver a speech to the Commonwealth Heads of Government Meeting on Tuesday as he concludes his nine-day Caribbean tour.",
-      "date": "2026-11-01T19:58:20+00:00",
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/98d2/live/7c6766b0-d613-11f1-90fb-b3468681b3ba.jpg",
-      "sourceName": "BBC News",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "King to address slavery in Antigua as PM says he is open to possible UK apology",
-          "description": "King Charles III will deliver a speech to the Commonwealth Heads of Government Meeting on Tuesday as he concludes his nine-day Caribbean tour.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "BBC News",
-          "url": "https://www.bbc.co.uk/news/articles/cq398y0zj9rpo?at_medium=RSS&at_campaign=rss"
         }
       ],
       "sourceCount": 1,
@@ -1326,38 +1390,6 @@
       }
     },
     {
-      "title": "USA w kontrze do nauki? Wielka szansa dla Europy na przejęcie lukratywnego rynku",
-      "link": "https://www.bankier.pl/wiadomosc/USA-w-kontrze-do-nauki-Wielka-szansa-dla-Europy-na-przejecie-lukratywnego-rynku-9221873.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
-      "description": "Europa ma szansę umocnić swoją pozycję światowego lidera w badaniach naukowych i rozwoju szczepionek, w szczególności wykorzystujących technologię mRNA. Sprzyjać temu mogą ograniczenia finansowania badań w Stanach Zjednoczonych oraz rosnący sceptycyzm administracji Donalda Trumpa wobec szczepień - ocenił w niedzielę portal Politico.",
-      "date": "2026-11-01T18:47:00+01:00",
-      "image": "",
-      "sourceName": "Bankier.pl",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "Technology",
-      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "USA w kontrze do nauki? Wielka szansa dla Europy na przejęcie lukratywnego rynku",
-          "description": "Europa ma szansę umocnić swoją pozycję światowego lidera w badaniach naukowych i rozwoju szczepionek, w szczególności wykorzystujących technologię mRNA. Sprzyjać temu mogą ograniczenia finansowania badań w Stanach Zjednoczonych oraz rosnący sceptycyzm administracji Donalda Trumpa wobec szczepień - ocenił w niedzielę portal Politico.",
-          "sourceCategory": "Poland"
-        }
-      },
-      "sources": [
-        {
-          "name": "Bankier.pl",
-          "url": "https://www.bankier.pl/wiadomosc/USA-w-kontrze-do-nauki-Wielka-szansa-dla-Europy-na-przejecie-lukratywnego-rynku-9221873.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Une semaine sous le signe de la haine raciste en France",
       "link": "https://www.mediapart.fr/journal/france/011126/une-semaine-sous-le-signe-de-la-haine-raciste-en-france",
       "description": "Plusieurs faits à caractère raciste et islamophobe ont marqué l’actualité des derniers jours. De l’attentat des Yvelines aux menaces visant une mosquée dans l’Hérault, en passant par un courrier haineux adressé au maire de Trappes ou des tags «remigration» à Paris, les pressions et les violences de l’extrême droite sont quotidiennes.",
@@ -1806,38 +1838,6 @@
       }
     },
     {
-      "title": "Bezcenne odkrycie archeologów. \"Możliwe, że tę monetę król trzymał kiedyś w dłoni\"",
-      "link": "https://www.bankier.pl/wiadomosc/Bezcenne-odkrycie-archeologow-Mozliwe-ze-te-monete-krol-trzymal-kiedys-w-dloni-9221072.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
-      "description": "Wśród monet z największego skarbu z epoki wikingów archeolodzy odkryli niezwykle rzadką monetę Olafa Świętego, patrona Norwegii. To skarb narodowy – przyznała w komunikacie archeolożka Anne Skogsfjord. Od listopada monetę będzie można obejrzeć na wystawie w Muzeum Historycznym w Oslo.",
-      "date": "2026-11-01T18:00:00+01:00",
-      "image": "",
-      "sourceName": "Bankier.pl",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "Poland",
-      "sectionReason": "feed category fallback: Poland",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Bezcenne odkrycie archeologów. \"Możliwe, że tę monetę król trzymał kiedyś w dłoni\"",
-          "description": "Wśród monet z największego skarbu z epoki wikingów archeolodzy odkryli niezwykle rzadką monetę Olafa Świętego, patrona Norwegii. To skarb narodowy – przyznała w komunikacie archeolożka Anne Skogsfjord. Od listopada monetę będzie można obejrzeć na wystawie w Muzeum Historycznym w Oslo.",
-          "sourceCategory": "Poland"
-        }
-      },
-      "sources": [
-        {
-          "name": "Bankier.pl",
-          "url": "https://www.bankier.pl/wiadomosc/Bezcenne-odkrycie-archeologow-Mozliwe-ze-te-monete-krol-trzymal-kiedys-w-dloni-9221072.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Brytyjczycy mają dość brexitu. Sensacyjne wyniki sondażu: Chcą z powrotem do Unii",
       "link": "https://www.bankier.pl/wiadomosc/Brytyjczycy-maja-dosc-brexitu-Sensacyjne-wyniki-sondazu-Chca-z-powrotem-do-Unii-9221718.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
       "description": "56 proc. Brytyjczyków zagłosowałoby dziś za odwróceniem brexitu, a 30 proc. chciałoby pozostać poza UE – to wyniki sondażu opublikowanego w sobotę przez dziennik „Independent”. Gazeta podkreśla, że poparcie dla powrotu rośnie w kontekście dyskusji o Unii, która rozpoczęła się w ostatnich tygodniach w Wielkiej Brytanii.",
@@ -2126,6 +2126,38 @@
       }
     },
     {
+      "title": "India’s Congress Party Holds Mass Protest in New Delhi",
+      "link": "https://www.nytimes.com/2026/10/31/world/asia/congress-cjp-protest-delhi-india-modi.html",
+      "description": "Tens of thousands gathered in India’s capital in a clamor of banging drums, chants and billowing flags, with participants from across the country.",
+      "date": "2026-11-01T16:51:34+00:00",
+      "image": "https://static01.nyt.com/images/2026/11/01/multimedia/01int-india-protest-vtgk/01int-india-protest-vtgk-mediumSquareAt3X.jpg",
+      "sourceName": "The New York Times",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "India’s Congress Party Holds Mass Protest in New Delhi",
+          "description": "Tens of thousands gathered in India’s capital in a clamor of banging drums, chants and billowing flags, with participants from across the country.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "The New York Times",
+          "url": "https://www.nytimes.com/2026/10/31/world/asia/congress-cjp-protest-delhi-india-modi.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "Jeden ruch Chin może wywołać zapaść w polskim rolnictwie. O tym problemie nikt głośno nie mówi",
       "link": "https://www.bankier.pl/wiadomosc/Jeden-ruch-Chin-moze-wywolac-zapasc-w-polskim-rolnictwie-O-tym-problemie-nikt-glosno-nie-mowi-9221295.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
       "description": "Ostatnie lata ujawniły wiele wrażliwości polskiego systemu żywnościowego, wśród nich jest uzależnienie od dostaw z Chin kluczowych elementów potrzebnych do produkcji roślinnej i zwierzęcej - ocenia Jakub Olipra, starszy ekonomista Credit Agricole. Jego zdaniem, obecnie największym problemem dla branży jest wzrost cen nawozów i środków ochrony roślin.",
@@ -2278,6 +2310,40 @@
         {
           "name": "Bloomberg",
           "url": "https://www.bloomberg.com/news/videos/2026-11-01/the-political-debate-on-daylight-saving-time-video"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "BNP Paribas stock starts week with EUR 1.3 billion buyback - ad-hoc-news.de",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNbmx5WVRGN1o2ZmpCamdQSDY3SmRTVzlJSkpnR0ZjV3FjdUhpWVhITGp2NHFWNU9xMnFrTWdCVWoyNGp4N3V2SUE1QXJoU0s5TEEyc1hlSndwd1c5VlBPSHJUa1otYVQ2VFV5WDBRMmpaM1VnQjlCMW1Ub2lsR19CT3VxSHZ2SE1OUU13ODh0bHJVa09lMjBrQ3hJbGQ1TEFlR1VvUFlHQkNUaGNwUjE0enozdnR6OVhsd2VHWk1n?oc=5",
+      "description": "BNP Paribas stock starts week with EUR 1.3 billion buyback ad-hoc-news.de",
+      "date": "2026-11-01T16:22:43+00:00",
+      "image": "",
+      "sourceName": "ad-hoc-news.de",
+      "language": "en",
+      "category": "Financial markets and economics",
+      "aggregator": true,
+      "subgroup": "BNP Paribas",
+      "sourceCategory": "Financial markets and economics",
+      "section": "Financial",
+      "sectionReason": "content: BNP Paribas bank evidence",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "BNP Paribas stock starts week with EUR 1.3 billion buyback - ad-hoc-news.de",
+          "description": "BNP Paribas stock starts week with EUR 1.3 billion buyback ad-hoc-news.de",
+          "sourceCategory": "Financial markets and economics"
+        }
+      },
+      "sources": [
+        {
+          "name": "ad-hoc-news.de",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNbmx5WVRGN1o2ZmpCamdQSDY3SmRTVzlJSkpnR0ZjV3FjdUhpWVhITGp2NHFWNU9xMnFrTWdCVWoyNGp4N3V2SUE1QXJoU0s5TEEyc1hlSndwd1c5VlBPSHJUa1otYVQ2VFV5WDBRMmpaM1VnQjlCMW1Ub2lsR19CT3VxSHZ2SE1OUU13ODh0bHJVa09lMjBrQ3hJbGQ1TEFlR1VvUFlHQkNUaGNwUjE0enozdnR6OVhsd2VHWk1n?oc=5"
         }
       ],
       "sourceCount": 1,
@@ -2958,6 +3024,38 @@
       }
     },
     {
+      "title": "Thailand’s Most Famous Snake Catcher",
+      "link": "https://www.nytimes.com/video/world/asia/100000011244032/thailand-snake-catcher-bangkok.html",
+      "description": "Pinyo Pukpinyo, Thailand’s most famous snake catcher, has found the critters slithering in nooks and crannies all over Bangkok. He refuses to kill them.",
+      "date": "2026-11-01T15:10:28+00:00",
+      "image": "https://static01.nyt.com/images/2026/11/01/multimedia/019nt-snakecatcher-profile-videocoverimage-pvjh/019nt-snakecatcher-profile-videocoverimage-pvjh-mediumSquareAt3X.jpg",
+      "sourceName": "The New York Times",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "feed category fallback: Global news and geopolitics",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Thailand’s Most Famous Snake Catcher",
+          "description": "Pinyo Pukpinyo, Thailand’s most famous snake catcher, has found the critters slithering in nooks and crannies all over Bangkok. He refuses to kill them.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "The New York Times",
+          "url": "https://www.nytimes.com/video/world/asia/100000011244032/thailand-snake-catcher-bangkok.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "W centrum Warszawy dramatycznie brakuje biur. Takiej sytuacji nie było od 2008 roku",
       "link": "https://www.bankier.pl/wiadomosc/W-centrum-Warszawy-dramatycznie-brakuje-biur-Takiej-sytuacji-nie-bylo-od-2008-roku-9221553.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
       "description": "Popyt na biura w Warszawie wyniósł w III kwartale br. 175,3 tys. mkw. - wynika z danych firmy Cushman & Wakefield. W centrum miasta do wynajęcia pozostawało niecałe 5 proc. powierzchni biurowej. Analitycy firmy podkreślili, że to najmniejsza dostępność od 2008 r.",
@@ -3182,6 +3280,38 @@
       }
     },
     {
+      "title": "Zniszczony nagrobek? Możesz dostać nawet 20 tys. zł odszkodowania",
+      "link": "https://www.bankier.pl/wiadomosc/Zniszczony-nagrobek-Mozesz-dostac-nawet-20-tys-zl-odszkodowania-9220030.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
+      "description": "Koszty naprawienia uszkodzonego nagrobka mogą zostać pokryte dzięki dodatkowej polisie, a w określonych przypadkach z ubezpieczenia OC odpowiedzialnego podmiotu - wskazali eksperci z Biura Rzecznika Finansowego.",
+      "date": "2026-11-01T16:00:00+01:00",
+      "image": "",
+      "sourceName": "Bankier.pl",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "Poland",
+      "sectionReason": "feed category fallback: Poland",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Zniszczony nagrobek? Możesz dostać nawet 20 tys. zł odszkodowania",
+          "description": "Koszty naprawienia uszkodzonego nagrobka mogą zostać pokryte dzięki dodatkowej polisie, a w określonych przypadkach z ubezpieczenia OC odpowiedzialnego podmiotu - wskazali eksperci z Biura Rzecznika Finansowego.",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Bankier.pl",
+          "url": "https://www.bankier.pl/wiadomosc/Zniszczony-nagrobek-Mozesz-dostac-nawet-20-tys-zl-odszkodowania-9220030.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "After Tech Rout, Investors Gird for More Wild Days for Stocks",
       "link": "https://www.bloomberg.com/news/articles/2026-11-01/wall-street-braces-for-more-wild-days-in-stocks-after-tech-rout",
       "description": "The stock market got a long-awaited jolt of volatility late last week after disappointing earnings from technology giants added to angst around the AI-driven rally.",
@@ -3206,38 +3336,6 @@
         {
           "name": "Bloomberg",
           "url": "https://www.bloomberg.com/news/articles/2026-11-01/wall-street-braces-for-more-wild-days-in-stocks-after-tech-rout"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Koniec z armią na \"trytytkach\" MON wreszcie pozwala żołnierzom na normalny sprzęt",
-      "link": "https://www.bankier.pl/wiadomosc/Koniec-z-armia-na-trytytkach-MON-wreszcie-pozwala-zolnierzom-na-normalny-sprzet-9221551.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
-      "description": "Tak zwana zielona lista rekomendowanego wyposażenia żołnierzy to racjonalna próba uporządkowania przez MON zjawiska, które i tak od lat funkcjonuje w polskim wojsku – ocenia kmdr por. rez. Włodzimierz Kopeć, były szef szkolenia specjalistycznego Formozy.",
-      "date": "2026-11-01T15:59:00+01:00",
-      "image": "",
-      "sourceName": "Bankier.pl",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "Poland",
-      "sectionReason": "content: Poland subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Koniec z armią na \"trytytkach\" MON wreszcie pozwala żołnierzom na normalny sprzęt",
-          "description": "Tak zwana zielona lista rekomendowanego wyposażenia żołnierzy to racjonalna próba uporządkowania przez MON zjawiska, które i tak od lat funkcjonuje w polskim wojsku – ocenia kmdr por. rez. Włodzimierz Kopeć, były szef szkolenia specjalistycznego Formozy.",
-          "sourceCategory": "Poland"
-        }
-      },
-      "sources": [
-        {
-          "name": "Bankier.pl",
-          "url": "https://www.bankier.pl/wiadomosc/Koniec-z-armia-na-trytytkach-MON-wreszcie-pozwala-zolnierzom-na-normalny-sprzet-9221551.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
         }
       ],
       "sourceCount": 1,
@@ -3590,6 +3688,38 @@
         {
           "name": "Bloomberg",
           "url": "https://www.bloomberg.com/news/videos/2026-11-01/ai-talent-war-spreads-to-wall-street-video"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Clashes Erupt Again in France, After Festive Start to Day of Protest",
+      "link": "https://www.nytimes.com/2026/10/31/world/europe/france-protests-clashes.html",
+      "description": "More than 300,000 people took to the streets, some wearing Halloween costumes, before the demonstrations ended in violence.",
+      "date": "2026-11-01T14:25:30+00:00",
+      "image": "https://static01.nyt.com/images/2026/10/31/multimedia/31int-france-protests-leadall-vpqj/31int-france-protests-leadall-vpqj-mediumSquareAt3X.jpg",
+      "sourceName": "The New York Times",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "France",
+      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Clashes Erupt Again in France, After Festive Start to Day of Protest",
+          "description": "More than 300,000 people took to the streets, some wearing Halloween costumes, before the demonstrations ended in violence.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "The New York Times",
+          "url": "https://www.nytimes.com/2026/10/31/world/europe/france-protests-clashes.html"
         }
       ],
       "sourceCount": 1,
@@ -5168,38 +5298,6 @@
       }
     },
     {
-      "title": "Zalew śmieciowych treści zniszczy samą AI? Medialny gigant uderza w Dolinę Krzemową",
-      "link": "https://www.bankier.pl/wiadomosc/Zalew-smieciowych-tresci-zniszczy-sama-AI-Medialny-gigant-uderza-w-Doline-Krzemowa-9218783.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
-      "description": "Sztuczna inteligencja nie jest w stanie zastąpić pracy reporterów, a wobec zalewu niesprawdzonych informacji w internecie rola dziennikarstwa tworzonego przez ludzi rośnie – ocenił szef jednego z największych koncernów mediowych News Corp Robert Thomson w rozmowie z dziennikiem „Yomiuri Shimbun”.",
-      "date": "2026-11-01T12:00:00+01:00",
-      "image": "",
-      "sourceName": "Bankier.pl",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "Technology",
-      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Zalew śmieciowych treści zniszczy samą AI? Medialny gigant uderza w Dolinę Krzemową",
-          "description": "Sztuczna inteligencja nie jest w stanie zastąpić pracy reporterów, a wobec zalewu niesprawdzonych informacji w internecie rola dziennikarstwa tworzonego przez ludzi rośnie – ocenił szef jednego z największych koncernów mediowych News Corp Robert Thomson w rozmowie z dziennikiem „Yomiuri Shimbun”.",
-          "sourceCategory": "Poland"
-        }
-      },
-      "sources": [
-        {
-          "name": "Bankier.pl",
-          "url": "https://www.bankier.pl/wiadomosc/Zalew-smieciowych-tresci-zniszczy-sama-AI-Medialny-gigant-uderza-w-Doline-Krzemowa-9218783.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Reeves says UK's future should be inside the EU",
       "link": "https://www.bbc.co.uk/news/articles/c62l4yz0eexpo?at_medium=RSS&at_campaign=rss",
       "description": "In her first major intervention since leaving the Treasury, Rachel Reeves says Brexit has made the UK \"poorer, weaker and less secure\".",
@@ -5424,6 +5522,38 @@
       }
     },
     {
+      "title": "Netanyahu’s Bid to Stay in Power Will Test His Political Savvy",
+      "link": "https://www.nytimes.com/2026/11/01/world/middleeast/netanyahu-coalition-building-tests-political-skills.html",
+      "description": "After losing ground in Israel’s election, Prime Minister Benjamin Netanyahu must draw on decades of political capital and reckon with old foes if he is to build a governing coalition.",
+      "date": "2026-11-01T10:20:20+00:00",
+      "image": "https://static01.nyt.com/images/2026/10/31/multimedia/31int-netanyahu-coalition-chmj/31int-netanyahu-coalition-chmj-mediumSquareAt3X.jpg",
+      "sourceName": "The New York Times",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Netanyahu’s Bid to Stay in Power Will Test His Political Savvy",
+          "description": "After losing ground in Israel’s election, Prime Minister Benjamin Netanyahu must draw on decades of political capital and reckon with old foes if he is to build a governing coalition.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "The New York Times",
+          "url": "https://www.nytimes.com/2026/11/01/world/middleeast/netanyahu-coalition-building-tests-political-skills.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "Prof. Włodzimierz Wróbel analizuje prawne podstawy decyzji o odsunięciu od obowiązków Bogdana Święczkowskiego",
       "link": "https://wyborcza.pl/7,75968,33110253,prof-wlodzimierz-wrobel-analizuje-prawne-podstawy-decyzji-o.html",
       "description": "Ustawa regulująca funkcjonowanie Trybunału Konstytucyjnego przewiduje, kiedy uprawnienia prezesa TK mogą przejść na innego sędziego.",
@@ -5448,6 +5578,102 @@
         {
           "name": "Gazeta Wyborcza",
           "url": "https://wyborcza.pl/7,75968,33110253,prof-wlodzimierz-wrobel-analizuje-prawne-podstawy-decyzji-o.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Putin Breaks Down His Isolation, With a Big Assist From Trump",
+      "link": "https://www.nytimes.com/2026/11/01/world/europe/putin-isolation-breakdown-trump.html",
+      "description": "Notching wins from Washington, the Russian leader is talking with foreign leaders and could return to diplomatic center stage with possible summit meetings.",
+      "date": "2026-11-01T10:04:00+00:00",
+      "image": "https://static01.nyt.com/images/2026/11/01/multimedia/01int-russia-putin-week-cfkh/01int-russia-putin-week-cfkh-mediumSquareAt3X.jpg",
+      "sourceName": "The New York Times",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Putin Breaks Down His Isolation, With a Big Assist From Trump",
+          "description": "Notching wins from Washington, the Russian leader is talking with foreign leaders and could return to diplomatic center stage with possible summit meetings.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "The New York Times",
+          "url": "https://www.nytimes.com/2026/11/01/world/europe/putin-isolation-breakdown-trump.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Where Do Israel’s Arab Parties Stand?",
+      "link": "https://www.nytimes.com/2026/11/01/world/middleeast/israel-arab-parties.html",
+      "description": "Having won a record 19 seats in Israel’s Parliament, the two Arab-led parties say they want to work with opposition factions to take down the Netanyahu government.",
+      "date": "2026-11-01T10:03:51+00:00",
+      "image": "https://static01.nyt.com/images/2026/11/01/multimedia/01int-israel-arab-parties-hfkw/01int-israel-arab-parties-hfkw-mediumSquareAt3X.jpg",
+      "sourceName": "The New York Times",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Where Do Israel’s Arab Parties Stand?",
+          "description": "Having won a record 19 seats in Israel’s Parliament, the two Arab-led parties say they want to work with opposition factions to take down the Netanyahu government.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "The New York Times",
+          "url": "https://www.nytimes.com/2026/11/01/world/middleeast/israel-arab-parties.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Joseph Lagu, Who Led Independence Movement in Southern Sudan, Has Died",
+      "link": "https://www.nytimes.com/2026/11/01/world/africa/joseph-lagu-sudan-dead.html",
+      "description": "He played a pivotal role in winning his region’s autonomy from Sudan in 1972, then served as a high-ranking diplomat. He was 94.",
+      "date": "2026-11-01T10:02:33+00:00",
+      "image": "https://static01.nyt.com/images/2026/10/28/obituaries/280bit-lagu-topper/280bit-lagu-topper-mediumSquareAt3X.jpg",
+      "sourceName": "The New York Times",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "feed category fallback: Global news and geopolitics",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Joseph Lagu, Who Led Independence Movement in Southern Sudan, Has Died",
+          "description": "He played a pivotal role in winning his region’s autonomy from Sudan in 1972, then served as a high-ranking diplomat. He was 94.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "The New York Times",
+          "url": "https://www.nytimes.com/2026/11/01/world/africa/joseph-lagu-sudan-dead.html"
         }
       ],
       "sourceCount": 1,
@@ -5746,10 +5972,10 @@
       }
     },
     {
-      "title": "Połowa mężczyzn umiera przed emeryturą. Zaczynają diagnostykę, ale nie kończą leczenia",
-      "link": "https://www.bankier.pl/wiadomosc/Polowa-mezczyzn-umiera-przed-emerytura-Zaczynaja-diagnostyke-ale-nie-koncza-leczenia-9220445.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
-      "description": "Mężczyźni żyją 7 lat krócej niż kobiety - wynika za raportu prof. Piotra Radziszewskiego z WUM. Blisko 52 proc. tej dysproporcji to efekt zgonów mężczyzn poniżej 65. roku życia.",
-      "date": "2026-11-01T10:00:00+01:00",
+      "title": "Komendant Główny Policji odpowiada związkowcom: Działania pod TK były w pełni zgodne z prawem",
+      "link": "https://www.bankier.pl/wiadomosc/Policjanci-przerywaja-milczenie-po-przepychankach-z-prezydentem-Rodziny-drza-z-niepokoju-9221820.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
+      "description": "Przewodniczący jednego ze związków zawodowych działających w policji - „Policyjna Solidarność” - napisał do komendanta głownego policji Marka Boronia list po wydarzeniach przed Trybunałem Konstytucyjnym.",
+      "date": "2026-11-01T09:55:00+01:00",
       "image": "",
       "sourceName": "Bankier.pl",
       "language": "pl",
@@ -5761,15 +5987,15 @@
         "method": "rules",
         "version": 1,
         "input": {
-          "title": "Połowa mężczyzn umiera przed emeryturą. Zaczynają diagnostykę, ale nie kończą leczenia",
-          "description": "Mężczyźni żyją 7 lat krócej niż kobiety - wynika za raportu prof. Piotra Radziszewskiego z WUM. Blisko 52 proc. tej dysproporcji to efekt zgonów mężczyzn poniżej 65. roku życia.",
+          "title": "Komendant Główny Policji odpowiada związkowcom: Działania pod TK były w pełni zgodne z prawem",
+          "description": "Przewodniczący jednego ze związków zawodowych działających w policji - „Policyjna Solidarność” - napisał do komendanta głownego policji Marka Boronia list po wydarzeniach przed Trybunałem Konstytucyjnym.",
           "sourceCategory": "Poland"
         }
       },
       "sources": [
         {
           "name": "Bankier.pl",
-          "url": "https://www.bankier.pl/wiadomosc/Polowa-mezczyzn-umiera-przed-emerytura-Zaczynaja-diagnostyke-ale-nie-koncza-leczenia-9220445.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
+          "url": "https://www.bankier.pl/wiadomosc/Policjanci-przerywaja-milczenie-po-przepychankach-z-prezydentem-Rodziny-drza-z-niepokoju-9221820.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
         }
       ],
       "sourceCount": 1,
@@ -6026,6 +6252,38 @@
         {
           "name": "Bankier.pl",
           "url": "https://www.bankier.pl/wiadomosc/Miliard-zlotych-za-cieknacy-kran-Tak-domowe-awarie-kradna-czas-polskim-pracownikom-9216484.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Olsztyn chce przejąć 27,5 km kw. sąsiednich gmin. Mieszkańcy protestują",
+      "link": "https://www.bankier.pl/wiadomosc/Olsztyn-chce-przejac-27-5-km-kw-sasiednich-gmin-Mieszkancy-protestuja-9219808.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
+      "description": "Radni Olsztyna zgodzili się w środę na rozpoczęcie procedowania zmiany granic miasta. Mieszkańcy podolsztyńskich Stawigudy i Dywity pikietowali przed urzędem miasta, nie zgadzając się na przejęcie terenów gminnych przez Olsztyn.",
+      "date": "2026-11-01T08:00:00+01:00",
+      "image": "",
+      "sourceName": "Bankier.pl",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "Poland",
+      "sectionReason": "feed category fallback: Poland",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Olsztyn chce przejąć 27,5 km kw. sąsiednich gmin. Mieszkańcy protestują",
+          "description": "Radni Olsztyna zgodzili się w środę na rozpoczęcie procedowania zmiany granic miasta. Mieszkańcy podolsztyńskich Stawigudy i Dywity pikietowali przed urzędem miasta, nie zgadzając się na przejęcie terenów gminnych przez Olsztyn.",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Bankier.pl",
+          "url": "https://www.bankier.pl/wiadomosc/Olsztyn-chce-przejac-27-5-km-kw-sasiednich-gmin-Mieszkancy-protestuja-9219808.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
         }
       ],
       "sourceCount": 1,
@@ -6354,38 +6612,6 @@
       }
     },
     {
-      "title": "Duch tnie czynsz o 30 proc. Szokujące kulisy japońskiego rynku nieruchomości",
-      "link": "https://www.bankier.pl/wiadomosc/Duch-tnie-czynsz-o-30-proc-Szokujace-kulisy-japonskiego-rynku-nieruchomosci-9220317.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
-      "description": "Kredyt hipoteczny czy wysoki czynsz albo duch - przed takim wyborem stają Japończycy, którzy poszukują swojego kąta. Istnieje bowiem cała kategoria nieruchomości oznaczona jako \"jiko bukken\", czyli \"napiętnowane\" lub związane z jedną kategorią \"wypadków\".",
-      "date": "2026-11-01T06:00:00+01:00",
-      "image": "",
-      "sourceName": "Bankier.pl",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "Financial",
-      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Duch tnie czynsz o 30 proc. Szokujące kulisy japońskiego rynku nieruchomości",
-          "description": "Kredyt hipoteczny czy wysoki czynsz albo duch - przed takim wyborem stają Japończycy, którzy poszukują swojego kąta. Istnieje bowiem cała kategoria nieruchomości oznaczona jako \"jiko bukken\", czyli \"napiętnowane\" lub związane z jedną kategorią \"wypadków\".",
-          "sourceCategory": "Poland"
-        }
-      },
-      "sources": [
-        {
-          "name": "Bankier.pl",
-          "url": "https://www.bankier.pl/wiadomosc/Duch-tnie-czynsz-o-30-proc-Szokujace-kulisy-japonskiego-rynku-nieruchomosci-9220317.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Przebitka na chryzantemach i zniczach. Tyle można zarobić na handlu 1 listopada",
       "link": "https://www.bankier.pl/wiadomosc/Przebitka-na-chryzantemach-i-zniczach-Tyle-mozna-zarobic-na-handlu-1-listopada-9219378.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
       "description": "Ddzień Wszystkich Świętych napędza nie tylko handel i produkcję zniczy, ale również rynek pracy sezonowej - wskazali autorzy raportu Personnel Service. Szacują, że na handlu przed cmentarzem można w ciągu kilku dni zarobić więcej niż przez miesiąc na etacie.",
@@ -6610,6 +6836,40 @@
       }
     },
     {
+      "title": "BNP Paribas posts strong Q3 growth with improvi... - Pluang",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNTVR0OXN2Nkw1Y3h6Q0RpUVdOclZYNzZxZEZxYldPMmFkckJvd3FLdmRxT241YV9DVG0xeGRocjF6Qmk4X2NTdVVpMmFjZDZjYUp5OTduYzgxeUxHQ0lnUnlSOTJmdTZUbGREbmhrZjJoNE5GZklnN3BDLVF1ZFJxazhXUEdfeXB0TE1RblByYUgxeHNXZTB6c3FvcGw0QQ?oc=5",
+      "description": "BNP Paribas posts strong Q3 growth with improvi... Pluang",
+      "date": "2026-11-01T04:27:17+00:00",
+      "image": "",
+      "sourceName": "Pluang",
+      "language": "en",
+      "category": "Financial markets and economics",
+      "aggregator": true,
+      "subgroup": "BNP Paribas",
+      "sourceCategory": "Financial markets and economics",
+      "section": "Financial",
+      "sectionReason": "content: BNP Paribas bank evidence",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "BNP Paribas posts strong Q3 growth with improvi... - Pluang",
+          "description": "BNP Paribas posts strong Q3 growth with improvi... Pluang",
+          "sourceCategory": "Financial markets and economics"
+        }
+      },
+      "sources": [
+        {
+          "name": "Pluang",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNTVR0OXN2Nkw1Y3h6Q0RpUVdOclZYNzZxZEZxYldPMmFkckJvd3FLdmRxT241YV9DVG0xeGRocjF6Qmk4X2NTdVVpMmFjZDZjYUp5OTduYzgxeUxHQ0lnUnlSOTJmdTZUbGREbmhrZjJoNE5GZklnN3BDLVF1ZFJxazhXUEdfeXB0TE1RblByYUgxeHNXZTB6c3FvcGw0QQ?oc=5"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "Jak znaleźć wyjście z konfliktu o Trybunał Konstytucyjny? Tak wielki kompromis wymaga odwagi, ale również równowagi sił",
       "link": "https://wyborcza.pl/7,75968,33110003,jak-znalezc-wyjscie-z-konfliktu-o-trybunal-konstytucyjny-tak.html",
       "description": "Uczciwe porozumienie wymaga sytuacji, w której obie strony uznają wspólne reguły za korzystniejsze od dalszej eskalacji.",
@@ -6634,6 +6894,70 @@
         {
           "name": "Gazeta Wyborcza",
           "url": "https://wyborcza.pl/7,75968,33110003,jak-znalezc-wyjscie-z-konfliktu-o-trybunal-konstytucyjny-tak.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "He’s the Top Snake Catcher, and Business Is Booming. There’s Just One Problem.",
+      "link": "https://www.nytimes.com/2026/11/01/world/asia/snake-catcher-bangkok-thailand.html",
+      "description": "Bangkok’s firefighters do more snake catching than firefighting, and Pinyo Pukpinyo trains them. But he refuses to kill the snakes, and he’s running out of containers.",
+      "date": "2026-11-01T04:01:16+00:00",
+      "image": "https://static01.nyt.com/images/2026/11/01/multimedia/01int-snake-catcher-profile-promoimage-qtfg/01int-snake-catcher-profile-promoimage-qtfg-mediumSquareAt3X.jpg",
+      "sourceName": "The New York Times",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "feed category fallback: Global news and geopolitics",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "He’s the Top Snake Catcher, and Business Is Booming. There’s Just One Problem.",
+          "description": "Bangkok’s firefighters do more snake catching than firefighting, and Pinyo Pukpinyo trains them. But he refuses to kill the snakes, and he’s running out of containers.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "The New York Times",
+          "url": "https://www.nytimes.com/2026/11/01/world/asia/snake-catcher-bangkok-thailand.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Korean Language Picks Up in Japan",
+      "link": "https://www.nytimes.com/2026/11/01/world/asia/japan-slang-korean-language.html",
+      "description": "The rise of Korean terms in Japanese is a striking reversal from colonial times and a sign of the global appeal of South Korean culture.",
+      "date": "2026-11-01T04:01:08+00:00",
+      "image": "https://static01.nyt.com/images/2026/10/28/multimedia/00int-japan-korea-slang-01-vzqc/00int-japan-korea-slang-01-vzqc-mediumSquareAt3X.jpg",
+      "sourceName": "The New York Times",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "feed category fallback: Global news and geopolitics",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Korean Language Picks Up in Japan",
+          "description": "The rise of Korean terms in Japanese is a striking reversal from colonial times and a sign of the global appeal of South Korean culture.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "The New York Times",
+          "url": "https://www.nytimes.com/2026/11/01/world/asia/japan-slang-korean-language.html"
         }
       ],
       "sourceCount": 1,
@@ -6868,6 +7192,38 @@
       }
     },
     {
+      "title": "North Korean Hackers Stole Billions, the F.B.I. Says. It’s Not Their First Heist.",
+      "link": "https://www.nytimes.com/2026/10/31/world/asia/north-korea-hacking.html",
+      "description": "This week’s $6.3 billion hack of Binance is the largest to hit crypto, and would be the most that North Koreans have stolen in years of brazen cybercrime.",
+      "date": "2026-10-31T23:05:42+00:00",
+      "image": "https://static01.nyt.com/images/2026/10/31/multimedia/31int-nkorea-hacking-wtk-lpjv/31int-nkorea-hacking-wtk-lpjv-mediumSquareAt3X.jpg",
+      "sourceName": "The New York Times",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "Technology",
+      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "North Korean Hackers Stole Billions, the F.B.I. Says. It’s Not Their First Heist.",
+          "description": "This week’s $6.3 billion hack of Binance is the largest to hit crypto, and would be the most that North Koreans have stolen in years of brazen cybercrime.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "The New York Times",
+          "url": "https://www.nytimes.com/2026/10/31/world/asia/north-korea-hacking.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "Anna Korwin-Piotrowska ogłosiła kolejne decyzje. Dotyczą pracy sędziów Trybunału Konstytucyjnego",
       "link": "https://wyborcza.pl/7,75398,33110110,anna-korwin-piotrowska-oglosila-kolejne-decyzje-dotycza-pracy.html",
       "description": "Anna Korwin-Piotrowska poinformowała w komunikacie, że Bogdan Święczkowski i Bartłomiej Sochański nie są uprawnieni do wstępu do budynku Trybunału Konstytucyjnego.",
@@ -6892,6 +7248,38 @@
         {
           "name": "Gazeta Wyborcza",
           "url": "https://wyborcza.pl/7,75398,33110110,anna-korwin-piotrowska-oglosila-kolejne-decyzje-dotycza-pracy.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Ukrainian Evacuees From Oleshky Tell Survival Stories",
+      "link": "https://www.nytimes.com/2026/10/31/world/europe/ukraine-evacuees-oleshky.html",
+      "description": "Safely out of Oleshky after enduring years in the combat zone and a harrowing 24-hour journey, weary civilians reunited with family and friends.",
+      "date": "2026-10-31T21:43:34+00:00",
+      "image": "https://static01.nyt.com/images/2026/10/31/multimedia/31int-ukraine-oleshky-zcvf/31int-ukraine-oleshky-zcvf-mediumSquareAt3X.jpg",
+      "sourceName": "The New York Times",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Ukrainian Evacuees From Oleshky Tell Survival Stories",
+          "description": "Safely out of Oleshky after enduring years in the combat zone and a harrowing 24-hour journey, weary civilians reunited with family and friends.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "The New York Times",
+          "url": "https://www.nytimes.com/2026/10/31/world/europe/ukraine-evacuees-oleshky.html"
         }
       ],
       "sourceCount": 1,
@@ -6956,38 +7344,6 @@
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/10/31/4-days-left-how-techcrunch-founder-summit-helps-you-make-more-useful-connections-to-scale/"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Judge allows NAACP lawsuit over xAI data center pollution to move forward",
-      "link": "https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/",
-      "description": "An NAACP lawsuit accuses the SpaceX-owned AI company of violating the Clean Air Act.",
-      "date": "2026-10-31T21:17:03+00:00",
-      "image": "",
-      "sourceName": "TechCrunch",
-      "language": "en",
-      "category": "Technology, AI and science",
-      "sourceCategory": "Technology, AI and science",
-      "section": "Technology",
-      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Judge allows NAACP lawsuit over xAI data center pollution to move forward",
-          "description": "An NAACP lawsuit accuses the SpaceX-owned AI company of violating the Clean Air Act.",
-          "sourceCategory": "Technology, AI and science"
-        }
-      },
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/"
         }
       ],
       "sourceCount": 1,
