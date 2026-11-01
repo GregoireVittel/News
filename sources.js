@@ -113,6 +113,13 @@ const sourceCatalog = [
     "status": "Public RSS verified"
   },
   {
+    "name": "The New York Times",
+    "language": "en",
+    "category": "Global news and geopolitics",
+    "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+    "status": "Public RSS (World section)"
+  },
+  {
     "name": "MIT Technology Review",
     "language": "en",
     "category": "Technology, AI and science",

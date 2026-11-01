@@ -24,12 +24,12 @@ test('catalog retains original publishers and only adds scoped Google News BNP P
   const expected = {
     Poland: ['Reuters','Notes from Poland','Gazeta Wyborcza','PAP','Bankier.pl'],
     France: ['AFP','Le Monde','Les Échos','franceinfo','Mediapart'],
-    'Global news and geopolitics': ['Reuters','Associated Press (AP)','BBC News','Financial Times','POLITICO Europe','The Economist'],
+    'Global news and geopolitics': ['Reuters','Associated Press (AP)','BBC News','Financial Times','POLITICO Europe','The Economist','The New York Times'],
     'Technology, AI and science': ['MIT Technology Review','Ars Technica','The Verge','TechCrunch','Nature','The Decoder'],
     'Financial markets and economics': ['Bloomberg','The Wall Street Journal','Bank for International Settlements (BIS)','European Central Bank (ECB)','OECD']
   };
-  assert.equal(catalog.length,27);
-  assert.equal(new Set(catalog.map(s=>s.name)).size,26);
+  assert.equal(catalog.length,28);
+  assert.equal(new Set(catalog.map(s=>s.name)).size,27);
   assert.deepEqual([...new Set(catalog.map(s=>s.category))],Object.keys(expected));
   for (const [category,names] of Object.entries(expected)) {
     assert.deepEqual(catalog.filter(s=>s.category===category).map(s=>s.name),names);
