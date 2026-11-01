@@ -1,0 +1,10 @@
+{
+  "edition": "2026-11-01",
+  "article_count": 458,
+  "failures": [
+    "Reuters (http://feeds.reuters.com/reuters/topNews): URLError: <urlopen error [Errno -2] Name or service not known>",
+    "Associated Press (https://apnews.com/apf-topnews/rss.xml): HTTPError: HTTP Error 403: Forbidden"
+  ],
+  "generated_at": "2026-11-01T15:04:37+01:00",
+  "output": "/opt/data/news-publisher/preview-final"
+}

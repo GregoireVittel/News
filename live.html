@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przegląd — Your daily news edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="./feed-utils.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --ink:#171b20; --muted:#687078; --red:#b82928; --paper:#f7f6f2; --line:#deded9; }
+        * { box-sizing:border-box; }
+        body { margin:0; background:var(--paper); color:var(--ink); font-family:'DM Sans',Arial,sans-serif; }
+        a { text-decoration:none; }
+        a:hover { color:var(--red); }
+        .shell { width:100%; max-width:1220px; margin:0 auto; padding:0 28px; }
+        .eyebrow { text-transform:uppercase; letter-spacing:.16em; font-size:11px; font-weight:700; color:var(--red); }
+        .serif { font-family:'Playfair Display',Georgia,serif; }
+        .topline { background:#161a1e; color:#e9e8e3; font-size:11px; letter-spacing:.06em; }
+        .topline .shell { display:flex; align-items:center; justify-content:space-between; padding-top:10px; padding-bottom:10px; gap:12px; }
+        .masthead { background:#fff; border-bottom:1px solid var(--line); }
+        .masthead-row { display:flex; align-items:center; justify-content:space-between; min-height:104px; gap:16px; }
+        .brand { font-family:'Playfair Display',Georgia,serif; font-weight:800; letter-spacing:-.065em; font-size:53px; line-height:1; color:var(--ink); }
+        .brand-mark { color:var(--red); }
+        .brand-sub { font-size:10px; letter-spacing:.22em; color:var(--muted); text-transform:uppercase; margin-top:7px; }
+        .edition { color:var(--muted); font-size:12px; text-align:right; line-height:1.6; }
+        .navwrap { border-bottom:1px solid var(--line); background:#fff; }
+        .navrow { display:flex; align-items:center; gap:5px; overflow-x:auto; scrollbar-width:none; }
+        .navrow::-webkit-scrollbar { display:none; }
+        .nav-button { border:0; border-bottom:3px solid transparent; background:transparent; color:#52595f; font:600 12px 'DM Sans',sans-serif; letter-spacing:.06em; text-transform:uppercase; padding:17px 17px 15px; white-space:nowrap; cursor:pointer; }
+        .nav-button.active { border-color:var(--red); color:var(--red); }
+        .nav-button:hover { color:var(--red); }
+        .manage-button,.refresh-button { border:1px solid var(--line); background:#fff; color:var(--ink); padding:9px 13px; border-radius:3px; cursor:pointer; font:600 12px 'DM Sans',sans-serif; white-space:nowrap; }
+        .manage-button:hover,.refresh-button:hover { border-color:var(--red); color:var(--red); }
+        .refresh-button:disabled { opacity:.5; cursor:wait; }
+        .edition-label { display:flex; align-items:center; justify-content:space-between; border-bottom:2px solid var(--ink); padding:28px 0 13px; gap:12px; }
+        .edition-label h1 { font:700 22px 'Playfair Display',Georgia,serif; margin:0; }
+        .statusline { display:flex; align-items:center; flex-wrap:wrap; gap:12px; color:var(--muted); font-size:12px; }
+        .portal-grid { display:grid; grid-template-columns:minmax(0,1.75fr) minmax(265px,1fr); gap:34px; padding-top:24px; }
+        .lead { min-width:0; }
+        .lead-image,.story-image { display:block; object-fit:cover; width:100%; background:#e4e3df; }
+        .lead-image { aspect-ratio:16/9; }
+        .lead-placeholder { aspect-ratio:16/9; background:#232c33; color:#f6f1e7; display:flex; align-items:center; justify-content:center; font:700 64px 'Playfair Display',Georgia,serif; }
+        .lead h2 { font:700 clamp(28px,3.2vw,43px)/1.17 'Playfair Display',Georgia,serif; letter-spacing:-.035em; margin:13px 0; }
+        .lead p { font-size:14px; line-height:1.75; color:#555e64; margin:0 0 14px; }
+        .meta { color:var(--muted); font-size:11px; display:flex; gap:9px; flex-wrap:wrap; align-items:center; margin-top:10px; }
+        .meta .source { color:var(--ink); font-weight:700; }
+        .rail { border-left:1px solid var(--line); padding-left:28px; }
+        .rail-title,.section-title { text-transform:uppercase; font-size:13px; letter-spacing:.12em; font-weight:700; margin:0; }
+        .rail-title { border-bottom:2px solid var(--ink); padding-bottom:12px; }
+        .rail-item { border-bottom:1px solid var(--line); padding:17px 0; }
+        .rail-item h3 { font:600 18px/1.35 'Playfair Display',Georgia,serif; margin:7px 0; }
+        .section { margin-top:47px; }
+        .section-heading { border-top:2px solid var(--ink); border-bottom:1px solid var(--line); padding:13px 0; display:flex; align-items:center; justify-content:space-between; }
+        .section-heading span { color:var(--muted); font-size:11px; }
+        .story-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; padding:22px 0 5px; }
+        .story { min-width:0; }
+        .story-image { aspect-ratio:16/10; }
+        .story h3 { font:600 20px/1.32 'Playfair Display',Georgia,serif; letter-spacing:-.025em; margin:9px 0; }
+        .story p { color:#5e666b; font-size:12px; line-height:1.65; margin:8px 0 0; }
+        .more-link { display:inline-block; color:var(--red); font-size:12px; font-weight:700; margin-top:12px; }
+        .empty { padding:65px 0; text-align:center; color:var(--muted); }
+        .footer { border-top:1px solid var(--line); margin-top:60px; padding:26px 0; color:var(--muted); font-size:12px; }
+        .modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,.7); display:flex; justify-content:center; align-items:center; z-index:50; }
+        .modal-content { background:#1f2937; padding:2rem; border-radius:.5rem; width:90%; max-width:600px; max-height:90vh; overflow-y:auto; color:#fff; }
+        @media(max-width:750px) { .shell { padding:0 16px; } .brand { font-size:39px; } .masthead-row { min-height:86px; } .edition { display:none; } .portal-grid { grid-template-columns:1fr; gap:30px; } .rail { border-left:0; padding-left:0; } .story-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .edition-label { align-items:flex-start; flex-direction:column; } }
+        @media(max-width:480px) { .topline .shell { font-size:10px; } .story-grid { grid-template-columns:1fr; } .story { border-bottom:1px solid var(--line); padding-bottom:16px; } .lead h2 { font-size:30px; } .nav-button { padding:14px 12px 12px; } }
+        /* Dark, data-forward editorial edition: high contrast, compact typography and fine rules. */
+        :root { --ink:#f2f2ef; --muted:#aaaeb0; --red:#f7ad26; --paper:#090b0e; --line:#34383d; }
+        body { background:var(--paper); color:var(--ink); }
+        a { color:inherit; }
+        a:hover { color:var(--red); }
+        button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible { outline:2px solid var(--red); outline-offset:3px; }
+        .shell { max-width:1400px; }
+        .topline { background:var(--red); color:#111; font-weight:700; }
+        .masthead,.navwrap { background:#090b0e; }
+        .masthead-row { min-height:90px; }
+        .brand { color:#fff; font-family:'DM Sans',Arial,sans-serif; font-size:clamp(36px,5vw,64px); letter-spacing:-.08em; }
+        .brand-sub { color:#c5c7c9; }
+        .edition { color:#c5c7c9; }
+        .navwrap { border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+        .nav-button { color:#b9bdc0; border-bottom-width:2px; font-size:11px; }
+        .nav-button.active { color:var(--red); }
+        .manage-button,.refresh-button { background:#191c20; border-color:#54585d; color:#f4f4f0; border-radius:0; }
+        .manage-button:hover,.refresh-button:hover { background:#29231a; }
+        .edition-label { padding-top:22px; border-bottom:2px solid var(--red); }
+        .edition-label h1,.lead h2,.rail-item h3,.story h3,.serif { font-family:'DM Sans',Arial,sans-serif; }
+        .edition-label h1 { text-transform:uppercase; font-size:16px; letter-spacing:.12em; }
+        .statusline { color:#c3c5c7; }
+        .portal-grid { grid-template-columns:minmax(0,1.7fr) minmax(280px,1fr); gap:0; }
+        .lead { padding-right:26px; }
+        .lead-image,.story-image { background:#24282d; filter:saturate(.72); }
+        .lead-placeholder { background:#1b1e22; color:var(--red); }
+        .lead h2 { font-size:clamp(30px,3.5vw,50px); line-height:1.08; letter-spacing:-.045em; }
+        .lead p,.story p { color:#c5c7c9; }
+        .meta { color:#aeb3b6; }
+        .meta .source { color:#f1f1eb; }
+        .rail { padding-left:26px; }
+        .rail-title { border-bottom-color:var(--red); }
+        .rail-item { padding:13px 0; }
+        .rail-item h3 { font-size:17px; line-height:1.32; }
+        .section { margin-top:36px; }
+        .section-heading { border-top-color:var(--red); }
+        .section-heading span { color:#b6babd; }
+        .story-grid { gap:0; padding-top:0; border-left:1px solid var(--line); }
+        .story { border-right:1px solid var(--line); border-bottom:1px solid var(--line); padding:18px; }
+        .story h3 { font-size:19px; line-height:1.3; letter-spacing:-.03em; }
+        .footer { color:#bec1c3; }
+        .modal-content { background:#171a1e; border:1px solid #52575c; border-radius:0; }
+        .modal-content input,.modal-content select { color:#fff; }
+        @media(max-width:750px) { .portal-grid { grid-template-columns:1fr; } .lead { padding-right:0; } .rail { border-left:0; padding-left:0; border-top:2px solid var(--red); padding-top:18px; } }
+        @media(max-width:480px) { .story-grid { border-top:1px solid var(--line); } .story { border-left:0; border-right:0; } .masthead-row { gap:8px; } .manage-button { padding:8px; } }
+    </style>
+
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // --- HELPERS (from utils/helpers.ts) ---
+        const stripHtml = (html) => {
+            const doc = new DOMParser().parseFromString(html, 'text/html');
+            return doc.body.textContent || "";
+        };
+
+        const categoryForFeed = (feed) => feed.category || (/biznes|money|bankier|financial|ft\.com/i.test(feed.name + feed.url) ? 'Business' : /nauka|technolog/i.test(feed.name + feed.url) ? 'Technology' : /sport/i.test(feed.name + feed.url) ? 'Sports' : /zdrowie/i.test(feed.name + feed.url) ? 'Lifestyle' : 'World');
+        const getSummary = (article, length = 185) => {
+            const text = stripHtml(article.description || article.content || '').trim();
+            return text.length > length ? text.slice(0, length).trimEnd() + '…' : text;
+        };
+        const articleImage = (article) => article.thumbnail || article.enclosure?.link || '';
+        const articleDate = (article) => {
+            const timestamp = parseFeedDate(article.pubDate);
+            return timestamp === null ? '' : new Date(timestamp).toLocaleString(undefined, { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+        };
+        // --- CONSTANTS (from constants.ts) ---
+        const defaultFeedUrls = [
+            { url: 'https://pap-mediaroom.pl/kategoria/biznes-i-finanse/rss.xml', language: 'pl', name: 'PAP Biznes', category: 'Business' },
+            { url: 'https://pap-mediaroom.pl/kategoria/nauka-i-technologie/rss.xml', language: 'pl', name: 'PAP Nauka', category: 'Technology' },
+            { url: 'https://pap-mediaroom.pl/kategoria/polityka-i-spo%C5%82eczenstwo/rss.xml', language: 'pl', name: 'PAP Polityka' },
+            { url: 'https://pap-mediaroom.pl/kategoria/zdrowie-i-styl-zycia/rss.xml', language: 'pl', name: 'PAP Zdrowie' },
+            { url: 'https://www.tvn24.pl/najnowsze.xml', language: 'pl', name: 'TVN24' },
+            { url: 'https://wiadomosci.wp.pl/rss.xml', language: 'pl', name: 'Wirtualna Polska' },
+            { url: 'https://www.rmf24.pl/feed', language: 'pl', name: 'RMF24' },
+            { url: 'https://www.money.pl/rss/main.xml', language: 'pl', name: 'Money.pl' },
+            { url: 'https://www.bankier.pl/rss/wiadomosci.xml', language: 'pl', name: 'Bankier.pl', category: 'Business' },
+            { url: 'https://www.bankier.pl/rss/gielda.xml', language: 'pl', name: 'Bankier Giełda', category: 'Business' },
+            { url: 'https://www.bankier.pl/rss/waluty.xml', language: 'pl', name: 'Bankier Waluty', category: 'Business' },
+            { url: 'https://www.polsatnews.pl/rss/wszystkie.xml', language: 'pl', name: 'Polsat News' },
+            { url: 'https://sportowefakty.wp.pl/rss.xml', language: 'pl', name: 'Sportowe Fakty WP' },
+            { url: 'https://wyborcza.pl/pub/rss/najnowsze_wyborcza.xml', language: 'pl', name: 'Gazeta Wyborcza' },
+            { url: 'https://www.rp.pl/rss/1', language: 'pl', name: 'Rzeczpospolita' },
+            { url: 'https://www.polsatnews.pl/rss/polska.xml', language: 'pl', name: 'Polsat News · Polska' },
+            { url: 'https://www.rmf24.pl/fakty/polska/feed', language: 'pl', name: 'RMF24 · Polska' },
+            { url: 'https://dziennik.com/feed/', language: 'pl', name: 'Nowy Dziennik' },
+            { url: 'https://pap-mediaroom.pl/rss.xml', language: 'pl', name: 'PAP Mediaroom' },
+
+            { url: 'https://feeds.bbci.co.uk/news/rss.xml', language: 'en', name: 'BBC News' },
+            { url: 'https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml', language: 'en', name: 'The New York Times' },
+            { url: 'https://www.theguardian.com/world/rss', language: 'en', name: 'The Guardian' },
+            { url: 'http://feeds.reuters.com/reuters/topNews', language: 'en', name: 'Reuters' },
+            { url: 'https://apnews.com/apf-topnews/rss.xml', language: 'en', name: 'Associated Press' },
+            { url: 'https://feeds.bbci.co.uk/news/business/rss.xml', language: 'en', name: 'BBC Business', category: 'Business' },
+            { url: 'https://feeds.npr.org/1001/rss.xml', language: 'en', name: 'NPR News' },
+            { url: 'https://notesfrompoland.com/feed/', language: 'en', name: 'Notes from Poland' },
+            
+            { url: 'https://www.ft.com/?format=rss', language: 'en', name: 'Financial Times', category: 'Business' },
+            
+            { url: 'https://www.lefigaro.fr/rss/figaro_actualites.xml', language: 'fr', name: 'Le Figaro' },
+            { url: 'https://www.lemonde.fr/rss/une.xml', language: 'fr', name: 'Le Monde' },
+            { url: 'https://www.lemonde.fr/international/rss_full.xml', language: 'fr', name: 'Le Monde · International' },
+            { url: 'https://www.france24.com/fr/rss', language: 'fr', name: 'France 24' },
+            { url: 'https://www.rfi.fr/fr/rss', language: 'fr', name: 'RFI' },
+            { url: 'https://www.francetvinfo.fr/titres.rss', language: 'fr', name: 'Franceinfo' },
+        ];
+        const retiredFeedUrls = { 'https://www.rp.pl/rss_main?unknown-old-rss': 'https://www.rp.pl/rss/1' };
+        const newlyShippedUrls = new Set([
+            'https://www.bankier.pl/rss/gielda.xml', 'https://www.bankier.pl/rss/waluty.xml',
+            'https://www.polsatnews.pl/rss/polska.xml', 'https://www.rmf24.pl/fakty/polska/feed',
+            'https://feeds.bbci.co.uk/news/business/rss.xml', 'https://feeds.npr.org/1001/rss.xml',
+            'https://www.lemonde.fr/international/rss_full.xml', 'https://www.france24.com/fr/rss',
+            'https://www.rfi.fr/fr/rss', 'https://www.francetvinfo.fr/titres.rss'
+        ]);
+        
+        // --- API SERVICE (from services/rssService.ts) ---
+        const parseXmlFeed = (xml) => {
+            const doc = new DOMParser().parseFromString(xml, 'application/xml');
+            if (doc.querySelector('parsererror')) throw new Error('Invalid RSS XML');
+            const nodes = [...doc.getElementsByTagName('item')];
+            if (!nodes.length) throw new Error('No RSS items');
+            const field = (node, tag) => node.getElementsByTagName(tag)[0]?.textContent?.trim() || '';
+            return nodes.map(item => ({
+                title: field(item, 'title'), link: field(item, 'link'),
+                guid: field(item, 'guid') || field(item, 'link'),
+                pubDate: field(item, 'pubDate') || field(item, 'dc:date'),
+                description: field(item, 'description'),
+                thumbnail: item.getElementsByTagName('media:thumbnail')[0]?.getAttribute('url') ||
+                    item.getElementsByTagName('media:content')[0]?.getAttribute('url') || '',
+                enclosure: { link: item.getElementsByTagName('enclosure')[0]?.getAttribute('url') || '' }
+            }));
+        };
+        const fetchFeed = async (feed) => {
+            let items;
+            try {
+                const api = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}`;
+                const response = await fetch(api, { signal: AbortSignal.timeout(12000) });
+                if (!response.ok) throw new Error(`RSS API HTTP ${response.status}`);
+                const data = await response.json();
+                if (data.status !== 'ok' || !Array.isArray(data.items)) throw new Error(data.message || 'Invalid RSS API response');
+                items = data.items;
+            } catch (primaryError) {
+                try {
+                    const proxy = `https://api.allorigins.win/raw?url=${encodeURIComponent(feed.url)}`;
+                    const response = await fetch(proxy, { signal: AbortSignal.timeout(22000) });
+                    if (!response.ok) throw new Error(`RSS fallback HTTP ${response.status}`);
+                    items = parseXmlFeed(await response.text());
+                } catch (fallbackError) {
+                    console.error(`RSS feed ${feed.name} failed via both providers:`, primaryError, fallbackError);
+                    return { items: [], failed: true };
+                }
+            }
+            return { items: items.map(item => ({ ...item, sourceName: feed.name, language: feed.language, category: categoryForFeed(feed) })), failed: false };
+        };
+        
+        // --- COMPONENTS ---
+        const Spinner = () => (
+            <div className="flex justify-center items-center p-8">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+            </div>
+        );
+
+        const Meta = ({ article }) => <div className="meta"><span className="source">{article.sourceName}</span><span>·</span><time>{articleDate(article)}</time></div>;
+
+        const Header = ({ onManageFeedsClick }) => (
+            <>
+                <div className="topline"><div className="shell"><span>THE DAILY BRIEFING · STORIES FROM AROUND THE WORLD</span><span>INDEPENDENT NEWS AGGREGATOR</span></div></div>
+                <header className="masthead"><div className="shell masthead-row">
+                    <div><a href="./" className="brand" aria-label="Przegląd home">Przegląd<span className="brand-mark">.</span></a><div className="brand-sub">The world, in perspective</div></div>
+                    <div className="edition"><strong>{new Date().toLocaleDateString(undefined, { weekday:'long', month:'long', day:'numeric', year:'numeric' })}</strong><br/>A curated window on the last 24 hours</div>
+                    <button className="manage-button" onClick={onManageFeedsClick} aria-label="Manage feeds">⚙ &nbsp;Manage feeds</button>
+                </div></header>
+            </>
+        );
+
+        const LanguageFilter = ({ selectedLanguage, onSelectLanguage }) => {
+            const languages = ['All', 'pl', 'en', 'fr'];
+            const langDisplay = { All: 'Front page', pl: 'Polski', en: 'English', fr: 'Français' };
+            return <nav className="navwrap" aria-label="News language"><div className="shell navrow">
+                {languages.map(lang => <button key={lang} onClick={() => onSelectLanguage(lang)} aria-pressed={selectedLanguage === lang} className={'nav-button ' + (selectedLanguage === lang ? 'active' : '')}>{langDisplay[lang]}</button>)}
+            </div></nav>;
+        };
+
+        const Story = ({ article }) => <article className="story">
+            {articleImage(article) && <a href={article.link} target="_blank" rel="noopener noreferrer"><img className="story-image" src={articleImage(article)} alt="" loading="lazy" onError={e => { e.currentTarget.style.display='none'; }} /></a>}
+            <div className="eyebrow" style={{marginTop:12}}>{article.category || 'World'}</div>
+            <h3><a href={article.link} target="_blank" rel="noopener noreferrer">{article.title}</a></h3>
+            <Meta article={article}/>
+            {getSummary(article, 115) && <p>{getSummary(article, 115)}</p>}
+        </article>;
+
+        const ArticleList = ({ articles, loading, selectedLanguage }) => {
+            const [expanded, setExpanded] = React.useState({});
+            if (loading && !articles.length) return <div className="empty" role="status">Gathering today's stories…</div>;
+            if (!articles.length) return <div className="empty"><h2 className="serif">No stories yet</h2><p>No articles from the past 24 hours match this language. Try another edition or refresh.</p></div>;
+            const { lead, latest, sections } = groupPortalArticles(articles);
+            const sectionOrder = ['World', 'Business', 'Technology', 'Sports', 'Lifestyle'];
+            return <>
+                <div className="portal-grid">
+                    <article className="lead">
+                        {articleImage(lead) ? <a href={lead.link} target="_blank" rel="noopener noreferrer"><img className="lead-image" src={articleImage(lead)} alt="" onError={e => { e.currentTarget.style.display='none'; }} /></a> : <div className="lead-placeholder" aria-hidden="true">P.</div>}
+                        <div className="eyebrow" style={{marginTop:20}}>Top story · {lead.category || 'World'}</div>
+                        <h2><a href={lead.link} target="_blank" rel="noopener noreferrer">{lead.title}</a></h2>
+                        {getSummary(lead, 240) && <p>{getSummary(lead, 240)}</p>}
+                        <Meta article={lead}/>
+                    </article>
+                    <aside className="rail" aria-label="Latest headlines"><h2 className="rail-title">The latest <span style={{color:'var(--red)'}}>●</span></h2>
+                        {latest.map(article => <article className="rail-item" key={article.link || article.guid}><div className="eyebrow">{article.category || 'World'}</div><h3><a href={article.link} target="_blank" rel="noopener noreferrer">{article.title}</a></h3><Meta article={article}/></article>)}
+                    </aside>
+                </div>
+                {sectionOrder.filter(category => sections[category]?.length).map(category => <section className="section" key={category} aria-label={category}>
+                    <div className="section-heading"><h2 className="section-title">{category}</h2><span>{sections[category].length} stories</span></div>
+                    <div className="story-grid">{(expanded[category] ? sections[category] : sections[category].slice(0, 6)).map(article => <Story key={article.link || article.guid} article={article}/>)}</div>
+                    {sections[category].length > 6 && <button className="manage-button" style={{marginTop:18}} onClick={() => setExpanded(prev => ({...prev, [category]: !prev[category]}))}>{expanded[category] ? 'Show fewer' : `View all ${sections[category].length} ${category.toLowerCase()} stories →`}</button>}
+                </section>)}
+            </>;
+        };
+
+        const FeedManager = ({ feeds, onClose, onAddFeed, onRemoveFeed }) => {
+            const { useState } = React;
+            const [name, setName] = useState('');
+            const [url, setUrl] = useState('');
+            const [language, setLanguage] = useState('en');
+
+            const handleSubmit = (e) => {
+                e.preventDefault();
+                if (name && url) {
+                    onAddFeed({ name, url, language });
+                    setName('');
+                    setUrl('');
+                    setLanguage('en');
+                }
+            };
+
+            return (
+                <div className="modal-overlay" onClick={onClose}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                        <div className="flex justify-between items-center mb-6">
+                            <h2 className="text-2xl font-bold text-white">Manage Feeds</h2>
+                            <button onClick={onClose} className="text-gray-400 hover:text-white text-3xl leading-none">&times;</button>
+                        </div>
+
+                        <div className="space-y-3 mb-8 max-h-60 overflow-y-auto pr-2">
+                            {feeds.map(feed => (
+                                <div key={feed.url} className="bg-gray-700 p-3 rounded-lg flex justify-between items-center">
+                                    <div>
+                                        <p className="font-semibold text-blue-300">{feed.name}</p>
+                                        <p className="text-xs text-gray-400 truncate max-w-xs">{feed.url}</p>
+                                    </div>
+                                    <button
+                                        onClick={() => onRemoveFeed(feed.url)}
+                                        className="bg-red-500 text-white px-3 py-1 text-sm rounded-md hover:bg-red-600"
+                                    >
+                                        Remove
+                                    </button>
+                                </div>
+                            ))}
+                        </div>
+
+                        <form onSubmit={handleSubmit} className="space-y-4">
+                            <h3 className="text-xl font-semibold text-white border-t border-gray-600 pt-4">Add New Feed</h3>
+                            <div>
+                                <label htmlFor="feed-name" className="block text-sm font-medium text-gray-300 mb-1">Feed Name</label>
+                                <input
+                                    id="feed-name"
+                                    type="text"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                    placeholder="e.g., TechCrunch"
+                                    required
+                                    className="w-full bg-gray-900 border border-gray-600 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"
+                                />
+                            </div>
+                            <div>
+                                <label htmlFor="feed-url" className="block text-sm font-medium text-gray-300 mb-1">Feed URL</label>
+                                <input
+                                    id="feed-url"
+                                    type="url"
+                                    value={url}
+                                    onChange={(e) => setUrl(e.target.value)}
+                                    placeholder="https://example.com/rss.xml"
+                                    required
+                                    className="w-full bg-gray-900 border border-gray-600 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"
+                                />
+                            </div>
+                            <div>
+                                <label htmlFor="feed-lang" className="block text-sm font-medium text-gray-300 mb-1">Language</label>
+                                <select
+                                    id="feed-lang"
+                                    value={language}
+                                    onChange={(e) => setLanguage(e.target.value)}
+                                    className="w-full bg-gray-900 border border-gray-600 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"
+                                >
+                                    <option value="en">English</option>
+                                    <option value="pl">Polish</option>
+                                    <option value="fr">French</option>
+                                </select>
+                            </div>
+                            <button type="submit" className="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-700">
+                                Add Feed
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            );
+        };
+        
+        // --- MAIN APP COMPONENT ---
+        const App = () => {
+            const { useState, useEffect, useCallback } = React;
+            
+            const [articles, setArticles] = useState([]);
+            const [loading, setLoading] = useState(true);
+            const [refreshing, setRefreshing] = useState(false);
+            const [failedFeeds, setFailedFeeds] = useState(0);
+            const [lastUpdated, setLastUpdated] = useState(null);
+            const [selectedLanguage, setSelectedLanguage] = useState('All');
+            const [isFeedManagerOpen, setIsFeedManagerOpen] = useState(false);
+
+            const [removedDefaults, setRemovedDefaults] = useState(() => {
+                try {
+                    const stored = localStorage.getItem('rssRemovedDefaults');
+                    if (stored) { const parsed = JSON.parse(stored); return Array.isArray(parsed) ? parsed : []; }
+                    const legacy = localStorage.getItem('rssFeeds');
+                    const saved = legacy ? JSON.parse(legacy) : null;
+                    return Array.isArray(saved) ? defaultFeedUrls.filter(feed => !newlyShippedUrls.has(feed.url) && !saved.some(old => (retiredFeedUrls[old.url] || old.url) === feed.url)).map(feed => feed.url) : [];
+                } catch { return []; }
+            });
+            const [feeds, setFeeds] = useState(() => {
+                try {
+                    const stored = localStorage.getItem('rssFeeds');
+                    const saved = stored ? JSON.parse(stored) : [];
+                    const removed = JSON.parse(localStorage.getItem('rssRemovedDefaults') || '[]');
+                    const legacyRemoved = stored && !localStorage.getItem('rssRemovedDefaults') && Array.isArray(saved)
+                        ? defaultFeedUrls.filter(feed => !newlyShippedUrls.has(feed.url) && !saved.some(old => (retiredFeedUrls[old.url] || old.url) === feed.url)).map(feed => feed.url)
+                        : [];
+                    return reconcileFeeds(defaultFeedUrls, saved, [...(Array.isArray(removed) ? removed : []), ...legacyRemoved], retiredFeedUrls);
+                } catch (error) {
+                    console.error('Error parsing feeds from localStorage', error);
+                    return defaultFeedUrls;
+                }
+            });
+
+            useEffect(() => {
+                try { localStorage.setItem('rssFeeds', JSON.stringify(feeds)); localStorage.setItem('rssRemovedDefaults', JSON.stringify(removedDefaults)); }
+                catch (error) { console.warn('Could not save feeds locally', error); }
+            }, [feeds, removedDefaults]);
+
+            const addFeed = (newFeed) => {
+                if (!feeds.some(feed => feed.url === newFeed.url)) {
+                    setRemovedDefaults(prev => prev.filter(url => url !== newFeed.url));
+                    setFeeds(prevFeeds => [...prevFeeds, newFeed]);
+                } else {
+                    alert('This feed URL already exists.');
+                }
+            };
+
+            const removeFeed = (urlToRemove) => {
+                if (defaultFeedUrls.some(feed => feed.url === urlToRemove)) setRemovedDefaults(prev => [...new Set([...prev, urlToRemove])]);
+                setFeeds(prevFeeds => prevFeeds.filter(feed => feed.url !== urlToRemove));
+            };
+
+            const fetchAllFeeds = useCallback(async (isInitialLoad = false) => {
+                if (isInitialLoad) setLoading(true);
+                else setRefreshing(true);
+
+                const results = await Promise.all(feeds.map(feed => fetchFeed(feed)));
+                setFailedFeeds(results.filter(result => result.failed).length);
+                setArticles(recentUniqueArticles(results.flatMap(result => result.items)));
+                setLastUpdated(new Date());
+                setLoading(false);
+                setRefreshing(false);
+            }, [feeds]);
+
+            useEffect(() => {
+                fetchAllFeeds(true);
+                const interval = setInterval(() => fetchAllFeeds(false), 3 * 60 * 1000);
+                return () => clearInterval(interval);
+            }, [fetchAllFeeds]);
+
+            const filteredArticles = selectedLanguage === 'All'
+                ? articles
+                : articles.filter(article => article.language === selectedLanguage);
+
+            return (
+                <div className="min-h-screen flex flex-col">
+                    <Header onManageFeedsClick={() => setIsFeedManagerOpen(true)} />
+                    <LanguageFilter selectedLanguage={selectedLanguage} onSelectLanguage={setSelectedLanguage} />
+                    <main className="shell" id="main-content">
+                        <div className="edition-label">
+                            <h1>{selectedLanguage === 'All' ? 'The Front Page' : `${{pl:'Polski',en:'English',fr:'Français'}[selectedLanguage]} Edition`}</h1>
+                            <div className="statusline" role="status" aria-live="polite">
+                                <span>{filteredArticles.length} stories · past 24 hours{lastUpdated ? ` · Updated ${lastUpdated.toLocaleTimeString()}` : ''}</span>
+                                {failedFeeds > 0 && <span style={{color:'#f7ad26'}}>{failedFeeds} {failedFeeds === 1 ? 'feed' : 'feeds'} unavailable</span>}
+                                <button onClick={() => fetchAllFeeds(false)} disabled={loading || refreshing} className="refresh-button">{refreshing ? 'Refreshing…' : '↻ Refresh'}</button>
+                            </div>
+                        </div>
+                        <ArticleList articles={filteredArticles} loading={loading} selectedLanguage={selectedLanguage} />
+                    </main>
+                    <footer className="footer"><div className="shell">Przegląd · Independent headlines, linked to their original publishers. © {new Date().getFullYear()}</div></footer>
+                    {isFeedManagerOpen && (
+                        <FeedManager
+                            feeds={feeds}
+                            onClose={() => setIsFeedManagerOpen(false)}
+                            onAddFeed={addFeed}
+                            onRemoveFeed={removeFeed}
+                        />
+                    )}
+                </div>
+            );
+        };
+
+        // --- RENDER THE APP ---
+        const rootElement = document.getElementById('root');
+        if (rootElement) {
+            const root = ReactDOM.createRoot(rootElement);
+            root.render(<App />);
+        }
+    </script>
+
+</body>
+</html>
