@@ -65,5 +65,37 @@ class PageTests(unittest.TestCase):
         self.assertIn('id="main-content"', html)
 
 
+class TopStoriesTests(unittest.TestCase):
+    def stories(self, edition, count):
+        now = datetime(2026, 11, 1, 12, tzinfo=timezone.utc)
+        items = []
+        for index in range(count):
+            story = edition.parse_feed(RSS, FEED)[0]
+            story.update(title=f'TEST ONLY story {index}', link=f'https://example.test/{index}',
+                         section=('World', 'Technology')[index % 2], sourceCount=1,
+                         sources=[{'name': 'TEST ONLY', 'url': f'https://example.test/{index}'}],
+                         date=now - timedelta(minutes=index))
+            items.append(story)
+        return now, items
+
+    def test_front_page_lists_top_stories_without_duplicate_cards(self):
+        edition = builder()
+        now, items = self.stories(edition, 9)
+        html = edition.edition_page(items, 'https://example.test/', '', 'All', now, [])
+        top = html.split('class="top-stories"', 1)[1].split('</section>', 1)[0]
+        self.assertEqual(top.count('<li '), edition.TOP_STORIES)
+        self.assertIn('TEST ONLY story 0', top)
+        self.assertNotIn('TEST ONLY story 7', top)
+        self.assertIn('href="#technology">Technology</a>', top)
+        self.assertLess(html.index('class="top-stories"'), html.index('id="poland"'))
+        self.assertEqual(html.count('<article '), 9)
+
+    def test_language_pages_and_empty_editions_have_no_top_stories(self):
+        edition = builder()
+        now, items = self.stories(edition, 3)
+        self.assertNotIn('top-stories', edition.edition_page(items, 'https://example.test/', '', 'pl', now, []))
+        self.assertNotIn('top-stories', edition.edition_page([], 'https://example.test/', '', 'All', now, []))
+
+
 if __name__ == '__main__':
     unittest.main()
