@@ -129,13 +129,13 @@ def generate(root, entries, now, base_url=BASE_URL):
     if portal_css.resolve() != target_css.resolve():
         shutil.copy2(portal_css, target_css)
 
-    def compatibility_page(rendered, canonical, language='pl'):
+    def compatibility_page(rendered, canonical, language='en'):
         # Retain legacy URLs and UTC build metadata while sharing all story markup.
         rendered = re.sub(r'(<link rel="canonical" href=")[^"]*',
                           lambda match: match[1] + html.escape(canonical, quote=True), rendered)
         rendered = re.sub(r'(<meta property="og:url" content=")[^"]*',
                           lambda match: match[1] + html.escape(canonical, quote=True), rendered)
-        rendered = rendered.replace('<html lang="pl">', f'<html lang="{language}">')
+        rendered = re.sub(r'<html lang="[a-z]+">', f'<html lang="{language}">', rendered, count=1)
         for lang in ('pl', 'en', 'fr'):
             rendered = rendered.replace(f'href="{html_base}{lang}/"',
                                         f'href="{html_base}lang/{lang}.html"')
@@ -145,7 +145,7 @@ def generate(root, entries, now, base_url=BASE_URL):
 
     def legacy_edition(language, canonical):
         return compatibility_page(edition_page(articles, html_base, '', language, now, []),
-                                  canonical, 'pl' if language == 'All' else language)
+                                  canonical, 'en' if language == 'All' else language)
 
     (root / 'index.html').write_text(legacy_edition('All', base_url), encoding='utf-8')
     archive_target = archive_dir / f'{date}.html'
