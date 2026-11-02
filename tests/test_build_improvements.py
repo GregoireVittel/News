@@ -105,5 +105,6 @@ class LayoutTests(unittest.TestCase):
     def test_menu_is_sticky_and_descriptions_are_readable(self):
         css = (Path(__file__).resolve().parents[1] / 'assets/portal.css').read_text()
         self.assertIn('.navwrap { position:sticky; top:0;', css)
-        self.assertIn('.story p { font-size:16px;', css)
-        self.assertIn('.lead p { font-size:18px;', css)
+        self.assertIn('.story h3 { font-size:25px;', css)
+        self.assertIn('.story p { font-size:19px;', css)
+        self.assertIn('.lead p { font-size:20px;', css)

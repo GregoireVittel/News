@@ -165,9 +165,11 @@ body { line-height:1.5; }
         @media(max-width:1000px) { .spark-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .panel-pair { grid-template-columns:1fr; gap:0; } }
         @media(max-width:600px) { .spark-grid { grid-template-columns:1fr; } .nav-extras { border-left:0; padding-left:0; } }
         /* Readable descriptions */
-        .lead p { font-size:18px; line-height:1.65; }
-        .story p { font-size:16px; line-height:1.6; margin-top:10px; }
-        .top-lead p { font-size:18px; line-height:1.65; color:#c5c7c9; }
+        .story h3 { font-size:25px; line-height:1.25; }
+        .story p { font-size:19px; line-height:1.6; margin-top:12px; }
+        .lead p { font-size:20px; line-height:1.6; }
+        .top-lead p { font-size:20px; line-height:1.6; color:#c5c7c9; }
+        .rail-item h3,.top-rail h3 { font-size:21px; line-height:1.3; }
         /* Section menu stays at the top of the screen while scrolling */
         .navwrap { position:sticky; top:0; z-index:40; }
         [id] { scroll-margin-top:64px; }
