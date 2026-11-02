@@ -27,26 +27,31 @@ def simulate(start, hours):
 
 
 class UpdateClockTests(unittest.TestCase):
-    def test_next_target_in_winter_and_summer(self):
-        self.assertEqual(clock.next_target(paris(2026, 11, 3, 8, 0)), paris(2026, 11, 3, 11, 57))
-        self.assertEqual(clock.next_target(paris(2026, 7, 1, 19, 30)), paris(2026, 7, 2, 6, 57))
+    def test_next_target_is_the_coming_hour_at_57(self):
+        self.assertEqual(clock.next_target(paris(2026, 11, 3, 8, 0)), paris(2026, 11, 3, 8, 57))
+        self.assertEqual(clock.next_target(paris(2026, 7, 1, 23, 58)), paris(2026, 7, 2, 0, 57))
         # A slot less than a minute away counts as passed.
-        self.assertEqual(clock.next_target(paris(2026, 11, 3, 11, 56, 30)), paris(2026, 11, 3, 18, 57))
+        self.assertEqual(clock.next_target(paris(2026, 11, 3, 11, 56, 30)), paris(2026, 11, 3, 12, 57))
 
-    def test_long_gaps_hop_without_publishing_and_never_exceed_job_limit(self):
-        seconds, publish, target = clock.plan(paris(2026, 11, 3, 19, 5))
-        self.assertFalse(publish)
-        self.assertEqual(seconds, clock.MAX_WAIT.total_seconds())
+    def test_every_wait_publishes_and_stays_under_an_hour(self):
+        for minute in range(0, 60, 7):
+            seconds, publish, _ = clock.plan(paris(2026, 11, 3, 14, minute))
+            self.assertTrue(publish)
+            self.assertLessEqual(seconds, 3600)
         self.assertLess(clock.MAX_WAIT, timedelta(minutes=350))
-        seconds, publish, _ = clock.plan(paris(2026, 11, 3, 7, 5))
-        self.assertTrue(publish)
-        self.assertAlmostEqual(seconds, timedelta(hours=4, minutes=52).total_seconds())
 
-    def test_chain_publishes_exactly_three_times_a_day_across_clock_changes(self):
-        for start, day in ((paris(2026, 11, 2, 21, 30), '11-03'), (paris(2026, 3, 28, 21, 30), '03-29'),
-                           (paris(2026, 10, 24, 21, 30), '10-25'), (paris(2026, 7, 1, 21, 30), '07-02')):
-            published = [p for p in simulate(start, 30) if p.startswith(day)]
-            self.assertEqual(published, [f'{day} 06:57', f'{day} 11:57', f'{day} 18:57'], start)
+    def test_chain_publishes_every_hour_including_clock_change_days(self):
+        def hours(day):
+            return [f'{day} {h:02d}:57' for h in range(24)]
+        for start, day in ((paris(2026, 11, 2, 23, 30), '11-03'), (paris(2026, 7, 1, 23, 30), '07-02')):
+            self.assertEqual([p for p in simulate(start, 26) if p.startswith(day)], hours(day))
+        # Spring forward: 02:57 does not exist, so 23 updates that day.
+        spring = [p for p in simulate(paris(2026, 3, 28, 23, 30), 26) if p.startswith('03-29')]
+        self.assertEqual(spring, [h for h in hours('03-29') if h != '03-29 02:57'])
+        # Fall back: still one update per wall-clock hour, never two at once.
+        fall = [p for p in simulate(paris(2026, 10, 24, 23, 30), 27) if p.startswith('10-25')]
+        self.assertEqual(sorted(set(fall)), hours('10-25'))
+        self.assertLessEqual(len(fall), 25)
 
     def test_workflow_wiring(self):
         workflow = (ROOT / '.github/workflows/update-clock.yml').read_text()

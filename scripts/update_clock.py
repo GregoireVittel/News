@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Self-running update clock for the news site (used by update-clock.yml).
+"""Self-running hourly update clock for the news site (used by update-clock.yml).
 
 GitHub's cron schedule proved unreliable for this repository (runs hours late
 or not at all), but workflows started with workflow_dispatch run immediately.
-So the clock workflow waits inside a job until just before the next Paris
-publication slot, starts the publish workflow, then starts itself again.
-A job may run for at most 6 hours, so longer gaps are covered by several hops.
+So the clock workflow waits inside a job until just before the next hour
+(Europe/Paris), starts the publish workflow, then starts itself again.
+A job may run for at most 6 hours; waits are capped well below that.
 
 Usage in the workflow:  update_clock.py wait
   Prints the plan, sleeps, then writes publish=true|false to $GITHUB_OUTPUT.
@@ -17,8 +17,8 @@ import sys
 import time
 
 PARIS = ZoneInfo('Europe/Paris')
-# Start publishing 3 minutes early so the site is rebuilt by 07:00, 12:00, 19:00.
-TARGETS = ((6, 57), (11, 57), (18, 57))
+# Start publishing 3 minutes early so the site is rebuilt on every hour.
+TARGETS = tuple((hour, 57) for hour in range(24))
 MAX_WAIT = timedelta(hours=5, minutes=30)   # stays under the 6-hour job limit
 MIN_LEAD = timedelta(minutes=1)             # a slot this close is treated as passed
 
