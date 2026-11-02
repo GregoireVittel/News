@@ -285,12 +285,9 @@ def edition_page(articles, base, prefix, language, now, failures):
                  + ''.join(f'<li>{escape(failure.split(" (", 1)[0])}</li>' for failure in failures) + '</ul></details>')
     body += '<p class="classification-note">Ordered by distinct publisher count, then recency.</p>'
     if language == 'All':
-        body += dashboard.numbers_bar(selected, SECTIONS, SECTION_LABELS, now)
         body += top_stories(selected, now)
-        body += dashboard.section_previews(selected, SECTIONS, SECTION_LABELS, now)
         body += ('<div class="panel-pair">' + dashboard.most_covered(selected, SECTION_LABELS)
                  + dashboard.trending_panel(dashboard.trending(selected), base) + '</div>')
-        body += dashboard.pulse(selected, SECTIONS, SECTION_LABELS, now, PARIS)
     for section in SECTIONS:
         items = [a for a in selected if a['section'] == section]
         body += f'<section class="section" id="{section.lower()}" aria-label="{section}"><div class="section-heading"><h2 class="section-title">{SECTION_LABELS[section]}</h2><span>{plural(len(items), "story", "stories")}</span></div>'

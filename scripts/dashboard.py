@@ -12,7 +12,6 @@ import unicodedata
 
 PARIS = ZoneInfo("Europe/Paris")
 NEW_WINDOW = timedelta(hours=3)
-PREVIEW_PER_SECTION = 3
 MOST_COVERED = 6
 TRENDING = 12
 TRENDING_MIN_STORIES = 3
@@ -36,42 +35,6 @@ def _link(article):
 
 def publishers(articles):
     return Counter(source['name'] for article in articles for source in article['sources'])
-
-
-# --- Today in numbers -------------------------------------------------------
-
-def numbers_bar(articles, sections, labels, now):
-    counts = publishers(articles)
-    multi = sum(1 for a in articles if a['sourceCount'] > 1)
-    fresh = sum(1 for a in articles if is_new(a, now))
-    top_name, top_count = counts.most_common(1)[0] if counts else ('—', 0)
-    tiles = [
-        (str(len(articles)), 'stories'),
-        (str(len(counts)), 'publishers'),
-        (str(multi), 'covered by 2+ outlets'),
-        (str(fresh), 'new in the last 3 hours'),
-        (escape(top_name), f'most active source · {plural(top_count, "story", "stories")}'),
-    ]
-    html = '<section class="numbers" aria-label="Today in numbers"><h2 class="visually-hidden">Today in numbers</h2><dl class="number-tiles">'
-    html += ''.join(f'<div class="tile"><dt>{label}</dt><dd>{value}</dd></div>' for value, label in tiles)
-    html += '</dl><ul class="section-counts">'
-    html += ''.join(f'<li><a href="#{s.lower()}">{labels[s]} <strong>{sum(1 for a in articles if a["section"] == s)}</strong></a></li>'
-                    for s in sections)
-    return html + '</ul></section>'
-
-
-# --- Section previews -------------------------------------------------------
-
-def section_previews(articles, sections, labels, now):
-    columns = []
-    for section in sections:
-        items = [a for a in articles if a['section'] == section][:PREVIEW_PER_SECTION]
-        body = ''.join(f'<li>{_link(a)}<span class="mini-meta">{escape(a["sourceName"])}{new_badge(a, now)}</span></li>' for a in items)
-        columns.append(f'<div class="glance-col"><h3><a href="#{section.lower()}">{labels[section]}</a></h3>'
-                       + (f'<ol>{body}</ol>' if body else '<p class="empty-mini">No stories yet.</p>') + '</div>')
-    return ('<section class="panel glance" aria-labelledby="glance-title"><div class="section-heading">'
-            '<h2 class="section-title" id="glance-title">At a glance</h2><span>top 3 per section</span></div>'
-            '<div class="glance-grid">' + ''.join(columns) + '</div></section>')
 
 
 # --- Most covered -----------------------------------------------------------
@@ -213,45 +176,7 @@ def sources_page(articles, labels, now):
     return body
 
 
-# --- Charts (inline SVG, single series each, native <title> tooltips) --------
-
-def pulse(articles, sections, labels, now, paris):
-    """Small multiples: stories per hour over the last 24 hours for each section."""
-    width, height, gap = 240, 44, 2
-    bar = (width - gap * 23) / 24
-    start = now - timedelta(hours=24)
-    table_rows = ''
-    rows = ''
-    for section in sections:
-        counts = [0] * 24
-        for a in articles:
-            if a['section'] == section and start <= a['date'] <= now:
-                counts[min(23, int((a['date'] - start).total_seconds() // 3600))] += 1
-        peak = max(counts)
-        marks = ''
-        for i, count in enumerate(counts):
-            hour = (start + timedelta(hours=i)).astimezone(paris).strftime('%H:00')
-            h = 0 if not peak else max(2.0, (height - 4) * count / peak)
-            x = i * (bar + gap)
-            tip = f'{hour} · {plural(count, "story", "stories")}'
-            marks += (f'<g><title>{tip}</title><rect class="hit" x="{x:.1f}" y="0" width="{bar + gap:.1f}" height="{height}"/>'
-                      + (f'<rect class="bar" x="{x:.1f}" y="{height - h:.1f}" width="{bar:.1f}" height="{h:.1f}"/>' if count else '')
-                      + '</g>')
-        peak_hour = (start + timedelta(hours=counts.index(peak))).astimezone(paris).strftime('%H:00') if peak else '—'
-        total = sum(counts)
-        rows += (f'<div class="pulse-row"><a class="pulse-label" href="#{section.lower()}">{labels[section]}</a>'
-                 f'<svg class="pulse-chart" viewBox="0 0 {width} {height}" preserveAspectRatio="none" role="img" '
-                 f'aria-label="{labels[section]}: {plural(total, "story", "stories")} in 24 hours, peak at {peak_hour}">'
-                 f'<line class="baseline" x1="0" y1="{height - .5}" x2="{width}" y2="{height - .5}"/>{marks}</svg>'
-                 f'<span class="pulse-note">{total} · peak {peak_hour}</span></div>')
-        table_rows += f'<tr><th scope="row">{labels[section]}</th>' + ''.join(f'<td>{c}</td>' for c in counts) + '</tr>'
-    hours = ''.join(f'<th scope="col">{(start + timedelta(hours=i)).astimezone(paris).strftime("%H")}</th>' for i in range(24))
-    return ('<section class="panel" aria-labelledby="pulse-title"><div class="section-heading">'
-            '<h2 class="section-title" id="pulse-title">News pulse</h2><span>stories per hour, last 24 hours · Paris time</span></div>'
-            f'<div class="pulse">{rows}<div class="pulse-axis"><span>−24h</span><span>now</span></div></div>'
-            '<details class="data-table"><summary>Show as table</summary><div class="table-scroll"><table>'
-            f'<thead><tr><th scope="col">Section</th>{hours}</tr></thead><tbody>{table_rows}</tbody></table></div></details></section>')
-
+# --- Archive trend (inline SVG sparklines with native <title> tooltips) -------
 
 def day_stats(articles, sections):
     return {'total': len(articles), 'publishers': len(publishers(articles)),
