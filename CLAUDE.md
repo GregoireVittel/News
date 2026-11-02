@@ -15,3 +15,10 @@ without asking for confirmation:
 
 The live site only changes after that workflow runs; merging alone does not
 republish it.
+
+## How the site is published
+GitHub Pages source is **GitHub Actions** (Settings → Pages). The site is built
+and deployed by `daily-edition.yml`, started every hour by `update-clock.yml`,
+and kept on the `site` branch (current + previous version only). Nothing
+generated belongs on `main`. If Pages is ever switched back to "Deploy from a
+branch", the live site will show whatever is on that branch.
