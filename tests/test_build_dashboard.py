@@ -40,23 +40,6 @@ class PanelTests(unittest.TestCase):
         self.assertIn('badge-new', dashboard.new_badge(self.stories[0], NOW))
         self.assertEqual(dashboard.new_badge(self.stories[3], NOW), '')
 
-    def test_numbers_bar(self):
-        html = dashboard.numbers_bar(self.stories, SECTIONS, LABELS, NOW)
-        tiles = dict(re.findall(r'<dt>([^<]+)</dt><dd>([^<]+)</dd>', html))
-        self.assertEqual(tiles['stories'], '5')
-        self.assertEqual(tiles['publishers'], '3')
-        self.assertEqual(tiles['covered by 2+ outlets'], '2')
-        self.assertEqual(tiles['new in the last 3 hours'], '2')
-        self.assertEqual(tiles['most active source · 3 stories'], 'TEST A')
-        self.assertIn('href="#world">World News <strong>2</strong>', html)
-
-    def test_section_previews_cap_and_empty_sections(self):
-        many = [story(f'TEST story {i}', 'World', 1, index=i) for i in range(5)]
-        html = dashboard.section_previews(many, SECTIONS, LABELS, NOW)
-        world = html.split('href="#world"', 1)[1].split('glance-col', 1)[0]
-        self.assertEqual(world.count('<li>'), dashboard.PREVIEW_PER_SECTION)
-        self.assertEqual(html.count('No stories yet.'), 4)
-
     def test_most_covered_lists_outlets_and_skips_single_source(self):
         html = dashboard.most_covered(self.stories, LABELS)
         self.assertIn('TEST A, TEST B, TEST C', html)
@@ -80,15 +63,6 @@ class PanelTests(unittest.TestCase):
             section = html.split(f'id="src-{dashboard.slug(name)}"', 1)[1].split('</section>', 1)[0]
             self.assertIn(f'{count} stories', section)
         self.assertLess(html.index('id="src-test-a"'), html.index('id="src-test-c"'))
-
-    def test_pulse_bins_stories_by_hour_with_tooltips_and_table(self):
-        html = dashboard.pulse(self.stories, SECTIONS, LABELS, NOW, dashboard.PARIS)
-        world = html.split('href="#world"', 1)[1].split('pulse-row', 1)[0]
-        self.assertEqual(world.count('class="bar"'), 2)
-        self.assertIn('2 stories in 24 hours', world)
-        self.assertIn('Show as table', html)
-        # The 30-hour-old Technology story is outside the window.
-        self.assertIn('Technology: 0 stories in 24 hours', html)
 
     def test_archive_page_trend_and_week_links(self):
         stats = {'2026-10-25': dashboard.day_stats(self.stories[:2], SECTIONS),
@@ -123,9 +97,10 @@ class BuildIntegrationTests(unittest.TestCase):
             edition.build(site, 'https://example.test/News/', now=NOW, feeds=[FEED],
                           fetcher=lambda feed: RSS, history_root=history)
             front = (site / 'index.html').read_text()
-            for marker in ('class="numbers"', 'id="glance-title"', 'id="covered-title"',
-                           'id="trending-title"', 'id="pulse-title"', 'class="top-stories"'):
+            for marker in ('id="covered-title"', 'id="trending-title"', 'class="top-stories"'):
                 self.assertIn(marker, front)
+            for removed in ('class="numbers"', 'glance', 'pulse'):
+                self.assertNotIn(removed, front)
             self.assertIn('<html lang="en">', front)
             self.assertIn('<html lang="pl">', (site / 'pl/index.html').read_text())
             self.assertNotIn('Wygenerowano', front)
