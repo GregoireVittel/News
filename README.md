@@ -148,7 +148,10 @@ cron proved unreliable here; a cron line only restarts the clock if the chain br
 To restart it by hand, run **Update clock** from the Actions tab.
 `daily-edition.yml` keeps UTC cron lines for CET and CEST as a fallback, filtered
 by `scripts/schedule_gate.py`; it builds with `scripts/build_edition.py`,
-installs the staged current pages and retains historical editions. Historical
+deploys the staged site straight to GitHub Pages and keeps it on the `site`
+branch with only two commits, the current and the previous version
+(`scripts/site_branch.sh`); nothing generated is committed to `main`. Each
+build reads dated editions and `stats.json` from the previous version. Historical
 snapshots are preserved unchanged and may contain formerly permitted publishers.
 The older `build.py` command and `/lang/*.html`, `/feed.xml`, and dated
 `/archive/*.html` URLs remain available for compatibility; it reads the same

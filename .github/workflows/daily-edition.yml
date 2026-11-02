@@ -51,26 +51,25 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
+      - name: Get the previous published version
+        run: |
+          scripts/site_branch.sh fetch "$RUNNER_TEMP/previous"
+          # First run after the switch: carry history over from main instead.
+          if [ -z "$(ls -A "$RUNNER_TEMP/previous")" ]; then
+            echo "HISTORY=." >> "$GITHUB_ENV"
+          else
+            echo "HISTORY=$RUNNER_TEMP/previous" >> "$GITHUB_ENV"
+          fi
       - name: Test and generate edition
         run: |
           python -m unittest discover -s tests -p 'test_build*.py'
           node --test tests/*.test.cjs
-          python scripts/build_edition.py --output "$RUNNER_TEMP/news-edition" --base-url https://gregoirevittel.github.io/News/ --history-root .
-          python -c 'import os, shutil; shutil.copytree(os.environ["RUNNER_TEMP"] + "/news-edition", ".", dirs_exist_ok=True)'
-      - name: Commit edition and archive
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add index.html archive lang feed.xml sitemap.xml pl en fr rss.xml build-info.json articles.json stats.json sources trending assets
-          # Stage whole dated edition folders; listing individual files fails when one is missing.
-          git add --all -- '20[0-9][0-9]-[0-9][0-9]-[0-9][0-9]/*'
-          if ! git diff --cached --quiet; then
-            git commit -m "news: generate daily edition"
-            git push origin HEAD:main
-          fi
+          python scripts/build_edition.py --output "$RUNNER_TEMP/news-edition" --base-url https://gregoirevittel.github.io/News/ --history-root "$HISTORY"
+      - name: Save as the current version (keeps only current + previous)
+        run: scripts/site_branch.sh save "$RUNNER_TEMP/news-edition"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: ${{ runner.temp }}/news-edition
       - id: deployment
         uses: actions/deploy-pages@v4
