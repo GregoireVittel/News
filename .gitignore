@@ -1,3 +1,20 @@
 __pycache__/
 *.py[cod]
 .pytest_cache/
+# Generated site: deployed to GitHub Pages by daily-edition.yml and kept on the
+# `site` branch only (Pages source must be "GitHub Actions").
+/index.html
+/archive/
+/lang/
+/pl/
+/en/
+/fr/
+/sources/
+/trending/
+/20[0-9][0-9]-[0-9][0-9]-[0-9][0-9]/
+/feed.xml
+/rss.xml
+/sitemap.xml
+/build-info.json
+/articles.json
+/stats.json
