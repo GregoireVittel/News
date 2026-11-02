@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-01T22:21:53+01:00",
+  "generatedAt": "2026-11-01T22:36:46+01:00",
   "sections": [
     "Poland",
     "France",
@@ -78,38 +78,6 @@
       }
     },
     {
-      "title": "NASA hopes the commercial space industry can help save Hubble",
-      "link": "https://www.theverge.com/science/1024239/nasa-commercial-space-save-hubble",
-      "description": "Gravity is a cruel mistress, slowly dragging the famed telescope ever closer to its ultimate demise with every day. Hubble is in no immediate danger of burning up in the Earth's atmosphere, but its time will run out in the early to mid 2030s unless its orbit is boosted. So NASA is taking proposals from […]",
-      "date": "2026-11-01T16:09:21-05:00",
-      "image": "",
-      "sourceName": "The Verge",
-      "language": "en",
-      "category": "Technology, AI and science",
-      "sourceCategory": "Technology, AI and science",
-      "section": "Technology",
-      "sectionReason": "feed category fallback: Technology, AI and science",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "NASA hopes the commercial space industry can help save Hubble",
-          "description": "Gravity is a cruel mistress, slowly dragging the famed telescope ever closer to its ultimate demise with every day. Hubble is in no immediate danger of burning up in the Earth's atmosphere, but its time will run out in the early to mid 2030s unless its orbit is boosted. So NASA is taking proposals from […]",
-          "sourceCategory": "Technology, AI and science"
-        }
-      },
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/science/1024239/nasa-commercial-space-save-hubble"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Russian strikes cut power to thousands in Ukraine as Kherson ceasefire ends",
       "link": "https://www.bbc.co.uk/news/articles/c64g1y90p71eo?at_medium=RSS&at_campaign=rss",
       "description": "A rare humanitarian ceasefire allowed civilians to evacuate the Russian-occupied city of Oleshky.",
@@ -146,7 +114,7 @@
       "link": "https://www.bbc.co.uk/sport/football/articles/cvp8grpjk4leo?at_medium=RSS&at_campaign=rss",
       "description": "Andoni Iraola says that he will tell his players to go down in future after Liverpool were denied a penalty in Sunday's defeat by Arsenal.",
       "date": "2026-11-01T21:00:26+00:00",
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3c6f/live/4e8ffeb0-d630-11f1-81be-7db9d1d08850.jpg",
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/afa9/live/8fe2aac0-d63a-11f1-8c46-b5027fa7bde9.jpg",
       "sourceName": "BBC News",
       "language": "en",
       "category": "Global news and geopolitics",
@@ -550,6 +518,70 @@
         {
           "name": "Bloomberg",
           "url": "https://www.bloomberg.com/news/articles/2026-11-01/wall-street-braces-for-biggest-treasury-sales-overhaul-in-years"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Były agent Mosadu towarzyszył Bolsonaro w potajemnym wyjeździe z kraju",
+      "link": "https://www.bankier.pl/wiadomosc/Byly-agent-Mosadu-towarzyszyl-Bolsonaro-w-potajemnym-wyjezdzie-z-kraju-9221801.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
+      "description": "Były agent izraelskiej służby wywiadowczej Mosad, posiadający obywatelstwo USA, towarzyszył senatorowi Flaviowi Bolsonaro w potajemnym wyjeździe z Brazylii po przegranych przez niego wyborach prezydenckich – podała stacja CNN Brasil, powołując się na źródła śledcze w Brazylii.",
+      "date": "2026-11-01T21:00:00+01:00",
+      "image": "",
+      "sourceName": "Bankier.pl",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "World",
+      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Były agent Mosadu towarzyszył Bolsonaro w potajemnym wyjeździe z kraju",
+          "description": "Były agent izraelskiej służby wywiadowczej Mosad, posiadający obywatelstwo USA, towarzyszył senatorowi Flaviowi Bolsonaro w potajemnym wyjeździe z Brazylii po przegranych przez niego wyborach prezydenckich – podała stacja CNN Brasil, powołując się na źródła śledcze w Brazylii.",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Bankier.pl",
+          "url": "https://www.bankier.pl/wiadomosc/Byly-agent-Mosadu-towarzyszyl-Bolsonaro-w-potajemnym-wyjezdzie-z-kraju-9221801.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Tajemniczy obiekt nad terytorium NATO. Pilny apel wojska, by nie wychodzić z domów",
+      "link": "https://www.bankier.pl/wiadomosc/Tajemniczy-obiekt-nad-terytorium-NATO-Pilny-apel-wojska-by-nie-wychodzic-z-domow-9221889.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
+      "description": "Armia Łotwy poinformowała w niedzielę o krótkotrwałym naruszeniu przestrzeni powietrznej kraju przez niezidentyfikowany obiekt w pobliżu granicy z Rosją.",
+      "date": "2026-11-01T20:59:00+01:00",
+      "image": "",
+      "sourceName": "Bankier.pl",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "World",
+      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Tajemniczy obiekt nad terytorium NATO. Pilny apel wojska, by nie wychodzić z domów",
+          "description": "Armia Łotwy poinformowała w niedzielę o krótkotrwałym naruszeniu przestrzeni powietrznej kraju przez niezidentyfikowany obiekt w pobliżu granicy z Rosją.",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Bankier.pl",
+          "url": "https://www.bankier.pl/wiadomosc/Tajemniczy-obiekt-nad-terytorium-NATO-Pilny-apel-wojska-by-nie-wychodzic-z-domow-9221889.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
         }
       ],
       "sourceCount": 1,
@@ -1175,8 +1207,8 @@
       "language": "en",
       "category": "Global news and geopolitics",
       "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -1382,6 +1414,38 @@
         {
           "name": "Les Échos",
           "url": "https://www.lesechos.fr/monde/etats-unis/midterms-lacceleration-de-leconomie-americaine-nempeche-pas-les-democrates-de-creuser-lecart-avant-le-scrutin-2260377"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "USA w kontrze do nauki? Wielka szansa dla Europy na przejęcie lukratywnego rynku",
+      "link": "https://www.bankier.pl/wiadomosc/USA-w-kontrze-do-nauki-Wielka-szansa-dla-Europy-na-przejecie-lukratywnego-rynku-9221873.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
+      "description": "Europa ma szansę umocnić swoją pozycję światowego lidera w badaniach naukowych i rozwoju szczepionek, w szczególności wykorzystujących technologię mRNA. Sprzyjać temu mogą ograniczenia finansowania badań w Stanach Zjednoczonych oraz rosnący sceptycyzm administracji Donalda Trumpa wobec szczepień - ocenił w niedzielę portal Politico.",
+      "date": "2026-11-01T18:47:00+01:00",
+      "image": "",
+      "sourceName": "Bankier.pl",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "Technology",
+      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "USA w kontrze do nauki? Wielka szansa dla Europy na przejęcie lukratywnego rynku",
+          "description": "Europa ma szansę umocnić swoją pozycję światowego lidera w badaniach naukowych i rozwoju szczepionek, w szczególności wykorzystujących technologię mRNA. Sprzyjać temu mogą ograniczenia finansowania badań w Stanach Zjednoczonych oraz rosnący sceptycyzm administracji Donalda Trumpa wobec szczepień - ocenił w niedzielę portal Politico.",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Bankier.pl",
+          "url": "https://www.bankier.pl/wiadomosc/USA-w-kontrze-do-nauki-Wielka-szansa-dla-Europy-na-przejecie-lukratywnego-rynku-9221873.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
         }
       ],
       "sourceCount": 1,
@@ -1830,6 +1894,38 @@
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/11/01/techcrunch-mobility-a-new-bigger-av-boom-is-here/"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Bezcenne odkrycie archeologów. \"Możliwe, że tę monetę król trzymał kiedyś w dłoni\"",
+      "link": "https://www.bankier.pl/wiadomosc/Bezcenne-odkrycie-archeologow-Mozliwe-ze-te-monete-krol-trzymal-kiedys-w-dloni-9221072.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
+      "description": "Wśród monet z największego skarbu z epoki wikingów archeolodzy odkryli niezwykle rzadką monetę Olafa Świętego, patrona Norwegii. To skarb narodowy – przyznała w komunikacie archeolożka Anne Skogsfjord. Od listopada monetę będzie można obejrzeć na wystawie w Muzeum Historycznym w Oslo.",
+      "date": "2026-11-01T18:00:00+01:00",
+      "image": "",
+      "sourceName": "Bankier.pl",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "Poland",
+      "sectionReason": "feed category fallback: Poland",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Bezcenne odkrycie archeologów. \"Możliwe, że tę monetę król trzymał kiedyś w dłoni\"",
+          "description": "Wśród monet z największego skarbu z epoki wikingów archeolodzy odkryli niezwykle rzadką monetę Olafa Świętego, patrona Norwegii. To skarb narodowy – przyznała w komunikacie archeolożka Anne Skogsfjord. Od listopada monetę będzie można obejrzeć na wystawie w Muzeum Historycznym w Oslo.",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Bankier.pl",
+          "url": "https://www.bankier.pl/wiadomosc/Bezcenne-odkrycie-archeologow-Mozliwe-ze-te-monete-krol-trzymal-kiedys-w-dloni-9221072.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
         }
       ],
       "sourceCount": 1,
@@ -2640,38 +2736,6 @@
       }
     },
     {
-      "title": "Green Party at 'crossroads' after Zionism vote, says former co-leader",
-      "link": "https://www.bbc.co.uk/news/articles/c6x2wkp7e0q9o?at_medium=RSS&at_campaign=rss",
-      "description": "Adrian Ramsay suggested the party needs to focus on its \"core values\", including environmental issues.",
-      "date": "2026-11-01T15:52:51+00:00",
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/802c/live/e0b8cef0-c403-11f1-a64c-550be9e3c66b.png",
-      "sourceName": "BBC News",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Green Party at 'crossroads' after Zionism vote, says former co-leader",
-          "description": "Adrian Ramsay suggested the party needs to focus on its \"core values\", including environmental issues.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "BBC News",
-          "url": "https://www.bbc.co.uk/news/articles/c6x2wkp7e0q9o?at_medium=RSS&at_campaign=rss"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Biją prognozy, ale inwestorzy mogą czuć niedosyt. Co pokazują wyniki potęg z S&P 500?",
       "link": "https://www.bankier.pl/wiadomosc/Bija-prognozy-ale-inwestorzy-moga-czuc-niedosyt-Co-pokazuja-wyniki-poteg-z-S-P-500-9221865.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
       "description": "W połowie sezonu publikacji wyników finansowych spółki z indeksu S&P 500 raportują mieszane wyniki za III kwartał w porównaniu z oczekiwaniami. Chociaż odsetek spółek, które odnotowały pozytywne niespodzianki w wynikach, jest powyżej ostatnich średnich, skala tych niespodzianek jest niższa - podaje FactSet.",
@@ -2681,8 +2745,8 @@
       "language": "pl",
       "category": "Poland",
       "sourceCategory": "Poland",
-      "section": "Poland",
-      "sectionReason": "feed category fallback: Poland",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -3280,38 +3344,6 @@
       }
     },
     {
-      "title": "Zniszczony nagrobek? Możesz dostać nawet 20 tys. zł odszkodowania",
-      "link": "https://www.bankier.pl/wiadomosc/Zniszczony-nagrobek-Mozesz-dostac-nawet-20-tys-zl-odszkodowania-9220030.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
-      "description": "Koszty naprawienia uszkodzonego nagrobka mogą zostać pokryte dzięki dodatkowej polisie, a w określonych przypadkach z ubezpieczenia OC odpowiedzialnego podmiotu - wskazali eksperci z Biura Rzecznika Finansowego.",
-      "date": "2026-11-01T16:00:00+01:00",
-      "image": "",
-      "sourceName": "Bankier.pl",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "Poland",
-      "sectionReason": "feed category fallback: Poland",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Zniszczony nagrobek? Możesz dostać nawet 20 tys. zł odszkodowania",
-          "description": "Koszty naprawienia uszkodzonego nagrobka mogą zostać pokryte dzięki dodatkowej polisie, a w określonych przypadkach z ubezpieczenia OC odpowiedzialnego podmiotu - wskazali eksperci z Biura Rzecznika Finansowego.",
-          "sourceCategory": "Poland"
-        }
-      },
-      "sources": [
-        {
-          "name": "Bankier.pl",
-          "url": "https://www.bankier.pl/wiadomosc/Zniszczony-nagrobek-Mozesz-dostac-nawet-20-tys-zl-odszkodowania-9220030.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "After Tech Rout, Investors Gird for More Wild Days for Stocks",
       "link": "https://www.bloomberg.com/news/articles/2026-11-01/wall-street-braces-for-more-wild-days-in-stocks-after-tech-rout",
       "description": "The stock market got a long-awaited jolt of volatility late last week after disappointing earnings from technology giants added to angst around the AI-driven rally.",
@@ -3336,6 +3368,38 @@
         {
           "name": "Bloomberg",
           "url": "https://www.bloomberg.com/news/articles/2026-11-01/wall-street-braces-for-more-wild-days-in-stocks-after-tech-rout"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Koniec z armią na \"trytytkach\" MON wreszcie pozwala żołnierzom na normalny sprzęt",
+      "link": "https://www.bankier.pl/wiadomosc/Koniec-z-armia-na-trytytkach-MON-wreszcie-pozwala-zolnierzom-na-normalny-sprzet-9221551.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
+      "description": "Tak zwana zielona lista rekomendowanego wyposażenia żołnierzy to racjonalna próba uporządkowania przez MON zjawiska, które i tak od lat funkcjonuje w polskim wojsku – ocenia kmdr por. rez. Włodzimierz Kopeć, były szef szkolenia specjalistycznego Formozy.",
+      "date": "2026-11-01T15:59:00+01:00",
+      "image": "",
+      "sourceName": "Bankier.pl",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "Poland",
+      "sectionReason": "content: Poland subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Koniec z armią na \"trytytkach\" MON wreszcie pozwala żołnierzom na normalny sprzęt",
+          "description": "Tak zwana zielona lista rekomendowanego wyposażenia żołnierzy to racjonalna próba uporządkowania przez MON zjawiska, które i tak od lat funkcjonuje w polskim wojsku – ocenia kmdr por. rez. Włodzimierz Kopeć, były szef szkolenia specjalistycznego Formozy.",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Bankier.pl",
+          "url": "https://www.bankier.pl/wiadomosc/Koniec-z-armia-na-trytytkach-MON-wreszcie-pozwala-zolnierzom-na-normalny-sprzet-9221551.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
         }
       ],
       "sourceCount": 1,
@@ -3385,8 +3449,8 @@
       "language": "en",
       "category": "Global news and geopolitics",
       "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -3432,6 +3496,38 @@
         {
           "name": "Le Monde",
           "url": "https://www.lemonde.fr/societe/article/2026/11/01/manifestations-du-31-octobre-enquete-ouverte-pour-tentative-d-homicide-a-la-suite-du-jet-d-un-cocktail-molotov-sur-des-gendarmes-a-paris_6804476_3224.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Nastolatek chciał dokonać rzezi w Moskwie. Pomoc przyszła ze strony USA",
+      "link": "https://www.bankier.pl/wiadomosc/Nastolatek-chcial-dokonac-rzezi-w-Moskwie-Pomoc-przyszla-ze-strony-USA-9221860.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
+      "description": "Rosyjska Federalna Służba Bezpieczeństwa (FSB) poinformowała w niedzielę o zatrzymaniu niepełnoletniego Rosjanina, który miał planować zamach terrorystyczny w kompleksie pałacowo-parkowym Carycyno na południu Moskwy.",
+      "date": "2026-11-01T15:54:00+01:00",
+      "image": "",
+      "sourceName": "Bankier.pl",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "World",
+      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Nastolatek chciał dokonać rzezi w Moskwie. Pomoc przyszła ze strony USA",
+          "description": "Rosyjska Federalna Służba Bezpieczeństwa (FSB) poinformowała w niedzielę o zatrzymaniu niepełnoletniego Rosjanina, który miał planować zamach terrorystyczny w kompleksie pałacowo-parkowym Carycyno na południu Moskwy.",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Bankier.pl",
+          "url": "https://www.bankier.pl/wiadomosc/Nastolatek-chcial-dokonac-rzezi-w-Moskwie-Pomoc-przyszla-ze-strony-USA-9221860.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
         }
       ],
       "sourceCount": 1,
@@ -3920,40 +4016,6 @@
       }
     },
     {
-      "title": "Stc Bahrain partners with BNP Paribas on $140mln strategic financing deal to drive next-phase digital expansion - Zawya",
-      "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNTmtRbUZFZV9yYU0xdVVFb05zNmRObkJuTFNvcnVvY1NmRXRreWdJNi1ocXBhSnBubWYxVThGUHBxb01HR3pOcVBBNW9vaDVnaXBEejAwTm5rT2c0OGczMzZsaXVlbzlGUnh1MDZ3akNZRDNwYlVMQlhlY1VBeTV3VERHZ05mb20yOUpuQm9uOGQzX2ZDUWpvdFk5SWJ3V3diWGJBWERGbmcxUzgtczlhSGMyTWtlQUxnbllhWE9nZDRPMGZnNXlMbndxRkVXMzRhZEJ5S2FqSm9tVjFWMkxybnRwUUgxREg2aVR2SHpjcHBwTGlDWkdEVm8yQjlXaVlyNGc?oc=5",
-      "description": "Stc Bahrain partners with BNP Paribas on $140mln strategic financing deal to drive next-phase digital expansion Zawya",
-      "date": "2026-11-01T14:00:00+00:00",
-      "image": "",
-      "sourceName": "Zawya",
-      "language": "en",
-      "category": "Financial markets and economics",
-      "aggregator": true,
-      "subgroup": "BNP Paribas",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Financial",
-      "sectionReason": "content: BNP Paribas bank evidence",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Stc Bahrain partners with BNP Paribas on $140mln strategic financing deal to drive next-phase digital expansion - Zawya",
-          "description": "Stc Bahrain partners with BNP Paribas on $140mln strategic financing deal to drive next-phase digital expansion Zawya",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "Zawya",
-          "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNTmtRbUZFZV9yYU0xdVVFb05zNmRObkJuTFNvcnVvY1NmRXRreWdJNi1ocXBhSnBubWYxVThGUHBxb01HR3pOcVBBNW9vaDVnaXBEejAwTm5rT2c0OGczMzZsaXVlbzlGUnh1MDZ3akNZRDNwYlVMQlhlY1VBeTV3VERHZ05mb20yOUpuQm9uOGQzX2ZDUWpvdFk5SWJ3V3diWGJBWERGbmcxUzgtczlhSGMyTWtlQUxnbllhWE9nZDRPMGZnNXlMbndxRkVXMzRhZEJ5S2FqSm9tVjFWMkxybnRwUUgxREg2aVR2SHpjcHBwTGlDWkdEVm8yQjlXaVlyNGc?oc=5"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Here’s what ‘renoa’ — the first new fiber in 25 years — feels like",
       "link": "https://techcrunch.com/2026/11/01/heres-what-renoa-the-first-new-fiber-in-25-years-feels-like/",
       "description": "Startup Everbloom's new material, renoa, is the first new fiber in 25 years, and it feels very familiar.",
@@ -4156,7 +4218,7 @@
       "category": "Financial markets and economics",
       "sourceCategory": "Financial markets and economics",
       "section": "Financial",
-      "sectionReason": "feed category fallback: Financial markets and economics",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -4202,6 +4264,38 @@
         {
           "name": "Bloomberg",
           "url": "https://www.bloomberg.com/news/videos/2026-11-01/brooks-steps-up-global-push-as-running-boom-builds-video"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Francja znów płonie. Pół miliona wściekłych obywateli na ulicach i setki aresztowanych",
+      "link": "https://www.bankier.pl/wiadomosc/Francja-znow-plonie-Pol-miliona-wscieklych-obywateli-na-ulicach-i-setki-aresztowanych-9221845.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
+      "description": "Ogółem 779 osób zostało zatrzymanych we Francji podczas sobotnich protestów przeciw rosnącym kosztom życia – poinformowało w niedzielę ministerstwo spraw wewnętrznych. Podkreśliło, że nie odnotowano „znaczących incydentów”.",
+      "date": "2026-11-01T14:17:00+01:00",
+      "image": "",
+      "sourceName": "Bankier.pl",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "France",
+      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Francja znów płonie. Pół miliona wściekłych obywateli na ulicach i setki aresztowanych",
+          "description": "Ogółem 779 osób zostało zatrzymanych we Francji podczas sobotnich protestów przeciw rosnącym kosztom życia – poinformowało w niedzielę ministerstwo spraw wewnętrznych. Podkreśliło, że nie odnotowano „znaczących incydentów”.",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Bankier.pl",
+          "url": "https://www.bankier.pl/wiadomosc/Francja-znow-plonie-Pol-miliona-wscieklych-obywateli-na-ulicach-i-setki-aresztowanych-9221845.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
         }
       ],
       "sourceCount": 1,
@@ -4394,6 +4488,40 @@
         {
           "name": "Mediapart",
           "url": "https://www.mediapart.fr/journal/france/011126/le-mensonge-en-politique-derniere-conversation-avec-gael-perdriau-avant-la-prison"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Stc Bahrain partners with BNP Paribas on $140mln strategic financing deal to drive next-phase digital expansion - Zawya",
+      "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNTmtRbUZFZV9yYU0xdVVFb05zNmRObkJuTFNvcnVvY1NmRXRreWdJNi1ocXBhSnBubWYxVThGUHBxb01HR3pOcVBBNW9vaDVnaXBEejAwTm5rT2c0OGczMzZsaXVlbzlGUnh1MDZ3akNZRDNwYlVMQlhlY1VBeTV3VERHZ05mb20yOUpuQm9uOGQzX2ZDUWpvdFk5SWJ3V3diWGJBWERGbmcxUzgtczlhSGMyTWtlQUxnbllhWE9nZDRPMGZnNXlMbndxRkVXMzRhZEJ5S2FqSm9tVjFWMkxybnRwUUgxREg2aVR2SHpjcHBwTGlDWkdEVm8yQjlXaVlyNGc?oc=5",
+      "description": "Stc Bahrain partners with BNP Paribas on $140mln strategic financing deal to drive next-phase digital expansion Zawya",
+      "date": "2026-11-01T13:00:00+00:00",
+      "image": "",
+      "sourceName": "Zawya",
+      "language": "en",
+      "category": "Financial markets and economics",
+      "aggregator": true,
+      "subgroup": "BNP Paribas",
+      "sourceCategory": "Financial markets and economics",
+      "section": "Financial",
+      "sectionReason": "content: BNP Paribas bank evidence",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Stc Bahrain partners with BNP Paribas on $140mln strategic financing deal to drive next-phase digital expansion - Zawya",
+          "description": "Stc Bahrain partners with BNP Paribas on $140mln strategic financing deal to drive next-phase digital expansion Zawya",
+          "sourceCategory": "Financial markets and economics"
+        }
+      },
+      "sources": [
+        {
+          "name": "Zawya",
+          "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNTmtRbUZFZV9yYU0xdVVFb05zNmRObkJuTFNvcnVvY1NmRXRreWdJNi1ocXBhSnBubWYxVThGUHBxb01HR3pOcVBBNW9vaDVnaXBEejAwTm5rT2c0OGczMzZsaXVlbzlGUnh1MDZ3akNZRDNwYlVMQlhlY1VBeTV3VERHZ05mb20yOUpuQm9uOGQzX2ZDUWpvdFk5SWJ3V3diWGJBWERGbmcxUzgtczlhSGMyTWtlQUxnbllhWE9nZDRPMGZnNXlMbndxRkVXMzRhZEJ5S2FqSm9tVjFWMkxybnRwUUgxREg2aVR2SHpjcHBwTGlDWkdEVm8yQjlXaVlyNGc?oc=5"
         }
       ],
       "sourceCount": 1,
@@ -5298,6 +5426,38 @@
       }
     },
     {
+      "title": "Zalew śmieciowych treści zniszczy samą AI? Medialny gigant uderza w Dolinę Krzemową",
+      "link": "https://www.bankier.pl/wiadomosc/Zalew-smieciowych-tresci-zniszczy-sama-AI-Medialny-gigant-uderza-w-Doline-Krzemowa-9218783.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
+      "description": "Sztuczna inteligencja nie jest w stanie zastąpić pracy reporterów, a wobec zalewu niesprawdzonych informacji w internecie rola dziennikarstwa tworzonego przez ludzi rośnie – ocenił szef jednego z największych koncernów mediowych News Corp Robert Thomson w rozmowie z dziennikiem „Yomiuri Shimbun”.",
+      "date": "2026-11-01T12:00:00+01:00",
+      "image": "",
+      "sourceName": "Bankier.pl",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "Technology",
+      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Zalew śmieciowych treści zniszczy samą AI? Medialny gigant uderza w Dolinę Krzemową",
+          "description": "Sztuczna inteligencja nie jest w stanie zastąpić pracy reporterów, a wobec zalewu niesprawdzonych informacji w internecie rola dziennikarstwa tworzonego przez ludzi rośnie – ocenił szef jednego z największych koncernów mediowych News Corp Robert Thomson w rozmowie z dziennikiem „Yomiuri Shimbun”.",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Bankier.pl",
+          "url": "https://www.bankier.pl/wiadomosc/Zalew-smieciowych-tresci-zniszczy-sama-AI-Medialny-gigant-uderza-w-Doline-Krzemowa-9218783.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "Reeves says UK's future should be inside the EU",
       "link": "https://www.bbc.co.uk/news/articles/c62l4yz0eexpo?at_medium=RSS&at_campaign=rss",
       "description": "In her first major intervention since leaving the Treasury, Rachel Reeves says Brexit has made the UK \"poorer, weaker and less secure\".",
@@ -5436,7 +5596,7 @@
       "category": "Financial markets and economics",
       "sourceCategory": "Financial markets and economics",
       "section": "Financial",
-      "sectionReason": "feed category fallback: Financial markets and economics",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
@@ -5972,10 +6132,10 @@
       }
     },
     {
-      "title": "Komendant Główny Policji odpowiada związkowcom: Działania pod TK były w pełni zgodne z prawem",
-      "link": "https://www.bankier.pl/wiadomosc/Policjanci-przerywaja-milczenie-po-przepychankach-z-prezydentem-Rodziny-drza-z-niepokoju-9221820.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
-      "description": "Przewodniczący jednego ze związków zawodowych działających w policji - „Policyjna Solidarność” - napisał do komendanta głownego policji Marka Boronia list po wydarzeniach przed Trybunałem Konstytucyjnym.",
-      "date": "2026-11-01T09:55:00+01:00",
+      "title": "Połowa mężczyzn umiera przed emeryturą. Zaczynają diagnostykę, ale nie kończą leczenia",
+      "link": "https://www.bankier.pl/wiadomosc/Polowa-mezczyzn-umiera-przed-emerytura-Zaczynaja-diagnostyke-ale-nie-koncza-leczenia-9220445.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
+      "description": "Mężczyźni żyją 7 lat krócej niż kobiety - wynika za raportu prof. Piotra Radziszewskiego z WUM. Blisko 52 proc. tej dysproporcji to efekt zgonów mężczyzn poniżej 65. roku życia.",
+      "date": "2026-11-01T10:00:00+01:00",
       "image": "",
       "sourceName": "Bankier.pl",
       "language": "pl",
@@ -5987,15 +6147,15 @@
         "method": "rules",
         "version": 1,
         "input": {
-          "title": "Komendant Główny Policji odpowiada związkowcom: Działania pod TK były w pełni zgodne z prawem",
-          "description": "Przewodniczący jednego ze związków zawodowych działających w policji - „Policyjna Solidarność” - napisał do komendanta głownego policji Marka Boronia list po wydarzeniach przed Trybunałem Konstytucyjnym.",
+          "title": "Połowa mężczyzn umiera przed emeryturą. Zaczynają diagnostykę, ale nie kończą leczenia",
+          "description": "Mężczyźni żyją 7 lat krócej niż kobiety - wynika za raportu prof. Piotra Radziszewskiego z WUM. Blisko 52 proc. tej dysproporcji to efekt zgonów mężczyzn poniżej 65. roku życia.",
           "sourceCategory": "Poland"
         }
       },
       "sources": [
         {
           "name": "Bankier.pl",
-          "url": "https://www.bankier.pl/wiadomosc/Policjanci-przerywaja-milczenie-po-przepychankach-z-prezydentem-Rodziny-drza-z-niepokoju-9221820.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
+          "url": "https://www.bankier.pl/wiadomosc/Polowa-mezczyzn-umiera-przed-emerytura-Zaczynaja-diagnostyke-ale-nie-koncza-leczenia-9220445.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
         }
       ],
       "sourceCount": 1,
@@ -6220,70 +6380,6 @@
         {
           "name": "Les Échos",
           "url": "https://www.lesechos.fr/monde/etats-unis/qui-vit-par-lepee-perit-par-lepee-ces-grands-patrons-rallies-a-trump-qui-redoutent-un-retour-de-baton-a-lissue-des-midterms-2260336"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Miliard złotych za cieknący kran. Tak domowe awarie kradną czas polskim pracownikom",
-      "link": "https://www.bankier.pl/wiadomosc/Miliard-zlotych-za-cieknacy-kran-Tak-domowe-awarie-kradna-czas-polskim-pracownikom-9216484.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
-      "description": "Sześciu na dziesięciu Polaków przynajmniej raz w ciągu ostatnich 12 miesięcy zajmowało się usuwaniem awarii w swoim domu lub mieszkaniu w czasie przeznaczonym na pracę zawodową - wynika z badania UCE Research. Poświęcony na to czas może być wart 1,24 mld zł.",
-      "date": "2026-11-01T08:00:00+01:00",
-      "image": "",
-      "sourceName": "Bankier.pl",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "Poland",
-      "sectionReason": "content: Poland subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Miliard złotych za cieknący kran. Tak domowe awarie kradną czas polskim pracownikom",
-          "description": "Sześciu na dziesięciu Polaków przynajmniej raz w ciągu ostatnich 12 miesięcy zajmowało się usuwaniem awarii w swoim domu lub mieszkaniu w czasie przeznaczonym na pracę zawodową - wynika z badania UCE Research. Poświęcony na to czas może być wart 1,24 mld zł.",
-          "sourceCategory": "Poland"
-        }
-      },
-      "sources": [
-        {
-          "name": "Bankier.pl",
-          "url": "https://www.bankier.pl/wiadomosc/Miliard-zlotych-za-cieknacy-kran-Tak-domowe-awarie-kradna-czas-polskim-pracownikom-9216484.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Olsztyn chce przejąć 27,5 km kw. sąsiednich gmin. Mieszkańcy protestują",
-      "link": "https://www.bankier.pl/wiadomosc/Olsztyn-chce-przejac-27-5-km-kw-sasiednich-gmin-Mieszkancy-protestuja-9219808.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
-      "description": "Radni Olsztyna zgodzili się w środę na rozpoczęcie procedowania zmiany granic miasta. Mieszkańcy podolsztyńskich Stawigudy i Dywity pikietowali przed urzędem miasta, nie zgadzając się na przejęcie terenów gminnych przez Olsztyn.",
-      "date": "2026-11-01T08:00:00+01:00",
-      "image": "",
-      "sourceName": "Bankier.pl",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "Poland",
-      "sectionReason": "feed category fallback: Poland",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Olsztyn chce przejąć 27,5 km kw. sąsiednich gmin. Mieszkańcy protestują",
-          "description": "Radni Olsztyna zgodzili się w środę na rozpoczęcie procedowania zmiany granic miasta. Mieszkańcy podolsztyńskich Stawigudy i Dywity pikietowali przed urzędem miasta, nie zgadzając się na przejęcie terenów gminnych przez Olsztyn.",
-          "sourceCategory": "Poland"
-        }
-      },
-      "sources": [
-        {
-          "name": "Bankier.pl",
-          "url": "https://www.bankier.pl/wiadomosc/Olsztyn-chce-przejac-27-5-km-kw-sasiednich-gmin-Mieszkancy-protestuja-9219808.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
         }
       ],
       "sourceCount": 1,
@@ -6604,6 +6700,38 @@
         {
           "name": "Bankier.pl",
           "url": "https://www.bankier.pl/wiadomosc/Az-70-proc-singli-nie-ma-kogo-przytulic-Technologiczni-giganci-na-tym-zarabiaja-9217781.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Duch tnie czynsz o 30 proc. Szokujące kulisy japońskiego rynku nieruchomości",
+      "link": "https://www.bankier.pl/wiadomosc/Duch-tnie-czynsz-o-30-proc-Szokujace-kulisy-japonskiego-rynku-nieruchomosci-9220317.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
+      "description": "Kredyt hipoteczny czy wysoki czynsz albo duch - przed takim wyborem stają Japończycy, którzy poszukują swojego kąta. Istnieje bowiem cała kategoria nieruchomości oznaczona jako \"jiko bukken\", czyli \"napiętnowane\" lub związane z jedną kategorią \"wypadków\".",
+      "date": "2026-11-01T06:00:00+01:00",
+      "image": "",
+      "sourceName": "Bankier.pl",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Duch tnie czynsz o 30 proc. Szokujące kulisy japońskiego rynku nieruchomości",
+          "description": "Kredyt hipoteczny czy wysoki czynsz albo duch - przed takim wyborem stają Japończycy, którzy poszukują swojego kąta. Istnieje bowiem cała kategoria nieruchomości oznaczona jako \"jiko bukken\", czyli \"napiętnowane\" lub związane z jedną kategorią \"wypadków\".",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Bankier.pl",
+          "url": "https://www.bankier.pl/wiadomosc/Duch-tnie-czynsz-o-30-proc-Szokujace-kulisy-japonskiego-rynku-nieruchomosci-9220317.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
         }
       ],
       "sourceCount": 1,
@@ -7312,38 +7440,6 @@
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "4 days left: How TechCrunch Founder Summit helps you make more useful connections to scale",
-      "link": "https://techcrunch.com/2026/10/31/4-days-left-how-techcrunch-founder-summit-helps-you-make-more-useful-connections-to-scale/",
-      "description": "On November 4 at Boston’s SoWa Power Station, get ready for a full day packed with meaningful networking opportunities, actionable insights, and connections that could change the trajectory of your idea and startup. Register before all prices go up at the door.",
-      "date": "2026-10-31T21:36:07+00:00",
-      "image": "",
-      "sourceName": "TechCrunch",
-      "language": "en",
-      "category": "Technology, AI and science",
-      "sourceCategory": "Technology, AI and science",
-      "section": "Technology",
-      "sectionReason": "feed category fallback: Technology, AI and science",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "4 days left: How TechCrunch Founder Summit helps you make more useful connections to scale",
-          "description": "On November 4 at Boston’s SoWa Power Station, get ready for a full day packed with meaningful networking opportunities, actionable insights, and connections that could change the trajectory of your idea and startup. Register before all prices go up at the door.",
-          "sourceCategory": "Technology, AI and science"
-        }
-      },
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/10/31/4-days-left-how-techcrunch-founder-summit-helps-you-make-more-useful-connections-to-scale/"
         }
       ],
       "sourceCount": 1,
