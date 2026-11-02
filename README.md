@@ -140,9 +140,14 @@ failure. Never call this with the live repository as output.
 
 ## Scheduled publication and compatibility
 
-`.github/workflows/daily-edition.yml` runs at 07:00, 12:00 and 19:00 Europe/Paris
-(UTC cron lines for both CET and CEST, filtered by `scripts/schedule_gate.py`),
-builds with `scripts/build_edition.py`,
+The site is rebuilt at 07:00, 12:00 and 19:00 Europe/Paris by
+`.github/workflows/update-clock.yml`: a self-chaining workflow that waits in a job
+(at most 5.5 h per run) until the next slot, starts `daily-edition.yml` with
+`workflow_dispatch`, then starts its next run (`scripts/update_clock.py`). GitHub's
+cron proved unreliable here; a cron line only restarts the clock if the chain breaks.
+To restart it by hand, run **Update clock** from the Actions tab.
+`daily-edition.yml` keeps UTC cron lines for CET and CEST as a fallback, filtered
+by `scripts/schedule_gate.py`; it builds with `scripts/build_edition.py`,
 installs the staged current pages and retains historical editions. Historical
 snapshots are preserved unchanged and may contain formerly permitted publishers.
 The older `build.py` command and `/lang/*.html`, `/feed.xml`, and dated
