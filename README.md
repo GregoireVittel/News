@@ -140,7 +140,9 @@ failure. Never call this with the live repository as output.
 
 ## Scheduled publication and compatibility
 
-`.github/workflows/daily-edition.yml` builds with `scripts/build_edition.py`,
+`.github/workflows/daily-edition.yml` runs at 07:00, 12:00 and 19:00 Europe/Paris
+(UTC cron lines for both CET and CEST, filtered by `scripts/schedule_gate.py`),
+builds with `scripts/build_edition.py`,
 installs the staged current pages and retains historical editions. Historical
 snapshots are preserved unchanged and may contain formerly permitted publishers.
 The older `build.py` command and `/lang/*.html`, `/feed.xml`, and dated
