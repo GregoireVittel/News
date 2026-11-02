@@ -140,9 +140,9 @@ failure. Never call this with the live repository as output.
 
 ## Scheduled publication and compatibility
 
-The site is rebuilt at 07:00, 12:00 and 19:00 Europe/Paris by
+The site is rebuilt every hour (starting at :57 Europe/Paris) by
 `.github/workflows/update-clock.yml`: a self-chaining workflow that waits in a job
-(at most 5.5 h per run) until the next slot, starts `daily-edition.yml` with
+until the next slot, starts `daily-edition.yml` with
 `workflow_dispatch`, then starts its next run (`scripts/update_clock.py`). GitHub's
 cron proved unreliable here; a cron line only restarts the clock if the chain breaks.
 To restart it by hand, run **Update clock** from the Actions tab.

@@ -1,7 +1,7 @@
 name: Update clock
-# Keeps the site updating at 07:00, 12:00 and 19:00 Europe/Paris without relying
-# on GitHub's cron timing. Each run waits (up to 5.5 h) for the next slot,
-# starts "Daily static edition", then starts the next clock run.
+# Keeps the site updating every hour (at :57, Europe/Paris) without relying on
+# GitHub's cron timing. Each run waits for the next slot, starts
+# "Daily static edition", then starts the next clock run.
 # See scripts/update_clock.py.
 on:
   workflow_dispatch:
