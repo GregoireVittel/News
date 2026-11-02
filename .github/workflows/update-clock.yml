@@ -1,0 +1,56 @@
+name: Update clock
+# Keeps the site updating at 07:00, 12:00 and 19:00 Europe/Paris without relying
+# on GitHub's cron timing. Each run waits (up to 5.5 h) for the next slot,
+# starts "Daily static edition", then starts the next clock run.
+# See scripts/update_clock.py.
+on:
+  workflow_dispatch:
+    inputs:
+      chain:
+        description: 'Set by the clock itself; leave as false to (re)start the clock'
+        default: 'false'
+  # Backup: restarts the clock if the chain is ever broken. Exits at once when a
+  # clock run is already in progress.
+  schedule:
+    - cron: '17 */2 * * *'
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          sparse-checkout: scripts/update_clock.py
+          sparse-checkout-cone-mode: false
+
+      - name: Skip if a clock is already running
+        id: guard
+        if: inputs.chain != 'true'
+        run: |
+          busy=$(gh run list -R "$REPO" --workflow update-clock.yml --status in_progress \
+            --json databaseId --jq "[.[] | select(.databaseId != ${{ github.run_id }})] | length")
+          echo "Other clock runs in progress: $busy"
+          echo "busy=$([ "$busy" -gt 0 ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+
+      - name: Wait for the next slot
+        id: wait
+        if: steps.guard.outputs.busy != 'true'
+        run: python3 scripts/update_clock.py wait
+
+      - name: Publish the site
+        if: steps.wait.outputs.publish == 'true'
+        continue-on-error: true   # never break the clock chain
+        run: gh workflow run daily-edition.yml -R "$REPO" --ref main
+
+      - name: Start the next clock run
+        if: steps.guard.outputs.busy != 'true'
+        run: gh workflow run update-clock.yml -R "$REPO" --ref main -f chain=true
