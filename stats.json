@@ -1,0 +1,27 @@
+{
+  "days": {
+    "2026-11-01": {
+      "publishers": 20,
+      "sections": {
+        "Financial": 38,
+        "France": 48,
+        "Poland": 31,
+        "Technology": 38,
+        "World": 77
+      },
+      "total": 232
+    },
+    "2026-11-02": {
+      "publishers": 40,
+      "sections": {
+        "Financial": 74,
+        "France": 41,
+        "Poland": 51,
+        "Technology": 81,
+        "World": 95
+      },
+      "total": 342
+    }
+  },
+  "schemaVersion": 1
+}
