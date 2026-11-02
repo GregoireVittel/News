@@ -1,8 +1,16 @@
 name: Daily static edition
 on:
   workflow_dispatch:
+  # Publishes at 07:00, 12:00 and 19:00 Europe/Paris. GitHub cron is UTC-only,
+  # so both the winter (CET) and summer (CEST) times are listed; the gate job
+  # lets only the ones matching Paris time today publish. See scripts/schedule_gate.py.
   schedule:
-    - cron: '15 6 * * *'
+    - cron: '57 4 * * *'   # 06:57 CEST
+    - cron: '57 5 * * *'   # 06:57 CET
+    - cron: '57 9 * * *'   # 11:57 CEST
+    - cron: '57 10 * * *'  # 11:57 CET
+    - cron: '57 16 * * *'  # 18:57 CEST
+    - cron: '57 17 * * *'  # 18:57 CET
 
 permissions:
   contents: write
@@ -14,7 +22,24 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      run: ${{ steps.check.outputs.run }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          sparse-checkout: scripts/schedule_gate.py
+          sparse-checkout-cone-mode: false
+      - id: check
+        env:
+          CRON: ${{ github.event.schedule }}
+        run: python3 scripts/schedule_gate.py "$CRON" | tee -a "$GITHUB_OUTPUT"
+
   publish:
+    needs: gate
+    if: needs.gate.outputs.run == 'true'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
