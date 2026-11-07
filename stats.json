@@ -1,0 +1,82 @@
+{
+  "days": {
+    "2026-11-01": {
+      "publishers": 20,
+      "sections": {
+        "Financial": 38,
+        "France": 48,
+        "Poland": 31,
+        "Technology": 38,
+        "World": 77
+      },
+      "total": 232
+    },
+    "2026-11-02": {
+      "publishers": 43,
+      "sections": {
+        "Financial": 78,
+        "France": 41,
+        "Poland": 51,
+        "Technology": 80,
+        "World": 96
+      },
+      "total": 346
+    },
+    "2026-11-03": {
+      "publishers": 42,
+      "sections": {
+        "Financial": 83,
+        "France": 43,
+        "Poland": 53,
+        "Technology": 92,
+        "World": 105
+      },
+      "total": 376
+    },
+    "2026-11-04": {
+      "publishers": 46,
+      "sections": {
+        "Financial": 97,
+        "France": 52,
+        "Poland": 36,
+        "Technology": 126,
+        "World": 113
+      },
+      "total": 424
+    },
+    "2026-11-05": {
+      "publishers": 50,
+      "sections": {
+        "Financial": 102,
+        "France": 54,
+        "Poland": 48,
+        "Technology": 76,
+        "World": 102
+      },
+      "total": 382
+    },
+    "2026-11-06": {
+      "publishers": 44,
+      "sections": {
+        "Financial": 83,
+        "France": 56,
+        "Poland": 46,
+        "Technology": 76,
+        "World": 82
+      },
+      "total": 343
+    },
+    "2026-11-07": {
+      "publishers": 22,
+      "sections": {
+        "Financial": 45,
+        "France": 46,
+        "Poland": 35,
+        "Technology": 52,
+        "World": 63
+      },
+      "total": 241
+    }
+  },
+  "schemaVersion": 1
+}
