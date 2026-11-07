@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-07T19:57:20+01:00",
+  "generatedAt": "2026-11-07T20:57:19+01:00",
   "sections": [
     "Poland",
     "France",
@@ -10,10 +10,234 @@
   ],
   "articles": [
     {
+      "title": "'Dana, please take the job!' - Trump asks UFC boss to be White House press secretary",
+      "link": "https://www.bbc.co.uk/news/articles/cvze47p9jeexo?at_medium=RSS&at_campaign=rss",
+      "description": "The BBC has asked the White House and TKO Holdings, the parent company of UFC, for comment.",
+      "date": "2026-11-07T19:52:23+00:00",
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4f42/live/47f84090-dadf-11f1-88f9-d3c2139f8619.jpg",
+      "sourceName": "BBC News",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "feed category fallback: Global news and geopolitics",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "'Dana, please take the job!' - Trump asks UFC boss to be White House press secretary",
+          "description": "The BBC has asked the White House and TKO Holdings, the parent company of UFC, for comment.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/cvze47p9jeexo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "What we know so far after Polish gunman in military clothing opens fire in Krakow",
+      "link": "https://www.bbc.co.uk/news/articles/cmd7q15drwgeo?at_medium=RSS&at_campaign=rss",
+      "description": "At least six people were killed by a gunman in military fatigues who opened fire in Poland's second largest city.",
+      "date": "2026-11-07T19:51:44+00:00",
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f6c3/live/95455f00-dac5-11f1-bda8-29fb69dbc026.jpg",
+      "sourceName": "BBC News",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "Poland",
+      "sectionReason": "content: Poland subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "What we know so far after Polish gunman in military clothing opens fire in Krakow",
+          "description": "At least six people were killed by a gunman in military fatigues who opened fire in Poland's second largest city.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/cmd7q15drwgeo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Israël : Gadi Eisenkot, le principal opposant de Benyamin Nétanyahou, va être chargé de former un gouvernement",
+      "link": "https://www.lemonde.fr/international/article/2026/11/07/israel-gadi-eisenkot-le-principal-opposant-de-benyamin-netanyahou-va-etre-charge-de-former-un-gouvernement_6808313_3210.html",
+      "description": "L’ancien chef d’état-major israélien aujourd’hui à la tête du parti Yashar ! sera officiellement chargé dimanche de former le prochain gouvernement israélien, a annoncé samedi soir la présidence.",
+      "date": "2026-11-07T20:51:05+01:00",
+      "image": "https://img.lemde.fr/2026/10/28/586/0/3416/1708/644/322/60/0/e5462d5_ftp-1-f7onczycej9p-2026-10-28t032117z-1949345560-rc2zboakgvrk-rtrmadp-3-israel-election.JPG",
+      "sourceName": "Le Monde",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "World",
+      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Israël : Gadi Eisenkot, le principal opposant de Benyamin Nétanyahou, va être chargé de former un gouvernement",
+          "description": "L’ancien chef d’état-major israélien aujourd’hui à la tête du parti Yashar ! sera officiellement chargé dimanche de former le prochain gouvernement israélien, a annoncé samedi soir la présidence.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "Le Monde",
+          "url": "https://www.lemonde.fr/international/article/2026/11/07/israel-gadi-eisenkot-le-principal-opposant-de-benyamin-netanyahou-va-etre-charge-de-former-un-gouvernement_6808313_3210.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Israeli Opposition Leader Tapped to Try to Form Government",
+      "link": "https://www.nytimes.com/2026/11/07/world/middleeast/israel-eisenkot-government.html",
+      "description": "Gadi Eisenkot, a former military chief, hopes to succeed Benjamin Netanyahu as prime minister by cobbling together a coalition after an inconclusive election.",
+      "date": "2026-11-07T19:50:21+00:00",
+      "image": "https://static01.nyt.com/images/2026/11/08/multimedia/08int-israel-politics-eisenkot-HFO-vbtf/08int-israel-politics-eisenkot-HFO-vbtf-mediumSquareAt3X.jpg",
+      "sourceName": "The New York Times",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Israeli Opposition Leader Tapped to Try to Form Government",
+          "description": "Gadi Eisenkot, a former military chief, hopes to succeed Benjamin Netanyahu as prime minister by cobbling together a coalition after an inconclusive election.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "The New York Times",
+          "url": "https://www.nytimes.com/2026/11/07/world/middleeast/israel-eisenkot-government.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Another 1-0 for relentless Arsenal - but did Odegaard spare VAR blushes?",
+      "link": "https://www.bbc.co.uk/sport/football/articles/c6rmyg7xpnj1o?at_medium=RSS&at_campaign=rss",
+      "description": "Arsenal move six points clear at the top of the Premier League after beating Hull City - but did Martin Odegaard's goal save the blushes of the VAR?",
+      "date": "2026-11-07T19:34:32+00:00",
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/57c7/live/371e4cc0-dae3-11f1-b441-2b33b063138f.jpg",
+      "sourceName": "BBC News",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "feed category fallback: Global news and geopolitics",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Another 1-0 for relentless Arsenal - but did Odegaard spare VAR blushes?",
+          "description": "Arsenal move six points clear at the top of the Premier League after beating Hull City - but did Martin Odegaard's goal save the blushes of the VAR?",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "BBC News",
+          "url": "https://www.bbc.co.uk/sport/football/articles/c6rmyg7xpnj1o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Another Day of France’s Protests Unfurl During an Autumn of Discontent",
+      "link": "https://www.nytimes.com/2026/11/07/world/europe/france-fourth-saturday-protests.html",
+      "description": "The crowds appeared to be smaller on Saturday than they had been in previous weeks’ demonstrations, but the animating sense of grievance remained.",
+      "date": "2026-11-07T19:21:43+00:00",
+      "image": "https://static01.nyt.com/images/2026/11/07/multimedia/07int-france-protest-hqvk/07int-france-protest-hqvk-mediumSquareAt3X.jpg",
+      "sourceName": "The New York Times",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "France",
+      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Another Day of France’s Protests Unfurl During an Autumn of Discontent",
+          "description": "The crowds appeared to be smaller on Saturday than they had been in previous weeks’ demonstrations, but the animating sense of grievance remained.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "The New York Times",
+          "url": "https://www.nytimes.com/2026/11/07/world/europe/france-fourth-saturday-protests.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "At Least 6 Dead in Poland After Gunman Opens Fire in Krakow, Police Say",
+      "link": "https://www.nytimes.com/2026/11/07/world/europe/krakow-poland-shooting.html",
+      "description": "The authorities said that the gunman, who began shooting from a car near a market square, was shot and taken to a hospital.",
+      "date": "2026-11-07T19:21:41+00:00",
+      "image": "https://static01.nyt.com/images/2026/11/07/multimedia/07int-poland-shooting-tjqg/07int-poland-shooting-tjqg-mediumSquareAt3X.jpg",
+      "sourceName": "The New York Times",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "Poland",
+      "sectionReason": "content: Poland subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "At Least 6 Dead in Poland After Gunman Opens Fire in Krakow, Police Say",
+          "description": "The authorities said that the gunman, who began shooting from a car near a market square, was shot and taken to a hospital.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "The New York Times",
+          "url": "https://www.nytimes.com/2026/11/07/world/europe/krakow-poland-shooting.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "Inside the Nightclub Sheltering Haitians From Violent Gangs",
       "link": "https://www.nytimes.com/video/world/americas/100000011168848/haiti-nightclub-shelter-gang-violence.html",
       "description": "Club International was once a popular music venue in Port-au-Prince. Now it’s a makeshift shelter for hundreds of Haitian families fleeing gang violence, and the club’s owner wants them out.",
-      "date": "2026-11-07T18:52:27+00:00",
+      "date": "2026-11-07T19:19:20+00:00",
       "image": "",
       "sourceName": "The New York Times",
       "language": "en",
@@ -34,6 +258,198 @@
         {
           "name": "The New York Times",
           "url": "https://www.nytimes.com/video/world/americas/100000011168848/haiti-nightclub-shelter-gang-violence.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Po zamachu w Krakowie. Hieny szukają politycznego złota",
+      "link": "https://wyborcza.pl/7,75968,33121992,po-zamachu-w-krakowie-hieny-szukaja-politycznego-zlota.html",
+      "description": "Niedawno krzyczeli \"murem za polskim mundurem\". Dziś nie potrafią uszanować ofiary, jaką złożyli krakowscy policjanci.",
+      "date": "2026-11-07T19:18:00+00:00",
+      "image": "",
+      "sourceName": "Gazeta Wyborcza",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "Poland",
+      "sectionReason": "content: Poland subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Po zamachu w Krakowie. Hieny szukają politycznego złota",
+          "description": "Niedawno krzyczeli \"murem za polskim mundurem\". Dziś nie potrafią uszanować ofiary, jaką złożyli krakowscy policjanci.",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Gazeta Wyborcza",
+          "url": "https://wyborcza.pl/7,75968,33121992,po-zamachu-w-krakowie-hieny-szukaja-politycznego-zlota.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Parents want safer phones for kids. These companies are answering the call.",
+      "link": "https://techcrunch.com/2026/11/07/parents-want-safer-phones-for-kids-these-companies-are-answering-the-call/",
+      "description": "As parents look for alternatives to unrestricted smartphones, a growing number of companies are building phones designed specifically for kids, from feature-limited mobile devices to minimalist home phones.",
+      "date": "2026-11-07T19:00:00+00:00",
+      "image": "",
+      "sourceName": "TechCrunch",
+      "language": "en",
+      "category": "Technology, AI and science",
+      "sourceCategory": "Technology, AI and science",
+      "section": "Technology",
+      "sectionReason": "feed category fallback: Technology, AI and science",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Parents want safer phones for kids. These companies are answering the call.",
+          "description": "As parents look for alternatives to unrestricted smartphones, a growing number of companies are building phones designed specifically for kids, from feature-limited mobile devices to minimalist home phones.",
+          "sourceCategory": "Technology, AI and science"
+        }
+      },
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/07/parents-want-safer-phones-for-kids-these-companies-are-answering-the-call/"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Katowice Airport rozbudowuje parkingi. Przybyło ponad 1,1 tys. miejsc",
+      "link": "https://www.bankier.pl/wiadomosc/Katowice-Airport-rozbudowuje-parkingi-Przybylo-ponad-1-1-tys-miejsc-9222454.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
+      "description": "Rozbudowę parkingu terenowego nr 5 o 1,1 tys. miejsc postojowych zakończył zarządca lotniska Katowice, spółka Górnośląskie Towarzystwo Lotnicze. GTL oferuje pasażerom ok. 8,4 tys. własnych miejsc parkingowych.",
+      "date": "2026-11-07T20:00:00+01:00",
+      "image": "",
+      "sourceName": "Bankier.pl",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "Poland",
+      "sectionReason": "feed category fallback: Poland",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Katowice Airport rozbudowuje parkingi. Przybyło ponad 1,1 tys. miejsc",
+          "description": "Rozbudowę parkingu terenowego nr 5 o 1,1 tys. miejsc postojowych zakończył zarządca lotniska Katowice, spółka Górnośląskie Towarzystwo Lotnicze. GTL oferuje pasażerom ok. 8,4 tys. własnych miejsc parkingowych.",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Bankier.pl",
+          "url": "https://www.bankier.pl/wiadomosc/Katowice-Airport-rozbudowuje-parkingi-Przybylo-ponad-1-1-tys-miejsc-9222454.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Współtwórca śmiercionośnej broni chemicznej nie żyje. Był konsultantem śledczych",
+      "link": "https://www.bankier.pl/wiadomosc/Wspoltworca-smiercionosnej-broni-chemicznej-nie-zyje-Byl-konsultantem-sledczych-9223137.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
+      "description": "Jeden z twórców bojowego środka trującego o działaniu paralityczno-drgawkowym nowiczok, rosyjski biochemik Władimir Ugłow zmarł w wieku 80 lat w Anapie w Kraju Krasnodarskim na zachodzie Rosji – poinformował we wtorek niezależny portal śledczy Insider.",
+      "date": "2026-11-07T20:00:00+01:00",
+      "image": "",
+      "sourceName": "Bankier.pl",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "World",
+      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Współtwórca śmiercionośnej broni chemicznej nie żyje. Był konsultantem śledczych",
+          "description": "Jeden z twórców bojowego środka trującego o działaniu paralityczno-drgawkowym nowiczok, rosyjski biochemik Władimir Ugłow zmarł w wieku 80 lat w Anapie w Kraju Krasnodarskim na zachodzie Rosji – poinformował we wtorek niezależny portal śledczy Insider.",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Bankier.pl",
+          "url": "https://www.bankier.pl/wiadomosc/Wspoltworca-smiercionosnej-broni-chemicznej-nie-zyje-Byl-konsultantem-sledczych-9223137.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Depuis son meeting au Bourget, Jean-Luc Mélenchon refuse de mettre \"de l'eau dans\" son \"vin pour séduire et être moins clivant\"",
+      "link": "https://www.franceinfo.fr/politique/melenchon/depuis-son-meeting-au-bourget-jean-luc-melenchon-refuse-de-mettre-de-l-eau-dans-son-vin-pour-seduire-et-etre-moins-clivant_8272640.html#xtor=RSS-3-[lestitres]",
+      "description": "Cet événement, qui se tenait samedi au Bourget (Seine-Saint-Denis), suivait la sortie en librairie vendredi du programme présidentiel des Insoumis, nouvelle version de \"L'Avenir en commun\", forte de 1 069 propositions.",
+      "date": "2026-11-07T19:58:40+01:00",
+      "image": "https://www.franceinfo.fr/pictures/FQe6SFt6rabz24Do1bYfHebDZy8/0x0:1920x1080/432x243/filters:format(jpg)/2026/11/07/6aef4919c04e3436802011.jpg",
+      "sourceName": "franceinfo",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "France",
+      "sectionReason": "feed category fallback: France",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Depuis son meeting au Bourget, Jean-Luc Mélenchon refuse de mettre \"de l'eau dans\" son \"vin pour séduire et être moins clivant\"",
+          "description": "Cet événement, qui se tenait samedi au Bourget (Seine-Saint-Denis), suivait la sortie en librairie vendredi du programme présidentiel des Insoumis, nouvelle version de \"L'Avenir en commun\", forte de 1 069 propositions.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "franceinfo",
+          "url": "https://www.franceinfo.fr/politique/melenchon/depuis-son-meeting-au-bourget-jean-luc-melenchon-refuse-de-mettre-de-l-eau-dans-son-vin-pour-seduire-et-etre-moins-clivant_8272640.html#xtor=RSS-3-[lestitres]"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Benoît Sineau a activé sa balise de détresse sur la Route du Rhum, des concurrents déroutés pour le secourir",
+      "link": "https://www.franceinfo.fr/sports/voile/route-du-rhum/benoit-sineau-a-active-sa-balise-de-detresse-sur-la-route-du-rhum-des-concurrents-deroutes-pour-le-secourir_8272628.html#xtor=RSS-3-[lestitres]",
+      "description": "L'organisation a annoncé samedi dans un communiqué qu'elle avait demandé à plusieurs bateaux de venir en aide au skippeur d'Ekinox-Rhétores.",
+      "date": "2026-11-07T19:50:04+01:00",
+      "image": "https://www.franceinfo.fr/pictures/oHpZD_bgRL5Th9MqzLL4YNkF_dc/0x105:4252x2497/432x243/filters:format(jpg)/2026/11/07/6aef704b5bb76951709703.jpg",
+      "sourceName": "franceinfo",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "France",
+      "sectionReason": "feed category fallback: France",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Benoît Sineau a activé sa balise de détresse sur la Route du Rhum, des concurrents déroutés pour le secourir",
+          "description": "L'organisation a annoncé samedi dans un communiqué qu'elle avait demandé à plusieurs bateaux de venir en aide au skippeur d'Ekinox-Rhétores.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "franceinfo",
+          "url": "https://www.franceinfo.fr/sports/voile/route-du-rhum/benoit-sineau-a-active-sa-balise-de-detresse-sur-la-route-du-rhum-des-concurrents-deroutes-pour-le-secourir_8272628.html#xtor=RSS-3-[lestitres]"
         }
       ],
       "sourceCount": 1,
@@ -77,7 +493,7 @@
       "title": "Aux obsèques de Pengo Bossio Wangi, une foule de proches et d’anonymes réunis : « C’est important d’être là pour montrer notre solidarité, quelle que soit la religion, la couleur »",
       "link": "https://www.lemonde.fr/societe/article/2026/11/07/aux-obseques-de-pengo-bossio-wangi-une-foule-de-proches-et-d-anonymes-reunis-c-est-important-d-etre-la-pour-montrer-notre-solidarite-quelle-que-soit-la-religion-la-couleur_6808310_3224.html",
       "description": "Les obsèques de Pengo Bossio Wangi, tué dans l’attentat raciste de Trappes, le 23 octobre, se sont déroulées samedi à Guyancourt (Yvelines).",
-      "date": "2026-11-07T19:45:59+01:00",
+      "date": "2026-11-07T19:45:55+01:00",
       "image": "https://img.lemde.fr/2026/10/31/377/0/4532/2266/644/322/60/0/1c31db1_upload-1-b4xo5ug3qijz-8-rassemblement-trappes-hleuqeux-dsc0282.jpg",
       "sourceName": "Le Monde",
       "language": "fr",
@@ -106,11 +522,11 @@
       }
     },
     {
-      "title": "Tuipulotu takes 'full responsibility' for Scotland collapse",
-      "link": "https://www.bbc.co.uk/sport/rugby-union/articles/cvx28xpn57r9o?at_medium=RSS&at_campaign=rss",
-      "description": "Captain Sione Tuipulotu takes responsibility for Scotland's second-half Nations Championship collapse against New Zealand, saying they were \"nowhere near accurate enough\".",
-      "date": "2026-11-07T18:38:00+00:00",
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e587/live/382e7350-dada-11f1-91ee-75ca1bd2f860.jpg",
+      "title": "Wales labour to bonus-point win against Japan",
+      "link": "https://www.bbc.co.uk/sport/rugby-union/articles/crd6d1ygjv68o?at_medium=RSS&at_campaign=rss",
+      "description": "Wales resumed their Nations Championship campaign with an unconvincing bonus-point 28-21 victory against Japan at the Principality Stadium.",
+      "date": "2026-11-07T18:43:59+00:00",
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a3cb/live/47522870-dad2-11f1-bda8-29fb69dbc026.jpg",
       "sourceName": "BBC News",
       "language": "en",
       "category": "Global news and geopolitics",
@@ -121,15 +537,15 @@
         "method": "rules",
         "version": 1,
         "input": {
-          "title": "Tuipulotu takes 'full responsibility' for Scotland collapse",
-          "description": "Captain Sione Tuipulotu takes responsibility for Scotland's second-half Nations Championship collapse against New Zealand, saying they were \"nowhere near accurate enough\".",
+          "title": "Wales labour to bonus-point win against Japan",
+          "description": "Wales resumed their Nations Championship campaign with an unconvincing bonus-point 28-21 victory against Japan at the Principality Stadium.",
           "sourceCategory": "Global news and geopolitics"
         }
       },
       "sources": [
         {
           "name": "BBC News",
-          "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cvx28xpn57r9o?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.co.uk/sport/rugby-union/articles/crd6d1ygjv68o?at_medium=RSS&at_campaign=rss"
         }
       ],
       "sourceCount": 1,
@@ -170,38 +586,6 @@
       }
     },
     {
-      "title": "Title race hots up before Chelsea-Man City showdown",
-      "link": "https://www.bbc.co.uk/sport/football/articles/cm0qkjdx3l9zo?at_medium=RSS&at_campaign=rss",
-      "description": "Champions Manchester City will travel to Chelsea next week on top of the pile after a decisive Saturday in the Women's Super League.",
-      "date": "2026-11-07T18:27:46+00:00",
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5d30/live/e8938990-dacd-11f1-bda8-29fb69dbc026.jpg",
-      "sourceName": "BBC News",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Title race hots up before Chelsea-Man City showdown",
-          "description": "Champions Manchester City will travel to Chelsea next week on top of the pile after a decisive Saturday in the Women's Super League.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "BBC News",
-          "url": "https://www.bbc.co.uk/sport/football/articles/cm0qkjdx3l9zo?at_medium=RSS&at_campaign=rss"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "EN DIRECT, guerre en Ukraine : les dernières informations",
       "link": "https://www.lemonde.fr/international/live/2026/11/07/en-direct-guerre-en-ukraine-les-dernieres-informations_6803934_3210.html",
       "description": "L’armée russe a lancé plusieurs attaques contre des infrastructures énergétiques ukrainiennes, cette nuit, selon le ministère de l’énergie ukrainien, qui signale des coupures d’électricité dans les oblasts de Dnipropetrovsk, Donetsk, Kiev, Jytomyr et Kharkiv.",
@@ -234,30 +618,30 @@
       }
     },
     {
-      "title": "What we know about Krakow mass shooting so far",
-      "link": "https://www.bbc.co.uk/news/articles/cmd7q15drwgeo?at_medium=RSS&at_campaign=rss",
-      "description": "At least six people were killed by a gunman in military fatigues who opened fire in Poland's second largest city.",
-      "date": "2026-11-07T18:22:11+00:00",
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f6c3/live/95455f00-dac5-11f1-bda8-29fb69dbc026.jpg",
-      "sourceName": "BBC News",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "Poland",
-      "sectionReason": "content: Poland subject evidence (technology first; Poland wins geographic ties)",
+      "title": "Près de 146 000 personnes ont défilé en France samedi 7 novembre selon le ministère de l'Intérieur, 250 000 selon l'intersyndicale de la jeunesse",
+      "link": "https://www.franceinfo.fr/societe/manifestations/pres-de-146-000-personnes-ont-defile-en-france-samedi-7-novembre-selon-le-ministere-de-l-interieur-250-000-selon-l-intersyndicale-de-la-jeunesse_8272610.html#xtor=RSS-3-[lestitres]",
+      "description": "La mobilisation de samedi est en recul par rapport à jeudi et par rapport aux trois précédents samedis de mobilisation sociale.",
+      "date": "2026-11-07T19:23:21+01:00",
+      "image": "https://www.franceinfo.fr/pictures/pYjSDCcdrAVkjjEQEQlk4PAfWRc/0x106:1024x682/432x243/filters:format(jpg)/2026/11/07/6aef6c73e48d2976248127.jpg",
+      "sourceName": "franceinfo",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "France",
+      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
         "input": {
-          "title": "What we know about Krakow mass shooting so far",
-          "description": "At least six people were killed by a gunman in military fatigues who opened fire in Poland's second largest city.",
-          "sourceCategory": "Global news and geopolitics"
+          "title": "Près de 146 000 personnes ont défilé en France samedi 7 novembre selon le ministère de l'Intérieur, 250 000 selon l'intersyndicale de la jeunesse",
+          "description": "La mobilisation de samedi est en recul par rapport à jeudi et par rapport aux trois précédents samedis de mobilisation sociale.",
+          "sourceCategory": "France"
         }
       },
       "sources": [
         {
-          "name": "BBC News",
-          "url": "https://www.bbc.co.uk/news/articles/cmd7q15drwgeo?at_medium=RSS&at_campaign=rss"
+          "name": "franceinfo",
+          "url": "https://www.franceinfo.fr/societe/manifestations/pres-de-146-000-personnes-ont-defile-en-france-samedi-7-novembre-selon-le-ministere-de-l-interieur-250-000-selon-l-intersyndicale-de-la-jeunesse_8272610.html#xtor=RSS-3-[lestitres]"
         }
       ],
       "sourceCount": 1,
@@ -330,11 +714,43 @@
       }
     },
     {
+      "title": "EN DIRECT, France-Fidji : Antoine Dupont et Romain Ntamack de retour pour le Championnat des nations",
+      "link": "https://www.lemonde.fr/sport/live/2026/11/07/en-direct-france-fidji-suivez-le-match-de-championnat-des-nations-de-rugby-2026_6808309_3242.html",
+      "description": "Après deux victoires et une défaite en juillet dans l’hémisphère Sud, les Bleus continuent leur parcours dans le Championnat des nations de rugby, samedi, avec un match contre les Fidji.",
+      "date": "2026-11-07T19:10:03+01:00",
+      "image": "https://img.lemde.fr/2026/11/07/276/0/5873/2936/644/322/60/0/43df542_ftp-1-4awoyfboxljp-afp-d6rw39q.jpg",
+      "sourceName": "Le Monde",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "France",
+      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "EN DIRECT, France-Fidji : Antoine Dupont et Romain Ntamack de retour pour le Championnat des nations",
+          "description": "Après deux victoires et une défaite en juillet dans l’hémisphère Sud, les Bleus continuent leur parcours dans le Championnat des nations de rugby, samedi, avec un match contre les Fidji.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "Le Monde",
+          "url": "https://www.lemonde.fr/sport/live/2026/11/07/en-direct-france-fidji-suivez-le-match-de-championnat-des-nations-de-rugby-2026_6808309_3242.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "A Cracovie, en Pologne, un assaillant tire sur des passants, faisant six morts et \"plusieurs blessés\"",
       "link": "https://www.franceinfo.fr/faits-divers/en-pologne-une-fusillade-a-cracovie-fait-cinq-morts-et-plusieurs-blesses-selon-le-porte-parole-de-la-police_8272454.html#xtor=RSS-3-[lestitres]",
       "description": "Un homme a foncé en voiture sur une place de la ville puis a tiré sur des passants. Il a été blessé par balle par la police et transporté à l'hôpital.",
       "date": "2026-11-07T19:02:03+01:00",
-      "image": "https://www.franceinfo.fr/pictures/GHDd8xzGqvIAs2WZrs-RRuTL4Wc/0x53:1024x629/432x243/filters:format(jpg)/2026/11/07/6aef47f147ade588177691.jpg",
+      "image": "https://www.franceinfo.fr/pictures/QNOOq7XAUw7mVHpRcNL0b6EMxas/0x60:1024x636/432x243/filters:format(jpg)/2026/11/07/6aef76bd1aa73040905605.jpg",
       "sourceName": "franceinfo",
       "language": "fr",
       "category": "France",
@@ -386,38 +802,6 @@
         {
           "name": "Le Monde",
           "url": "https://www.lemonde.fr/intimites/article/2026/11/07/le-soignant-qui-a-change-ma-vie-j-etais-sa-patiente-pour-covid-long-je-suis-devenue-sa-collegue_6808308_6190330.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Une sélection de livres de poche : « Les Femmes et la Libération », André Comte-Sponville, Paul Lynch, Lydie Salvayre…",
-      "link": "https://www.lemonde.fr/critique-litteraire/article/2026/11/07/une-selection-de-livres-de-poche-les-femmes-et-la-liberation-andre-comte-sponville-paul-lynch-lydie-salvayre_6808307_5473203.html",
-      "description": "Parmi les livres de poche parus récemment, « Le Monde des livres » vous recommande…",
-      "date": "2026-11-07T19:00:04+01:00",
-      "image": "https://img.lemde.fr/2026/11/04/160/0/1920/960/644/322/60/0/b7e7e15_upload-1-5p7sco6uhytv-poches1.jpg",
-      "sourceName": "Le Monde",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "feed category fallback: France",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Une sélection de livres de poche : « Les Femmes et la Libération », André Comte-Sponville, Paul Lynch, Lydie Salvayre…",
-          "description": "Parmi les livres de poche parus récemment, « Le Monde des livres » vous recommande…",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "Le Monde",
-          "url": "https://www.lemonde.fr/critique-litteraire/article/2026/11/07/une-selection-de-livres-de-poche-les-femmes-et-la-liberation-andre-comte-sponville-paul-lynch-lydie-salvayre_6808307_5473203.html"
         }
       ],
       "sourceCount": 1,
@@ -490,30 +874,30 @@
       }
     },
     {
-      "title": "Des sportifs et créateurs de contenus français courent pendant vingt-cinq heures pour soutenir une association",
-      "link": "https://www.lemonde.fr/videos/article/2026/11/07/des-sportifs-et-createurs-de-contenus-francais-courent-pendant-vingt-cinq-heures-pour-soutenir-une-association_6808306_1669088.html",
-      "description": "Cent quarante coureurs ont récolté près de 1,5 million d’euros pour l’association Rêves, qui réalise les vœux d’enfants gravement malades.",
-      "date": "2026-11-07T18:50:19+01:00",
-      "image": "https://img.lemde.fr/2026/08/29/666/0/8000/4000/644/322/60/0/fdf90e5_ftp-1-w8p3iupu2x9v-5947310-01-06.jpg",
-      "sourceName": "Le Monde",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
+      "title": "Wyruszył, gdy nie było Google'a i Facebooka. Brytyjski podróżnik wrócił do domu po 28 latach",
+      "link": "https://www.bankier.pl/wiadomosc/Wyruszyl-gdy-nie-bylo-Google-a-i-Facebooka-Brytyjski-podroznik-wrocil-do-domu-po-28-latach-9222434.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
+      "description": "Z Chile do Anglii na piechotę, a czasem wpław – taką podróż odbył Brytyjczyk Karl Bushby. Trwała 28 lat i jeden dzień. W poniedziałek zakończył ją, przychodząc do rodzinnego Hull.",
+      "date": "2026-11-07T18:55:00+01:00",
+      "image": "",
+      "sourceName": "Bankier.pl",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "Poland",
+      "sectionReason": "feed category fallback: Poland",
       "classification": {
         "method": "rules",
         "version": 1,
         "input": {
-          "title": "Des sportifs et créateurs de contenus français courent pendant vingt-cinq heures pour soutenir une association",
-          "description": "Cent quarante coureurs ont récolté près de 1,5 million d’euros pour l’association Rêves, qui réalise les vœux d’enfants gravement malades.",
-          "sourceCategory": "France"
+          "title": "Wyruszył, gdy nie było Google'a i Facebooka. Brytyjski podróżnik wrócił do domu po 28 latach",
+          "description": "Z Chile do Anglii na piechotę, a czasem wpław – taką podróż odbył Brytyjczyk Karl Bushby. Trwała 28 lat i jeden dzień. W poniedziałek zakończył ją, przychodząc do rodzinnego Hull.",
+          "sourceCategory": "Poland"
         }
       },
       "sources": [
         {
-          "name": "Le Monde",
-          "url": "https://www.lemonde.fr/videos/article/2026/11/07/des-sportifs-et-createurs-de-contenus-francais-courent-pendant-vingt-cinq-heures-pour-soutenir-une-association_6808306_1669088.html"
+          "name": "Bankier.pl",
+          "url": "https://www.bankier.pl/wiadomosc/Wyruszyl-gdy-nie-bylo-Google-a-i-Facebooka-Brytyjski-podroznik-wrocil-do-domu-po-28-latach-9222434.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
         }
       ],
       "sourceCount": 1,
@@ -682,38 +1066,6 @@
       }
     },
     {
-      "title": "Mobilisation du 7 novembre : 146 000 personnes ont défilé en France samedi selon le ministère de l'Intérieur, 250 000 selon l'intersyndicale de la jeunesse",
-      "link": "https://www.franceinfo.fr/economie/greve/direct-mobilisation-du-7-novembre-suivez-avec-nous-cette-nouvelle-journee-de-manifestations_8272010.html#xtor=RSS-3-[lestitres]",
-      "description": "De nouvelles manifestations se sont tenues samedi sous haute sécurité, deux jours après une mobilisation nationale de grande ampleur à l'appel des syndicats.",
-      "date": "2026-11-07T18:26:58+01:00",
-      "image": "https://www.franceinfo.fr/pictures/39ahfXNm58MOHy9Cbd19ARfN7XA/0x261:5000x3073/432x243/filters:format(jpg)/2026/11/07/6aef5a7e50aa1907108607.jpg",
-      "sourceName": "franceinfo",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Mobilisation du 7 novembre : 146 000 personnes ont défilé en France samedi selon le ministère de l'Intérieur, 250 000 selon l'intersyndicale de la jeunesse",
-          "description": "De nouvelles manifestations se sont tenues samedi sous haute sécurité, deux jours après une mobilisation nationale de grande ampleur à l'appel des syndicats.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "franceinfo",
-          "url": "https://www.franceinfo.fr/economie/greve/direct-mobilisation-du-7-novembre-suivez-avec-nous-cette-nouvelle-journee-de-manifestations_8272010.html#xtor=RSS-3-[lestitres]"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "A ‘Chaotic Race’ for the World’s Top Diplomat",
       "link": "https://www.nytimes.com/2026/11/07/world/americas/un-secretary-general-pick.html",
       "description": "The contest to replace António Guterres as U.N. secretary general has been jolted by last-minute entrants and deep divisions among members of the Security Council.",
@@ -802,38 +1154,6 @@
         {
           "name": "Bankier.pl",
           "url": "https://www.bankier.pl/wiadomosc/Rekord-polskiej-transplantologii-W-2025-r-przeszczepiono-ponad-2-5-tys-narzadow-9222193.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Depuis son meeting au Bourget, Jean-Luc Mélenchon refuse de mettre \"de l'eau dans\" son \"vin pour séduire et être moins clivant\"",
-      "link": "https://www.franceinfo.fr/elections/presidentielle/direct-presidentielle-2027-jean-luc-melenchon-va-presenter-son-programme-au-bourget_8272022.html#xtor=RSS-3-[lestitres]",
-      "description": "A six mois de la présidentielle, Jean-Luc Mélenchon a tenu un meeting samedi au Bourget. Edouard Philippe s'est rendu de son côté aux Rencontres de l'avenir à Saint-Raphaël, et Bruno Retailleau sera à Brive-la-Gaillarde.",
-      "date": "2026-11-07T18:25:21+01:00",
-      "image": "https://www.franceinfo.fr/pictures/FQe6SFt6rabz24Do1bYfHebDZy8/0x0:1920x1080/432x243/filters:format(jpg)/2026/11/07/6aef4919c04e3436802011.jpg",
-      "sourceName": "franceinfo",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "feed category fallback: France",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Depuis son meeting au Bourget, Jean-Luc Mélenchon refuse de mettre \"de l'eau dans\" son \"vin pour séduire et être moins clivant\"",
-          "description": "A six mois de la présidentielle, Jean-Luc Mélenchon a tenu un meeting samedi au Bourget. Edouard Philippe s'est rendu de son côté aux Rencontres de l'avenir à Saint-Raphaël, et Bruno Retailleau sera à Brive-la-Gaillarde.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "franceinfo",
-          "url": "https://www.franceinfo.fr/elections/presidentielle/direct-presidentielle-2027-jean-luc-melenchon-va-presenter-son-programme-au-bourget_8272022.html#xtor=RSS-3-[lestitres]"
         }
       ],
       "sourceCount": 1,
@@ -1002,38 +1322,6 @@
       }
     },
     {
-      "title": "Another Day of France’s Protests Unfurl During an Autumn of Discontent",
-      "link": "https://www.nytimes.com/2026/11/07/world/europe/france-fourth-saturday-protests.html",
-      "description": "Two days after a general strike and huge demonstrations, students and workers took to the streets again on Saturday.",
-      "date": "2026-11-07T17:06:40+00:00",
-      "image": "https://static01.nyt.com/images/2026/11/07/multimedia/07int-france-protest-hqvk/07int-france-protest-hqvk-mediumSquareAt3X.jpg",
-      "sourceName": "The New York Times",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "France",
-      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Another Day of France’s Protests Unfurl During an Autumn of Discontent",
-          "description": "Two days after a general strike and huge demonstrations, students and workers took to the streets again on Saturday.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "The New York Times",
-          "url": "https://www.nytimes.com/2026/11/07/world/europe/france-fourth-saturday-protests.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Hervé Le Bras, historien : « Une France de technocrates est en train d’être remplacée par une France de tribuns »",
       "link": "https://www.lemonde.fr/societe/article/2026/11/07/herve-le-bras-historien-une-france-de-technocrates-est-en-train-d-etre-remplacee-par-une-france-de-tribuns_6808301_3224.html",
       "description": "Dans un entretien au « Monde », Hervé Le Bras explique comment une partie de la population française en perte de repères traditionnels et se sentant exclue pourrait écarter les élites actuelles au profit d’un gouvernement autoritaire qui redonnerait au peuple une place centrale.",
@@ -1122,6 +1410,38 @@
         {
           "name": "Le Monde",
           "url": "https://www.lemonde.fr/campus/article/2026/11/07/dans-les-cabinets-d-affaires-l-inquietude-des-jeunes-avocats-d-ici-a-cinq-ans-l-ia-sera-capable-d-executer-la-quasi-totalite-des-taches-aujourd-hui-confiees-a-un-stagiaire-ou-a-un-jeune-collaborateur_6808299_4401467.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "« L’Europe et le Canada se sont mis d’accord pour essayer de vivre dans un monde post-Trump avant même qu’il ait quitté la Maison Blanche »",
+      "link": "https://www.lemonde.fr/idees/article/2026/11/07/l-europe-et-le-canada-se-sont-mis-d-accord-pour-essayer-de-vivre-dans-un-monde-post-trump-avant-meme-qu-il-ait-quitte-la-maison-blanche_6808298_3232.html",
+      "description": "L’Union européenne et Ottawa s’inspirent de la stratégie de la « révolution autolimitée », pensée par les dissidents d’Europe de l’Est dans les années 1970 pour bâtir une société parallèle à côté de la société officielle, sans chercher à la réformer, note le politiste bulgare Ivan Krastev, dans une tribune au « Monde ».",
+      "date": "2026-11-07T18:00:13+01:00",
+      "image": "https://img.lemde.fr/2026/02/25/125/0/1500/750/644/322/60/0/74736ce_upload-1-1q1lcx7t5zad-frame-1190.jpg",
+      "sourceName": "Le Monde",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "France",
+      "sectionReason": "feed category fallback: France",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "« L’Europe et le Canada se sont mis d’accord pour essayer de vivre dans un monde post-Trump avant même qu’il ait quitté la Maison Blanche »",
+          "description": "L’Union européenne et Ottawa s’inspirent de la stratégie de la « révolution autolimitée », pensée par les dissidents d’Europe de l’Est dans les années 1970 pour bâtir une société parallèle à côté de la société officielle, sans chercher à la réformer, note le politiste bulgare Ivan Krastev, dans une tribune au « Monde ».",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "Le Monde",
+          "url": "https://www.lemonde.fr/idees/article/2026/11/07/l-europe-et-le-canada-se-sont-mis-d-accord-pour-essayer-de-vivre-dans-un-monde-post-trump-avant-meme-qu-il-ait-quitte-la-maison-blanche_6808298_3232.html"
         }
       ],
       "sourceCount": 1,
@@ -1258,38 +1578,6 @@
       }
     },
     {
-      "title": "Gunman Opens Fire in Krakow, Killing at Least 5, Polish Police Say",
-      "link": "https://www.nytimes.com/2026/11/07/world/europe/krakow-poland-shooting.html",
-      "description": "The authorities said that the gunman, who began shooting from a car near a market square, was shot and taken to a hospital.",
-      "date": "2026-11-07T16:49:25+00:00",
-      "image": "https://static01.nyt.com/images/2026/11/07/multimedia/07int-poland-shooting-zbcg/07int-poland-shooting-zbcg-mediumSquareAt3X.jpg",
-      "sourceName": "The New York Times",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "Poland",
-      "sectionReason": "content: Poland subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Gunman Opens Fire in Krakow, Killing at Least 5, Polish Police Say",
-          "description": "The authorities said that the gunman, who began shooting from a car near a market square, was shot and taken to a hospital.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "The New York Times",
-          "url": "https://www.nytimes.com/2026/11/07/world/europe/krakow-poland-shooting.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Le ministre délégué Mathieu Lefèvre va être nommé porte-parole du gouvernement par intérim",
       "link": "https://www.franceinfo.fr/politique/le-ministre-delegue-mathieu-lefevre-va-etre-nomme-porte-parole-du-gouvernement-par-interim_8272532.html#xtor=RSS-3-[lestitres]",
       "description": "Cette nomination intervient alors que l'actuelle porte-parole du gouvernement, Maud Bregeon, va bientôt entamer son congé maternité.",
@@ -1354,6 +1642,38 @@
       }
     },
     {
+      "title": "Zełenski ostrzega Polskę. Narkotykowa siatka powiązana z SBU wkracza do Polski",
+      "link": "https://www.bankier.pl/wiadomosc/Zelenski-ostrzega-Polske-Narkotykowa-siatka-powiazana-z-SBU-wkracza-do-Polski-9225501.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
+      "description": "Prezydent Ukrainy Wołodymyr Zełenski ostrzegł w sobotę, że kierowany przez obywatela Rosji międzynarodowy syndykat narkotykowy Chimprom, który powiązany jest z wysokimi rangą funkcjonariuszami ukraińskich służb, rozpoczął działalność w Polsce i próbuje rozszerzyć ją na Niemcy.",
+      "date": "2026-11-07T17:40:00+01:00",
+      "image": "",
+      "sourceName": "Bankier.pl",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "Poland",
+      "sectionReason": "content: Poland subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Zełenski ostrzega Polskę. Narkotykowa siatka powiązana z SBU wkracza do Polski",
+          "description": "Prezydent Ukrainy Wołodymyr Zełenski ostrzegł w sobotę, że kierowany przez obywatela Rosji międzynarodowy syndykat narkotykowy Chimprom, który powiązany jest z wysokimi rangą funkcjonariuszami ukraińskich służb, rozpoczął działalność w Polsce i próbuje rozszerzyć ją na Niemcy.",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Bankier.pl",
+          "url": "https://www.bankier.pl/wiadomosc/Zelenski-ostrzega-Polske-Narkotykowa-siatka-powiazana-z-SBU-wkracza-do-Polski-9225501.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "More Than 50 Killed in Yemen in One of the Deadliest 24 Hours of the War",
       "link": "https://www.nytimes.com/2026/11/07/world/middleeast/more-than-50-killed-in-yemen.html",
       "description": "Strikes show the heavy toll since fighting between the Houthis and the Saudi-backed government reignited in August, with civilians paying a heavy price.",
@@ -1378,38 +1698,6 @@
         {
           "name": "The New York Times",
           "url": "https://www.nytimes.com/2026/11/07/world/middleeast/more-than-50-killed-in-yemen.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Tottenham set to complain to Pro Ref - but should Bogle have seen red?",
-      "link": "https://www.bbc.co.uk/sport/football/articles/c39wz9llg255o?at_medium=RSS&at_campaign=rss",
-      "description": "Tottenham are set to submit a formal complaint about the decision not to send off Jayden Bogle for his challenge on Mathys Tel during the defeat by Leeds.",
-      "date": "2026-11-07T16:35:26+00:00",
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4437/live/77476990-dac4-11f1-bda8-29fb69dbc026.jpg",
-      "sourceName": "BBC News",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Tottenham set to complain to Pro Ref - but should Bogle have seen red?",
-          "description": "Tottenham are set to submit a formal complaint about the decision not to send off Jayden Bogle for his challenge on Mathys Tel during the defeat by Leeds.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "BBC News",
-          "url": "https://www.bbc.co.uk/sport/football/articles/c39wz9llg255o?at_medium=RSS&at_campaign=rss"
         }
       ],
       "sourceCount": 1,
@@ -1666,38 +1954,6 @@
         {
           "name": "franceinfo",
           "url": "https://www.franceinfo.fr/faits-divers/le-parquet-de-paris-ouvre-une-enquete-sur-les-recentes-alertes-a-la-bombe-visant-des-avions-survolant-la-france-et-recherche-un-lien-eventuel-avec-des-puissances-etrangeres_8272469.html#xtor=RSS-3-[lestitres]"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "All Blacks cruise to victory as Scotland fade",
-      "link": "https://www.bbc.co.uk/sport/rugby-union/articles/c9e8l5vlgxl5o?at_medium=RSS&at_campaign=rss",
-      "description": "New Zealand canter to a 43-21 Nations Championship win at Murrayfield as Scotland fall away after a thrilling first half.",
-      "date": "2026-11-07T16:13:03+00:00",
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c759/live/32801a10-dac3-11f1-8c3b-f3c0d6bd7c4f.jpg",
-      "sourceName": "BBC News",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "All Blacks cruise to victory as Scotland fade",
-          "description": "New Zealand canter to a 43-21 Nations Championship win at Murrayfield as Scotland fall away after a thrilling first half.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "BBC News",
-          "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c9e8l5vlgxl5o?at_medium=RSS&at_campaign=rss"
         }
       ],
       "sourceCount": 1,
@@ -2346,38 +2602,6 @@
       }
     },
     {
-      "title": "Le XV de France confronté à une hécatombe de blessures avant son match contre les Fidji, un casse-tête pour Fabien Galthié",
-      "link": "https://www.lemonde.fr/sport/article/2026/11/07/le-xv-de-france-confronte-a-une-hecatombe-de-blessures-avant-son-match-contre-les-fidji-un-casse-tete-pour-fabien-galthie_6808289_3242.html",
-      "description": "Privés de nombreux titulaires, les Bleus affrontent les Fidji, samedi, lors du Championnat des nations de rugby. Avant de se frotter aux doubles champions du monde sud-africains, moins d’une semaine plus tard.",
-      "date": "2026-11-07T16:00:10+01:00",
-      "image": "https://img.lemde.fr/2026/11/06/318/0/3813/1906/644/322/60/0/cec95da_upload-1-zf9rabigayux-000-d4kr9ke.jpg",
-      "sourceName": "Le Monde",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Le XV de France confronté à une hécatombe de blessures avant son match contre les Fidji, un casse-tête pour Fabien Galthié",
-          "description": "Privés de nombreux titulaires, les Bleus affrontent les Fidji, samedi, lors du Championnat des nations de rugby. Avant de se frotter aux doubles champions du monde sud-africains, moins d’une semaine plus tard.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "Le Monde",
-          "url": "https://www.lemonde.fr/sport/article/2026/11/07/le-xv-de-france-confronte-a-une-hecatombe-de-blessures-avant-son-match-contre-les-fidji-un-casse-tete-pour-fabien-galthie_6808289_3242.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Dyplomacja w cieniu wojny. Katar ogłasza postęp, w Ormuzie wybuchają miny",
       "link": "https://www.bankier.pl/wiadomosc/Dyplomacja-w-cieniu-wojny-Katar-oglasza-postep-w-Ormuzie-wybuchaja-miny-9225454.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
       "description": "Irańska marynarka wojenna poinformowała w sobotę, że w tak zwanej „strefie zakazanej” w cieśninie Ormuz tankowiec uderzył w minę i stanął w płomieniach. Według Teheranu jednostka zignorowała ostrzeżenia i wyłączyła systemy nawigacyjne.",
@@ -2890,7 +3114,7 @@
       }
     },
     {
-      "title": "Turkey Nabs Regulatory Executives in Growing Fund Probe",
+      "title": "Top Turkish Regulators Taken Into Custody in Fund Probe",
       "link": "https://www.bloomberg.com/news/articles/2026-11-07/turkey-arrests-former-regulatory-executive-in-growing-fund-probe",
       "description": "Turkish authorities detained top officials from the country’s regulators on Saturday, local media reported, the latest executives to be caught up in a widening fund scandal.",
       "date": "2026-11-07T13:56:55+00:00",
@@ -2905,7 +3129,7 @@
         "method": "rules",
         "version": 1,
         "input": {
-          "title": "Turkey Nabs Regulatory Executives in Growing Fund Probe",
+          "title": "Top Turkish Regulators Taken Into Custody in Fund Probe",
           "description": "Turkish authorities detained top officials from the country’s regulators on Saturday, local media reported, the latest executives to be caught up in a widening fund scandal.",
           "sourceCategory": "Financial markets and economics"
         }
@@ -4492,38 +4716,6 @@
       }
     },
     {
-      "title": "\"Godzilla Minus Zero\", \"L'Affaire Marie-Claire\", \"L'Arabe\", \"Kwibuka, se souvenir\" : quels sont les films à voir (ou pas) cette semaine au cinéma ?",
-      "link": "https://www.franceinfo.fr/culture/cinema/sorties-de-films/godzilla-minus-zero-l-affaire-marie-claire-l-arabe-kwibuka-se-souvenir-quels-sont-les-films-a-voir-ou-pas-cette-semaine-au-cinema_8270942.html#xtor=RSS-3-[lestitres]",
-      "description": "Découvrez les critiques de notre sélection des films sortis en salles le mercredi 4 novembre 2026.",
-      "date": "2026-11-07T11:12:44+01:00",
-      "image": "https://www.franceinfo.fr/pictures/q7tTLfVnO5292qtGeRumlrhavWA/0x0:1070x602/432x243/filters:format(jpg)/2026/11/06/6aedec577af4d349833902.jpeg",
-      "sourceName": "franceinfo",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "feed category fallback: France",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "\"Godzilla Minus Zero\", \"L'Affaire Marie-Claire\", \"L'Arabe\", \"Kwibuka, se souvenir\" : quels sont les films à voir (ou pas) cette semaine au cinéma ?",
-          "description": "Découvrez les critiques de notre sélection des films sortis en salles le mercredi 4 novembre 2026.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "franceinfo",
-          "url": "https://www.franceinfo.fr/culture/cinema/sorties-de-films/godzilla-minus-zero-l-affaire-marie-claire-l-arabe-kwibuka-se-souvenir-quels-sont-les-films-a-voir-ou-pas-cette-semaine-au-cinema_8270942.html#xtor=RSS-3-[lestitres]"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Wulkan Tambora zgasił słońce nad Anglią. Skutki dla zdrowia były dramatyczne",
       "link": "https://wyborcza.pl/7,75400,33118097,indonezyjski-wulkan-tambora-mogl-wplynac-na-zdrowie-angielskich.html",
       "description": "Katastrofy klimatyczne spowodowane przez wybuchy wulkanów przyczyniły się do epidemii krzywicy w XIX-wiecznej Anglii. Dowody zachowały się w zębach.",
@@ -5068,38 +5260,6 @@
       }
     },
     {
-      "title": "Mamy pieniądze, ale nie potrafimy ich pomnażać. PIE pokazał dane",
-      "link": "https://www.bankier.pl/wiadomosc/Mamy-pieniadze-ale-nie-potrafimy-ich-pomnazac-PIE-pokazal-dane-9222547.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
-      "description": "Tylko Grecja i Rumunia posiadają niższy poziom stóp oszczędności w Unii Europejskiej niż Polska, gdzie wynosi on 9,5 proc. - przekazał Polski Instytut Ekonomiczny. Jednocześnie stopa oszczędności w Polsce systematycznie rośnie.",
-      "date": "2026-11-07T09:00:00+01:00",
-      "image": "",
-      "sourceName": "Bankier.pl",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "Financial",
-      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Mamy pieniądze, ale nie potrafimy ich pomnażać. PIE pokazał dane",
-          "description": "Tylko Grecja i Rumunia posiadają niższy poziom stóp oszczędności w Unii Europejskiej niż Polska, gdzie wynosi on 9,5 proc. - przekazał Polski Instytut Ekonomiczny. Jednocześnie stopa oszczędności w Polsce systematycznie rośnie.",
-          "sourceCategory": "Poland"
-        }
-      },
-      "sources": [
-        {
-          "name": "Bankier.pl",
-          "url": "https://www.bankier.pl/wiadomosc/Mamy-pieniadze-ale-nie-potrafimy-ich-pomnazac-PIE-pokazal-dane-9222547.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "PKP ma wielkie plany. Chce zarabiać nie tylko na przewozach pasażerów",
       "link": "https://www.bankier.pl/wiadomosc/PKP-ma-wielkie-plany-Chce-zarabiac-nie-tylko-na-przewozach-pasazerow-9221938.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
       "description": "Rosnąca popularność podróży pociągami napędza inwestycje w tabor, dworce i usługi dla pasażerów. PKP chce także szerzej wykorzystywać potencjał swoich nieruchomości oraz rozwijać działalność...",
@@ -5612,6 +5772,38 @@
       }
     },
     {
+      "title": "\"L'accueil dans les manifs, je n'ai jamais vu ça\" : comment Jean-Luc Mélenchon surfe sur la contestation sociale en vue de la présidentielle",
+      "link": "https://www.franceinfo.fr/economie/greve/greve/l-accueil-dans-les-manifs-je-n-ai-jamais-vu-ca-comment-jean-luc-melenchon-surfe-sur-la-contestation-sociale-en-vue-de-la-presidentielle_8267927.html#xtor=RSS-3-[lestitres]",
+      "description": "Avant la mise à jour de son programme et la convention présidentielle qui lance officiellement sa campagne, le candidat de La France insoumise était dans la rue, jeudi, pour une nouvelle journée de mobilisation.",
+      "date": "2026-11-07T07:02:40+01:00",
+      "image": "https://www.franceinfo.fr/pictures/UWa_402kb6XjRycSfD0f1mjxXq0/0x212:5472x3290/432x243/filters:format(jpg)/2026/11/04/6aeb5490ad4f0174810539.jpg",
+      "sourceName": "franceinfo",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "France",
+      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "\"L'accueil dans les manifs, je n'ai jamais vu ça\" : comment Jean-Luc Mélenchon surfe sur la contestation sociale en vue de la présidentielle",
+          "description": "Avant la mise à jour de son programme et la convention présidentielle qui lance officiellement sa campagne, le candidat de La France insoumise était dans la rue, jeudi, pour une nouvelle journée de mobilisation.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "franceinfo",
+          "url": "https://www.franceinfo.fr/economie/greve/greve/l-accueil-dans-les-manifs-je-n-ai-jamais-vu-ca-comment-jean-luc-melenchon-surfe-sur-la-contestation-sociale-en-vue-de-la-presidentielle_8267927.html#xtor=RSS-3-[lestitres]"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "Comment l'Ouzbékistan s'est libéralisé et ouvert au monde en dix ans",
       "link": "https://www.lesechos.fr/monde/enjeux-internationaux/comment-louzbekistan-sest-liberalise-et-ouvert-au-monde-en-dix-ans-2261665",
       "description": "Ce pays d'Asie centrale affiche une forte croissance et attire les investissements venus de partout. Dans « L'Entretien géopolitique » des « Echos », Christophe Jakubyszyn et Benaouda Abdeddaïm décryptent chaque semaine les signaux faibles de la géopolitique.",
@@ -5932,6 +6124,38 @@
       }
     },
     {
+      "title": "Jak naprawdę inwestują młodzi? Szybkie zyski, emocje i lekcja z giełdy",
+      "link": "https://www.bankier.pl/wiadomosc/Jak-naprawde-inwestuja-mlodzi-Szybkie-zyski-emocje-i-lekcja-z-gieldy-9224857.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
+      "description": "Przekonanie studenta w wieku od 19 do 24 lat do założenia konta inwestycyjnego bywa ogromnym wyzwaniem. Tradycyjne podręczniki do finansów mówią o powolnym pomnażaniu oszczędności i ostrożnym zarządzaniu ryzykiem. Jednak w codziennym życiu młodzi ludzie kierują się zupełnie innymi impulsami. Jednak świat inwestowania widziany oczami dwudziestolatka różni się od tego, co proponują klasyczne fundusze.",
+      "date": "2026-11-07T06:00:00+01:00",
+      "image": "",
+      "sourceName": "Bankier.pl",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Jak naprawdę inwestują młodzi? Szybkie zyski, emocje i lekcja z giełdy",
+          "description": "Przekonanie studenta w wieku od 19 do 24 lat do założenia konta inwestycyjnego bywa ogromnym wyzwaniem. Tradycyjne podręczniki do finansów mówią o powolnym pomnażaniu oszczędności i ostrożnym zarządzaniu ryzykiem. Jednak w codziennym życiu młodzi ludzie kierują się zupełnie innymi impulsami. Jednak świat inwestowania widziany oczami dwudziestolatka różni się od tego, co proponują klasyczne fundusze.",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Bankier.pl",
+          "url": "https://www.bankier.pl/wiadomosc/Jak-naprawde-inwestuja-mlodzi-Szybkie-zyski-emocje-i-lekcja-z-gieldy-9224857.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "Panika i zaskoczenie na rynkach, a świat wraca do podwyżek stóp",
       "link": "https://www.bankier.pl/wiadomosc/Panika-i-zaskoczenie-na-rynkach-a-swiat-wraca-do-podwyzek-stop-9223540.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
       "description": "W tym tygodniu rynki dostały kilka mocnych sygnałów ostrzegawczych. Polityczne trzęsienie ziemi w USA wywołało panikę wśród inwestorów, inflacja ponownie przyspiesza, a banki centralne na świecie coraz śmielej sięgają po podwyżki stóp procentowych. Podczas gdy RPP pozostaje niewzruszona, Polska gospodarka wysyła mieszane sygnały: płace rosną, przemysł próbuje odbić, ale ożywienia wciąż nie widać. Do tego zmiany przy dystrybutorach i mocne tąpnięcie kursu Orlenu. Oto wykresy, które pokazują, co najważniejszego wydarzyło się na rynkach i w gospodarce.",
@@ -6028,6 +6252,38 @@
       }
     },
     {
+      "title": "Le néolibéralisme est-il mort ? Vie et métamorphoses de la doctrine qui a façonné le monde contemporain",
+      "link": "https://www.lemonde.fr/idees/article/2026/11/07/le-neoliberalisme-est-il-mort-vie-et-metamorphoses-de-la-doctrine-qui-a-faconne-le-monde-contemporain_6808201_3232.html",
+      "description": "L’élection de Donald Trump et le Brexit, en 2016, marquent-ils la fin de quatre décennies d’hégémonie du néolibéralisme ? Le débat anime des intellectuels à travers le monde, qui s’interrogent sur les mutations d’une doctrine ayant refondé le libéralisme moderne en donnant un rôle nouveau à l’Etat.",
+      "date": "2026-11-07T05:55:01+01:00",
+      "image": "https://img.lemde.fr/2026/11/06/740/0/2433/1216/644/322/60/0/202c0b3_upload-1-khu4se4ac0wv-neoliberalisme.jpg",
+      "sourceName": "Le Monde",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "France",
+      "sectionReason": "feed category fallback: France",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Le néolibéralisme est-il mort ? Vie et métamorphoses de la doctrine qui a façonné le monde contemporain",
+          "description": "L’élection de Donald Trump et le Brexit, en 2016, marquent-ils la fin de quatre décennies d’hégémonie du néolibéralisme ? Le débat anime des intellectuels à travers le monde, qui s’interrogent sur les mutations d’une doctrine ayant refondé le libéralisme moderne en donnant un rôle nouveau à l’Etat.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "Le Monde",
+          "url": "https://www.lemonde.fr/idees/article/2026/11/07/le-neoliberalisme-est-il-mort-vie-et-metamorphoses-de-la-doctrine-qui-a-faconne-le-monde-contemporain_6808201_3232.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "China Forex Reserves Edged Up in October",
       "link": "https://www.wsj.com/economy/central-banking/china-forex-reserves-edged-up-in-october-89c34113?mod=rss_markets_main",
       "description": "",
@@ -6116,38 +6372,6 @@
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/11/06/from-the-front-row-to-the-hot-seat-what-the-midterms-mean-for-big-tech/"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Derrière le piratage de Binance, le savoir-faire redoutable des hackeurs nord-coréens",
-      "link": "https://www.lemonde.fr/pixels/article/2026/11/07/derriere-le-piratage-de-binance-le-savoir-faire-redoutable-des-hackeurs-nord-coreens_6808134_4408996.html",
-      "description": "Depuis plus de dix ans, Pyongyang finance son programme balistique et nucléaire à coup de « cybercasses ». Les pirates nord-coréens ont fait de l’industrie des cryptomonnaies leur cible principale, avec succès.",
-      "date": "2026-11-07T05:00:07+01:00",
-      "image": "https://img.lemde.fr/2026/11/05/250/0/3000/1500/644/322/60/0/d30a0b0_upload-1-jx4pttyclhbi-papier-coree-nord.jpg",
-      "sourceName": "Le Monde",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "Technology",
-      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Derrière le piratage de Binance, le savoir-faire redoutable des hackeurs nord-coréens",
-          "description": "Depuis plus de dix ans, Pyongyang finance son programme balistique et nucléaire à coup de « cybercasses ». Les pirates nord-coréens ont fait de l’industrie des cryptomonnaies leur cible principale, avec succès.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "Le Monde",
-          "url": "https://www.lemonde.fr/pixels/article/2026/11/07/derriere-le-piratage-de-binance-le-savoir-faire-redoutable-des-hackeurs-nord-coreens_6808134_4408996.html"
         }
       ],
       "sourceCount": 1,
@@ -6730,38 +6954,6 @@
         {
           "name": "The Wall Street Journal",
           "url": "https://www.wsj.com/finance/currencies/asian-currencies-mixed-diminishing-risk-appetite-might-weigh-84b91434?mod=rss_markets_main"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Trump taps immigration hardliner Stephen Miller as chief of staff",
-      "link": "https://www.ft.com/content/6e8f2244-0e39-45cd-b415-e0be54b0351f?syn-25a6b1a6=1",
-      "description": "Decision to replace Susie Wiles comes days after Republican Party’s resounding midterm election defeat",
-      "date": "2026-11-06T22:09:58+00:00",
-      "image": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F454287ca-e16c-40fa-a565-cb443208cdf6.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down",
-      "sourceName": "Financial Times",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Trump taps immigration hardliner Stephen Miller as chief of staff",
-          "description": "Decision to replace Susie Wiles comes days after Republican Party’s resounding midterm election defeat",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "Financial Times",
-          "url": "https://www.ft.com/content/6e8f2244-0e39-45cd-b415-e0be54b0351f?syn-25a6b1a6=1"
         }
       ],
       "sourceCount": 1,
@@ -7410,6 +7602,40 @@
       }
     },
     {
+      "title": "India faces structural growth challenges and the AI transition – BNP Paribas - www.tmgm.com",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPdTc3bVUyNUk3VkdZdDJ2endaN3Jzb1RRYjdoRnBYY0ZWcHVSdGNaemttcGVMeDZDVDBRbXBZWFV6dW1fUU5yeUp1QzExMktfU3g1ZV9SWmo1UVhUejVaaEJWWVJJT2dwNXk5WXB1YzM0Q0I1YnlncFN6aDNyM3VDem5KYW5BcTV2MDFJaklpR2poa2ZVcFRuS1N4LWxWNzRuYnFZOUdyd2JpTlNURF9nUjEtODVXSXdPd1NmSlhCTXRYSnJaa1JvZGVrQUpiUQ?oc=5",
+      "description": "India faces structural growth challenges and the AI transition – BNP Paribas www.tmgm.com",
+      "date": "2026-11-06T20:00:56+00:00",
+      "image": "",
+      "sourceName": "www.tmgm.com",
+      "language": "en",
+      "category": "Financial markets and economics",
+      "aggregator": true,
+      "subgroup": "BNP Paribas",
+      "sourceCategory": "Financial markets and economics",
+      "section": "Financial",
+      "sectionReason": "content: BNP Paribas bank evidence",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "India faces structural growth challenges and the AI transition – BNP Paribas - www.tmgm.com",
+          "description": "India faces structural growth challenges and the AI transition – BNP Paribas www.tmgm.com",
+          "sourceCategory": "Financial markets and economics"
+        }
+      },
+      "sources": [
+        {
+          "name": "www.tmgm.com",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPdTc3bVUyNUk3VkdZdDJ2endaN3Jzb1RRYjdoRnBYY0ZWcHVSdGNaemttcGVMeDZDVDBRbXBZWFV6dW1fUU5yeUp1QzExMktfU3g1ZV9SWmo1UVhUejVaaEJWWVJJT2dwNXk5WXB1YzM0Q0I1YnlncFN6aDNyM3VDem5KYW5BcTV2MDFJaklpR2poa2ZVcFRuS1N4LWxWNzRuYnFZOUdyd2JpTlNURF9nUjEtODVXSXdPd1NmSlhCTXRYSnJaa1JvZGVrQUpiUQ?oc=5"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "Blisko mijanki PiS z Konfederacją. Różnica w sondażu jest minimalna",
       "link": "https://wyborcza.pl/7,75398,33121341,blisko-mijanki-pis-z-konfederacja-roznica-w-sondazu-jest-minimalna.html",
       "description": "Poparcie PiS spada, a Konfederacji rośnie. W najnowszym sondażu CBOS różnica między tymi dwiema partiami wynosi tylko 0,4 punktu procentowego.",
@@ -7434,294 +7660,6 @@
         {
           "name": "Gazeta Wyborcza",
           "url": "https://wyborcza.pl/7,75398,33121341,blisko-mijanki-pis-z-konfederacja-roznica-w-sondazu-jest-minimalna.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Developer ends lucrative screensaver deal with Roku because Fox bought it",
-      "link": "https://arstechnica.com/gadgets/2026/11/artist-pulls-popular-screensaver-from-roku-os-because-of-fox-acquisition/",
-      "description": "Developer: “I can’t be part of the Fox world.”",
-      "date": "2026-11-06T19:50:18+00:00",
-      "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/11/Screenshot-2026-11-06-134100-1152x648.jpg",
-      "sourceName": "Ars Technica",
-      "language": "en",
-      "category": "Technology, AI and science",
-      "sourceCategory": "Technology, AI and science",
-      "section": "Technology",
-      "sectionReason": "feed category fallback: Technology, AI and science",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Developer ends lucrative screensaver deal with Roku because Fox bought it",
-          "description": "Developer: “I can’t be part of the Fox world.”",
-          "sourceCategory": "Technology, AI and science"
-        }
-      },
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/gadgets/2026/11/artist-pulls-popular-screensaver-from-roku-os-because-of-fox-acquisition/"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Ripple-65B Preview delivers strong agentic coding results as a fully Apache 2.0 open US model",
-      "link": "https://the-decoder.com/ripple-65b-preview-delivers-strong-agentic-coding-results-as-a-fully-apache-2-0-open-us-model/",
-      "description": "Ricursive Intelligence is releasing Ripple-65B Preview, a 65-billion-parameter open-weight language model that the company says achieves the top score among open-source U.S. models on the TerminalBench 2.1 coding benchmark at a total R&D cost of $32 million. On other benchmarks, however, Ripple falls behind the likewise newly released western open model Inkling 2 Small. The article Ripple-65B Preview delivers strong agentic coding results as a fully Apache 2.0 open US model appeared first on The Decoder.",
-      "date": "2026-11-06T19:47:04+00:00",
-      "image": "",
-      "sourceName": "The Decoder",
-      "language": "en",
-      "category": "Technology, AI and science",
-      "sourceCategory": "Technology, AI and science",
-      "section": "Technology",
-      "sectionReason": "feed category fallback: Technology, AI and science",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Ripple-65B Preview delivers strong agentic coding results as a fully Apache 2.0 open US model",
-          "description": "Ricursive Intelligence is releasing Ripple-65B Preview, a 65-billion-parameter open-weight language model that the company says achieves the top score among open-source U.S. models on the TerminalBench 2.1 coding benchmark at a total R&D cost of $32 million. On other benchmarks, however, Ripple falls behind the likewise newly released western open model Inkling 2 Small. The article Ripple-65B Preview delivers strong agentic coding results as a fully Apache 2.0 open US model appeared first on The Decoder.",
-          "sourceCategory": "Technology, AI and science"
-        }
-      },
-      "sources": [
-        {
-          "name": "The Decoder",
-          "url": "https://the-decoder.com/ripple-65b-preview-delivers-strong-agentic-coding-results-as-a-fully-apache-2-0-open-us-model/"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Precious Metals Post Weekly Gains",
-      "link": "https://www.wsj.com/finance/commodities-futures/gold-continues-to-rise-amid-better-risk-sentiment-e2d133ff?mod=rss_markets_main",
-      "description": "Precious metals gave back some gains from the previous two sessions but ended the week higher as stepped-up diplomatic efforts in the Middle East and the Democrats’ midterm election win sent oil prices lower, tempering some inflation concerns.",
-      "date": "2026-11-06T19:25:00+00:00",
-      "image": "",
-      "sourceName": "The Wall Street Journal",
-      "language": "en",
-      "category": "Financial markets and economics",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Financial",
-      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Precious Metals Post Weekly Gains",
-          "description": "Precious metals gave back some gains from the previous two sessions but ended the week higher as stepped-up diplomatic efforts in the Middle East and the Democrats’ midterm election win sent oil prices lower, tempering some inflation concerns.",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "The Wall Street Journal",
-          "url": "https://www.wsj.com/finance/commodities-futures/gold-continues-to-rise-amid-better-risk-sentiment-e2d133ff?mod=rss_markets_main"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "12 Planes in 12 Days: Pope Begins Major Latin America Tour, Weeks After Surgery",
-      "link": "https://www.nytimes.com/2026/11/06/world/europe/pope-leo-visit-uruguay-argentina-peru.html",
-      "description": "Pope Leo XIV’s tour of Uruguay, Argentina and Peru is his first major trip since an operation on his lung last month.",
-      "date": "2026-11-06T19:24:09+00:00",
-      "image": "https://static01.nyt.com/images/2026/11/06/multimedia/06int-pope-latam-01-qlvc/06int-pope-latam-01-qlvc-mediumSquareAt3X.jpg",
-      "sourceName": "The New York Times",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "12 Planes in 12 Days: Pope Begins Major Latin America Tour, Weeks After Surgery",
-          "description": "Pope Leo XIV’s tour of Uruguay, Argentina and Peru is his first major trip since an operation on his lung last month.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "The New York Times",
-          "url": "https://www.nytimes.com/2026/11/06/world/europe/pope-leo-visit-uruguay-argentina-peru.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "In French City Hit by Terrorist Attack, Residents Blame Far-Right Rhetoric",
-      "link": "https://www.nytimes.com/2026/11/06/world/europe/france-shooting-trappes.html",
-      "description": "In Trappes, a suburb of Paris with a large immigrant population, residents believe that a shooting was fueled by years of anti-immigrant sentiment.",
-      "date": "2026-11-06T19:19:56+00:00",
-      "image": "https://static01.nyt.com/images/2026/11/05/multimedia/00int-france-shooting-01-hfwq/00int-france-shooting-01-hfwq-mediumSquareAt3X.jpg",
-      "sourceName": "The New York Times",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "France",
-      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "In French City Hit by Terrorist Attack, Residents Blame Far-Right Rhetoric",
-          "description": "In Trappes, a suburb of Paris with a large immigrant population, residents believe that a shooting was fueled by years of anti-immigrant sentiment.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "The New York Times",
-          "url": "https://www.nytimes.com/2026/11/06/world/europe/france-shooting-trappes.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "AI Stocks Rebound After Brutal Week for Nasdaq",
-      "link": "https://www.wsj.com/finance/stocks/nasdaq-futures-steady-after-asian-ai-rout-as-investors-brace-for-jobs-day-83415c52?mod=rss_markets_main",
-      "description": "The tech-heavy Nasdaq is reversing some of Thursday’s historic losses. The Dow, on the other hand, is about flat on the day after paring morning losses.",
-      "date": "2026-11-06T19:13:00+00:00",
-      "image": "https://images.wsj.net/im-99721792",
-      "sourceName": "The Wall Street Journal",
-      "language": "en",
-      "category": "Financial markets and economics",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Technology",
-      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "AI Stocks Rebound After Brutal Week for Nasdaq",
-          "description": "The tech-heavy Nasdaq is reversing some of Thursday’s historic losses. The Dow, on the other hand, is about flat on the day after paring morning losses.",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "The Wall Street Journal",
-          "url": "https://www.wsj.com/finance/stocks/nasdaq-futures-steady-after-asian-ai-rout-as-investors-brace-for-jobs-day-83415c52?mod=rss_markets_main"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "FAA to finally ditch floppy disks in what it calls \"historic\" tech upgrade",
-      "link": "https://arstechnica.com/tech-policy/2026/11/faa-to-finally-ditch-floppy-disks-in-what-it-calls-historic-tech-upgrade/",
-      "description": "FAA information display systems to be floppy-free at 435 sites by end of 2028.",
-      "date": "2026-11-06T19:12:28+00:00",
-      "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/11/sean-duffy-faa-tech-1152x648-1793989923.jpg",
-      "sourceName": "Ars Technica",
-      "language": "en",
-      "category": "Technology, AI and science",
-      "sourceCategory": "Technology, AI and science",
-      "section": "Technology",
-      "sectionReason": "feed category fallback: Technology, AI and science",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "FAA to finally ditch floppy disks in what it calls \"historic\" tech upgrade",
-          "description": "FAA information display systems to be floppy-free at 435 sites by end of 2028.",
-          "sourceCategory": "Technology, AI and science"
-        }
-      },
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/tech-policy/2026/11/faa-to-finally-ditch-floppy-disks-in-what-it-calls-historic-tech-upgrade/"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Miał być całkowity zakaz reklamy alkoholu. Senat zrobił wyłom",
-      "link": "https://www.bankier.pl/wiadomosc/Mial-byc-calkowity-zakaz-reklamy-alkoholu-Senat-zrobil-wylom-9225006.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
-      "description": "Senat opowiedział się w piątek za nowelizacją ustawy o wychowaniu w trzeźwości z poprawkami. Mają one m.in. umożliwić reklamę piwa 0 proc. i nocną sprzedaż alkoholu na lotniskach.",
-      "date": "2026-11-06T20:00:00+01:00",
-      "image": "",
-      "sourceName": "Bankier.pl",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "Poland",
-      "sectionReason": "feed category fallback: Poland",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Miał być całkowity zakaz reklamy alkoholu. Senat zrobił wyłom",
-          "description": "Senat opowiedział się w piątek za nowelizacją ustawy o wychowaniu w trzeźwości z poprawkami. Mają one m.in. umożliwić reklamę piwa 0 proc. i nocną sprzedaż alkoholu na lotniskach.",
-          "sourceCategory": "Poland"
-        }
-      },
-      "sources": [
-        {
-          "name": "Bankier.pl",
-          "url": "https://www.bankier.pl/wiadomosc/Mial-byc-calkowity-zakaz-reklamy-alkoholu-Senat-zrobil-wylom-9225006.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "They Spent Millions to Keep Their Dream Cruise Afloat. It Died Anyway.",
-      "link": "https://www.nytimes.com/2026/11/06/travel/villa-vie-residences-odyssey-cruise.html",
-      "description": "Secrecy, debt and soaring fuel costs all contributed to the Odyssey’s downfall. Here’s an inside look at how the “endless cruise” unraveled.",
-      "date": "2026-11-06T18:58:23+00:00",
-      "image": "https://static01.nyt.com/images/2026/11/05/multimedia/05trav-cruise-lkwz/05trav-cruise-lkwz-mediumSquareAt3X.jpg",
-      "sourceName": "The New York Times",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "They Spent Millions to Keep Their Dream Cruise Afloat. It Died Anyway.",
-          "description": "Secrecy, debt and soaring fuel costs all contributed to the Odyssey’s downfall. Here’s an inside look at how the “endless cruise” unraveled.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "The New York Times",
-          "url": "https://www.nytimes.com/2026/11/06/travel/villa-vie-residences-odyssey-cruise.html"
         }
       ],
       "sourceCount": 1,

@@ -67,15 +67,15 @@
       "total": 343
     },
     "2026-11-07": {
-      "publishers": 22,
+      "publishers": 23,
       "sections": {
         "Financial": 45,
         "France": 46,
-        "Poland": 35,
-        "Technology": 52,
-        "World": 63
+        "Poland": 38,
+        "Technology": 48,
+        "World": 62
       },
-      "total": 241
+      "total": 239
     }
   },
   "schemaVersion": 1
