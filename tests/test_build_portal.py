@@ -101,7 +101,8 @@ class PortalTests(unittest.TestCase):
                 html = module.edition_page([], 'https://example.test/News/', prefix, language, now, [])
                 links = re.findall(r'<a class="nav-button[^"]*" href="([^"]+)"[^>]*>([^<]+)</a>', html)
                 self.assertEqual(links, list(zip(
-                    ['#world', '#poland', '#france', '#financial', '#technology'], labels)))
+                    ['#world', '#poland', '#france', '#financial', '#technology',
+                     'https://example.test/News/barometer/'], labels + ['Barometer'])))
                 # Sections appear on the page in menu order.
                 positions = [html.index(f'id="{a}"') for a in ('world', 'poland', 'france', 'financial', 'technology')]
                 self.assertEqual(positions, sorted(positions))

@@ -28,6 +28,32 @@ exactly one card. Extra pages: `sources/` (stories grouped by publisher),
 sparklines from `stats.json`, which each build carries forward from history).
 Page text is English; language pages declare their own `lang`.
 
+## Barometer
+
+`barometer/` (menu: **Barometer**, `scripts/barometer.py`) sets the France + Global Markets
+news flow next to the CAC 40. It shows:
+
+- **Today's reading:** a dial from −100 to +100 for the tone of the past 24 hours,
+  with zones from Stormy to Sunny.
+- **Themes:** story counts for CAC 40 sectors and market-wide drivers (rates, French
+  politics, trade, geopolitics), each against its 30-session average.
+- **Session charts:** tone and CAC 40 daily change, as two charts on the same dates.
+- **Relationship:** a scatter of tone against the next session's move. Correlations stay
+  hidden until 20 sessions have both news and prices.
+
+Tone is positive minus negative market words in French, English and Polish, from
+headlines and RSS snippets. News after the 17:30 Paris close, or at the weekend, counts
+toward the next trading session.
+
+CAC 40 daily closes come from Yahoo Finance's chart endpoint, with Stooq's CSV as a
+fallback. Neither needs a key. If both fail, the edition still publishes with the last
+saved prices and the log says `CAC 40 source unavailable`.
+
+History is kept in `barometer.json` on the site. Per-story scores are kept for 10 days,
+so hourly rebuilds never double count a story, and then folded into one row per session.
+On the first build it is filled from the saved daily `articles.json` snapshots.
+It shows co-movement, not cause and effect.
+
 ## Build (standard-library Python)
 
 ```sh
