@@ -3,14 +3,16 @@
 The default portal serves real article HTML without JavaScript, React, Babel,
 Tailwind or CDN scripts. Its dark editorial CSS is retained.
 The masthead is **What's happening in the World** with the subtitle **What’s happening now…**.
-Primary navigation is **Front Page** plus five topic anchors: **Polish News / French News / World News / Technology / Financial News**.
-These select story subjects, not feed languages. Legacy language URLs remain available.
-Stories appear once in five sections, stored as **Poland / France / World / Technology / Financial**,
-with **BNP Paribas** nested under Financial News. Technology and financial subjects take precedence over geography.
+The menu is **World / Poland / France / Global Markets / Tech** (stored sections
+`World`, `Poland`, `France`, `Financial`, `Technology`), with **BNP Paribas** nested
+under Global Markets. Technology and financial subjects take precedence over geography.
 Publisher catalog categories remain provenance, not final story sections.
-`pl/`, `en/` and `fr/` are ordinary static language pages; dated
-editions have their own language pages. All sections' stories are available
-without a JavaScript “View all” control.
+
+A language switch at the right of the menu offers **English / Français / Polski**.
+It changes the interface text (menu, headings, counts, footer; see `scripts/i18n.py`),
+not the stories: every language shows every story, untranslated. English is the
+front page `/`; French is `fr/` and Polish `pl/` (also inside dated editions).
+`en/` remains as an English copy for old links.
 
 Descriptions are **snippets supplied by the existing publishers' feeds**, as in
 the original reader, not original/editorial/AI summaries. No automatic translation
@@ -18,10 +20,8 @@ is performed. PAP Mediaroom is not used as a substitute for PAP domestic news.
 
 ## Dashboard
 
-The Front Page (`scripts/dashboard.py`) adds, above the five sections: a
-*Today in numbers* bar, *Top stories*, *At a glance* (top 3 per section),
-*Most covered* (stories from several outlets), *Trending* keywords and a
-*News pulse* chart of stories per hour. Stories published within 3 hours of the
+The front page in each language (`scripts/dashboard.py`) adds, above the five sections,
+*Top stories*, *Most covered* (stories from several outlets) and *Trending* keywords. Stories published within 3 hours of the
 build carry a **New** badge. These panels link to stories; each story still has
 exactly one card. Extra pages: `sources/` (stories grouped by publisher),
 `trending/` (stories per keyword) and `archive/` (editions plus daily trend

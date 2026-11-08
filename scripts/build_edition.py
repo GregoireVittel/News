@@ -119,16 +119,18 @@ if __package__ in (None, ''):
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     from story_classification import enrich_articles, bnp_bank_article
     import dashboard
+    import i18n
 else:
     from .story_classification import enrich_articles, bnp_bank_article
-    from . import dashboard
+    from . import dashboard, i18n
 
 ROOT = Path(__file__).resolve().parents[1]
 PARIS = ZoneInfo('Europe/Paris')
 LOG = logging.getLogger('edition')
 SECTIONS = ('Poland', 'France', 'World', 'Technology', 'Financial')
 SITE_TITLE = "What's happening in the World"
-SECTION_LABELS = dict(zip(SECTIONS, ('Polish News', 'French News', 'World News', 'Technology', 'Financial News')))
+MENU = i18n.MENU  # display order: World / Poland / France / Global Markets / Tech
+SECTION_LABELS = dict(i18n.TEXT['en']['sections'])
 
 
 def default_feeds():
@@ -199,9 +201,10 @@ def snippet(article, length):
     return escape(value[:length].rstrip() + ('…' if len(value) > length else ''))
 
 
-def story(article, kind='story', now=None):
+def story(article, kind='story', now=None, lang='en'):
     a = article
-    badge = dashboard.new_badge(a, now) if now else ''
+    t = i18n.TEXT[lang]
+    badge = dashboard.new_badge(a, now, t['new']) if now else ''
     heading = 'h2' if kind == 'lead' else 'h3'
     image = ''
     if kind != 'rail-item':
@@ -210,12 +213,12 @@ def story(article, kind='story', now=None):
         elif kind == 'lead':
             image = '<div class="lead-placeholder" aria-hidden="true">W.</div>'
     return (f'<article class="{kind}" lang="{escape(a["language"], quote=True)}">{image}'
-            f'<div class="eyebrow">{escape(a["section"])}</div><{heading}><a href="{escape(a["link"], quote=True)}" rel="noopener noreferrer">{escape(a["title"])}</a></{heading}>'
+            f'<div class="eyebrow">{escape(t["sections"].get(a["section"], a["section"]))}</div><{heading}><a href="{escape(a["link"], quote=True)}" rel="noopener noreferrer">{escape(a["title"])}</a></{heading}>'
             f'<div class="meta"><span class="source">{escape(a["sourceName"])}</span> · <time datetime="{a["date"].isoformat()}">{a["date"].astimezone(PARIS).strftime("%d.%m %H:%M")}</time>{badge}</div>'
-            + f'<div class="meta">{a["sourceCount"]} {"source" if a["sourceCount"] == 1 else "sources"}</div>'
-            + '<details class="source-list"><summary>Coverage sources</summary><ul>'
+            + f'<div class="meta">{i18n.count(lang, a["sourceCount"], "source")}</div>'
+            + f'<details class="source-list"><summary>{t["coverage_sources"]}</summary><ul>'
             + ''.join(f'<li><a href="{escape(s["url"], quote=True)}" rel="noopener noreferrer">{escape(s["name"])}</a></li>' for s in a['sources']) + '</ul></details>'
-            + ('<p class="meta">Google News RSS aggregation; Google News links redirect to publisher coverage. Snippets are supplied RSS text, not original summaries.</p>'
+            + (f'<p class="meta">{t["google_note"]}</p>'
                if any(urlsplit(s['url']).hostname == 'news.google.com' for s in a['sources']) else '')
             + (f'<p>{snippet(a, 240 if kind == "lead" else 115)}</p>' if kind != 'rail-item' and a['description'] else '') + '</article>')
 
@@ -223,7 +226,7 @@ def story(article, kind='story', now=None):
 TOP_STORIES = 7
 
 
-def top_stories(articles, now=None):
+def top_stories(articles, now=None, lang='en'):
     """Front-page digest: the highest-ranked stories across all sections.
 
     Rendered as a ranked list of links, not as story cards, so each story still
@@ -232,6 +235,7 @@ def top_stories(articles, now=None):
     picks = articles[:TOP_STORIES]
     if not picks:
         return ''
+    t = i18n.TEXT[lang]
 
     def item(a, lead):
         when = a['date']
@@ -240,77 +244,95 @@ def top_stories(articles, now=None):
             image = f'<img class="lead-image" src="{escape(a["image"], quote=True)}" alt="" loading="lazy">'
         meta = (f'<div class="meta"><span class="source">{escape(a["sourceName"])}</span> · '
                 f'<time datetime="{when.isoformat()}">{when.astimezone(PARIS).strftime("%d.%m %H:%M")}</time> · '
-                f'{plural(a["sourceCount"], "source", "sources")}{dashboard.new_badge(a, now) if now else ""}</div>')
+                f'{i18n.count(lang, a["sourceCount"], "source")}{dashboard.new_badge(a, now, t["new"]) if now else ""}</div>')
         heading = 'h3'
         text = f'<p>{snippet(a, 240)}</p>' if lead and a['description'] else ''
         return (f'<li class="{"lead top-lead" if lead else "rail-item"}" lang="{escape(a["language"], quote=True)}">{image}'
-                f'<a class="eyebrow" href="#{a["section"].lower()}">{escape(SECTION_LABELS.get(a["section"], a["section"]))}</a>'
+                f'<a class="eyebrow" href="#{a["section"].lower()}">{escape(t["sections"].get(a["section"], a["section"]))}</a>'
                 f'<{heading}><a href="{escape(a["link"], quote=True)}" rel="noopener noreferrer">{escape(a["title"])}</a></{heading}>'
                 f'{meta}{text}</li>')
 
     rail = ''.join(item(a, False) for a in picks[1:])
     return ('<section class="top-stories" aria-labelledby="top-stories-title">'
-            '<div class="section-heading"><h2 class="section-title" id="top-stories-title">Top stories</h2>'
-            '<span>most publishers, then most recent</span></div>'
+            f'<div class="section-heading"><h2 class="section-title" id="top-stories-title">{t["top_stories"]}</h2>'
+            f'<span>{t["top_stories_note"]}</span></div>'
             '<div class="portal-grid"><ol class="top-lead-list">' + item(picks[0], True) + '</ol>'
             + (f'<ol class="rail top-rail" start="2">{rail}</ol>' if rail else '') + '</div></section>')
 
 
-def page(base, canonical, title, body, now, lang='en'):
+def page(base, canonical, title, body, now, lang='en', home=None, front=False):
+    """Wrap a page body. Interface text follows lang (en/fr/pl); front marks a front page."""
+    t = i18n.TEXT[i18n.ui_language(lang)]
+    home = base if home is None else home
     stamp = now.astimezone(PARIS).isoformat(timespec='seconds')
-    document_title = SITE_TITLE if title == 'Front Page' else title + ' — ' + SITE_TITLE
+    site = t['site_title']
+    document_title = site if front or title == 'Front Page' else title + ' — ' + site
     return f'''<!DOCTYPE html>
 <html lang="{lang}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
-<title>{escape(document_title)}</title><meta name="description" content="What’s happening now… Publisher feed headlines and snippets.">
-<meta property="og:type" content="website"><meta property="og:locale" content="en_GB"><meta property="og:title" content="{escape(document_title, quote=True)}"><meta property="og:description" content="What’s happening now…"><meta property="og:url" content="{escape(canonical, quote=True)}">
+<title>{escape(document_title)}</title><meta name="description" content="{escape(t['description'], quote=True)}">
+<meta property="og:type" content="website"><meta property="og:locale" content="{t['og_locale']}"><meta property="og:title" content="{escape(document_title, quote=True)}"><meta property="og:description" content="{escape(t['tagline'], quote=True)}"><meta property="og:url" content="{escape(canonical, quote=True)}">
 <meta name="color-scheme" content="dark"><meta name="theme-color" content="#090b0e"><meta name="generated-at" content="{stamp}"><link rel="canonical" href="{escape(canonical, quote=True)}"><link rel="alternate" type="application/rss+xml" title="{escape(SITE_TITLE, quote=True)} RSS" href="{base}rss.xml"><link rel="stylesheet" href="{base}assets/portal.css"></head>
-<body><a class="skip-link" href="#main-content">Skip to content</a><div class="topline"><div class="shell"><span>THE DAILY BRIEFING · STORIES FROM AROUND THE WORLD</span><span>INDEPENDENT NEWS AGGREGATOR</span></div></div>
-<header class="masthead"><div class="shell masthead-row"><div><a class="brand" href="{base}">{escape(SITE_TITLE)}</a><div class="brand-sub">What’s happening now…</div></div><div class="edition">{now.astimezone(PARIS).strftime('%d.%m.%Y')}<br>Updated <time datetime="{stamp}">{stamp}</time> · Europe/Paris</div><a class="manage-button" href="{base}live.html">Live reader</a></div></header>
-{body}<footer class="footer"><div class="shell"><a href="{base}sources/">By source</a> · <a href="{base}trending/">Trending</a> · <a href="{base}archive/">Archive</a> · <a href="{base}rss.xml">RSS</a><p>Descriptions are snippets from the publishers' or aggregators' RSS feeds, not original summaries. Links go to publishers directly or via Google News.</p><p>Updated {stamp} · Europe/Paris</p></div></footer></body></html>'''
+<body><a class="skip-link" href="#main-content">{t['skip']}</a><div class="topline"><div class="shell"><span>{t['topline'][0]}</span><span>{t['topline'][1]}</span></div></div>
+<header class="masthead"><div class="shell masthead-row"><div><a class="brand" href="{home}">{escape(site)}</a><div class="brand-sub">{t['tagline']}</div></div><div class="edition">{now.astimezone(PARIS).strftime('%d.%m.%Y')}<br>{t['updated']} <time datetime="{stamp}">{stamp}</time> · Europe/Paris</div><a class="manage-button" href="{base}live.html">{t['live_reader']}</a></div></header>
+{body}<footer class="footer"><div class="shell"><a href="{base}sources/">{t['by_source']}</a> · <a href="{base}trending/">{t['trending']}</a> · <a href="{base}archive/">{t['archive']}</a> · <a href="{base}rss.xml">RSS</a><p>{t['footer_note']}</p><p>{t['updated']} {stamp} · Europe/Paris</p></div></footer></body></html>'''
+
+
+def language_href(base, prefix, lang):
+    """English is the default front page; French and Polish live in fr/ and pl/."""
+    return f'{base}{prefix}' + ('' if lang == 'en' else f'{lang}/')
 
 
 def edition_page(articles, base, prefix, language, now, failures):
-    selected = articles if language == 'All' else [a for a in articles if a['language'] == language]
-    labels = {'All': 'Front Page', 'pl': 'Polski', 'en': 'English', 'fr': 'Français'}
-    nav = '<nav class="navwrap" aria-label="News sections"><div class="shell navrow">'
-    nav += f'<a class="nav-button {"active" if language == "All" else ""}" href="{base}{prefix}"' + (' aria-current="page"' if language == 'All' else '') + '>Front Page</a>'
-    for section in SECTIONS:
-        nav += f'<a class="nav-button" href="#{section.lower()}">{SECTION_LABELS[section]}</a>'
-    nav += f'<span class="nav-extras"><a class="nav-extra" href="{base}sources/">By source</a><a class="nav-extra" href="{base}trending/">Trending</a></span>'
-    body = nav + '</div></nav><main class="shell" id="main-content"><div class="edition-label">'
-    body += f'<h1>{"Front Page" if language == "All" else labels[language] + " Edition"}</h1><div class="statusline">{plural(len(selected), "story", "stories")} · past 24 hours · {plural(len(failures), "feed", "feeds")} unavailable</div></div>'
+    """Render a front page. language is 'All' (English default) or en/fr/pl.
+
+    Every language shows the same stories; only the interface text changes,
+    because stories are never translated.
+    """
+    lang = i18n.ui_language(language)
+    t = i18n.TEXT[lang]
+    labels = t['sections']
+    home = language_href(base, prefix, lang)
+    nav = f'<nav class="navwrap" aria-label="{t["sections_nav"]}"><div class="shell navrow">'
+    for section in MENU:
+        nav += f'<a class="nav-button" href="#{section.lower()}">{escape(labels[section])}</a>'
+    nav += f'<span class="nav-languages" role="group" aria-label="{t["language_nav"]}">'
+    for code in i18n.LANGUAGES:
+        current = code == lang
+        nav += (f'<a class="nav-language{" active" if current else ""}" href="{language_href(base, prefix, code)}" '
+                f'hreflang="{code}" lang="{code}"' + (' aria-current="true"' if current else '')
+                + f'>{i18n.LANGUAGE_NAMES[code]}</a>')
+    body = nav + '</span></div></nav><main class="shell" id="main-content"><div class="edition-label">'
+    body += (f'<h1>{t["front_page"]}</h1><div class="statusline">{i18n.count(lang, len(articles), "story")} · {t["past_day"]} · '
+             + t['feeds_unavailable'].format(feeds=i18n.count(lang, len(failures), 'feed')) + '</div></div>')
     if failures:
-        body += ('<details class="feed-failures"><summary>Unavailable feeds</summary><ul>'
+        body += (f'<details class="feed-failures"><summary>{t["unavailable_feeds"]}</summary><ul>'
                  + ''.join(f'<li>{escape(failure.split(" (", 1)[0])}</li>' for failure in failures) + '</ul></details>')
-    body += '<p class="classification-note">Ordered by distinct publisher count, then recency.</p>'
-    if language == 'All':
-        body += top_stories(selected, now)
-        body += ('<div class="panel-pair">' + dashboard.most_covered(selected, SECTION_LABELS)
-                 + dashboard.trending_panel(dashboard.trending(selected), base) + '</div>')
-    for section in SECTIONS:
-        items = [a for a in selected if a['section'] == section]
-        body += f'<section class="section" id="{section.lower()}" aria-label="{section}"><div class="section-heading"><h2 class="section-title">{SECTION_LABELS[section]}</h2><span>{plural(len(items), "story", "stories")}</span></div>'
+    body += f'<p class="classification-note">{t["ordering"]}</p>'
+    body += top_stories(articles, now, lang)
+    if articles:
+        body += ('<div class="panel-pair">' + dashboard.most_covered(articles, labels, t)
+                 + dashboard.trending_panel(dashboard.trending(articles), base, t) + '</div>')
+    for section in MENU:
+        items = [a for a in articles if a['section'] == section]
+        body += f'<section class="section" id="{section.lower()}" aria-label="{section}"><div class="section-heading"><h2 class="section-title">{escape(labels[section])}</h2><span>{i18n.count(lang, len(items), "story")}</span></div>'
         subgroup = [a for a in items if a.get('subgroup') == 'BNP Paribas'] if section == 'Financial' else []
         if section == 'Financial':
             body += '<p><a href="#bnp-paribas">BNP Paribas</a></p>'
             items = [a for a in items if a.get('subgroup') != 'BNP Paribas']
         if items:
-            body += '<div class="portal-grid section-lead">' + story(items[0], 'lead', now)
-            body += '<div class="story-grid">' + ''.join(story(a, now=now) for a in items[1:]) + '</div></div>'
+            body += '<div class="portal-grid section-lead">' + story(items[0], 'lead', now, lang)
+            body += '<div class="story-grid">' + ''.join(story(a, now=now, lang=lang) for a in items[1:]) + '</div></div>'
         elif not subgroup:
-            body += '<p class="empty">No stories in this section for this edition.</p>'
+            body += f'<p class="empty">{t["empty_section"]}</p>'
         if section == 'Financial':
-            body += '<section id="bnp-paribas" aria-label="BNP Paribas"><div class="section-heading"><h3 class="section-title">BNP Paribas</h3>' + f'<span>{plural(len(subgroup), "story", "stories")}</span></div>'
-            body += ('<div class="story-grid">' + ''.join(story(a, now=now) for a in subgroup) + '</div>'
-                     if subgroup else '<p class="empty">No BNP Paribas stories in this edition.</p>')
+            body += '<section id="bnp-paribas" aria-label="BNP Paribas"><div class="section-heading"><h3 class="section-title">BNP Paribas</h3>' + f'<span>{i18n.count(lang, len(subgroup), "story")}</span></div>'
+            body += ('<div class="story-grid">' + ''.join(story(a, now=now, lang=lang) for a in subgroup) + '</div>'
+                     if subgroup else f'<p class="empty">{t["empty_bnp"]}</p>')
             body += '</section>'
         body += '</section>'
-    body += '<p class="language-links">Read by language: ' + ' · '.join(
-        f'<a href="{base}{prefix}{lang}/">{labels[lang]}</a>' for lang in ('pl', 'fr', 'en')) + '</p>'
     suffix = '' if language == 'All' else language + '/'
-    return page(base, base + prefix + suffix, labels[language], body + '</main>', now,
-                'en' if language == 'All' else language)
+    return page(base, base + prefix + suffix, t['front_page'], body + '</main>', now, lang, home=home, front=True)
 
 
 def load_stats(history):
@@ -382,7 +404,7 @@ def build(output, base_url, *, now=None, feeds=None, fetcher=None, history_root=
         stats = load_stats(history)
         stats[edition] = dashboard.day_stats(articles, SECTIONS)
         (stage / 'stats.json').write_text(json.dumps({'schemaVersion': 1, 'days': stats}, ensure_ascii=False, indent=2, sort_keys=True) + '\n', encoding='utf-8')
-        archive = dashboard.archive_page(html_base, editions, stats, SECTIONS, SECTION_LABELS)
+        archive = dashboard.archive_page(html_base, editions, stats, MENU, SECTION_LABELS)
         (stage / 'archive').mkdir()
         (stage / 'archive/index.html').write_text(page(html_base, html_base + 'archive/', 'Archive', archive, now), encoding='utf-8')
         for folder, title, content in (

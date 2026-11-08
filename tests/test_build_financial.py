@@ -19,10 +19,10 @@ class FinancialTests(unittest.TestCase):
         now = datetime(2026, 11, 1, 12, tzinfo=timezone.utc)
         rendered = static.edition_page(stories, 'https://example.test/', '', 'All', now, [])
         self.assertEqual(static.SECTIONS, ('Poland', 'France', 'World', 'Technology', 'Financial'))
-        self.assertIn('href="#financial">Financial News</a>', rendered)
+        self.assertIn('href="#financial">Global Markets</a>', rendered)
         self.assertIn('href="#bnp-paribas">BNP Paribas</a>', rendered)
         self.assertIn('id="bnp-paribas"', rendered)
-        financial = rendered.split('id="financial"', 1)[1]
+        financial = rendered.split('id="financial"', 1)[1].split('id="technology"', 1)[0]
         self.assertIn('2 stories', financial)
         self.assertIn('1 story', financial.split('id="bnp-paribas"', 1)[1])
         self.assertEqual(rendered.count('<article '), 2)
@@ -53,7 +53,7 @@ class FinancialTests(unittest.TestCase):
         stories = enrich_articles([article('BNP Paribas announces partnership')])
         rendered = static.edition_page(stories, 'https://example.test/', '', 'All',
                                        datetime(2026, 11, 1, tzinfo=timezone.utc), [])
-        financial = rendered.split('id="financial"', 1)[1]
+        financial = rendered.split('id="financial"', 1)[1].split('id="technology"', 1)[0]
         self.assertNotIn('No stories in this section', financial)
 
     def test_legacy_keeps_explicit_evidence_beyond_snippet_length(self):

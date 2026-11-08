@@ -86,14 +86,16 @@ class TopStoriesTests(unittest.TestCase):
         self.assertEqual(top.count('<li '), edition.TOP_STORIES)
         self.assertIn('TEST ONLY story 0', top)
         self.assertNotIn('TEST ONLY story 7', top)
-        self.assertIn('href="#technology">Technology</a>', top)
+        self.assertIn('href="#technology">Tech</a>', top)
         self.assertLess(html.index('class="top-stories"'), html.index('id="poland"'))
         self.assertEqual(html.count('<article '), 9)
 
-    def test_language_pages_and_empty_editions_have_no_top_stories(self):
+    def test_language_pages_translate_top_stories_and_empty_editions_have_none(self):
         edition = builder()
         now, items = self.stories(edition, 3)
-        self.assertNotIn('top-stories', edition.edition_page(items, 'https://example.test/', '', 'pl', now, []))
+        polish = edition.edition_page(items, 'https://example.test/', '', 'pl', now, [])
+        self.assertIn('id="top-stories-title">Najważniejsze</h2>', polish)
+        self.assertEqual(polish.count('<article '), 3)
         self.assertNotIn('top-stories', edition.edition_page([], 'https://example.test/', '', 'All', now, []))
 
 

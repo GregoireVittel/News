@@ -173,3 +173,9 @@ body { line-height:1.5; }
         /* Section menu stays at the top of the screen while scrolling */
         .navwrap { position:sticky; top:0; z-index:40; }
         [id] { scroll-margin-top:64px; }
+        /* Language switch: English / Français / Polski, right of the section menu */
+        .nav-languages { margin-left:auto; display:flex; gap:2px; padding-left:12px; border-left:1px solid var(--line); }
+        .nav-language { color:#b9bdc0; font:600 11px 'DM Sans',sans-serif; letter-spacing:.06em; padding:17px 10px 15px; white-space:nowrap; border-bottom:2px solid transparent; }
+        .nav-language:hover { color:var(--red); }
+        .nav-language.active { color:var(--red); border-color:var(--red); }
+        @media(max-width:700px) { .navrow { flex-wrap:wrap; gap:0; } .nav-languages { order:-1; width:100%; margin-left:0; padding-left:0; border-left:0; border-bottom:1px solid var(--line); justify-content:flex-end; } .nav-language { padding:10px 10px 8px; } }
