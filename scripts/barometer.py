@@ -273,26 +273,28 @@ def _num(value, digits=1, sign=True):
     return f'{value:+.{digits}f}' if sign else f'{value:.{digits}f}'
 
 
-def gauge(value):
-    """Half-dial from -100 to +100 with five weather zones and a needle."""
+def gauge(value, zones=ZONES, lo=-100, hi=100, label='Barometer reading', fmt='{:+d}'):
+    """Half-dial from lo to hi with five coloured zones (negative to positive) and a needle."""
     cx, cy, r = 160, 150, 120
 
     def point(v, radius):
-        angle = pi * (1 - (v + 100) / 200)
+        angle = pi * (1 - (v - lo) / (hi - lo))
         return cx + radius * cos(angle), cy - radius * sin(angle)
 
     arcs = ''
     fills = (NEG, NEG, MID, POS, POS)
     opacity = (1, .55, 1, .55, 1)
-    for (low, high, name), fill, alpha in zip(ZONES, fills, opacity):
-        high = min(high, 100)
+    for (low, high, name), fill, alpha in zip(zones, fills, opacity):
+        low, high = max(low, lo), min(high, hi)
         (x1, y1), (x2, y2) = point(low, r), point(high, r)
         arcs += (f'<path d="M{x1:.1f},{y1:.1f} A{r},{r} 0 0 1 {x2:.1f},{y2:.1f}" stroke="{fill}" stroke-opacity="{alpha}" '
-                 f'stroke-width="22" fill="none"><title>{name}: {low:+d} to {high:+d}</title></path>')
-        lx, ly = point((low + high) / 2, r + 26)
-        arcs += f'<text class="gauge-zone" x="{lx:.1f}" y="{ly:.1f}" text-anchor="middle">{name}</text>'
-    nx, ny = point(max(-100, min(100, value)), r - 30)
-    return (f'<svg class="gauge" viewBox="-36 0 392 175" role="img" aria-label="Barometer reading {value:+d}, {zone(value)}">{arcs}'
+                 f'stroke-width="22" fill="none"><title>{name}: {fmt.format(low)} to {fmt.format(high)}</title></path>')
+        lx, ly = point((low + high) / 2, r + 22)
+        anchor = 'end' if lx < cx - 60 else 'start' if lx > cx + 60 else 'middle'
+        arcs += f'<text class="gauge-zone" x="{lx:.1f}" y="{ly:.1f}" text-anchor="{anchor}">{name}</text>'
+    nx, ny = point(max(lo, min(hi, value)), r - 30)
+    name = next(n for low, high, n in zones if low <= value < high or high >= hi and value >= low)
+    return (f'<svg class="gauge" viewBox="-70 0 460 175" role="img" aria-label="{label} {fmt.format(value)}, {name}">{arcs}'
             f'<line class="gauge-needle" x1="{cx}" y1="{cy}" x2="{nx:.1f}" y2="{ny:.1f}"/>'
             f'<circle class="gauge-hub" cx="{cx}" cy="{cy}" r="7"/></svg>')
 

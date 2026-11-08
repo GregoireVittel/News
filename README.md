@@ -54,6 +54,38 @@ so hourly rebuilds never double count a story, and then folded into one row per 
 On the first build it is filled from the saved daily `articles.json` snapshots.
 It shows co-movement, not cause and effect.
 
+## Sentiment
+
+`sentiment/` (menu: **Sentiment**, `scripts/sentiment.py`) is a fear and greed index for French
+markets, from 0 (extreme fear) to 100 (extreme greed). Four daily readings are each ranked as a
+percentile within their last 756 trading days (about three years; a rank needs at least 252),
+then averaged:
+
+| Reading | Raw value | High score means |
+|---|---|---|
+| Equity momentum | CAC 40 vs its 125-day average, % | further above than usual |
+| Volatility | CAC 40 20-day annualised volatility, flipped | calmer than usual |
+| Safe haven | EUR/CHF 20-day change, % | franc weakening |
+| Stocks vs gold | CAC 40 20-day return minus gold's in euros | shares ahead of gold |
+
+Bands: below 25 extreme fear, 25–45 fear, 45–55 neutral, 55–75 greed, 75+ extreme greed.
+
+Each day's rank uses that day and earlier days only, so history is not rewritten. The index
+is left blank when fewer than two readings exist.
+
+Inputs are 10 years of daily closes from Yahoo Finance (`^FCHI`, `EURCHF=X`, `GC=F`,
+`EURUSD=X`), fetched every build. If an input fails, its reading is left out. If the CAC 40
+fails, the page keeps the previous `sentiment.json`.
+
+The page shows:
+
+- the dial and comparisons with the previous close, a week, a month and a year ago;
+- where today sits in the record;
+- each reading with its 3-year range;
+- the Barometer's news tone, shown alongside but not counted;
+- 3-year and full-history charts;
+- `sentiment.csv` for download.
+
 ## Build (standard-library Python)
 
 ```sh
