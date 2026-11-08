@@ -121,9 +121,10 @@ if __package__ in (None, ''):
     import barometer
     import dashboard
     import i18n
+    import sentiment
 else:
     from .story_classification import enrich_articles, bnp_bank_article
-    from . import barometer, dashboard, i18n
+    from . import barometer, dashboard, i18n, sentiment
 
 ROOT = Path(__file__).resolve().parents[1]
 PARIS = ZoneInfo('Europe/Paris')
@@ -194,8 +195,9 @@ def nav_links(base, active=None):
     labels = i18n.TEXT['en']['sections']
     nav = '<nav class="navwrap" aria-label="News sections"><div class="shell navrow">'
     nav += ''.join(f'<a class="nav-button" href="{base}#{s.lower()}">{escape(labels[s])}</a>' for s in MENU)
-    nav += (f'<a class="nav-button{" active" if active == "barometer" else ""}" href="{base}barometer/"'
-            + (' aria-current="page"' if active == 'barometer' else '') + '>Barometer</a>')
+    for key, title in (('barometer', 'Barometer'), ('sentiment', 'Sentiment')):
+        nav += (f'<a class="nav-button{" active" if active == key else ""}" href="{base}{key}/"'
+                + (' aria-current="page"' if active == key else '') + f'>{title}</a>')
     return nav + '</div></nav>'
 
 
@@ -331,6 +333,7 @@ def edition_page(articles, base, prefix, language, now, failures):
     for section in MENU:
         nav += f'<a class="nav-button" href="#{section.lower()}">{escape(labels[section])}</a>'
     nav += f'<a class="nav-button" href="{base}barometer/">Barometer</a>'
+    nav += f'<a class="nav-button" href="{base}sentiment/">Sentiment</a>'
     nav += f'<span class="nav-languages" role="group" aria-label="{t["language_nav"]}">'
     for code in i18n.LANGUAGES:
         current = code == language
@@ -408,7 +411,11 @@ def build(output, base_url, *, now=None, feeds=None, fetcher=None, history_root=
     edition = now.astimezone(PARIS).date().isoformat()
     articles, failures = collect(default_feeds() if feeds is None else feeds, fetcher or fetch_feed, now)
     articles = enrich_articles(articles)
-    market, market_info = fetch_cac40(market_fetcher or (fetch_url if fetcher is None else None))
+    get = market_fetcher or (fetch_url if fetcher is None else None)
+    market, market_info = fetch_cac40(get)
+    mood, mood_errors = sentiment.fetch(get) if get else ({}, [])
+    for error in mood_errors:
+        LOG.warning('Sentiment input unavailable: %s', error)
     data = {'schemaVersion': 2, 'generatedAt': now.astimezone(PARIS).isoformat(timespec='seconds'),
             'sections': list(SECTIONS),
             'articles': [dict(a, date=a['date'].isoformat()) for a in articles]}
@@ -458,6 +465,20 @@ def build(output, base_url, *, now=None, feeds=None, fetcher=None, history_root=
         (stage / 'barometer/index.html').write_text(
             page(html_base, f'{html_base}barometer/', 'Barometer',
                  nav_links(html_base, 'barometer') + barometer.page(gauge, articles, now, html_base, note), now), encoding='utf-8')
+        rows = sentiment.compute(mood) if 'cac' in mood else []
+        mood_note = 'Some inputs could not be updated in this build: ' + ', '.join(e.split(':', 1)[0] for e in mood_errors) + '.' if mood_errors else ''
+        if not rows:
+            rows = sentiment.load(history / 'sentiment.json').get('days', [])
+            mood_note = 'Market data could not be updated in this build; showing the last saved values.' if rows and get else mood_note
+        (stage / 'sentiment.json').write_text(json.dumps({'schemaVersion': sentiment.SCHEMA, 'days': rows}, separators=(',', ':')) + '\n', encoding='utf-8')
+        (stage / 'sentiment.csv').write_text(sentiment.csv_text(rows), encoding='utf-8')
+        news_now = barometer.summarize(barometer.score(a) for a in barometer.market_stories(articles))
+        (stage / 'sentiment').mkdir()
+        (stage / 'sentiment/index.html').write_text(
+            page(html_base, f'{html_base}sentiment/', 'Sentiment',
+                 nav_links(html_base, 'sentiment') + sentiment.page(rows, news_now, html_base, mood_note), now), encoding='utf-8')
+        market_info['sentiment'] = dict(latest=rows[-1]['date'] if rows else None, index=rows[-1]['index'] if rows else None,
+                                        errors=mood_errors)
         for folder, title, content in (
                 ('sources', 'By source', dashboard.sources_page(articles, SECTION_LABELS, now)),
                 ('trending', 'Trending', dashboard.trending_page(dashboard.trending(articles), SECTION_LABELS, now))):
