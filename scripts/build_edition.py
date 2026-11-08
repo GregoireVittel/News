@@ -118,11 +118,12 @@ from urllib.error import HTTPError, URLError
 if __package__ in (None, ''):
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     from story_classification import enrich_articles, bnp_bank_article
+    import barometer
     import dashboard
     import i18n
 else:
     from .story_classification import enrich_articles, bnp_bank_article
-    from . import dashboard, i18n
+    from . import barometer, dashboard, i18n
 
 ROOT = Path(__file__).resolve().parents[1]
 PARIS = ZoneInfo('Europe/Paris')
@@ -163,6 +164,39 @@ def fetch_feed(feed, attempts=2, backoff=2.0):
     if len(data) > 4 * 1024 * 1024:
         raise ValueError('Feed exceeds 4 MiB limit')
     return data
+
+
+def fetch_url(url):
+    """Market data download (CAC 40 prices); same limits as feeds."""
+    request = Request(url, headers={'User-Agent': 'Mozilla/5.0 (compatible; WorldNewsStatic/1.0)', 'Accept': 'application/json, text/csv, */*'})
+    with urlopen(request, timeout=15) as response:
+        data = response.read(4 * 1024 * 1024 + 1)
+    if len(data) > 4 * 1024 * 1024:
+        raise ValueError('Response exceeds 4 MiB limit')
+    return data
+
+
+def fetch_cac40(get):
+    """CAC 40 closes plus a report; a failure never stops the edition."""
+    if get is None:
+        return {}, dict(source=None, latest=None, errors=[])
+    closes, source, errors = barometer.fetch_market(get)
+    for error in errors:
+        LOG.warning('CAC 40 source unavailable: %s', error)
+    latest = max(closes) if closes else None
+    if source:
+        LOG.info('CAC 40: %d closes from %s, latest %s', len(closes), source, latest)
+    return closes, dict(source=source, latest=latest, errors=errors)
+
+
+def nav_links(base, active=None):
+    """Section menu for pages other than the front pages: links back to each section."""
+    labels = i18n.TEXT['en']['sections']
+    nav = '<nav class="navwrap" aria-label="News sections"><div class="shell navrow">'
+    nav += ''.join(f'<a class="nav-button" href="{base}#{s.lower()}">{escape(labels[s])}</a>' for s in MENU)
+    nav += (f'<a class="nav-button{" active" if active == "barometer" else ""}" href="{base}barometer/"'
+            + (' aria-current="page"' if active == 'barometer' else '') + '>Barometer</a>')
+    return nav + '</div></nav>'
 
 
 def collect(feeds, fetcher, now):
@@ -296,6 +330,7 @@ def edition_page(articles, base, prefix, language, now, failures):
     nav = f'<nav class="navwrap" aria-label="{t["sections_nav"]}"><div class="shell navrow">'
     for section in MENU:
         nav += f'<a class="nav-button" href="#{section.lower()}">{escape(labels[section])}</a>'
+    nav += f'<a class="nav-button" href="{base}barometer/">Barometer</a>'
     nav += f'<span class="nav-languages" role="group" aria-label="{t["language_nav"]}">'
     for code in i18n.LANGUAGES:
         current = code == language
@@ -349,12 +384,13 @@ def load_stats(history):
         return {}
 
 
-def build(output, base_url, *, now=None, feeds=None, fetcher=None, history_root=None):
+def build(output, base_url, *, now=None, feeds=None, fetcher=None, history_root=None, market_fetcher=None):
     """Atomically install a complete site into absent/empty output; never publish it.
 
     history_root defaults to repository root; only existing dated editions are copied.
-    now must be timezone-aware. feeds/fetcher are offline test injection only.
-    Returns edition, article_count, failures, generated_at, and output.
+    now must be timezone-aware. feeds/fetcher/market_fetcher are offline test
+    injection only; CAC 40 prices are fetched only in production (no fetcher given).
+    Returns edition, article_count, failures, generated_at, market and output.
     """
     output = Path(output).resolve()
     if output == ROOT or ROOT in output.parents and output.name in ('assets', 'scripts', 'tests'):
@@ -372,6 +408,7 @@ def build(output, base_url, *, now=None, feeds=None, fetcher=None, history_root=
     edition = now.astimezone(PARIS).date().isoformat()
     articles, failures = collect(default_feeds() if feeds is None else feeds, fetcher or fetch_feed, now)
     articles = enrich_articles(articles)
+    market, market_info = fetch_cac40(market_fetcher or (fetch_url if fetcher is None else None))
     data = {'schemaVersion': 2, 'generatedAt': now.astimezone(PARIS).isoformat(timespec='seconds'),
             'sections': list(SECTIONS),
             'articles': [dict(a, date=a['date'].isoformat()) for a in articles]}
@@ -411,6 +448,16 @@ def build(output, base_url, *, now=None, feeds=None, fetcher=None, history_root=
         archive = dashboard.archive_page(html_base, editions, stats, MENU, SECTION_LABELS)
         (stage / 'archive').mkdir()
         (stage / 'archive/index.html').write_text(page(html_base, html_base + 'archive/', 'Archive', archive, now), encoding='utf-8')
+        previous = barometer.load(history / 'barometer.json')
+        known = barometer.backfill(history) if not previous else []
+        gauge = barometer.update(previous, known + articles, now, market)
+        (stage / 'barometer.json').write_text(json.dumps(gauge, ensure_ascii=False, sort_keys=True) + '\n', encoding='utf-8')
+        note = (f'CAC 40 prices: {market_info["source"]}.' if market_info['source'] else
+                'CAC 40 prices could not be updated in this build; showing the last saved values.' if market_info['errors'] else '')
+        (stage / 'barometer').mkdir()
+        (stage / 'barometer/index.html').write_text(
+            page(html_base, f'{html_base}barometer/', 'Barometer',
+                 nav_links(html_base, 'barometer') + barometer.page(gauge, articles, now, html_base, note), now), encoding='utf-8')
         for folder, title, content in (
                 ('sources', 'By source', dashboard.sources_page(articles, SECTION_LABELS, now)),
                 ('trending', 'Trending', dashboard.trending_page(dashboard.trending(articles), SECTION_LABELS, now))):
@@ -434,7 +481,7 @@ def build(output, base_url, *, now=None, feeds=None, fetcher=None, history_root=
             url = ET.SubElement(sitemap, 'url')
             ET.SubElement(url, 'loc').text = base + relative.removesuffix('index.html')
         ET.ElementTree(sitemap).write(stage / 'sitemap.xml', encoding='utf-8', xml_declaration=True)
-        result = {'edition': edition, 'article_count': len(articles), 'failures': failures, 'generated_at': now.astimezone(PARIS).isoformat(timespec='seconds'), 'output': str(output)}
+        result = {'edition': edition, 'article_count': len(articles), 'failures': failures, 'generated_at': now.astimezone(PARIS).isoformat(timespec='seconds'), 'market': market_info, 'output': str(output)}
         (stage / 'build-info.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         os.replace(stage, output)
         return result
