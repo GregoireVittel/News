@@ -8,11 +8,11 @@ The menu is **World / Poland / France / Global Markets / Tech** (stored sections
 under Global Markets. Technology and financial subjects take precedence over geography.
 Publisher catalog categories remain provenance, not final story sections.
 
-A language switch at the right of the menu offers **English / Français / Polski**.
-It changes the interface text (menu, headings, counts, footer; see `scripts/i18n.py`),
-not the stories: every language shows every story, untranslated. English is the
-front page `/`; French is `fr/` and Polish `pl/` (also inside dated editions).
-`en/` remains as an English copy for old links.
+A switch at the right of the menu offers **English / Français / Polski**. It filters
+stories by the language they were written in. Page text stays English. The front page `/`
+shows every language; `en/`, `fr/` and `pl/` show only English, French or Polish stories
+in every section. Dated editions work the same way. Clicking the active language
+again goes back to all languages.
 
 Descriptions are **snippets supplied by the existing publishers' feeds**, as in
 the original reader, not original/editorial/AI summaries. No automatic translation

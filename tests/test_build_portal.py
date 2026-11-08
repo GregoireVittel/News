@@ -91,18 +91,13 @@ class PortalTests(unittest.TestCase):
         self.assertNotIn('<script', html)
         self.assertIn('portal-grid', html)
 
-    def test_menu_is_world_poland_france_global_markets_tech_in_each_language(self):
+    def test_menu_is_world_poland_france_global_markets_tech_with_story_language_filter(self):
         import re
         module = builder()
         now = datetime(2026, 11, 1, 12, tzinfo=timezone.utc)
-        expected = {
-            'All': ['World', 'Poland', 'France', 'Global Markets', 'Tech'],
-            'en': ['World', 'Poland', 'France', 'Global Markets', 'Tech'],
-            'fr': ['Monde', 'Pologne', 'France', 'Marchés mondiaux', 'Tech'],
-            'pl': ['Świat', 'Polska', 'Francja', 'Rynki globalne', 'Technologie'],
-        }
+        labels = ['World', 'Poland', 'France', 'Global Markets', 'Tech']
         for prefix in ('', '2026-11-01/'):
-            for language, labels in expected.items():
+            for language in ('All', 'en', 'fr', 'pl'):
                 html = module.edition_page([], 'https://example.test/News/', prefix, language, now, [])
                 links = re.findall(r'<a class="nav-button[^"]*" href="([^"]+)"[^>]*>([^<]+)</a>', html)
                 self.assertEqual(links, list(zip(
@@ -110,13 +105,15 @@ class PortalTests(unittest.TestCase):
                 # Sections appear on the page in menu order.
                 positions = [html.index(f'id="{a}"') for a in ('world', 'poland', 'france', 'financial', 'technology')]
                 self.assertEqual(positions, sorted(positions))
-                switch = re.findall(r'<a class="nav-language( active)?" href="([^"]+)" hreflang="(\w+)"[^>]*>([^<]+)</a>', html)
+                switch = re.findall(r'<a class="nav-language( active)?" href="([^"]+)" data-lang="(\w+)"[^>]*>([^<]+)</a>', html)
                 base = 'https://example.test/News/' + prefix
+                # Each option filters to its language; the active one clears the filter.
                 self.assertEqual([(href, code, name) for _, href, code, name in switch], [
-                    (base, 'en', 'English'), (base + 'fr/', 'fr', 'Français'), (base + 'pl/', 'pl', 'Polski')])
-                active = 'en' if language == 'All' else language
-                self.assertEqual([code for flag, _, code, _ in switch if flag], [active])
-                self.assertIn(f'<html lang="{active}">', html)
+                    (base if code == language else f'{base}{code}/', code, name)
+                    for code, name in (('en', 'English'), ('fr', 'Français'), ('pl', 'Polski'))])
+                self.assertEqual([code for flag, _, code, _ in switch if flag], [] if language == 'All' else [language])
+                self.assertIn('<html lang="en">', html)
+                self.assertIn('<h1>Front Page</h1>', html)
 
     def test_build_persists_enrichment_and_legacy_aliases(self):
         module = builder()
@@ -169,15 +166,8 @@ if __name__ == '__main__':
 
 
 class LanguageTests(unittest.TestCase):
-    def test_counts_follow_each_languages_plural_rules(self):
+    def test_interface_text_is_english_only(self):
         from scripts import i18n
-        self.assertEqual([i18n.count('pl', n, 'story') for n in (1, 2, 5, 12, 22)],
-                         ['1 artykuł', '2 artykuły', '5 artykułów', '12 artykułów', '22 artykuły'])
-        self.assertEqual([i18n.count('fr', n, 'story') for n in (0, 1, 2)], ['0 article', '1 article', '2 articles'])
-        self.assertEqual(i18n.count('en', 1, 'source'), '1 source')
-
-    def test_every_language_translates_the_same_interface_keys(self):
-        from scripts import i18n
-        for lang in i18n.LANGUAGES:
-            self.assertEqual(set(i18n.TEXT[lang]), set(i18n.TEXT['en']))
-            self.assertEqual(set(i18n.TEXT[lang]['sections']), set(i18n.MENU))
+        self.assertEqual(list(i18n.TEXT), ['en'])
+        self.assertEqual(set(i18n.TEXT['en']['sections']), set(i18n.MENU))
+        self.assertEqual([i18n.count(code, 2, 'story') for code in i18n.LANGUAGES], ['2 stories'] * 3)

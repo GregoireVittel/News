@@ -279,42 +279,46 @@ def page(base, canonical, title, body, now, lang='en', home=None, front=False):
 
 
 def language_href(base, prefix, lang):
-    """English is the default front page; French and Polish live in fr/ and pl/."""
-    return f'{base}{prefix}' + ('' if lang == 'en' else f'{lang}/')
+    """All languages live at the edition root; en/, fr/ and pl/ keep one story language."""
+    return f'{base}{prefix}' + ('' if lang == 'All' else f'{lang}/')
 
 
 def edition_page(articles, base, prefix, language, now, failures):
-    """Render a front page. language is 'All' (English default) or en/fr/pl.
+    """Render a front page. language is 'All' or en/fr/pl.
 
-    Every language shows the same stories; only the interface text changes,
-    because stories are never translated.
+    The language switch filters stories by the language they were written in;
+    the interface text stays English on every page.
     """
-    lang = i18n.ui_language(language)
+    lang = 'en'
     t = i18n.TEXT[lang]
     labels = t['sections']
-    home = language_href(base, prefix, lang)
+    selected = articles if language == 'All' else [a for a in articles if a['language'] == language]
     nav = f'<nav class="navwrap" aria-label="{t["sections_nav"]}"><div class="shell navrow">'
     for section in MENU:
         nav += f'<a class="nav-button" href="#{section.lower()}">{escape(labels[section])}</a>'
     nav += f'<span class="nav-languages" role="group" aria-label="{t["language_nav"]}">'
     for code in i18n.LANGUAGES:
-        current = code == lang
-        nav += (f'<a class="nav-language{" active" if current else ""}" href="{language_href(base, prefix, code)}" '
-                f'hreflang="{code}" lang="{code}"' + (' aria-current="true"' if current else '')
+        current = code == language
+        # Selecting the active language again clears the filter.
+        target = language_href(base, prefix, 'All' if current else code)
+        nav += (f'<a class="nav-language{" active" if current else ""}" href="{target}" data-lang="{code}"'
+                + (' aria-current="true" title="Show stories in all languages"' if current
+                   else f' title="Only stories written in {i18n.LANGUAGE_NAMES[code]}"')
                 + f'>{i18n.LANGUAGE_NAMES[code]}</a>')
     body = nav + '</span></div></nav><main class="shell" id="main-content"><div class="edition-label">'
-    body += (f'<h1>{t["front_page"]}</h1><div class="statusline">{i18n.count(lang, len(articles), "story")} · {t["past_day"]} · '
+    scope = '' if language == 'All' else f' in {i18n.LANGUAGE_NAMES[language]}'
+    body += (f'<h1>{t["front_page"]}</h1><div class="statusline">{i18n.count(lang, len(selected), "story")}{scope} · {t["past_day"]} · '
              + t['feeds_unavailable'].format(feeds=i18n.count(lang, len(failures), 'feed')) + '</div></div>')
     if failures:
         body += (f'<details class="feed-failures"><summary>{t["unavailable_feeds"]}</summary><ul>'
                  + ''.join(f'<li>{escape(failure.split(" (", 1)[0])}</li>' for failure in failures) + '</ul></details>')
     body += f'<p class="classification-note">{t["ordering"]}</p>'
-    body += top_stories(articles, now, lang)
-    if articles:
-        body += ('<div class="panel-pair">' + dashboard.most_covered(articles, labels, t)
-                 + dashboard.trending_panel(dashboard.trending(articles), base, t) + '</div>')
+    body += top_stories(selected, now, lang)
+    if selected:
+        body += ('<div class="panel-pair">' + dashboard.most_covered(selected, labels, t)
+                 + dashboard.trending_panel(dashboard.trending(selected), base, t) + '</div>')
     for section in MENU:
-        items = [a for a in articles if a['section'] == section]
+        items = [a for a in selected if a['section'] == section]
         body += f'<section class="section" id="{section.lower()}" aria-label="{section}"><div class="section-heading"><h2 class="section-title">{escape(labels[section])}</h2><span>{i18n.count(lang, len(items), "story")}</span></div>'
         subgroup = [a for a in items if a.get('subgroup') == 'BNP Paribas'] if section == 'Financial' else []
         if section == 'Financial':
@@ -331,8 +335,8 @@ def edition_page(articles, base, prefix, language, now, failures):
                      if subgroup else f'<p class="empty">{t["empty_bnp"]}</p>')
             body += '</section>'
         body += '</section>'
-    suffix = '' if language == 'All' else language + '/'
-    return page(base, base + prefix + suffix, t['front_page'], body + '</main>', now, lang, home=home, front=True)
+    return page(base, language_href(base, prefix, language), t['front_page'], body + '</main>', now, lang,
+                home=language_href(base, prefix, 'All'), front=True)
 
 
 def load_stats(history):

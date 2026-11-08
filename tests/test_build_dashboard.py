@@ -102,7 +102,8 @@ class BuildIntegrationTests(unittest.TestCase):
             for removed in ('class="numbers"', 'glance', 'pulse'):
                 self.assertNotIn(removed, front)
             self.assertIn('<html lang="en">', front)
-            self.assertIn('<html lang="pl">', (site / 'pl/index.html').read_text())
+            # The language switch filters stories; the page text stays English.
+            self.assertIn('<html lang="en">', (site / 'pl/index.html').read_text())
             self.assertNotIn('Wygenerowano', front)
             self.assertNotIn('Archiwum', front)
             self.assertIn('href="https://example.test/News/sources/"', front)

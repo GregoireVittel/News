@@ -60,10 +60,9 @@ class EditionTests(unittest.TestCase):
             self.assertEqual(generate(root, [entry], now, 'https://example.test/News/'), 1)
             for relative in ('index.html', 'lang/fr.html', 'archive/2026-11-01.html'):
                 page = (root / relative).read_text()
-                french = relative == 'lang/fr.html'
-                self.assertIn('Ce qui se passe maintenant…' if french else 'What’s happening now…', page)
+                self.assertIn('What’s happening now…', page)
 
-                self.assertIn('Sources' if french else 'Coverage sources', page)
+                self.assertIn('Coverage sources', page)
                 self.assertEqual(page.count('<article '), 1)
                 for section in ('Poland', 'France', 'World', 'Technology', 'Financial'):
                     self.assertIn(f'aria-label="{section}"', page)

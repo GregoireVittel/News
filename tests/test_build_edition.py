@@ -132,11 +132,12 @@ class BuildTests(unittest.TestCase):
             self.assertNotIn('<script', html)
             self.assertTrue((output / '2026-11-02/index.html').exists())
             self.assertTrue((output / '2026-11-02/pl/index.html').exists())
-            # Language pages translate the interface only; every edition shows every story.
-            for lang, heading in (('en', 'Front Page'), ('fr', 'À la une'), ('pl', 'Strona główna')):
-                localized = (output / lang / 'index.html').read_text()
-                self.assertIn('TEST ONLY &amp; title', localized)
-                self.assertIn(f'<h1>{heading}</h1>', localized)
+            # Language pages keep only stories written in that language; text stays English.
+            self.assertIn('TEST ONLY &amp; title', (output / 'pl/index.html').read_text())
+            for lang in ('en', 'fr'):
+                filtered = (output / lang / 'index.html').read_text()
+                self.assertNotIn('TEST ONLY &amp; title', filtered)
+                self.assertIn('<h1>Front Page</h1>', filtered)
             archive = (output / 'archive/index.html').read_text()
             self.assertIn('/News/2026-11-02/', archive)
             self.assertNotIn('/News/2026-11-01/', archive)
