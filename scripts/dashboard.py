@@ -25,8 +25,8 @@ def is_new(article, now):
     return now - article['date'] <= NEW_WINDOW
 
 
-def new_badge(article, now):
-    return '<span class="badge-new">New</span>' if is_new(article, now) else ''
+def new_badge(article, now, label='New'):
+    return f'<span class="badge-new">{label}</span>' if is_new(article, now) else ''
 
 
 def _link(article):
@@ -39,18 +39,25 @@ def publishers(articles):
 
 # --- Most covered -----------------------------------------------------------
 
-def most_covered(articles, labels):
+ENGLISH = {'most_covered': 'Most covered', 'most_covered_note': 'stories reported by several outlets',
+           'most_covered_empty': 'No story was covered by more than one outlet in this edition.', 'outlets': 'outlets',
+           'trending': 'Trending', 'trending_note': 'words in the most headlines',
+           'trending_empty': 'Not enough overlap between headlines yet.', 'trending_all': 'All trending topics →'}
+
+
+def most_covered(articles, labels, text=None):
+    t = text or ENGLISH
     picks = [a for a in articles if a['sourceCount'] > 1][:MOST_COVERED]
-    heading = ('<div class="section-heading"><h2 class="section-title" id="covered-title">Most covered</h2>'
-               '<span>stories reported by several outlets</span></div>')
+    heading = (f'<div class="section-heading"><h2 class="section-title" id="covered-title">{t["most_covered"]}</h2>'
+               f'<span>{t["most_covered_note"]}</span></div>')
     if not picks:
         return (f'<section class="panel" aria-labelledby="covered-title">{heading}'
-                '<p class="empty-mini">No story was covered by more than one outlet in this edition.</p></section>')
+                f'<p class="empty-mini">{t["most_covered_empty"]}</p></section>')
     rows = ''
     for a in picks:
         outlets = ', '.join(escape(name) for name in dict.fromkeys(s['name'] for s in a['sources']))
-        rows += (f'<li><span class="coverage-count" aria-label="{a["sourceCount"]} outlets">{a["sourceCount"]}</span>'
-                 f'<div><a class="mini-section" href="#{a["section"].lower()}">{labels.get(a["section"], a["section"])}</a>'
+        rows += (f'<li><span class="coverage-count" aria-label="{a["sourceCount"]} {t["outlets"]}">{a["sourceCount"]}</span>'
+                 f'<div><a class="mini-section" href="#{a["section"].lower()}">{escape(labels.get(a["section"], a["section"]))}</a>'
                  f'{_link(a)}<span class="mini-meta">{outlets}</span></div></li>')
     return f'<section class="panel" aria-labelledby="covered-title">{heading}<ol class="covered-list">{rows}</ol></section>'
 
@@ -126,16 +133,17 @@ def trending(articles):
     return result
 
 
-def trending_panel(topics, base):
-    heading = ('<div class="section-heading"><h2 class="section-title" id="trending-title">Trending</h2>'
-               '<span>words in the most headlines</span></div>')
+def trending_panel(topics, base, text=None):
+    t = text or ENGLISH
+    heading = (f'<div class="section-heading"><h2 class="section-title" id="trending-title">{t["trending"]}</h2>'
+               f'<span>{t["trending_note"]}</span></div>')
     if not topics:
         return (f'<section class="panel" aria-labelledby="trending-title">{heading}'
-                '<p class="empty-mini">Not enough overlap between headlines yet.</p></section>')
+                f'<p class="empty-mini">{t["trending_empty"]}</p></section>')
     chips = ''.join(f'<li><a class="chip" href="{base}trending/#kw-{s}">{escape(label)} <span>{len(items)}</span></a></li>'
                     for label, s, items in topics)
     return (f'<section class="panel" aria-labelledby="trending-title">{heading}<ul class="chips">{chips}</ul>'
-            f'<p class="mini-meta"><a href="{base}trending/">All trending topics →</a></p></section>')
+            f'<p class="mini-meta"><a href="{base}trending/">{t["trending_all"]}</a></p></section>')
 
 
 def trending_page(topics, labels, now):

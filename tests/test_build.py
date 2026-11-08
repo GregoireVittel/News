@@ -60,13 +60,14 @@ class EditionTests(unittest.TestCase):
             self.assertEqual(generate(root, [entry], now, 'https://example.test/News/'), 1)
             for relative in ('index.html', 'lang/fr.html', 'archive/2026-11-01.html'):
                 page = (root / relative).read_text()
-                self.assertIn('What’s happening now…', page)
+                french = relative == 'lang/fr.html'
+                self.assertIn('Ce qui se passe maintenant…' if french else 'What’s happening now…', page)
 
-                self.assertIn('Coverage sources', page)
+                self.assertIn('Sources' if french else 'Coverage sources', page)
                 self.assertEqual(page.count('<article '), 1)
                 for section in ('Poland', 'France', 'World', 'Technology', 'Financial'):
                     self.assertIn(f'aria-label="{section}"', page)
-                self.assertIn('<div class="eyebrow">Technology</div>', page)
+                self.assertIn('<div class="eyebrow">Tech</div>', page)
                 self.assertIn('https://example.test/News/assets/portal.css', page)
                 self.assertIn('href="https://example.test/News/lang/fr.html"', page)
                 self.assertNotIn('<script', page)
