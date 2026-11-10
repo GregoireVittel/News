@@ -254,3 +254,8 @@ body { line-height:1.5; }
         .line-chart g:hover .dot { fill:var(--ink); }
         .band-table { max-width:460px; margin-top:16px; }
         @media(max-width:800px) { .legs, .tiles { grid-template-columns:1fr; } .chart-scroll .line-chart { min-width:720px; } }
+        /* Smaller photos: lead pictures capped at 280px tall, story pictures at 140px */
+        .lead-image, .lead-placeholder { aspect-ratio:auto; height:clamp(180px,22vw,280px); max-width:560px; }
+        .lead-placeholder { font-size:44px; }
+        .story-image { aspect-ratio:auto; height:140px; }
+        @media(max-width:750px) { .lead-image, .lead-placeholder { height:200px; } .story-image { height:110px; } }

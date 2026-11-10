@@ -115,4 +115,7 @@ class LayoutTests(unittest.TestCase):
         self.assertIn('.navwrap { position:sticky; top:0;', css)
         self.assertIn('.story h3 { font-size:25px;', css)
         self.assertIn('.story p { font-size:19px;', css)
+        # Photos stay small: lead pictures at most 280px tall, story pictures 140px.
+        self.assertIn('.lead-image, .lead-placeholder { aspect-ratio:auto; height:clamp(180px,22vw,280px); max-width:560px; }', css)
+        self.assertIn('.story-image { aspect-ratio:auto; height:140px; }', css)
         self.assertIn('.lead p { font-size:20px;', css)
