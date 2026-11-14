@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-14T20:57:22+01:00",
+  "generatedAt": "2026-11-14T20:58:01+01:00",
   "sections": [
     "Poland",
     "France",
@@ -66,6 +66,38 @@
         {
           "name": "franceinfo",
           "url": "https://www.franceinfo.fr/elections/presidentielle-2027-raphael-glucksmann-et-teddy-riner-attendus-au-salon-du-made-in-france_8282213.html#xtor=RSS-3-[lestitres]"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Magic: The Gathering is getting a Netflix animated series. For real this time.",
+      "link": "https://www.theverge.com/entertainment/1033909/magic-the-gathering-netflix-series",
+      "description": "\"It's really happening. I promise. For real.\" Those are the first words from Roy Graham, Head of Story at Magic: The Gathering, in a video posted yesterday announcing Planeswalker, the animated series heading to Netflix in 2027. An animated Magic: The Gathering series was first teased back in 2019 with Joe and Anthony Russo at […]",
+      "date": "2026-11-14T14:47:40-05:00",
+      "image": "",
+      "sourceName": "The Verge",
+      "language": "en",
+      "category": "Technology, AI and science",
+      "sourceCategory": "Technology, AI and science",
+      "section": "Technology",
+      "sectionReason": "feed category fallback: Technology, AI and science",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Magic: The Gathering is getting a Netflix animated series. For real this time.",
+          "description": "\"It's really happening. I promise. For real.\" Those are the first words from Roy Graham, Head of Story at Magic: The Gathering, in a video posted yesterday announcing Planeswalker, the animated series heading to Netflix in 2027. An animated Magic: The Gathering series was first teased back in 2019 with Joe and Anthony Russo at […]",
+          "sourceCategory": "Technology, AI and science"
+        }
+      },
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/entertainment/1033909/magic-the-gathering-netflix-series"
         }
       ],
       "sourceCount": 1,
@@ -1514,6 +1546,38 @@
       }
     },
     {
+      "title": "Un souffle collectif pour la quarantième édition de D’Jazz Nevers Festival",
+      "link": "https://www.lemonde.fr/culture/article/2026/11/14/un-souffle-collectif-pour-la-quarantieme-edition-de-d-jazz-nevers-festival_6810457_3246.html",
+      "description": "Signe, peut-être, de temps difficiles, l’édition 2026 a accueilli peu d’artistes américains. Au profit de talents français, confirmés et émergents, comme Catherine Delaunay, Louis Sclavis, Henri Texier, Camille Maussion et Jessica Simon.",
+      "date": "2026-11-14T18:00:26+01:00",
+      "image": "https://img.lemde.fr/2026/11/14/555/0/6661/3330/644/322/60/0/107ddf4_upload-1-epmscsisj39l-dsc08787.jpg",
+      "sourceName": "Le Monde",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Un souffle collectif pour la quarantième édition de D’Jazz Nevers Festival",
+          "description": "Signe, peut-être, de temps difficiles, l’édition 2026 a accueilli peu d’artistes américains. Au profit de talents français, confirmés et émergents, comme Catherine Delaunay, Louis Sclavis, Henri Texier, Camille Maussion et Jessica Simon.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "Le Monde",
+          "url": "https://www.lemonde.fr/culture/article/2026/11/14/un-souffle-collectif-pour-la-quarantieme-edition-de-d-jazz-nevers-festival_6810457_3246.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "Avec le « Legend Tour » de Guillaume Pley, l’armée française s’offre une vitrine auprès de la jeunesse",
       "link": "https://www.lemonde.fr/politique/article/2026/11/14/avec-le-legend-tour-de-guillaume-pley-l-armee-francaise-s-offre-une-vitrine-aupres-de-la-jeunesse_6810456_823448.html",
       "description": "En associant ses moyens à la tournée du producteur du podcast suivi par des millions d’internautes, l’institution militaire veut séduire un public jeune et susciter des vocations. Une stratégie de communication qui interroge, alors que l’animateur est visé par des accusations d’échanges à caractère sexuel avec des mineures, qu’il conteste.",
@@ -2500,38 +2564,6 @@
         {
           "name": "Bloomberg",
           "url": "https://www.bloomberg.com/news/videos/2026-11-14/how-china-s-intelligence-operations-target-tech-video"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Pluie et inondations : les départements du Gard, de l’Hérault et des Bouches-du-Rhône placés en vigilance orange à partir de samedi soir",
-      "link": "https://www.lemonde.fr/planete/article/2026/11/14/pluie-et-inondations-les-departements-du-gard-de-l-herault-et-des-bouches-du-rhone-places-en-vigilance-orange-a-partir-de-samedi-soir_6810050_3245.html",
-      "description": "L’agence météorologique met en garde contre des « risques de ruissellements » et de possibles « phénomènes tourbillonnaires (type trombe marine) », alors que les trois départements ont déjà été touchés par des inondations il y a quelques semaines.",
-      "date": "2026-11-14T16:38:48+01:00",
-      "image": "https://img.lemde.fr/2025/06/26/250/0/3000/1500/644/322/60/0/1de69bf_upload-1-yj2nqx8xrdsm-modei-le-1.jpg",
-      "sourceName": "Le Monde",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "feed category fallback: France",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Pluie et inondations : les départements du Gard, de l’Hérault et des Bouches-du-Rhône placés en vigilance orange à partir de samedi soir",
-          "description": "L’agence météorologique met en garde contre des « risques de ruissellements » et de possibles « phénomènes tourbillonnaires (type trombe marine) », alors que les trois départements ont déjà été touchés par des inondations il y a quelques semaines.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "Le Monde",
-          "url": "https://www.lemonde.fr/planete/article/2026/11/14/pluie-et-inondations-les-departements-du-gard-de-l-herault-et-des-bouches-du-rhone-places-en-vigilance-orange-a-partir-de-samedi-soir_6810050_3245.html"
         }
       ],
       "sourceCount": 1,
@@ -6888,38 +6920,6 @@
         {
           "name": "The New York Times",
           "url": "https://www.nytimes.com/2026/11/13/world/africa/miss-universe-us-visas.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you",
-      "link": "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet",
-      "description": "After launching its Dots AI agents platform earlier this year, OpenAI is launching a wallet for the agents. ChatGPT Wallet is rolling out starting today for ChatGPT Pro subscribers in the US aged 18 and older using a US billing address and \"eligible US-issued American Express, Chase, Mastercard and Visa cards.\" After adding a card […]",
-      "date": "2026-11-13T15:45:10-05:00",
-      "image": "",
-      "sourceName": "The Verge",
-      "language": "en",
-      "category": "Technology, AI and science",
-      "sourceCategory": "Technology, AI and science",
-      "section": "Technology",
-      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you",
-          "description": "After launching its Dots AI agents platform earlier this year, OpenAI is launching a wallet for the agents. ChatGPT Wallet is rolling out starting today for ChatGPT Pro subscribers in the US aged 18 and older using a US billing address and \"eligible US-issued American Express, Chase, Mastercard and Visa cards.\" After adding a card […]",
-          "sourceCategory": "Technology, AI and science"
-        }
-      },
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet"
         }
       ],
       "sourceCount": 1,
