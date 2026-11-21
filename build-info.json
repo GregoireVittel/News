@@ -1,0 +1,17 @@
+{
+  "edition": "2026-11-21",
+  "article_count": 256,
+  "failures": [],
+  "generated_at": "2026-11-21T14:59:40+01:00",
+  "market": {
+    "source": "Yahoo Finance",
+    "latest": "2026-11-20",
+    "errors": [],
+    "sentiment": {
+      "latest": "2026-11-20",
+      "index": 52.0,
+      "errors": []
+    }
+  },
+  "output": "/home/runner/work/_temp/news-edition"
+}
