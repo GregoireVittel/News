@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-21T14:59:40+01:00",
+  "generatedAt": "2026-11-21T15:57:27+01:00",
   "sections": [
     "Poland",
     "France",
@@ -10,10 +10,298 @@
   ],
   "articles": [
     {
+      "title": "Les pompiers des Vosges annulent la distribution d’un calendrier montrant un volontaire asiatique déguisé en panda",
+      "link": "https://www.mediapart.fr/journal/france/201126/les-pompiers-des-vosges-annulent-la-distribution-d-un-calendrier-montrant-un-volontaire-asiatique-deguise",
+      "description": "Des sapeurs-pompiers du Grand Est ont mis en scène une saynète raciste pour leur calendrier, qui se voulait humoristique. Si la distribution a été coupée net, l’affaire met en lumière la faible visibilité de la lutte contre le racisme antiasiatique en France.",
+      "date": "2026-11-21T15:56:41+01:00",
+      "image": "https://static.mediapart.fr/etmagine/default/files/2026/11/20/261118-img-calendrier-pompier-02-jpg.jpg",
+      "sourceName": "Mediapart",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "France",
+      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Les pompiers des Vosges annulent la distribution d’un calendrier montrant un volontaire asiatique déguisé en panda",
+          "description": "Des sapeurs-pompiers du Grand Est ont mis en scène une saynète raciste pour leur calendrier, qui se voulait humoristique. Si la distribution a été coupée net, l’affaire met en lumière la faible visibilité de la lutte contre le racisme antiasiatique en France.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "Mediapart",
+          "url": "https://www.mediapart.fr/journal/france/201126/les-pompiers-des-vosges-annulent-la-distribution-d-un-calendrier-montrant-un-volontaire-asiatique-deguise"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Fight over fossil fuels leaves COP31 climate talks in deadlock",
+      "link": "https://www.bbc.co.uk/news/articles/c6ly5w40eg07o?at_medium=RSS&at_campaign=rss",
+      "description": "Countries from nearly 200 countries are in a deadlock to try and get a new global climate agreement.",
+      "date": "2026-11-21T14:54:24+00:00",
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5253/live/c9ca5500-e579-11f1-a5f6-b3028adf2d6d.jpg",
+      "sourceName": "BBC News",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "feed category fallback: Global news and geopolitics",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Fight over fossil fuels leaves COP31 climate talks in deadlock",
+          "description": "Countries from nearly 200 countries are in a deadlock to try and get a new global climate agreement.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/c6ly5w40eg07o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Długość życia w Polsce rośnie, ale dystans do średniej UE się nie zmniejsza",
+      "link": "https://www.bankier.pl/wiadomosc/Dlugosc-zycia-w-Polsce-rosnie-ale-dystans-do-sredniej-UE-sie-nie-zmniejsza-9229305.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
+      "description": "Przeciętne dalsze trwanie życia w Polsce wydłuża się, ale dystans do średniej UE się nie zmniejsza - wynika z raportu \"Sytuacja demograficzna Polski. Raport 2025\", przygotowanego przez Rządową Radę Ludnościową.",
+      "date": "2026-11-21T15:50:00+01:00",
+      "image": "",
+      "sourceName": "Bankier.pl",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "Poland",
+      "sectionReason": "content: Poland subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Długość życia w Polsce rośnie, ale dystans do średniej UE się nie zmniejsza",
+          "description": "Przeciętne dalsze trwanie życia w Polsce wydłuża się, ale dystans do średniej UE się nie zmniejsza - wynika z raportu \"Sytuacja demograficzna Polski. Raport 2025\", przygotowanego przez Rządową Radę Ludnościową.",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Bankier.pl",
+          "url": "https://www.bankier.pl/wiadomosc/Dlugosc-zycia-w-Polsce-rosnie-ale-dystans-do-sredniej-UE-sie-nie-zmniejsza-9229305.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "BepiColombo ma dziś \"zakotwiczyć\" na obicie wokół Merkurego",
+      "link": "https://wyborcza.pl/7,75400,33143647,bepicolombo-ma-dzis-zakotwiczyc-na-obicie-wokol-merkurego.html",
+      "description": "Po blisko 10 miliardach kilometrów zakończy się ośmioletnia odyseja BepiColombo, a potem rozpocznie się co najmniej rok jej pracy ku chwale ludzkości.",
+      "date": "2026-11-21T14:45:00+00:00",
+      "image": "",
+      "sourceName": "Gazeta Wyborcza",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "Poland",
+      "sectionReason": "feed category fallback: Poland",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "BepiColombo ma dziś \"zakotwiczyć\" na obicie wokół Merkurego",
+          "description": "Po blisko 10 miliardach kilometrów zakończy się ośmioletnia odyseja BepiColombo, a potem rozpocznie się co najmniej rok jej pracy ku chwale ludzkości.",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Gazeta Wyborcza",
+          "url": "https://wyborcza.pl/7,75400,33143647,bepicolombo-ma-dzis-zakotwiczyc-na-obicie-wokol-merkurego.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Mobilisation du 21 novembre : Une quarantaine de rassemblements recensés par le ministère de l'Intérieur en début d'après-midi",
+      "link": "https://www.franceinfo.fr/societe/manifestations/direct-mobilisation-du-21-novembre-syndicats-et-gilets-jaunes-appellent-a-manifester-pour-la-jeunesse-et-contre-la-vie-chere-pour-le-sixieme-samedi-d-affilee_8293460.html#xtor=RSS-3-[lestitres]",
+      "description": "Ces actions s'inscrivent dans le cadre d'un appel européen de syndicats et associations de défense du droit au logement à des actions coordonnées sur trois jours, de vendredi à dimanche.",
+      "date": "2026-11-21T15:44:55+01:00",
+      "image": "https://www.franceinfo.fr/pictures/jDDaRlZCIVatOKyJ2NkdSSQaNJY/0x39:1024x615/432x243/filters:format(jpg)/2026/11/21/6b014735f0249092308717.jpg",
+      "sourceName": "franceinfo",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "France",
+      "sectionReason": "feed category fallback: France",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Mobilisation du 21 novembre : Une quarantaine de rassemblements recensés par le ministère de l'Intérieur en début d'après-midi",
+          "description": "Ces actions s'inscrivent dans le cadre d'un appel européen de syndicats et associations de défense du droit au logement à des actions coordonnées sur trois jours, de vendredi à dimanche.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "franceinfo",
+          "url": "https://www.franceinfo.fr/societe/manifestations/direct-mobilisation-du-21-novembre-syndicats-et-gilets-jaunes-appellent-a-manifester-pour-la-jeunesse-et-contre-la-vie-chere-pour-le-sixieme-samedi-d-affilee_8293460.html#xtor=RSS-3-[lestitres]"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "La Finlande soupçonne un hélicoptère russe d'avoir violé son espace aérien",
+      "link": "https://www.franceinfo.fr/monde/russie/la-finlande-soupconne-un-helicoptere-russe-d-avoir-viole-son-espace-aerien_8293799.html#xtor=RSS-3-[lestitres]",
+      "description": "L'appareil a pénétré jusqu'à 4,1 km à l'intérieur du territoire finlandais, a précisé le ministère de la Défense.",
+      "date": "2026-11-21T15:37:26+01:00",
+      "image": "https://www.franceinfo.fr/pictures/dzl70O5wmble6f9aN4HYt3m3SWs/0x53:1024x629/432x243/filters:format(jpg)/2026/11/21/6b01ac8904cf5326131943.jpg",
+      "sourceName": "franceinfo",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "France",
+      "sectionReason": "feed category fallback: France",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "La Finlande soupçonne un hélicoptère russe d'avoir violé son espace aérien",
+          "description": "L'appareil a pénétré jusqu'à 4,1 km à l'intérieur du territoire finlandais, a précisé le ministère de la Défense.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "franceinfo",
+          "url": "https://www.franceinfo.fr/monde/russie/la-finlande-soupconne-un-helicoptere-russe-d-avoir-viole-son-espace-aerien_8293799.html#xtor=RSS-3-[lestitres]"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "EN DIRECT, guerre en Ukraine : la Finlande soupçonne un hélicoptère russe d’être entré dans son espace aérien, quelques heures après une attaque de drone sur un cargo russe en mer Baltique",
+      "link": "https://www.lemonde.fr/international/live/2026/11/21/en-direct-guerre-en-ukraine-la-finlande-soupconne-un-helicoptere-russe-d-etre-entre-dans-son-espace-aerien-quelques-heures-apres-une-attaque-de-drone-sur-un-cargo-russe-en-mer-baltique_6810982_3210.html",
+      "description": "« Cette violation présumée de l’espace aérien pourrait être liée à des opérations de sauvetage ou de surveillance menées à la suite des dommages subis par un navire cargo dans le golfe de Finlande », a déclaré le ministre finlandais de la défense Antti Häkkänen.",
+      "date": "2026-11-21T15:35:11+01:00",
+      "image": "https://img.lemde.fr/2026/10/28/432/0/6144/3072/644/322/60/0/2f215db_ftp-1-508sred31mq3-2026-10-28t113715z-1529411193-rc2acoada6jl-rtrmadp-3-finland-italy.JPG",
+      "sourceName": "Le Monde",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "World",
+      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "EN DIRECT, guerre en Ukraine : la Finlande soupçonne un hélicoptère russe d’être entré dans son espace aérien, quelques heures après une attaque de drone sur un cargo russe en mer Baltique",
+          "description": "« Cette violation présumée de l’espace aérien pourrait être liée à des opérations de sauvetage ou de surveillance menées à la suite des dommages subis par un navire cargo dans le golfe de Finlande », a déclaré le ministre finlandais de la défense Antti Häkkänen.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "Le Monde",
+          "url": "https://www.lemonde.fr/international/live/2026/11/21/en-direct-guerre-en-ukraine-la-finlande-soupconne-un-helicoptere-russe-d-etre-entre-dans-son-espace-aerien-quelques-heures-apres-une-attaque-de-drone-sur-un-cargo-russe-en-mer-baltique_6810982_3210.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Top Drug Kingpin Is Captured by Mexican Army as Gunfire Erupts",
+      "link": "https://www.nytimes.com/2026/11/21/world/americas/mexico-el-chapo-isidro-captured-drugs.html",
+      "description": "The arrest of Fausto Isidro Meza Flores, who is known as El Chapo Isidro and was one of the F.B.I.’s 10 most wanted, was a victory for the Mexican government.",
+      "date": "2026-11-21T14:30:52+00:00",
+      "image": "https://static01.nyt.com/images/2026/11/21/multimedia/21int-cartel-arrest-zqtf/21int-cartel-arrest-zqtf-mediumSquareAt3X.jpg",
+      "sourceName": "The New York Times",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "feed category fallback: Global news and geopolitics",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Top Drug Kingpin Is Captured by Mexican Army as Gunfire Erupts",
+          "description": "The arrest of Fausto Isidro Meza Flores, who is known as El Chapo Isidro and was one of the F.B.I.’s 10 most wanted, was a victory for the Mexican government.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "The New York Times",
+          "url": "https://www.nytimes.com/2026/11/21/world/americas/mexico-el-chapo-isidro-captured-drugs.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Shenzhen Wants to Become a Cultural Capital",
+      "link": "https://www.bloomberg.com/news/videos/2026-11-21/shenzhen-wants-to-become-a-cultural-capital-video",
+      "description": "Bloomberg’s Tiffany Ap tells Bloomberg This Weekend how Shenzhen is spending billions on museums as the technology and manufacturing hub tries to establish itself as a cultural destination and attract talent and tourism. Speaking with hosts David Gura and Christina Ruffini, Ap discusses whether a city known for Huawei, Tencent and BYD can build a lasting cultural identity while rapid wealth creation and a softer broader economy deepen economic divides. (Source: Bloomberg)",
+      "date": "2026-11-21T14:24:08+00:00",
+      "image": "",
+      "sourceName": "Bloomberg",
+      "language": "en",
+      "category": "Financial markets and economics",
+      "sourceCategory": "Financial markets and economics",
+      "section": "Technology",
+      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Shenzhen Wants to Become a Cultural Capital",
+          "description": "Bloomberg’s Tiffany Ap tells Bloomberg This Weekend how Shenzhen is spending billions on museums as the technology and manufacturing hub tries to establish itself as a cultural destination and attract talent and tourism. Speaking with hosts David Gura and Christina Ruffini, Ap discusses whether a city known for Huawei, Tencent and BYD can build a lasting cultural identity while rapid wealth creation and a softer broader economy deepen economic divides. (Source: Bloomberg)",
+          "sourceCategory": "Financial markets and economics"
+        }
+      },
+      "sources": [
+        {
+          "name": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/videos/2026-11-21/shenzhen-wants-to-become-a-cultural-capital-video"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "A Butler School in the Netherlands Offers Entry Into a Gilded World",
       "link": "https://www.nytimes.com/2026/11/21/world/europe/butler-school-international-butler-academy-netherlands.html",
       "description": "An academy in the Netherlands offers an eight-week, $14,000 program for entry into a gilded world of service. What’s the appeal?",
-      "date": "2026-11-21T13:56:35+00:00",
+      "date": "2026-11-21T14:17:42+00:00",
       "image": "https://static01.nyt.com/images/2026/11/10/multimedia/00xp-butlerschool-promo-jvwm/00xp-butlerschool-promo-jvwm-mediumSquareAt3X.jpg",
       "sourceName": "The New York Times",
       "language": "en",
@@ -42,30 +330,222 @@
       }
     },
     {
-      "title": "Mobilisation du 21 novembre : 44 rassemblements ont été recensés par le ministère de l'Intérieur sur le territoire national",
-      "link": "https://www.franceinfo.fr/societe/manifestations/direct-mobilisation-du-21-novembre-syndicats-et-gilets-jaunes-appellent-a-manifester-pour-la-jeunesse-et-contre-la-vie-chere-pour-le-sixieme-samedi-d-affilee_8293460.html#xtor=RSS-3-[lestitres]",
-      "description": "Ces actions s'inscrivent dans le cadre d'un appel européen de syndicats et associations de défense du droit au logement à des actions coordonnées sur trois jours, de vendredi à dimanche.",
-      "date": "2026-11-21T14:55:59+01:00",
-      "image": "https://www.franceinfo.fr/pictures/jDDaRlZCIVatOKyJ2NkdSSQaNJY/0x39:1024x615/432x243/filters:format(jpg)/2026/11/21/6b014735f0249092308717.jpg",
-      "sourceName": "franceinfo",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "feed category fallback: France",
+      "title": "Serious crash closes M42 near Birmingham Airport",
+      "link": "https://www.bbc.co.uk/news/articles/c8vg2pd5707wo?at_medium=RSS&at_campaign=rss",
+      "description": "Drivers describe seeing a \"huge fire\" from cars on the M42 motorway.",
+      "date": "2026-11-21T14:10:59+00:00",
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6a32/live/851f0970-e5ae-11f1-a3d4-adbb3f9e5dfd.png",
+      "sourceName": "BBC News",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "feed category fallback: Global news and geopolitics",
       "classification": {
         "method": "rules",
         "version": 1,
         "input": {
-          "title": "Mobilisation du 21 novembre : 44 rassemblements ont été recensés par le ministère de l'Intérieur sur le territoire national",
-          "description": "Ces actions s'inscrivent dans le cadre d'un appel européen de syndicats et associations de défense du droit au logement à des actions coordonnées sur trois jours, de vendredi à dimanche.",
+          "title": "Serious crash closes M42 near Birmingham Airport",
+          "description": "Drivers describe seeing a \"huge fire\" from cars on the M42 motorway.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/c8vg2pd5707wo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Catherine, Princess of Wales, Documents Life With Cancer in BBC Film",
+      "link": "https://www.nytimes.com/2026/11/21/world/europe/princess-kate-bbc-cancer-film.html",
+      "description": "“Cancer does change you,” Catherine, who is in remission, says in a trailer for the film. It will be released this month.",
+      "date": "2026-11-21T14:09:39+00:00",
+      "image": "https://static01.nyt.com/images/2026/11/21/multimedia/21int-uk-princess-cancer-kwfq/21int-uk-princess-cancer-kwfq-mediumSquareAt3X.jpg",
+      "sourceName": "The New York Times",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "feed category fallback: Global news and geopolitics",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Catherine, Princess of Wales, Documents Life With Cancer in BBC Film",
+          "description": "“Cancer does change you,” Catherine, who is in remission, says in a trailer for the film. It will be released this month.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "The New York Times",
+          "url": "https://www.nytimes.com/2026/11/21/world/europe/princess-kate-bbc-cancer-film.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Maldon Salt’s Authenticity Is Questioned, Leaving Foodies Shaken",
+      "link": "https://www.nytimes.com/2026/11/21/world/europe/maldon-sea-salt-artisanal-scandal.html",
+      "description": "The salt is a flaky favorite of food influencers and famous chefs. A revelation this week raised questions about what makes artisanal “artisanal.”",
+      "date": "2026-11-21T14:01:15+00:00",
+      "image": "https://static01.nyt.com/images/2026/11/21/multimedia/21xp-salt/21xp-salt-mediumSquareAt3X.jpg",
+      "sourceName": "The New York Times",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "feed category fallback: Global news and geopolitics",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Maldon Salt’s Authenticity Is Questioned, Leaving Foodies Shaken",
+          "description": "The salt is a flaky favorite of food influencers and famous chefs. A revelation this week raised questions about what makes artisanal “artisanal.”",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "The New York Times",
+          "url": "https://www.nytimes.com/2026/11/21/world/europe/maldon-sea-salt-artisanal-scandal.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Quand Elon Musk alertait sur les dangers de l’IA",
+      "link": "https://www.lemonde.fr/m-le-mag/article/2026/11/21/quand-elon-musk-alertait-sur-les-dangers-de-l-ia_6814022_4500055.html",
+      "description": "L’entrepreneur de la tech, qui fait l’objet d’un documentaire à charge actuellement en salle aux Etats-Unis, vante aujourd’hui les mérites de l’intelligence artificielle. En 2017 pourtant, il partageait ses craintes en s’appuyant sur le film « Le Cerveau d’acier », dont il est fan.",
+      "date": "2026-11-21T15:00:11+01:00",
+      "image": "https://img.lemde.fr/2026/11/11/121/0/1500/750/644/322/60/0/0afe7a7_ftp-1-8yauk3tzuzqq-451561-3515986.jpg",
+      "sourceName": "Le Monde",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "World",
+      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Quand Elon Musk alertait sur les dangers de l’IA",
+          "description": "L’entrepreneur de la tech, qui fait l’objet d’un documentaire à charge actuellement en salle aux Etats-Unis, vante aujourd’hui les mérites de l’intelligence artificielle. En 2017 pourtant, il partageait ses craintes en s’appuyant sur le film « Le Cerveau d’acier », dont il est fan.",
           "sourceCategory": "France"
         }
       },
       "sources": [
         {
-          "name": "franceinfo",
-          "url": "https://www.franceinfo.fr/societe/manifestations/direct-mobilisation-du-21-novembre-syndicats-et-gilets-jaunes-appellent-a-manifester-pour-la-jeunesse-et-contre-la-vie-chere-pour-le-sixieme-samedi-d-affilee_8293460.html#xtor=RSS-3-[lestitres]"
+          "name": "Le Monde",
+          "url": "https://www.lemonde.fr/m-le-mag/article/2026/11/21/quand-elon-musk-alertait-sur-les-dangers-de-l-ia_6814022_4500055.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Chess.com’s next move is a new hub for classic games, from mahjong to sudoku",
+      "link": "https://www.theverge.com/games/1038099/chess-classic-games-expansion-ai",
+      "description": "Chess.com is ready to go a lot bigger than chess. After launching Gambit, a gambling-free poker site, earlier this year, the company is now adding 10 more games: backgammon, checkers, go, hearts, mahjong, shogi, sudoku, solitaire, xiangqi, and a Scrabble alternative called word. They're all part of Chess's new Classic Games platform, which is launching […]",
+      "date": "2026-11-21T09:00:00-05:00",
+      "image": "",
+      "sourceName": "The Verge",
+      "language": "en",
+      "category": "Technology, AI and science",
+      "sourceCategory": "Technology, AI and science",
+      "section": "Technology",
+      "sectionReason": "feed category fallback: Technology, AI and science",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Chess.com’s next move is a new hub for classic games, from mahjong to sudoku",
+          "description": "Chess.com is ready to go a lot bigger than chess. After launching Gambit, a gambling-free poker site, earlier this year, the company is now adding 10 more games: backgammon, checkers, go, hearts, mahjong, shogi, sudoku, solitaire, xiangqi, and a Scrabble alternative called word. They're all part of Chess's new Classic Games platform, which is launching […]",
+          "sourceCategory": "Technology, AI and science"
+        }
+      },
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/games/1038099/chess-classic-games-expansion-ai"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "\"Kulturalna operacja specjalna\" Rosji we Włoszech. Na celowniku Wenecja i Rzym",
+      "link": "https://wyborcza.pl/7,75399,33138143,kulturalna-ofensywa-rosji-we-wloszech-kreml-planuje-powtorke.html",
+      "description": "Powrót Rosji na najważniejszy festiwal kulturalny w 2026 roku nie wystarczył Moskwie. Teraz chce, aby jej pawilon stał się znowu stałym elementem Biennale. Włoski rząd zmienia taktykę.",
+      "date": "2026-11-21T14:00:00+00:00",
+      "image": "",
+      "sourceName": "Gazeta Wyborcza",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "World",
+      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "\"Kulturalna operacja specjalna\" Rosji we Włoszech. Na celowniku Wenecja i Rzym",
+          "description": "Powrót Rosji na najważniejszy festiwal kulturalny w 2026 roku nie wystarczył Moskwie. Teraz chce, aby jej pawilon stał się znowu stałym elementem Biennale. Włoski rząd zmienia taktykę.",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Gazeta Wyborcza",
+          "url": "https://wyborcza.pl/7,75399,33138143,kulturalna-ofensywa-rosji-we-wloszech-kreml-planuje-powtorke.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Trump’s Putin Outreach Tests Ukraine Talks",
+      "link": "https://www.bloomberg.com/news/videos/2026-11-21/trump-s-putin-outreach-tests-ukraine-talks-video",
+      "description": "Bloomberg White House and National Security Editor Michelle Jamrisko tells Bloomberg This Weekend that President Donald Trump’s summit with Vladimir Putin and Xi Jinping reinforced his approach to diplomacy but left major questions unresolved over Ukraine and potential US security guarantees. Speaking with hosts David Gura and Christina Ruffini, Jamrisko discusses European skepticism toward Putin, tensions within the Trump administration and Vice President JD Vance’s effort to distinguish his views as he looks toward 2028. (Source: Bloomberg)",
+      "date": "2026-11-21T13:56:40+00:00",
+      "image": "",
+      "sourceName": "Bloomberg",
+      "language": "en",
+      "category": "Financial markets and economics",
+      "sourceCategory": "Financial markets and economics",
+      "section": "World",
+      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Trump’s Putin Outreach Tests Ukraine Talks",
+          "description": "Bloomberg White House and National Security Editor Michelle Jamrisko tells Bloomberg This Weekend that President Donald Trump’s summit with Vladimir Putin and Xi Jinping reinforced his approach to diplomacy but left major questions unresolved over Ukraine and potential US security guarantees. Speaking with hosts David Gura and Christina Ruffini, Jamrisko discusses European skepticism toward Putin, tensions within the Trump administration and Vice President JD Vance’s effort to distinguish his views as he looks toward 2028. (Source: Bloomberg)",
+          "sourceCategory": "Financial markets and economics"
+        }
+      },
+      "sources": [
+        {
+          "name": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/videos/2026-11-21/trump-s-putin-outreach-tests-ukraine-talks-video"
         }
       ],
       "sourceCount": 1,
@@ -98,38 +578,6 @@
         {
           "name": "Bloomberg",
           "url": "https://www.bloomberg.com/news/videos/2026-11-21/anthropic-ipo-fails-to-calm-ai-jitters-video"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Top Drug Kingpin Is Captured by Mexican Army as Gunfire Erupts",
-      "link": "https://www.nytimes.com/2026/11/21/world/americas/mexico-el-chapo-isidro-captured-drugs.html",
-      "description": "The arrest of Fausto Isidro Meza Flores, who is known as El Chapo Isidro and was one of the F.B.I.’s 10 most wanted, was a victory for the Mexican government.",
-      "date": "2026-11-21T13:36:40+00:00",
-      "image": "https://static01.nyt.com/images/2026/11/21/multimedia/21int-cartel-arrest-zqtf/21int-cartel-arrest-zqtf-mediumSquareAt3X.jpg",
-      "sourceName": "The New York Times",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Top Drug Kingpin Is Captured by Mexican Army as Gunfire Erupts",
-          "description": "The arrest of Fausto Isidro Meza Flores, who is known as El Chapo Isidro and was one of the F.B.I.’s 10 most wanted, was a victory for the Mexican government.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "The New York Times",
-          "url": "https://www.nytimes.com/2026/11/21/world/americas/mexico-el-chapo-isidro-captured-drugs.html"
         }
       ],
       "sourceCount": 1,
@@ -522,6 +970,70 @@
       }
     },
     {
+      "title": "Le boom des embauches dans le secteur médico-social cache les fragilités de l’économie sociale et solidaire",
+      "link": "https://www.lemonde.fr/economie/article/2026/11/21/le-boom-des-embauches-dans-le-secteur-medico-social-cache-les-fragilites-de-l-economie-sociale-et-solidaire_6814018_3234.html",
+      "description": "Sans les créations d’emplois nécessaires pour accompagner le vieillissement de la population et le soin aux personnes âgées, l’ESS aurait perdu des postes sur un an.",
+      "date": "2026-11-21T14:00:16+01:00",
+      "image": "https://img.lemde.fr/2026/11/19/531/0/4567/2283/644/322/60/0/557fe59_upload-1-m6jf1xicktgg-20260122vdn9887.jpg",
+      "sourceName": "Le Monde",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Le boom des embauches dans le secteur médico-social cache les fragilités de l’économie sociale et solidaire",
+          "description": "Sans les créations d’emplois nécessaires pour accompagner le vieillissement de la population et le soin aux personnes âgées, l’ESS aurait perdu des postes sur un an.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "Le Monde",
+          "url": "https://www.lemonde.fr/economie/article/2026/11/21/le-boom-des-embauches-dans-le-secteur-medico-social-cache-les-fragilites-de-l-economie-sociale-et-solidaire_6814018_3234.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Santé mentale : « Une société qui n’écoute pas la souffrance des enfants prépare les difficultés de demain »",
+      "link": "https://www.lemonde.fr/idees/article/2026/11/21/sante-mentale-une-societe-qui-n-ecoute-pas-la-souffrance-des-enfants-prepare-les-difficultes-de-demain_6814017_3232.html",
+      "description": "La protection des enfants et des adolescents victimes de violences physiques et psychiques doit être une priorité pour quiconque entend gouverner la France, affirment, dans une tribune au « Monde », des scientifiques et des responsables politiques.",
+      "date": "2026-11-21T14:00:11+01:00",
+      "image": "https://img.lemde.fr/2026/02/25/125/0/1500/750/644/322/60/0/3542fe8_upload-1-91mvclxd2fsp-frame-845.jpg",
+      "sourceName": "Le Monde",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "France",
+      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Santé mentale : « Une société qui n’écoute pas la souffrance des enfants prépare les difficultés de demain »",
+          "description": "La protection des enfants et des adolescents victimes de violences physiques et psychiques doit être une priorité pour quiconque entend gouverner la France, affirment, dans une tribune au « Monde », des scientifiques et des responsables politiques.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "Le Monde",
+          "url": "https://www.lemonde.fr/idees/article/2026/11/21/sante-mentale-une-societe-qui-n-ecoute-pas-la-souffrance-des-enfants-prepare-les-difficultes-de-demain_6814017_3232.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "Guerre en Ukraine : des frappes russes font deux morts et 58 blessés à Kryvyï Rih, ville natale de Volodymyr Zelensky",
       "link": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/guerre-en-ukraine-des-frappes-russes-font-deux-morts-et-58-blesses-a-kryvyi-rih-ville-natale-de-volodymyr-zelensky_8293700.html#xtor=RSS-3-[lestitres]",
       "description": "Six enfants figurent parmi les blessés, a précisé samedi le président ukrainien sur Telegram.",
@@ -717,7 +1229,7 @@
       "title": "On the Trail With Spain’s Prime Minister, as He Tries to Pull Out a Win",
       "link": "https://www.nytimes.com/2026/11/21/world/europe/spain-sanchez-interview-election-basketball.html",
       "description": "Pedro Sánchez, Europe’s most prominent left-wing leader, seems set to lose power in an election next week. Our reporter trailed his last-ditch effort to turn his campaign around.",
-      "date": "2026-11-21T12:54:43+00:00",
+      "date": "2026-11-21T12:54:44+00:00",
       "image": "https://static01.nyt.com/images/2026/11/21/multimedia/21int-spain-sanchez-01-clpt/21int-spain-sanchez-01-clpt-mediumSquareAt3X-v2.jpg",
       "sourceName": "The New York Times",
       "language": "en",
@@ -778,6 +1290,38 @@
       }
     },
     {
+      "title": "Jusqu'à deux ans de prison ferme et le caractère raciste des violences retenu pour les trois policiers accusés d'avoir roué de coups Michel Zecler",
+      "link": "https://www.franceinfo.fr/faits-divers/producteur-passe-a-tabac-par-des-policiers/des-condamnations-allant-d-un-an-a-deux-ans-de-prison-ferme-pour-les-trois-policiers-accuses-d-avoir-roue-de-coups-michel-zecler_8292287.html#xtor=RSS-3-[lestitres]",
+      "description": "La cour criminelle de Paris a rendu son verdict très attendu, vendredi soir, face à un public venu en nombre. Elle a finalement retenu la circonstance aggravante de racisme. Les peines vont de un an sous bracelet électronique à deux ans de prison ferme.",
+      "date": "2026-11-21T13:49:59+01:00",
+      "image": "https://www.franceinfo.fr/pictures/mUce-5pfICvv5UodXjzk4q_zQz4/0x28:5315x3018/432x243/filters:format(jpg)/2026/11/21/6b00d3309e766622813542.jpg",
+      "sourceName": "franceinfo",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "France",
+      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Jusqu'à deux ans de prison ferme et le caractère raciste des violences retenu pour les trois policiers accusés d'avoir roué de coups Michel Zecler",
+          "description": "La cour criminelle de Paris a rendu son verdict très attendu, vendredi soir, face à un public venu en nombre. Elle a finalement retenu la circonstance aggravante de racisme. Les peines vont de un an sous bracelet électronique à deux ans de prison ferme.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "franceinfo",
+          "url": "https://www.franceinfo.fr/faits-divers/producteur-passe-a-tabac-par-des-policiers/des-condamnations-allant-d-un-an-a-deux-ans-de-prison-ferme-pour-les-trois-policiers-accuses-d-avoir-roue-de-coups-michel-zecler_8292287.html#xtor=RSS-3-[lestitres]"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "Le Mexique arrête Fausto Isidro Meza, alias « Chapo Isidro », un puissant chef de cartel recherché par le FBI",
       "link": "https://www.lemonde.fr/international/article/2026/11/21/le-mexique-arrete-fausto-isidro-meza-alias-chapo-isidro-un-puissant-chef-de-cartel-recherche-par-le-fbi_6814013_3210.html",
       "description": "Le narcotrafiquant a été arrêté au Mexique, vendredi, ce qui a déclenché de violents affrontements. Il opérait dans le nord de l’Etat de Sinaloa, et les Etats-Unis offraient une récompense de 5 millions de dollars pour son arrestation.",
@@ -812,7 +1356,7 @@
     {
       "title": "Russian ship damaged by drone attack in Gulf of Finland, Helsinki and Moscow say",
       "link": "https://www.politico.eu/article/russian-ship-damaged-drone-attack-gulf-finland-helsinki-moscow-say/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-      "description": "\"War is spilling into our neighboring regions,\" Finnish Prime Minister Petteri Orpo said.",
+      "description": "The Finnish coast guard said the ship was known to have ties with Russian armed forces.",
       "date": "2026-11-21T12:36:56+00:00",
       "image": "",
       "sourceName": "POLITICO Europe",
@@ -826,7 +1370,7 @@
         "version": 1,
         "input": {
           "title": "Russian ship damaged by drone attack in Gulf of Finland, Helsinki and Moscow say",
-          "description": "\"War is spilling into our neighboring regions,\" Finnish Prime Minister Petteri Orpo said.",
+          "description": "The Finnish coast guard said the ship was known to have ties with Russian armed forces.",
           "sourceCategory": "Global news and geopolitics"
         }
       },
@@ -834,6 +1378,70 @@
         {
           "name": "POLITICO Europe",
           "url": "https://www.politico.eu/article/russian-ship-damaged-drone-attack-gulf-finland-helsinki-moscow-say/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "A Genève, la communauté internationale échoue à interdire les robots tueurs",
+      "link": "https://www.lemonde.fr/international/article/2026/11/21/a-geneve-la-communaute-internationale-echoue-a-interdire-les-robots-tueurs_6814012_3210.html",
+      "description": "Alors que la menace des systèmes d’armes létales autonomes, désormais assistées par l’intelligence artificielle, se fait chaque jour plus précise dans les zones de combat, la Russie, les Etats-Unis et Israël se sont opposés à l’ouverture de négociations pour un traité international sur ce type d’armes.",
+      "date": "2026-11-21T13:36:49+01:00",
+      "image": "https://img.lemde.fr/2026/11/16/833/0/5000/2500/644/322/60/0/44263a9_ftp-1-rvj56vvtx8uc-afp-d7kw7kf.jpg",
+      "sourceName": "Le Monde",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "Technology",
+      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "A Genève, la communauté internationale échoue à interdire les robots tueurs",
+          "description": "Alors que la menace des systèmes d’armes létales autonomes, désormais assistées par l’intelligence artificielle, se fait chaque jour plus précise dans les zones de combat, la Russie, les Etats-Unis et Israël se sont opposés à l’ouverture de négociations pour un traité international sur ce type d’armes.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "Le Monde",
+          "url": "https://www.lemonde.fr/international/article/2026/11/21/a-geneve-la-communaute-internationale-echoue-a-interdire-les-robots-tueurs_6814012_3210.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Un directeur d'école maternelle de Montpellier mis en examen pour viol et agression sexuelle",
+      "link": "https://www.franceinfo.fr/societe/harcelement-sexuel/un-directeur-d-ecole-maternelle-de-montpellier-mis-en-examen-pour-viol-et-agression-sexuelle_8293025.html#xtor=RSS-3-[lestitres]",
+      "description": "L’homme a été placé sous contrôle judiciaire et a interdiction d'exercer une fonction au contact d'enfants.",
+      "date": "2026-11-21T13:32:30+01:00",
+      "image": "https://www.franceinfo.fr/pictures/BKovo4tkuGAqw9KoTb0vFntHU0E/0x53:1024x629/432x243/filters:format(jpg)/2026/11/20/6b00cf1de02bd414492259.jpg",
+      "sourceName": "franceinfo",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "France",
+      "sectionReason": "feed category fallback: France",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Un directeur d'école maternelle de Montpellier mis en examen pour viol et agression sexuelle",
+          "description": "L’homme a été placé sous contrôle judiciaire et a interdiction d'exercer une fonction au contact d'enfants.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "franceinfo",
+          "url": "https://www.franceinfo.fr/societe/harcelement-sexuel/un-directeur-d-ecole-maternelle-de-montpellier-mis-en-examen-pour-viol-et-agression-sexuelle_8293025.html#xtor=RSS-3-[lestitres]"
         }
       ],
       "sourceCount": 1,
@@ -1066,38 +1674,6 @@
       }
     },
     {
-      "title": "Alexandre Smia, réalisateur de « Jupiter », spécialiste des histoires à haute tension",
-      "link": "https://www.lemonde.fr/culture/article/2026/11/21/alexandre-smia-realisateur-de-jupiter-specialiste-des-histoires-a-haute-tension_6814011_3246.html",
-      "description": "D’abord scénariste pour des séries comme « Le Bureau des légendes », le cinéaste signe, à 45 ans, son premier long-métrage, qui montre le président français face au dilemme d’utiliser ou non l’arme nucléaire.",
-      "date": "2026-11-21T13:00:09+01:00",
-      "image": "https://img.lemde.fr/2026/11/06/41/0/2274/1137/644/322/60/0/4e0a207_upload-1-achyzyooatyv-capture-d-e-cran-2026-11-06-a-17-04-56.jpg",
-      "sourceName": "Le Monde",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Alexandre Smia, réalisateur de « Jupiter », spécialiste des histoires à haute tension",
-          "description": "D’abord scénariste pour des séries comme « Le Bureau des légendes », le cinéaste signe, à 45 ans, son premier long-métrage, qui montre le président français face au dilemme d’utiliser ou non l’arme nucléaire.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "Le Monde",
-          "url": "https://www.lemonde.fr/culture/article/2026/11/21/alexandre-smia-realisateur-de-jupiter-specialiste-des-histoires-a-haute-tension_6814011_3246.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Navy budget pick has family investments in Trump Jr-linked contractor",
       "link": "https://www.ft.com/content/145e6fab-d93a-412d-8670-0554064fdf98?syn-25a6b1a6=1",
       "description": "Democrats have promised to raise alleged conflicts of interest concerning administration officials when they take over Congress",
@@ -1226,38 +1802,6 @@
       }
     },
     {
-      "title": "Un mathématicien annonce la résolution de l'hypothèse de Riemann, l'un des plus célèbres problèmes du monde, avec l'aide d'une IA d'Anthropic",
-      "link": "https://www.franceinfo.fr/internet/intelligence-artificielle/un-mathematicien-annonce-la-resolution-d-un-des-plus-celebres-problemes-du-monde-avec-l-aide-d-une-ia-d-anthropic_8293547.html#xtor=RSS-3-[lestitres]",
-      "description": "Levent Alpöge n'a publié qu'un récit de ces travaux sur son site personnel et non la démonstration intégrale, qui fait plus de 250 000 pages selon lui et n'a pu être vérifiée par aucun autre mathématicien.",
-      "date": "2026-11-21T12:59:30+01:00",
-      "image": "https://www.franceinfo.fr/pictures/mgOtj1CTOwixxfj0lANHUDkldZU/484x0:1024x303/432x243/filters:format(jpg)/2026/11/21/6b016518399e7631030789.jpg",
-      "sourceName": "franceinfo",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "Technology",
-      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Un mathématicien annonce la résolution de l'hypothèse de Riemann, l'un des plus célèbres problèmes du monde, avec l'aide d'une IA d'Anthropic",
-          "description": "Levent Alpöge n'a publié qu'un récit de ces travaux sur son site personnel et non la démonstration intégrale, qui fait plus de 250 000 pages selon lui et n'a pu être vérifiée par aucun autre mathématicien.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "franceinfo",
-          "url": "https://www.franceinfo.fr/internet/intelligence-artificielle/un-mathematicien-annonce-la-resolution-d-un-des-plus-celebres-problemes-du-monde-avec-l-aide-d-une-ia-d-anthropic_8293547.html#xtor=RSS-3-[lestitres]"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "« Aux Britanniques de décider quelle relation de long terme ils veulent » : dix ans après le Brexit, l'Europe et le Royaume-Uni font un pas l'un vers l'autre",
       "link": "https://www.lesechos.fr/monde/europe/aux-britanniques-de-decider-quelle-relation-de-long-terme-ils-veulent-dix-ans-apres-le-brexit-leurope-et-le-royaume-uni-font-un-pas-lun-vers-lautre-2263811",
       "description": "A Bruxelles, ce vendredi, Londres et Bruxelles ont officialisé leurs accords sur les produits agricoles, le marché du carbone et la mobilité des jeunes. Mais de nombreux points restent en suspens.",
@@ -1324,7 +1868,7 @@
     {
       "title": "Russia Says Cargo Ship Attacked By Drones in Gulf of Finland",
       "link": "https://www.bloomberg.com/news/articles/2026-11-21/russia-says-cargo-ship-attacked-by-drones-in-gulf-of-finland",
-      "description": "Russia said a cargo ship bound for its Kaliningrad exclave was targeted in neutral waters in the Gulf of Finland, highlighting growing risks to the country’s energy and food exports through critical Baltic shipping routes.",
+      "description": "Russia said a cargo ship bound for its Kaliningrad exclave was targeted in international waters in the Gulf of Finland, highlighting growing risks to the country’s energy and food exports through critical Baltic Sea shipping routes.",
       "date": "2026-11-21T11:44:46+00:00",
       "image": "",
       "sourceName": "Bloomberg",
@@ -1338,7 +1882,7 @@
         "version": 1,
         "input": {
           "title": "Russia Says Cargo Ship Attacked By Drones in Gulf of Finland",
-          "description": "Russia said a cargo ship bound for its Kaliningrad exclave was targeted in neutral waters in the Gulf of Finland, highlighting growing risks to the country’s energy and food exports through critical Baltic shipping routes.",
+          "description": "Russia said a cargo ship bound for its Kaliningrad exclave was targeted in international waters in the Gulf of Finland, highlighting growing risks to the country’s energy and food exports through critical Baltic Sea shipping routes.",
           "sourceCategory": "Financial markets and economics"
         }
       },
@@ -1642,38 +2186,6 @@
       }
     },
     {
-      "title": "Maldon Salt’s Authenticity Is Questioned, Leaving Foodies Shaken",
-      "link": "https://www.nytimes.com/2026/11/21/world/europe/maldon-sea-salt-artisanal-scandal.html",
-      "description": "The salt is a flaky favorite of food influencers and famous chefs. A revelation this week raised questions about what makes artisanal “artisanal.”",
-      "date": "2026-11-21T11:04:53+00:00",
-      "image": "https://static01.nyt.com/images/2026/11/21/multimedia/21xp-salt/21xp-salt-mediumSquareAt3X.jpg",
-      "sourceName": "The New York Times",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Maldon Salt’s Authenticity Is Questioned, Leaving Foodies Shaken",
-          "description": "The salt is a flaky favorite of food influencers and famous chefs. A revelation this week raised questions about what makes artisanal “artisanal.”",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "The New York Times",
-          "url": "https://www.nytimes.com/2026/11/21/world/europe/maldon-sea-salt-artisanal-scandal.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "\"Prokuratura nie na posyłki Godek\". Obywatele idą pod Ministertswo Sprawiedliwości",
       "link": "https://wyborcza.pl/7,75398,33143049,prokuratura-nie-na-posylki-godek-obywatele-ida-pod-ministertswo.html",
       "description": "- Prokuratura tańczy, tak jak Kaja Godek jej zagra - przekonuje Aleksandra Łoboda z Fundacji Widzialne. I zapowiada protest przed gmachem resortu sprawiedliwości we wtorek, 24 listopada.",
@@ -1730,74 +2242,6 @@
         {
           "name": "The New York Times",
           "url": "https://www.nytimes.com/2026/11/21/world/canada/carney-china-electric-vehicles-tariffs.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris - Boursorama",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1uYlMtclJJQjJfa19vbGVCdEZVYzk4akZZbjM0Snpocy1LUnRxWWJPUWdhRG45a0o2YnBuZWxTcHdJazQ2c0owMjFteVI5T0xENWc?oc=5",
-      "description": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris Boursorama",
-      "date": "2026-11-21T10:53:12+00:00",
-      "image": "",
-      "sourceName": "Boursorama",
-      "language": "fr",
-      "category": "Financial markets and economics",
-      "aggregator": true,
-      "subgroup": "BNP Paribas",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Financial",
-      "sectionReason": "content: BNP Paribas bank evidence",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris - Boursorama",
-          "description": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris Boursorama",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "Boursorama",
-          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1uYlMtclJJQjJfa19vbGVCdEZVYzk4akZZbjM0Snpocy1LUnRxWWJPUWdhRG45a0o2YnBuZWxTcHdJazQ2c0owMjFteVI5T0xENWc?oc=5"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "BNP Paribas stock: BNL targets pre-tax RONE above 20% by 2030 - ad-hoc-news.de",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNZUhZd0h4d1lGQ18zYzIyYTRuMzVUQWdiRXI4VGFhcjc4QXhtOVU2NDVLLXFtMEVWMU9wV0otUVNQNzdXc255VGwyeko4aFkyWW51OVlRTU5zWXZnaEtKeGZLbFNnTHg0NEdLdHBBbzdEMFdIdU83c2pDdmFTWExUWVRJaE1lallHWVdKcUdNMy1HS1MzbjFVbnpEM3pBb0c1aHd2QXltc3hDY0F4RldaazNITkU5VzBPc2ljQ1Rpbw?oc=5",
-      "description": "BNP Paribas stock: BNL targets pre-tax RONE above 20% by 2030 ad-hoc-news.de",
-      "date": "2026-11-21T10:52:25+00:00",
-      "image": "",
-      "sourceName": "ad-hoc-news.de",
-      "language": "en",
-      "category": "Financial markets and economics",
-      "aggregator": true,
-      "subgroup": "BNP Paribas",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Financial",
-      "sectionReason": "content: BNP Paribas bank evidence",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "BNP Paribas stock: BNL targets pre-tax RONE above 20% by 2030 - ad-hoc-news.de",
-          "description": "BNP Paribas stock: BNL targets pre-tax RONE above 20% by 2030 ad-hoc-news.de",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "ad-hoc-news.de",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNZUhZd0h4d1lGQ18zYzIyYTRuMzVUQWdiRXI4VGFhcjc4QXhtOVU2NDVLLXFtMEVWMU9wV0otUVNQNzdXc255VGwyeko4aFkyWW51OVlRTU5zWXZnaEtKeGZLbFNnTHg0NEdLdHBBbzdEMFdIdU83c2pDdmFTWExUWVRJaE1lallHWVdKcUdNMy1HS1MzbjFVbnpEM3pBb0c1aHd2QXltc3hDY0F4RldaazNITkU5VzBPc2ljQ1Rpbw?oc=5"
         }
       ],
       "sourceCount": 1,
@@ -1902,38 +2346,6 @@
       }
     },
     {
-      "title": "\"C'est un ovni depuis très longtemps\" : à son meilleur niveau, Antoine Dupont suscite l'engouement avant France-Argentine",
-      "link": "https://www.franceinfo.fr/sports/rugby/antoine-dupont/c-est-un-ovni-depuis-tres-longtemps-a-son-meilleur-niveau-antoine-dupont-suscite-l-engouement-avant-france-argentine_8293577.html#xtor=RSS-3-[lestitres]",
-      "description": "Des supporters aux médias étrangers, le capitaine des Bleus fait l'objet de toutes les attentions depuis sa prestation face à l'Afrique du Sud. A 30 ans, le demi de mêlée toulousain veut garder la tête froide et rester \"le seul juge\" de ses performances.",
-      "date": "2026-11-21T11:37:01+01:00",
-      "image": "https://www.franceinfo.fr/pictures/hUHGZKG3V-c_rxVOUZ-yPh-bblE/0x312:6000x3687/432x243/filters:format(jpg)/2026/11/21/6b016bc439868879869920.jpg",
-      "sourceName": "franceinfo",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "\"C'est un ovni depuis très longtemps\" : à son meilleur niveau, Antoine Dupont suscite l'engouement avant France-Argentine",
-          "description": "Des supporters aux médias étrangers, le capitaine des Bleus fait l'objet de toutes les attentions depuis sa prestation face à l'Afrique du Sud. A 30 ans, le demi de mêlée toulousain veut garder la tête froide et rester \"le seul juge\" de ses performances.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "franceinfo",
-          "url": "https://www.franceinfo.fr/sports/rugby/antoine-dupont/c-est-un-ovni-depuis-tres-longtemps-a-son-meilleur-niveau-antoine-dupont-suscite-l-engouement-avant-france-argentine_8293577.html#xtor=RSS-3-[lestitres]"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "New open model Inkling 2 Mini thinks in loops to solve problems with fewer words and still runs on a laptop",
       "link": "https://the-decoder.com/new-open-model-inkling-2-mini-thinks-in-loops-to-solve-problems-with-fewer-words-and-still-runs-on-a-laptop/",
       "description": "Thinking Machines has released Inkling 2 Mini, an open looped transformer that runs 12 of its 24 layers three times per token. This lets the model reason internally for longer without generating extra text. On Artificial Analysis's Intelligence Index, it ties with Qwen3.8 27B at roughly six times lower cost. The article New open model Inkling 2 Mini thinks in loops to solve problems with fewer words and still runs on a laptop appeared first on The Decoder.",
@@ -1990,38 +2402,6 @@
         {
           "name": "franceinfo",
           "url": "https://www.franceinfo.fr/replay-magazine/france-2/affaires-sensibles/video-quand-un-gourou-condamne-coule-des-jours-tranquilles-au-bord-de-sa-piscine-affaires-sensibles-revient-sur-le-fiasco-judiciaire-de-la-secte-okc_8290778.html#xtor=RSS-3-[lestitres]"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "La F1, ce sport mixte sur le papier, où les femmes peinent toujours à exister",
-      "link": "https://www.lemonde.fr/sport/article/2026/11/21/la-f1-ce-sport-mixte-sur-le-papier-ou-les-femmes-peinent-toujours-a-exister_6813981_3242.html",
-      "description": "Aucune pilote n’a pris le départ d’un Grand Prix depuis l’Italienne Lella Lomardi en 1976. La F1 Academy, lancée en 2023 et dont la dernière manche de la saison se déroule en marge du Grand Prix de Las Vegas, samedi, vise à y remédier. Mais les freins restent nombreux.",
-      "date": "2026-11-21T11:30:15+01:00",
-      "image": "https://img.lemde.fr/2026/10/25/548/0/3947/1973/644/322/60/0/7dcf5f4_ftp-1-w1vsvi9ijou4-2301970250.jpg",
-      "sourceName": "Le Monde",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "feed category fallback: France",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "La F1, ce sport mixte sur le papier, où les femmes peinent toujours à exister",
-          "description": "Aucune pilote n’a pris le départ d’un Grand Prix depuis l’Italienne Lella Lomardi en 1976. La F1 Academy, lancée en 2023 et dont la dernière manche de la saison se déroule en marge du Grand Prix de Las Vegas, samedi, vise à y remédier. Mais les freins restent nombreux.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "Le Monde",
-          "url": "https://www.lemonde.fr/sport/article/2026/11/21/la-f1-ce-sport-mixte-sur-le-papier-ou-les-femmes-peinent-toujours-a-exister_6813981_3242.html"
         }
       ],
       "sourceCount": 1,
@@ -2182,38 +2562,6 @@
         {
           "name": "Le Monde",
           "url": "https://www.lemonde.fr/la-chronique-de-thomas-piketty/article/2026/11/21/thomas-piketty-le-projet-de-convention-fiscale-de-l-onu-a-le-potentiel-de-changer-la-face-du-monde_6813978_6649149.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Fight over fossil fuels leaves COP31 climate talks in deadlock",
-      "link": "https://www.bbc.co.uk/news/articles/c6ly5w40eg07o?at_medium=RSS&at_campaign=rss",
-      "description": "Countries from nearly 200 countries are in a deadlock to try and get a new global climate agreement.",
-      "date": "2026-11-21T09:52:11+00:00",
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5253/live/c9ca5500-e579-11f1-a5f6-b3028adf2d6d.jpg",
-      "sourceName": "BBC News",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Fight over fossil fuels leaves COP31 climate talks in deadlock",
-          "description": "Countries from nearly 200 countries are in a deadlock to try and get a new global climate agreement.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "BBC News",
-          "url": "https://www.bbc.co.uk/news/articles/c6ly5w40eg07o?at_medium=RSS&at_campaign=rss"
         }
       ],
       "sourceCount": 1,
@@ -2502,38 +2850,6 @@
         {
           "name": "Bloomberg",
           "url": "https://www.bloomberg.com/news/articles/2026-11-21/how-ai-is-forcing-china-to-reshape-industrial-policy"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "« Pas question de mettre mon père en contact d’urgence, le temps qu’il décroche, je serai déjà morte… »",
-      "link": "https://www.lemonde.fr/m-le-mag/article/2026/11/21/pas-question-de-mettre-mon-pere-en-contact-d-urgence-le-temps-qu-il-decroche-je-serai-deja-morte_6813958_4500055.html",
-      "description": "Dans sa chronique, Guillemette Faure met en lumière les transformations invisibles de notre époque. Cette semaine, le choix cornélien de celui ou celle à avertir en cas de pépin.",
-      "date": "2026-11-21T10:00:09+01:00",
-      "image": "https://img.lemde.fr/2026/11/18/76/0/1024/512/644/322/60/0/8df3080_upload-1-oas1ka236gsa-043-dpa-pa-250304-99-108180-dpai.jpg",
-      "sourceName": "Le Monde",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "feed category fallback: France",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "« Pas question de mettre mon père en contact d’urgence, le temps qu’il décroche, je serai déjà morte… »",
-          "description": "Dans sa chronique, Guillemette Faure met en lumière les transformations invisibles de notre époque. Cette semaine, le choix cornélien de celui ou celle à avertir en cas de pépin.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "Le Monde",
-          "url": "https://www.lemonde.fr/m-le-mag/article/2026/11/21/pas-question-de-mettre-mon-pere-en-contact-d-urgence-le-temps-qu-il-decroche-je-serai-deja-morte_6813958_4500055.html"
         }
       ],
       "sourceCount": 1,
@@ -3122,30 +3438,30 @@
       }
     },
     {
-      "title": "Serge Money, avocat de Michel Zecler, salue une \"décision historique\" mais les peines \"laissent un petit goût amer\"",
-      "link": "https://www.franceinfo.fr/faits-divers/producteur-passe-a-tabac-par-des-policiers/serge-money-avocat-de-michel-zecler-salue-une-decision-historique-mais-les-peines-laissent-un-petit-gout-amer_8293472.html#xtor=RSS-3-[lestitres]",
-      "description": "C'est une \"décision historique\", a réagi sur franceinfo Serge Money, l'avocat de Michel Zecler, après la condamnation des trois policiers vendredi.",
-      "date": "2026-11-21T08:56:43+01:00",
-      "image": "https://www.franceinfo.fr/pictures/tmCowXUv3G5H0K-pMHxRpGNaO1Y/0x0:1280x720/432x243/filters:format(jpg)/2026/11/21/6b01584ec818c782246418.jpg",
-      "sourceName": "franceinfo",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "feed category fallback: France",
+      "title": "Rosja oskarża holenderską firmę o udział w ataku na Most Krymski. Żąda wyjaśnień",
+      "link": "https://www.bankier.pl/wiadomosc/Rosja-oskarza-holenderska-firme-o-udzial-w-ataku-na-Most-Krymski-Zada-wyjasnien-9232899.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
+      "description": "Rosyjska ambasada w Hadze wezwała w piątek władze Holandii do wyjaśnienia udziału pracowników firmy zbrojeniowej Destinus „w przeprowadzaniu ataków terrorystycznych przeciwko Rosji”. Równolegle, we wpisie na platformie X strona rosyjska ponownie wezwała do ewakuacji pracowników ambasady Holandii w Kijowie.",
+      "date": "2026-11-21T09:00:00+01:00",
+      "image": "",
+      "sourceName": "Bankier.pl",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "World",
+      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
         "input": {
-          "title": "Serge Money, avocat de Michel Zecler, salue une \"décision historique\" mais les peines \"laissent un petit goût amer\"",
-          "description": "C'est une \"décision historique\", a réagi sur franceinfo Serge Money, l'avocat de Michel Zecler, après la condamnation des trois policiers vendredi.",
-          "sourceCategory": "France"
+          "title": "Rosja oskarża holenderską firmę o udział w ataku na Most Krymski. Żąda wyjaśnień",
+          "description": "Rosyjska ambasada w Hadze wezwała w piątek władze Holandii do wyjaśnienia udziału pracowników firmy zbrojeniowej Destinus „w przeprowadzaniu ataków terrorystycznych przeciwko Rosji”. Równolegle, we wpisie na platformie X strona rosyjska ponownie wezwała do ewakuacji pracowników ambasady Holandii w Kijowie.",
+          "sourceCategory": "Poland"
         }
       },
       "sources": [
         {
-          "name": "franceinfo",
-          "url": "https://www.franceinfo.fr/faits-divers/producteur-passe-a-tabac-par-des-policiers/serge-money-avocat-de-michel-zecler-salue-une-decision-historique-mais-les-peines-laissent-un-petit-gout-amer_8293472.html#xtor=RSS-3-[lestitres]"
+          "name": "Bankier.pl",
+          "url": "https://www.bankier.pl/wiadomosc/Rosja-oskarza-holenderska-firme-o-udzial-w-ataku-na-Most-Krymski-Zada-wyjasnien-9232899.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
         }
       ],
       "sourceCount": 1,
@@ -3658,70 +3974,6 @@
         {
           "name": "Les Échos",
           "url": "https://www.lesechos.fr/monde/enjeux-internationaux/ia-avec-une-nouvelle-generation-de-fibre-optique-la-chine-pourrait-prendre-le-dessus-sur-lensemble-de-ses-concurrents-2263896"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Téléphonie mobile par satellite : le chemin tortueux des opérateurs européens vers une constellation souveraine",
-      "link": "https://www.lemonde.fr/economie/article/2026/11/21/telephonie-mobile-par-satellite-le-chemin-tortueux-des-operateurs-europeens-vers-une-constellation-souveraine_6813948_3234.html",
-      "description": "Face à Starlink, Orange, Deutsche Telekom, Telefonica et Vodafone veulent créer un service mobile par satellite européen et souverain. Mais les délais, le coût et le manque de solutions disponibles compliquent leur projet.",
-      "date": "2026-11-21T07:00:05+01:00",
-      "image": "https://img.lemde.fr/2026/11/20/368/0/4413/2206/644/322/60/0/27700c8_upload-1-ffedsxaoejcr-p-070309-00-16-01-original-127679.jpg",
-      "sourceName": "Le Monde",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "feed category fallback: France",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Téléphonie mobile par satellite : le chemin tortueux des opérateurs européens vers une constellation souveraine",
-          "description": "Face à Starlink, Orange, Deutsche Telekom, Telefonica et Vodafone veulent créer un service mobile par satellite européen et souverain. Mais les délais, le coût et le manque de solutions disponibles compliquent leur projet.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "Le Monde",
-          "url": "https://www.lemonde.fr/economie/article/2026/11/21/telephonie-mobile-par-satellite-le-chemin-tortueux-des-operateurs-europeens-vers-une-constellation-souveraine_6813948_3234.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "EN DIRECT, guerre en Ukraine : « L’Ukraine a le droit de riposter contre l’agresseur », déclare le premier ministre finlandais, à la suite de l’attaque d’un cargo russe dont l’origine n’est pas encore connue",
-      "link": "https://www.lemonde.fr/international/live/2026/11/21/en-direct-guerre-en-ukraine-deux-morts-et-47-blesses-dans-des-frappes-russes-sur-kryvy-rih-ville-natale-de-volodymyr-zelensky_6810982_3210.html",
-      "description": "Plus tôt, Alexandre Drozdenko, le gouverneur de l’oblast de Leningrad, écrivait sur son compte Telegram qu’un « cargo en route vers la ville de Kaliningrad a été attaqué à l’aide de deux drones », et ce « à trois milles marins de la frontière avec la Fédération de Russie ».",
-      "date": "2026-11-21T06:38:14+01:00",
-      "image": "https://img.lemde.fr/2026/11/21/24/0/1280/640/644/322/60/0/381793b_ftp-1-fwowo1pjmudo-2026-11-21t104532z-1799509031-rc2asoaptvul-rtrmadp-3-ukraine-crisis-attack-kryvyi-rih.JPG",
-      "sourceName": "Le Monde",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "World",
-      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "EN DIRECT, guerre en Ukraine : « L’Ukraine a le droit de riposter contre l’agresseur », déclare le premier ministre finlandais, à la suite de l’attaque d’un cargo russe dont l’origine n’est pas encore connue",
-          "description": "Plus tôt, Alexandre Drozdenko, le gouverneur de l’oblast de Leningrad, écrivait sur son compte Telegram qu’un « cargo en route vers la ville de Kaliningrad a été attaqué à l’aide de deux drones », et ce « à trois milles marins de la frontière avec la Fédération de Russie ».",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "Le Monde",
-          "url": "https://www.lemonde.fr/international/live/2026/11/21/en-direct-guerre-en-ukraine-deux-morts-et-47-blesses-dans-des-frappes-russes-sur-kryvy-rih-ville-natale-de-volodymyr-zelensky_6810982_3210.html"
         }
       ],
       "sourceCount": 1,
@@ -4724,6 +4976,38 @@
       }
     },
     {
+      "title": "Guerre en Ukraine : Emmanuel Macron dénonce un \"agenda agressif\" de la Russie, après une série d'\"incidents graves\", notamment en Pologne et au Danemark",
+      "link": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/direct-guerre-en-ukraine-un-missile-russe-tombe-dans-le-sud-est-de-la-pologne-sans-faire-de-blesse_8292080.html#xtor=RSS-3-[lestitres]",
+      "description": "Des missiles russes sont tombés vendredi en Pologne, non loin de la frontière ukrainienne, sans faire de blessé.",
+      "date": "2026-11-20T23:54:33+01:00",
+      "image": "https://www.franceinfo.fr/pictures/izQJ5PMUXr-6C22CfOWQASAnr3c/0x53:1024x629/432x243/filters:format(jpg)/2026/11/16/6afb597e4670a357573193.jpg",
+      "sourceName": "franceinfo",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "Poland",
+      "sectionReason": "content: Poland subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Guerre en Ukraine : Emmanuel Macron dénonce un \"agenda agressif\" de la Russie, après une série d'\"incidents graves\", notamment en Pologne et au Danemark",
+          "description": "Des missiles russes sont tombés vendredi en Pologne, non loin de la frontière ukrainienne, sans faire de blessé.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "franceinfo",
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/direct-guerre-en-ukraine-un-missile-russe-tombe-dans-le-sud-est-de-la-pologne-sans-faire-de-blesse_8292080.html#xtor=RSS-3-[lestitres]"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "WSJ Dollar Index Rises 0.42% This Week to 98.75",
       "link": "https://www.wsj.com/finance/currencies/asian-currencies-consolidate-but-may-be-weighed-by-risk-off-sentiment-38aa30b7?mod=rss_markets_main",
       "description": "The WSJ Dollar Index declined 0.1%, snapping a two-trading-day winning streak.",
@@ -4812,38 +5096,6 @@
         {
           "name": "The New York Times",
           "url": "https://www.nytimes.com/2026/11/19/world/asia/trump-xi-putin.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "‘Always Remain Liquid’: Richards",
-      "link": "https://www.bloomberg.com/news/videos/2026-11-20/-always-remain-liquid-richards-video",
-      "description": "Bruce Richards, managing partner and head of CVC Marathon, joins Scarlet Fu and Tom Keene on “Bloomberg Money.” They discuss Richards’ favorite investing advice he has received throughout his career. Richards warns about irrational markets and also says he’s not a fan of leveraged ETF structures. (Source: Bloomberg)",
-      "date": "2026-11-20T22:30:37+00:00",
-      "image": "",
-      "sourceName": "Bloomberg",
-      "language": "en",
-      "category": "Financial markets and economics",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Financial",
-      "sectionReason": "feed category fallback: Financial markets and economics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "‘Always Remain Liquid’: Richards",
-          "description": "Bruce Richards, managing partner and head of CVC Marathon, joins Scarlet Fu and Tom Keene on “Bloomberg Money.” They discuss Richards’ favorite investing advice he has received throughout his career. Richards warns about irrational markets and also says he’s not a fan of leveraged ETF structures. (Source: Bloomberg)",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "Bloomberg",
-          "url": "https://www.bloomberg.com/news/videos/2026-11-20/-always-remain-liquid-richards-video"
         }
       ],
       "sourceCount": 1,
@@ -6328,38 +6580,6 @@
       }
     },
     {
-      "title": "Miami or Vice City? Tour the real-world inspiration for GTA 6",
-      "link": "https://www.bbc.co.uk/news/videos/c8wy5d43zp9qo?at_medium=RSS&at_campaign=rss",
-      "description": "BBC News Mundo’s Rafael Rojas visits the real-life Miami locations that inspired Vice City, GTA 6’s fictionalised setting.",
-      "date": "2026-11-20T18:48:48+00:00",
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5b70/live/4733dfb0-e512-11f1-99b6-a35a62fa4264.jpg",
-      "sourceName": "BBC News",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Miami or Vice City? Tour the real-world inspiration for GTA 6",
-          "description": "BBC News Mundo’s Rafael Rojas visits the real-life Miami locations that inspired Vice City, GTA 6’s fictionalised setting.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "BBC News",
-          "url": "https://www.bbc.co.uk/news/videos/c8wy5d43zp9qo?at_medium=RSS&at_campaign=rss"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Święczkowski straci połowę wynagrodzenia, a nie 150 proc. TK wydał komunikat",
       "link": "https://www.bankier.pl/wiadomosc/Swieczkowski-straci-polowe-wynagrodzenia-a-nie-150-proc-TK-wydal-komunikat-9232859.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
       "description": "Nie sumuje się obniżek wynagrodzenia wynikających z wykonywanych jednocześnie uchwał o uchyleniu immunitetu. Równoczesne obniżenie wynagrodzenia Bogdana Święczkowskiego w trzech uchwałach o 50 proc. oznacza obniżenie wynagrodzenia o połowę - przekazał Trybunał Konstytucyjny.",
@@ -6680,6 +6900,38 @@
       }
     },
     {
+      "title": "Le Danemark soupçonne la Russie d'avoir planifié l'assassinat d'un rappeur ukrainien sur son sol",
+      "link": "https://www.franceinfo.fr/monde/europe/union-europeenne/le-danemark-soupconne-la-russie-d-avoir-planifie-l-assassinat-d-un-ukrainien-sur-son-sol_8292689.html#xtor=RSS-3-[lestitres]",
+      "description": "Les faits remontent au 25 septembre et la cible présumée a été identifiée par la presse danoise comme le rappeur Kyivstoner.",
+      "date": "2026-11-20T18:41:08+01:00",
+      "image": "https://www.franceinfo.fr/pictures/6cvksXLLYFqWaI10pKj-zNiA834/0x53:1024x629/432x243/filters:format(jpg)/2026/11/20/6b0080df6e055703366761.jpg",
+      "sourceName": "franceinfo",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "World",
+      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Le Danemark soupçonne la Russie d'avoir planifié l'assassinat d'un rappeur ukrainien sur son sol",
+          "description": "Les faits remontent au 25 septembre et la cible présumée a été identifiée par la presse danoise comme le rappeur Kyivstoner.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "franceinfo",
+          "url": "https://www.franceinfo.fr/monde/europe/union-europeenne/le-danemark-soupconne-la-russie-d-avoir-planifie-l-assassinat-d-un-ukrainien-sur-son-sol_8292689.html#xtor=RSS-3-[lestitres]"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "Dominique de Villepin, le candidat d’un monde disparu",
       "link": "https://www.mediapart.fr/journal/politique/201126/dominique-de-villepin-le-candidat-d-un-monde-disparu",
       "description": "L’ancien ministre de Jacques Chirac a déclaré officiellement sa candidature à la présidentielle. Autour de lui, des profils de droite et de gauche se disent «orphelins», admirent l’homme du «non» en 2003 et pensent qu’il peut profiter de la déshérence du camp des modérés.",
@@ -6736,38 +6988,6 @@
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/11/20/chips-can-survive-the-space-environment-can-their-financing/"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Here are the Apple deals actually worth picking up ahead of Black Friday",
-      "link": "https://www.theverge.com/gadgets/1035460/best-early-black-friday-apple-deals-2026",
-      "description": "A new pair of AirPods or the latest Apple Watch can make a great holiday gift, but they can also take a pretty big dent out of your budget. That’s especially true this year, as rising hardware prices have made MacBooks and other Apple devices even more expensive. Fortunately, Black Friday offers a chance to […]",
-      "date": "2026-11-20T12:33:59-05:00",
-      "image": "",
-      "sourceName": "The Verge",
-      "language": "en",
-      "category": "Technology, AI and science",
-      "sourceCategory": "Technology, AI and science",
-      "section": "Technology",
-      "sectionReason": "feed category fallback: Technology, AI and science",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Here are the Apple deals actually worth picking up ahead of Black Friday",
-          "description": "A new pair of AirPods or the latest Apple Watch can make a great holiday gift, but they can also take a pretty big dent out of your budget. That’s especially true this year, as rising hardware prices have made MacBooks and other Apple devices even more expensive. Fortunately, Black Friday offers a chance to […]",
-          "sourceCategory": "Technology, AI and science"
-        }
-      },
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/gadgets/1035460/best-early-black-friday-apple-deals-2026"
         }
       ],
       "sourceCount": 1,
@@ -7386,38 +7606,6 @@
       }
     },
     {
-      "title": "La justice administrative retoque le «bouclier de sécurité» de Valérie Pécresse",
-      "link": "https://www.mediapart.fr/journal/france/201126/la-justice-administrative-retoque-le-bouclier-de-securite-de-valerie-pecresse",
-      "description": "Le tribunal de Montreuil a annulé une série de délibérations du conseil régional d’Île-de-France autorisant le financement d’équipements de sécurité des communes, notamment des armes létales ou des caméras de vidéosurveillance. Ces dépenses ne relèvent pas de la compétence de la région, estime-t-il.",
-      "date": "2026-11-20T17:07:28+01:00",
-      "image": "https://static.mediapart.fr/etmagine/default/files/2026/11/20/261120-img-valerie-pecresse.jpg",
-      "sourceName": "Mediapart",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "Financial",
-      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "La justice administrative retoque le «bouclier de sécurité» de Valérie Pécresse",
-          "description": "Le tribunal de Montreuil a annulé une série de délibérations du conseil régional d’Île-de-France autorisant le financement d’équipements de sécurité des communes, notamment des armes létales ou des caméras de vidéosurveillance. Ces dépenses ne relèvent pas de la compétence de la région, estime-t-il.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "Mediapart",
-          "url": "https://www.mediapart.fr/journal/france/201126/la-justice-administrative-retoque-le-bouclier-de-securite-de-valerie-pecresse"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "EU warns against COP31 becoming a ‘fossil fuel summit’",
       "link": "https://www.politico.eu/article/eu-warns-against-cop31-becoming-a-fossil-fuel-summit/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
       "description": "The current draft decision text discussed in Antalya would represent \"a substantive step backwards\" on climate action, European Union leaders said.",
@@ -7764,456 +7952,6 @@
         {
           "name": "The Decoder",
           "url": "https://the-decoder.com/apple-joins-the-race-for-ai-agents-that-control-your-device-while-raising-new-barriers-for-competitors/"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "US will soon announce root cause behind FAA nationwide ground stop",
-      "link": "https://arstechnica.com/gadgets/2026/11/how-faa-can-modernize-us-national-airspace-system-without-emergency-ground-stops/",
-      "description": "Former FAA insider on reducing the risks of upgrading a decades-old network.",
-      "date": "2026-11-20T14:52:51+00:00",
-      "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/11/Travelers-during-FAA-ground-stop-1152x648.jpg",
-      "sourceName": "Ars Technica",
-      "language": "en",
-      "category": "Technology, AI and science",
-      "sourceCategory": "Technology, AI and science",
-      "section": "Technology",
-      "sectionReason": "feed category fallback: Technology, AI and science",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "US will soon announce root cause behind FAA nationwide ground stop",
-          "description": "Former FAA insider on reducing the risks of upgrading a decades-old network.",
-          "sourceCategory": "Technology, AI and science"
-        }
-      },
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/gadgets/2026/11/how-faa-can-modernize-us-national-airspace-system-without-emergency-ground-stops/"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Dziennikarze \"Wyborczej\" w finale konkursu \"Grand Press - Książka Reporterska Roku\"",
-      "link": "https://wyborcza.pl/7,75398,33143080,dziennikarze-wyborczej-w-finale-konkursu-grand-press-ksiazka.html",
-      "description": "Jurorzy docenili biografię wybitnego kardiochirurga Mariana Zembali, autorstwa dziennikarzy \"Gazety Wyborczej\" - Judyty Watoły i Dariusza Kortki.",
-      "date": "2026-11-20T14:42:00+00:00",
-      "image": "",
-      "sourceName": "Gazeta Wyborcza",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "Poland",
-      "sectionReason": "feed category fallback: Poland",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Dziennikarze \"Wyborczej\" w finale konkursu \"Grand Press - Książka Reporterska Roku\"",
-          "description": "Jurorzy docenili biografię wybitnego kardiochirurga Mariana Zembali, autorstwa dziennikarzy \"Gazety Wyborczej\" - Judyty Watoły i Dariusza Kortki.",
-          "sourceCategory": "Poland"
-        }
-      },
-      "sources": [
-        {
-          "name": "Gazeta Wyborcza",
-          "url": "https://wyborcza.pl/7,75398,33143080,dziennikarze-wyborczej-w-finale-konkursu-grand-press-ksiazka.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Posiedzenie TK ws. Święczkowskiego zostało przełożone. Powodem informacja od Piotrowicza",
-      "link": "https://wyborcza.pl/7,75398,33143371,posiedzenie-tk-ws-swieczkowskiego-zostalo-przelozone-powodem.html",
-      "description": "Stanisław Piotrowicz został wylosowany na rzecznika dyscyplinarnego w sprawie dotyczącej Bogdana Święczkowskiego. Trybunał Konstytucyjny zdecydował o zmianie terminu posiedzenia.",
-      "date": "2026-11-20T14:42:00+00:00",
-      "image": "",
-      "sourceName": "Gazeta Wyborcza",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "Poland",
-      "sectionReason": "feed category fallback: Poland",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Posiedzenie TK ws. Święczkowskiego zostało przełożone. Powodem informacja od Piotrowicza",
-          "description": "Stanisław Piotrowicz został wylosowany na rzecznika dyscyplinarnego w sprawie dotyczącej Bogdana Święczkowskiego. Trybunał Konstytucyjny zdecydował o zmianie terminu posiedzenia.",
-          "sourceCategory": "Poland"
-        }
-      },
-      "sources": [
-        {
-          "name": "Gazeta Wyborcza",
-          "url": "https://wyborcza.pl/7,75398,33143371,posiedzenie-tk-ws-swieczkowskiego-zostalo-przelozone-powodem.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Wielka Brytania przeprowadziła tajną operację. Cel: ochrona lodówek",
-      "link": "https://wyborcza.pl/7,75399,33142944,wielka-brytania-przeprowadzila-tajna-operacje-cel-ochrona.html",
-      "description": "Szczegóły akcji, wymierzonej przeciwko ewentualnym działaniom hakerów, opisało BBC.",
-      "date": "2026-11-20T14:37:00+00:00",
-      "image": "",
-      "sourceName": "Gazeta Wyborcza",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "Poland",
-      "sectionReason": "feed category fallback: Poland",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Wielka Brytania przeprowadziła tajną operację. Cel: ochrona lodówek",
-          "description": "Szczegóły akcji, wymierzonej przeciwko ewentualnym działaniom hakerów, opisało BBC.",
-          "sourceCategory": "Poland"
-        }
-      },
-      "sources": [
-        {
-          "name": "Gazeta Wyborcza",
-          "url": "https://wyborcza.pl/7,75399,33142944,wielka-brytania-przeprowadzila-tajna-operacje-cel-ochrona.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Anthropic Slides 8.5% to Shrink IPO Gain as AI Trade Unravels",
-      "link": "https://www.bloomberg.com/news/articles/2026-11-20/anthropic-share-slump-nearly-erases-ipo-pop-as-ai-trade-unravels",
-      "description": "Anthropic PBC shares erased a portion of their first-day jump on Friday, testing investors’ faith after the AI lab delivered the biggest initial public offering in history.",
-      "date": "2026-11-20T14:36:49+00:00",
-      "image": "",
-      "sourceName": "Bloomberg",
-      "language": "en",
-      "category": "Financial markets and economics",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Technology",
-      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Anthropic Slides 8.5% to Shrink IPO Gain as AI Trade Unravels",
-          "description": "Anthropic PBC shares erased a portion of their first-day jump on Friday, testing investors’ faith after the AI lab delivered the biggest initial public offering in history.",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "Bloomberg",
-          "url": "https://www.bloomberg.com/news/articles/2026-11-20/anthropic-share-slump-nearly-erases-ipo-pop-as-ai-trade-unravels"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Rosja uderza w Polskę? Szef MON wskazuje cel piątkowego ataku",
-      "link": "https://www.bankier.pl/wiadomosc/Rosja-uderza-w-Polske-Szef-MON-wskazuje-cel-piatkowego-ataku-9232628.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
-      "description": "Piątkowy rosyjski atak, w wyniku którego doszło do naruszenia polskiej przestrzeni powietrznej, nie był przypadkowy – powiedział w piątek szef MON Władysław Kosiniak-Kamysz. Dodał, że miał on na celu zniszczenie współpracy państw zachodnich, które niosą pomoc Ukrainie. Nie możemy się temu poddać - podkreślił.",
-      "date": "2026-11-20T15:28:00+01:00",
-      "image": "",
-      "sourceName": "Bankier.pl",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "Poland",
-      "sectionReason": "content: Poland subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Rosja uderza w Polskę? Szef MON wskazuje cel piątkowego ataku",
-          "description": "Piątkowy rosyjski atak, w wyniku którego doszło do naruszenia polskiej przestrzeni powietrznej, nie był przypadkowy – powiedział w piątek szef MON Władysław Kosiniak-Kamysz. Dodał, że miał on na celu zniszczenie współpracy państw zachodnich, które niosą pomoc Ukrainie. Nie możemy się temu poddać - podkreślił.",
-          "sourceCategory": "Poland"
-        }
-      },
-      "sources": [
-        {
-          "name": "Bankier.pl",
-          "url": "https://www.bankier.pl/wiadomosc/Rosja-uderza-w-Polske-Szef-MON-wskazuje-cel-piatkowego-ataku-9232628.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Gen Z Is Driving Global Political Change, Aiding Far Left and Far Right",
-      "link": "https://www.nytimes.com/2026/11/20/world/europe/youth-protests-far-right-left.html",
-      "description": "Protests across Europe are the latest example of global youth anger that has driven demonstrations and election upsets.",
-      "date": "2026-11-20T14:17:02+00:00",
-      "image": "https://static01.nyt.com/images/2026/11/20/multimedia/20Europe-youth-01-zvtl/20Europe-youth-01-zvtl-mediumSquareAt3X.jpg",
-      "sourceName": "The New York Times",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Gen Z Is Driving Global Political Change, Aiding Far Left and Far Right",
-          "description": "Protests across Europe are the latest example of global youth anger that has driven demonstrations and election upsets.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "The New York Times",
-          "url": "https://www.nytimes.com/2026/11/20/world/europe/youth-protests-far-right-left.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "U.S. Auctions 31.5 Million Acres of Pacific Ocean to Deep Sea Mining Company",
-      "link": "https://www.nytimes.com/2026/11/19/climate/metals-company-seafloor-mining-auction.html",
-      "description": "The first-ever lease sale took place over the objections of a federal judge. Wetstone U.S. Ventures paid $6 million to lease the seabed for mapping and preparation, not actual mining.",
-      "date": "2026-11-20T14:16:51+00:00",
-      "image": "https://static01.nyt.com/images/2026/11/19/climate/19cli-seabed-mining/19cli-seabed-mining-mediumSquareAt3X.jpg",
-      "sourceName": "The New York Times",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "U.S. Auctions 31.5 Million Acres of Pacific Ocean to Deep Sea Mining Company",
-          "description": "The first-ever lease sale took place over the objections of a federal judge. Wetstone U.S. Ventures paid $6 million to lease the seabed for mapping and preparation, not actual mining.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "The New York Times",
-          "url": "https://www.nytimes.com/2026/11/19/climate/metals-company-seafloor-mining-auction.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "SpaceX lenders don’t want Elon Musk launching their collateral into space",
-      "link": "https://arstechnica.com/space/2026/11/spacex-lenders-dont-want-elon-musk-launching-their-collateral-into-space/",
-      "description": "Bondholders want SpaceX’s valuable chip collateral kept on Earth and within reach.",
-      "date": "2026-11-20T14:15:21+00:00",
-      "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/HS7_82eXsAAa-Hx-1152x648.jpeg",
-      "sourceName": "Ars Technica",
-      "language": "en",
-      "category": "Technology, AI and science",
-      "sourceCategory": "Technology, AI and science",
-      "section": "Technology",
-      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "SpaceX lenders don’t want Elon Musk launching their collateral into space",
-          "description": "Bondholders want SpaceX’s valuable chip collateral kept on Earth and within reach.",
-          "sourceCategory": "Technology, AI and science"
-        }
-      },
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/space/2026/11/spacex-lenders-dont-want-elon-musk-launching-their-collateral-into-space/"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Gold, Silver Drop to Lowest Levels in Over a Year",
-      "link": "https://www.wsj.com/finance/commodities-futures/gold-silver-drop-to-lowest-levels-in-over-a-year-c657402c?mod=rss_markets_main",
-      "description": "Expectations for tighter monetary policy appear to have overshadowed the typical demand for gold as a safe haven for risk-averse investors.",
-      "date": "2026-11-20T14:14:00+00:00",
-      "image": "https://images.wsj.net/im-66775951",
-      "sourceName": "The Wall Street Journal",
-      "language": "en",
-      "category": "Financial markets and economics",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Financial",
-      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Gold, Silver Drop to Lowest Levels in Over a Year",
-          "description": "Expectations for tighter monetary policy appear to have overshadowed the typical demand for gold as a safe haven for risk-averse investors.",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "The Wall Street Journal",
-          "url": "https://www.wsj.com/finance/commodities-futures/gold-silver-drop-to-lowest-levels-in-over-a-year-c657402c?mod=rss_markets_main"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Colgate-Palmolive India to host BNP Paribas investor meet on Nov 26 - scanx.trade",
-      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQVHp3NFV0YlcxRUxOVGFzSGtUMmNHTFU4Q1Vsa2k5NUVxLTRoY1FmclJPV09zSFk2aXR5MS1oUjB3OGRmS1JBRDladmZNU0JqMXZYck1YOENXakFSSVQxbVppN2VtX1VsS0M2T2lOdlpzbDBYTHpYT0dpZFdzeFdjQ0NsOVVOeGRnOXpydk5pR09LeVplYmhQRlk2ajFBMUZUamdWWVhWWjlCUEpyT1BEUXRUTmZwLW9vUGc?oc=5",
-      "description": "Colgate-Palmolive India to host BNP Paribas investor meet on Nov 26 scanx.trade",
-      "date": "2026-11-20T14:04:40+00:00",
-      "image": "",
-      "sourceName": "scanx.trade",
-      "language": "en",
-      "category": "Financial markets and economics",
-      "aggregator": true,
-      "subgroup": "BNP Paribas",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Financial",
-      "sectionReason": "content: BNP Paribas bank evidence",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Colgate-Palmolive India to host BNP Paribas investor meet on Nov 26 - scanx.trade",
-          "description": "Colgate-Palmolive India to host BNP Paribas investor meet on Nov 26 scanx.trade",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "scanx.trade",
-          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQVHp3NFV0YlcxRUxOVGFzSGtUMmNHTFU4Q1Vsa2k5NUVxLTRoY1FmclJPV09zSFk2aXR5MS1oUjB3OGRmS1JBRDladmZNU0JqMXZYck1YOENXakFSSVQxbVppN2VtX1VsS0M2T2lOdlpzbDBYTHpYT0dpZFdzeFdjQ0NsOVVOeGRnOXpydk5pR09LeVplYmhQRlk2ajFBMUZUamdWWVhWWjlCUEpyT1BEUXRUTmZwLW9vUGc?oc=5"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "11 of the Best Financial Advisor Companies: Well-Known Fiduciary Investment Firms to Consider",
-      "link": "https://www.wsj.com/buyside/personal-finance/financial-advisors/best-financial-advisors?mod=rss_markets_main",
-      "description": "We analyzed everything from advisor credentials to fees to portfolio options at some of the larger and more well-known registered investment advisor firms, to help you select a firm that could best connect you with a fiduciary financial advisor.",
-      "date": "2026-11-20T14:04:00+00:00",
-      "image": "https://www.wsj.com/buyside/content-images/a8ae897f-5089-409c-97ed-81063d36da0e",
-      "sourceName": "The Wall Street Journal",
-      "language": "en",
-      "category": "Financial markets and economics",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Financial",
-      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "11 of the Best Financial Advisor Companies: Well-Known Fiduciary Investment Firms to Consider",
-          "description": "We analyzed everything from advisor credentials to fees to portfolio options at some of the larger and more well-known registered investment advisor firms, to help you select a firm that could best connect you with a fiduciary financial advisor.",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "The Wall Street Journal",
-          "url": "https://www.wsj.com/buyside/personal-finance/financial-advisors/best-financial-advisors?mod=rss_markets_main"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Six AI-powered gadgets that could make your home office smarter",
-      "link": "https://techcrunch.com/2026/11/20/6-ai-powered-gadgets-that-could-make-your-home-office-smarter/",
-      "description": "From notetakers to webcams, here are six AI-powered gadgets to upgrade your workspace.",
-      "date": "2026-11-20T14:00:00+00:00",
-      "image": "",
-      "sourceName": "TechCrunch",
-      "language": "en",
-      "category": "Technology, AI and science",
-      "sourceCategory": "Technology, AI and science",
-      "section": "Technology",
-      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Six AI-powered gadgets that could make your home office smarter",
-          "description": "From notetakers to webcams, here are six AI-powered gadgets to upgrade your workspace.",
-          "sourceCategory": "Technology, AI and science"
-        }
-      },
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/11/20/6-ai-powered-gadgets-that-could-make-your-home-office-smarter/"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Rosja zwiększa sprzedaż złota z rezerw. Konsekwentny proces upłynniania kruszcu",
-      "link": "https://www.bankier.pl/wiadomosc/Centralny-Bank-Rosji-oglasza-kolejna-sprzedaz-zlota-Rezerwy-zmniejszyly-sie-o-ponad-9-ton-9232622.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
-      "description": "Centralny Bank Rosji (CBR) od początku 2026 roku nieprzerwanie redukuje swoje zasoby kruszcu, a najnowsze dane z 20 listopada pokazują, że z rosyjskiego skarbca zniknęło kolejne 9,33 tony metalu. Moskwa zmuszona jest realnie upłynniać swoje strategiczne aktywa, by finansować wojenną gospodarkę.",
-      "date": "2026-11-20T15:00:00+01:00",
-      "image": "",
-      "sourceName": "Bankier.pl",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "Financial",
-      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Rosja zwiększa sprzedaż złota z rezerw. Konsekwentny proces upłynniania kruszcu",
-          "description": "Centralny Bank Rosji (CBR) od początku 2026 roku nieprzerwanie redukuje swoje zasoby kruszcu, a najnowsze dane z 20 listopada pokazują, że z rosyjskiego skarbca zniknęło kolejne 9,33 tony metalu. Moskwa zmuszona jest realnie upłynniać swoje strategiczne aktywa, by finansować wojenną gospodarkę.",
-          "sourceCategory": "Poland"
-        }
-      },
-      "sources": [
-        {
-          "name": "Bankier.pl",
-          "url": "https://www.bankier.pl/wiadomosc/Centralny-Bank-Rosji-oglasza-kolejna-sprzedaz-zlota-Rezerwy-zmniejszyly-sie-o-ponad-9-ton-9232622.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
         }
       ],
       "sourceCount": 1,
