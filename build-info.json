@@ -1,0 +1,19 @@
+{
+  "edition": "2026-11-28",
+  "article_count": 227,
+  "failures": [
+    "Les Échos (https://services.lesechos.fr/rss/les-echos-monde.xml): HTTPError: HTTP Error 403: Forbidden"
+  ],
+  "generated_at": "2026-11-28T13:57:21+01:00",
+  "market": {
+    "source": "Yahoo Finance",
+    "latest": "2026-11-27",
+    "errors": [],
+    "sentiment": {
+      "latest": "2026-11-27",
+      "index": 43.4,
+      "errors": []
+    }
+  },
+  "output": "/home/runner/work/_temp/news-edition"
+}
