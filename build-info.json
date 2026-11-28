@@ -1,10 +1,13 @@
 {
   "edition": "2026-11-28",
-  "article_count": 227,
+  "article_count": 209,
   "failures": [
-    "Les Échos (https://services.lesechos.fr/rss/les-echos-monde.xml): HTTPError: HTTP Error 403: Forbidden"
+    "Les Échos (https://services.lesechos.fr/rss/les-echos-monde.xml): HTTPError: HTTP Error 403: Forbidden",
+    "Google News — BNP Paribas (FR) (https://news.google.com/rss/search?q=%22BNP+Paribas%22+-tennis+-%22Indian+Wells%22&hl=fr&gl=FR&ceid=FR%3Afr): HTTPError: HTTP Error 503: Service Unavailable",
+    "Google News — BNP Paribas (EN) (https://news.google.com/rss/search?q=%22BNP+Paribas%22+-tennis+-%22Indian+Wells%22&hl=en-GB&gl=GB&ceid=GB%3Aen): HTTPError: HTTP Error 503: Service Unavailable",
+    "Google News — BNP Paribas (PL) (https://news.google.com/rss/search?q=%22BNP+Paribas%22+-tennis+-%22Indian+Wells%22&hl=pl&gl=PL&ceid=PL%3Apl): HTTPError: HTTP Error 503: Service Unavailable"
   ],
-  "generated_at": "2026-11-28T13:57:21+01:00",
+  "generated_at": "2026-11-28T14:57:34+01:00",
   "market": {
     "source": "Yahoo Finance",
     "latest": "2026-11-27",

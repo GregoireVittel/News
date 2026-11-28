@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-28T13:57:21+01:00",
+  "generatedAt": "2026-11-28T14:57:34+01:00",
   "sections": [
     "Poland",
     "France",
@@ -9,6 +9,550 @@
     "Financial"
   ],
   "articles": [
+    {
+      "title": "Le numéro 2 de la Banque centrale européenne écarte un scénario à la grecque pour la dette française",
+      "link": "https://www.franceinfo.fr/economie/crise/le-numero-2-de-la-banque-centrale-europeenne-ecarte-un-scenario-a-la-grecque-pour-la-dette-francaise_8304585.html#xtor=RSS-3-[lestitres]",
+      "description": "L'agence de notation S&P Global a abaissé vendredi la perspective de stable à négative, la menaçant d'une éventuelle dégradation à l'avenir, en raison des difficultés du pays à réduire son déficit.",
+      "date": "2026-11-28T14:53:39+01:00",
+      "image": "https://www.franceinfo.fr/pictures/ni_lfN9CT9W5icT0I-piTJnO7Yg/0x0:4989x2806/432x243/filters:format(jpg)/2026/11/28/6b0ac0d2adc33023116121.jpg",
+      "sourceName": "franceinfo",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Le numéro 2 de la Banque centrale européenne écarte un scénario à la grecque pour la dette française",
+          "description": "L'agence de notation S&P Global a abaissé vendredi la perspective de stable à négative, la menaçant d'une éventuelle dégradation à l'avenir, en raison des difficultés du pays à réduire son déficit.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "franceinfo",
+          "url": "https://www.franceinfo.fr/economie/crise/le-numero-2-de-la-banque-centrale-europeenne-ecarte-un-scenario-a-la-grecque-pour-la-dette-francaise_8304585.html#xtor=RSS-3-[lestitres]"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Des centaines de personnes rassemblées à Biarritz contre la tenue d'un banquet du très controversé \"Canon français\"",
+      "link": "https://www.franceinfo.fr/societe/racisme/des-centaines-de-personnes-rassemblees-a-biarritz-contre-la-tenue-d-un-banquet-du-tres-controverse-canon-francais_8304570.html#xtor=RSS-3-[lestitres]",
+      "description": "Cofinancé par le milliardaire ultraconservateur Pierre-Edouard Stérin, le Canon français, est accusé de véhiculer des idées d'extrême droite derrière sa vitrine patriotique et franchouillarde.",
+      "date": "2026-11-28T14:43:12+01:00",
+      "image": "https://www.franceinfo.fr/pictures/ytny_1hFZL8fCKcZJ4AEC91kkr8/0x151:4712x2801/432x243/filters:format(jpg)/2026/11/28/6b0abe7be828b484753588.jpg",
+      "sourceName": "franceinfo",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "Financial",
+      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Des centaines de personnes rassemblées à Biarritz contre la tenue d'un banquet du très controversé \"Canon français\"",
+          "description": "Cofinancé par le milliardaire ultraconservateur Pierre-Edouard Stérin, le Canon français, est accusé de véhiculer des idées d'extrême droite derrière sa vitrine patriotique et franchouillarde.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "franceinfo",
+          "url": "https://www.franceinfo.fr/societe/racisme/des-centaines-de-personnes-rassemblees-a-biarritz-contre-la-tenue-d-un-banquet-du-tres-controverse-canon-francais_8304570.html#xtor=RSS-3-[lestitres]"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Znowu gorąco na linii Wilno-Warszawa. I znowu poszło o to samo",
+      "link": "https://wyborcza.pl/7,75968,33154996,znowu-goraco-na-linii-wilno-warszawa-i-znowu-poszlo-o-to-samo.html",
+      "description": "Czy Radosław Sikorski ma rację, upominając się o prawa mniejszości polskiej na Litwie? Zapewne, i jest w tym konsekwentny. Ale litewskie media i politycy miały przez lata inny obraz szefa polskiego MSZ, uznając, że na Litwę patrzy z pogardą i wyższością.",
+      "date": "2026-11-28T13:43:00+00:00",
+      "image": "",
+      "sourceName": "Gazeta Wyborcza",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "Poland",
+      "sectionReason": "content: Poland subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Znowu gorąco na linii Wilno-Warszawa. I znowu poszło o to samo",
+          "description": "Czy Radosław Sikorski ma rację, upominając się o prawa mniejszości polskiej na Litwie? Zapewne, i jest w tym konsekwentny. Ale litewskie media i politycy miały przez lata inny obraz szefa polskiego MSZ, uznając, że na Litwę patrzy z pogardą i wyższością.",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Gazeta Wyborcza",
+          "url": "https://wyborcza.pl/7,75968,33154996,znowu-goraco-na-linii-wilno-warszawa-i-znowu-poszlo-o-to-samo.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "UK Parliament demands unredacted METR safety report after Anthropic redacts most of the evidence",
+      "link": "https://the-decoder.com/uk-parliament-demands-unredacted-metr-safety-report-after-anthropic-redacts-most-of-the-evidence/",
+      "description": "The UK Parliament is turning up the pressure on Anthropic. Committee chair Liam Byrne is demanding the unredacted METR safety report on AI acceleration by December 4. METR criticized Anthropic for cutting \"most informative\" evidence before publication. The episode raises broader questions about the transparency of voluntary AI safety evaluations and again shows Europe's dependence on US AI labs. The article UK Parliament demands unredacted METR safety report after Anthropic redacts most of the evidence appeared first on The Decoder.",
+      "date": "2026-11-28T13:42:00+00:00",
+      "image": "",
+      "sourceName": "The Decoder",
+      "language": "en",
+      "category": "Technology, AI and science",
+      "sourceCategory": "Technology, AI and science",
+      "section": "Technology",
+      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "UK Parliament demands unredacted METR safety report after Anthropic redacts most of the evidence",
+          "description": "The UK Parliament is turning up the pressure on Anthropic. Committee chair Liam Byrne is demanding the unredacted METR safety report on AI acceleration by December 4. METR criticized Anthropic for cutting \"most informative\" evidence before publication. The episode raises broader questions about the transparency of voluntary AI safety evaluations and again shows Europe's dependence on US AI labs. The article UK Parliament demands unredacted METR safety report after Anthropic redacts most of the evidence appeared first on The Decoder.",
+          "sourceCategory": "Technology, AI and science"
+        }
+      },
+      "sources": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/uk-parliament-demands-unredacted-metr-safety-report-after-anthropic-redacts-most-of-the-evidence/"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Argentina's bid to stop Falklands oil drilling rejected",
+      "link": "https://www.bbc.co.uk/news/articles/c84gnq3qq9rno?at_medium=RSS&at_campaign=rss",
+      "description": "A joint venture between UK-Israeli companies is set to start exploring for oil and gas, but Argentina sought to block it as part of its claim to sovereignty.",
+      "date": "2026-11-28T13:36:36+00:00",
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1615/live/b6e6bd30-eb1d-11f1-8743-3f686b14075c.jpg",
+      "sourceName": "BBC News",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Argentina's bid to stop Falklands oil drilling rejected",
+          "description": "A joint venture between UK-Israeli companies is set to start exploring for oil and gas, but Argentina sought to block it as part of its claim to sovereignty.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/c84gnq3qq9rno?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Actor and comedian PJ Gallagher dies aged 51",
+      "link": "https://www.bbc.co.uk/news/articles/cwp83j2k31g3o?at_medium=RSS&at_campaign=rss",
+      "description": "PJ Gallagher appeared on Irish television for more than two decades with shows including Naked Camera and The Young Offenders.",
+      "date": "2026-11-28T13:34:39+00:00",
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/99b7/live/11b79e90-eb0b-11f1-a094-5fdc692f3e33.jpg",
+      "sourceName": "BBC News",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "feed category fallback: Global news and geopolitics",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Actor and comedian PJ Gallagher dies aged 51",
+          "description": "PJ Gallagher appeared on Irish television for more than two decades with shows including Naked Camera and The Young Offenders.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/cwp83j2k31g3o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Présidentielle 2027 : Raphaël Glucksmann \"soutiendra\" François Hollande s'il se \"présente en recours\", assure le porte-parole des députés socialistes",
+      "link": "https://www.franceinfo.fr/elections/direct-election-presidentielle-raphael-glucksmann-soutiendra-francois-hollande-s-il-se-presente-en-recours_8304636.html#xtor=RSS-3-[lestitres]",
+      "description": "\"Les deux hommes seront ensemble pour porter le programme de la gauche démocratique et républicaine, l'un derrière l'autre en fonction de celui qui sera le plus haut dans les sondages\", a affirmé samedi le porte-parole des élus PS à l'Assemblée nationale.",
+      "date": "2026-11-28T14:27:04+01:00",
+      "image": "https://www.franceinfo.fr/pictures/nWZSf5armjFCyfLs2sa2ZBzz9us/0x0:5340x3003/432x243/filters:format(jpg)/2026/11/28/6b0accf7c3222481485419.jpg",
+      "sourceName": "franceinfo",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "France",
+      "sectionReason": "feed category fallback: France",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Présidentielle 2027 : Raphaël Glucksmann \"soutiendra\" François Hollande s'il se \"présente en recours\", assure le porte-parole des députés socialistes",
+          "description": "\"Les deux hommes seront ensemble pour porter le programme de la gauche démocratique et républicaine, l'un derrière l'autre en fonction de celui qui sera le plus haut dans les sondages\", a affirmé samedi le porte-parole des élus PS à l'Assemblée nationale.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "franceinfo",
+          "url": "https://www.franceinfo.fr/elections/direct-election-presidentielle-raphael-glucksmann-soutiendra-francois-hollande-s-il-se-presente-en-recours_8304636.html#xtor=RSS-3-[lestitres]"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Ukraine’s Deep Strikes Grow in Scale and Scope Across Russia and Beyond",
+      "link": "https://www.nytimes.com/2026/11/28/world/europe/ukraine-russia-long-range-strikes.html",
+      "description": "A campaign aimed at depriving Moscow’s war machine of fuel, weapons and money has been criticized by the Trump administration.",
+      "date": "2026-11-28T13:25:26+00:00",
+      "image": "https://static01.nyt.com/images/2026/11/28/multimedia/28int-ukraine-air-war-01-top-kgtp/28int-ukraine-air-war-01-top-kgtp-mediumSquareAt3X-v3.jpg",
+      "sourceName": "The New York Times",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Ukraine’s Deep Strikes Grow in Scale and Scope Across Russia and Beyond",
+          "description": "A campaign aimed at depriving Moscow’s war machine of fuel, weapons and money has been criticized by the Trump administration.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "The New York Times",
+          "url": "https://www.nytimes.com/2026/11/28/world/europe/ukraine-russia-long-range-strikes.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Zmiana w jednym genie może obniżyć twój wzrost o 17 cm. W innym - podwyższyć cię o 11 cm",
+      "link": "https://wyborcza.pl/7,75400,33153900,zmiana-w-jednym-genie-moze-obnizyc-twoj-wzrost-o-17-cm-w-innym.html",
+      "description": "Naukowcy znaleźli kolejne setki genów odpowiedzialnych za ludzki wzrost. Warianty, które mogą nas mocno podwyższyć albo obniżyć, są jednak bardzo rzadkie.",
+      "date": "2026-11-28T13:22:00+00:00",
+      "image": "",
+      "sourceName": "Gazeta Wyborcza",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "Technology",
+      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Zmiana w jednym genie może obniżyć twój wzrost o 17 cm. W innym - podwyższyć cię o 11 cm",
+          "description": "Naukowcy znaleźli kolejne setki genów odpowiedzialnych za ludzki wzrost. Warianty, które mogą nas mocno podwyższyć albo obniżyć, są jednak bardzo rzadkie.",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Gazeta Wyborcza",
+          "url": "https://wyborcza.pl/7,75400,33153900,zmiana-w-jednym-genie-moze-obnizyc-twoj-wzrost-o-17-cm-w-innym.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Nawrocki uruchamia Akademię Prezydencką. Zgłoszenia już trwają",
+      "link": "https://www.bankier.pl/wiadomosc/Nawrocki-uruchamia-Akademie-Prezydencka-Zgloszenia-juz-trwaja-9236810.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
+      "description": "Polska potrzebuje młodych liderów, którzy będą zmieniać nasz kraj na lepsze; dlatego rozpoczynamy nabór do Akademii Prezydenckiej, bezpłatnego programu edukacyjnego - poinformował prezydent Karol Nawrocki w filmie umieszczonym w sobotę na jego profilu na platformie X.",
+      "date": "2026-11-28T14:10:00+01:00",
+      "image": "",
+      "sourceName": "Bankier.pl",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "Poland",
+      "sectionReason": "content: Poland subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Nawrocki uruchamia Akademię Prezydencką. Zgłoszenia już trwają",
+          "description": "Polska potrzebuje młodych liderów, którzy będą zmieniać nasz kraj na lepsze; dlatego rozpoczynamy nabór do Akademii Prezydenckiej, bezpłatnego programu edukacyjnego - poinformował prezydent Karol Nawrocki w filmie umieszczonym w sobotę na jego profilu na platformie X.",
+          "sourceCategory": "Poland"
+        }
+      },
+      "sources": [
+        {
+          "name": "Bankier.pl",
+          "url": "https://www.bankier.pl/wiadomosc/Nawrocki-uruchamia-Akademie-Prezydencka-Zgloszenia-juz-trwaja-9236810.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Greek junior minister resigns amid public contracts controversy",
+      "link": "https://www.politico.eu/article/greek-junior-minister-vangelis-liakos-forced-to-resign-over-corruption-allegations/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+      "description": "Vangelis Liakos was put in post two weeks ago after another scandal led to a minister resigning from Kyriakos Mitsotakis's government.",
+      "date": "2026-11-28T13:08:02+00:00",
+      "image": "",
+      "sourceName": "POLITICO Europe",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "feed category fallback: Global news and geopolitics",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Greek junior minister resigns amid public contracts controversy",
+          "description": "Vangelis Liakos was put in post two weeks ago after another scandal led to a minister resigning from Kyriakos Mitsotakis's government.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "POLITICO Europe",
+          "url": "https://www.politico.eu/article/greek-junior-minister-vangelis-liakos-forced-to-resign-over-corruption-allegations/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Higher Prices Test Holiday Shoppers",
+      "link": "https://www.bloomberg.com/news/videos/2026-11-28/higher-prices-test-holiday-shoppers-video",
+      "description": "Holiday sales are expected to rise this season, but inflation means shoppers may be spending more without bringing home more goods, while value and convenience remain key drivers. On Bloomberg This Weekend, Bloomberg Intelligence Senior Retail Analyst Poonam Goyal tells hosts David Gura and Christina Ruffini how AI is reshaping shopping and helping consumers search for products, track prices and find deals. (Source: Bloomberg)",
+      "date": "2026-11-28T13:04:58+00:00",
+      "image": "",
+      "sourceName": "Bloomberg",
+      "language": "en",
+      "category": "Financial markets and economics",
+      "sourceCategory": "Financial markets and economics",
+      "section": "Technology",
+      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Higher Prices Test Holiday Shoppers",
+          "description": "Holiday sales are expected to rise this season, but inflation means shoppers may be spending more without bringing home more goods, while value and convenience remain key drivers. On Bloomberg This Weekend, Bloomberg Intelligence Senior Retail Analyst Poonam Goyal tells hosts David Gura and Christina Ruffini how AI is reshaping shopping and helping consumers search for products, track prices and find deals. (Source: Bloomberg)",
+          "sourceCategory": "Financial markets and economics"
+        }
+      },
+      "sources": [
+        {
+          "name": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/videos/2026-11-28/higher-prices-test-holiday-shoppers-video"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Pensions and benefits services still down after 'cyber incident'",
+      "link": "https://www.bbc.co.uk/news/articles/cm1wrgqyq4d8o?at_medium=RSS&at_campaign=rss",
+      "description": "The UK's former chief technology officer says the Department for Work and Pensions may have been hit by hackers, but the government has not confirmed that.",
+      "date": "2026-11-28T13:02:10+00:00",
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6b20/live/d7c70ab0-eb21-11f1-99b6-a35a62fa4264.jpg",
+      "sourceName": "BBC News",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "Technology",
+      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Pensions and benefits services still down after 'cyber incident'",
+          "description": "The UK's former chief technology officer says the Department for Work and Pensions may have been hit by hackers, but the government has not confirmed that.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/cm1wrgqyq4d8o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Lou Jeanmonnot et Eric Perrot troisièmes du relais mixte simple de Kontiolahti, en Coupe du monde biathlon",
+      "link": "https://www.franceinfo.fr/sports/sports-d-hiver/biathlon/lou-jeanmonnot-et-eric-perrot-troisiemes-du-relais-mixte-simple-de-kontiolahti-en-coupe-du-monde-biathlon_8304654.html#xtor=RSS-3-[lestitres]",
+      "description": "Les deux tenants du titre du gros globe de cristal étaient associés dans ce format qui deviendra olympique en 2030.",
+      "date": "2026-11-28T14:00:54+01:00",
+      "image": "https://www.franceinfo.fr/pictures/0VGW2LXxM7VOWh4rncZO7JugfKo/0x0:3609x2030/432x243/filters:format(jpg)/2026/11/28/6b0aca48b7f4a861450749.jpg",
+      "sourceName": "franceinfo",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "France",
+      "sectionReason": "feed category fallback: France",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Lou Jeanmonnot et Eric Perrot troisièmes du relais mixte simple de Kontiolahti, en Coupe du monde biathlon",
+          "description": "Les deux tenants du titre du gros globe de cristal étaient associés dans ce format qui deviendra olympique en 2030.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "franceinfo",
+          "url": "https://www.franceinfo.fr/sports/sports-d-hiver/biathlon/lou-jeanmonnot-et-eric-perrot-troisiemes-du-relais-mixte-simple-de-kontiolahti-en-coupe-du-monde-biathlon_8304654.html#xtor=RSS-3-[lestitres]"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Here’s how to make that new Black Friday TV look its best",
+      "link": "https://www.theverge.com/tech/1042700/change-these-tv-settings",
+      "description": "It's the season of great deals on TVs. But once you get a new one home and set it up in your living room, it might not meet expectations when you turn it on. Maybe it's overly bright, or things just look… off. Luckily, there are some easy tweaks you can make so that new, […]",
+      "date": "2026-11-28T08:00:00-05:00",
+      "image": "",
+      "sourceName": "The Verge",
+      "language": "en",
+      "category": "Technology, AI and science",
+      "sourceCategory": "Technology, AI and science",
+      "section": "Technology",
+      "sectionReason": "feed category fallback: Technology, AI and science",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Here’s how to make that new Black Friday TV look its best",
+          "description": "It's the season of great deals on TVs. But once you get a new one home and set it up in your living room, it might not meet expectations when you turn it on. Maybe it's overly bright, or things just look… off. Luckily, there are some easy tweaks you can make so that new, […]",
+          "sourceCategory": "Technology, AI and science"
+        }
+      },
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/1042700/change-these-tv-settings"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Channel 4 executive defends Huw Edwards documentary",
+      "link": "https://www.bbc.co.uk/news/articles/c5gm3z8y0nxdo?at_medium=RSS&at_campaign=rss",
+      "description": "The broadcaster defends its decision to interview the disgraced former BBC newsreader in an upcoming documentary.",
+      "date": "2026-11-28T12:56:54+00:00",
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9398/live/c1a2edf0-eb1f-11f1-bf04-65a057babcf8.jpg",
+      "sourceName": "BBC News",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "World",
+      "sectionReason": "feed category fallback: Global news and geopolitics",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Channel 4 executive defends Huw Edwards documentary",
+          "description": "The broadcaster defends its decision to interview the disgraced former BBC newsreader in an upcoming documentary.",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/c5gm3z8y0nxdo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "Plus de 700 armes et pièces d'armes découvertes dans l'Oise chez un particulier, mis en examen et placé en détention provisoire",
+      "link": "https://www.franceinfo.fr/faits-divers/plus-de-700-armes-et-pieces-d-armes-decouvertes-dans-l-oise-chez-un-particulier-mis-en-examen-et-place-en-detention-provisoire_8304666.html#xtor=RSS-3-[lestitres]",
+      "description": "L'homme se justifie en se présentant comme \"un collectionneur passionné.\"",
+      "date": "2026-11-28T13:53:23+01:00",
+      "image": "https://www.franceinfo.fr/pictures/vuYkkww-nrpRDg55wkuL2hJbChs/0x312:6000x3687/432x243/filters:format(jpg)/2026/11/26/6b082239e2649405717295.jpg",
+      "sourceName": "franceinfo",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "France",
+      "sectionReason": "feed category fallback: France",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "Plus de 700 armes et pièces d'armes découvertes dans l'Oise chez un particulier, mis en examen et placé en détention provisoire",
+          "description": "L'homme se justifie en se présentant comme \"un collectionneur passionné.\"",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "franceinfo",
+          "url": "https://www.franceinfo.fr/faits-divers/plus-de-700-armes-et-pieces-d-armes-decouvertes-dans-l-oise-chez-un-particulier-mis-en-examen-et-place-en-detention-provisoire_8304666.html#xtor=RSS-3-[lestitres]"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
     {
       "title": "Afghanistan explosion kills 10 students and injures more than 100, official says",
       "link": "https://www.bbc.co.uk/news/articles/ckp80jyz6dl8o?at_medium=RSS&at_campaign=rss",
@@ -42,30 +586,30 @@
       }
     },
     {
-      "title": "Argentina's bid to stop Falklands oil drilling rejected",
-      "link": "https://www.bbc.co.uk/news/articles/c84gnq3qq9rno?at_medium=RSS&at_campaign=rss",
-      "description": "A joint venture between UK-Israeli companies is set to start exploring for oil and gas, but Argentina sought to block it as part of its claim to sovereignty.",
-      "date": "2026-11-28T12:36:59+00:00",
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1615/live/b6e6bd30-eb1d-11f1-8743-3f686b14075c.jpg",
-      "sourceName": "BBC News",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
+      "title": "Do Polski dotarła pierwsza dostawa LNG dla Orlenu z kontraktu z Plaquemines",
+      "link": "https://www.bankier.pl/wiadomosc/Do-Polski-dotarla-pierwsza-dostawa-LNG-dla-Orlenu-z-kontraktu-z-Plaquemines-9236821.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
+      "description": "Do Polski dotarła z USA pierwsza dostawa LNG dla Orlenu, realizowana w ramach długoterminowego kontraktu z Venture Global Plaquemines LNG. Ładunek odpowiadający prawie 95 mln m sześc. gazu ziemnego po regazyfikacji dostarczył gazowiec „Święta Barbara” z floty koncernu - podał w sobotę Orlen.",
+      "date": "2026-11-28T13:48:00+01:00",
+      "image": "",
+      "sourceName": "Bankier.pl",
+      "language": "pl",
+      "category": "Poland",
+      "sourceCategory": "Poland",
+      "section": "Poland",
+      "sectionReason": "content: Poland subject evidence (technology first; Poland wins geographic ties)",
       "classification": {
         "method": "rules",
         "version": 1,
         "input": {
-          "title": "Argentina's bid to stop Falklands oil drilling rejected",
-          "description": "A joint venture between UK-Israeli companies is set to start exploring for oil and gas, but Argentina sought to block it as part of its claim to sovereignty.",
-          "sourceCategory": "Global news and geopolitics"
+          "title": "Do Polski dotarła pierwsza dostawa LNG dla Orlenu z kontraktu z Plaquemines",
+          "description": "Do Polski dotarła z USA pierwsza dostawa LNG dla Orlenu, realizowana w ramach długoterminowego kontraktu z Venture Global Plaquemines LNG. Ładunek odpowiadający prawie 95 mln m sześc. gazu ziemnego po regazyfikacji dostarczył gazowiec „Święta Barbara” z floty koncernu - podał w sobotę Orlen.",
+          "sourceCategory": "Poland"
         }
       },
       "sources": [
         {
-          "name": "BBC News",
-          "url": "https://www.bbc.co.uk/news/articles/c84gnq3qq9rno?at_medium=RSS&at_campaign=rss"
+          "name": "Bankier.pl",
+          "url": "https://www.bankier.pl/wiadomosc/Do-Polski-dotarla-pierwsza-dostawa-LNG-dla-Orlenu-z-kontraktu-z-Plaquemines-9236821.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
         }
       ],
       "sourceCount": 1,
@@ -270,7 +814,7 @@
       "link": "https://www.bbc.co.uk/news/articles/ckwy9rde8gyqo?at_medium=RSS&at_campaign=rss",
       "description": "The crash happened on Friday just after 23:00 GMT on Rugeley Road in Hednesford.",
       "date": "2026-11-28T12:09:09+00:00",
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3702/live/71da5d20-eb16-11f1-90b9-a9d17de9c0bd.png",
+      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ba67/live/c22de780-eb2d-11f1-8c00-ff7035d56586.jpg",
       "sourceName": "BBC News",
       "language": "en",
       "category": "Global news and geopolitics",
@@ -290,38 +834,6 @@
         {
           "name": "BBC News",
           "url": "https://www.bbc.co.uk/news/articles/ckwy9rde8gyqo?at_medium=RSS&at_campaign=rss"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Le numéro 2 de la Banque centrale européenne écarte un scénario à la grecque pour la dette française",
-      "link": "https://www.franceinfo.fr/economie/crise/le-numero-2-de-la-banque-centrale-europeenne-ecarte-un-scenario-a-la-grecque-pour-la-dette-francaise_8304585.html#xtor=RSS-3-[lestitres]",
-      "description": "L'agence de notation S&P Global a abaissé vendredi la perspective de stable à négative, la menaçant d'une éventuelle dégradation à l'avenir, en raison des difficultés du pays à réduire son déficit.",
-      "date": "2026-11-28T13:02:26+01:00",
-      "image": "https://www.franceinfo.fr/pictures/ni_lfN9CT9W5icT0I-piTJnO7Yg/0x0:4989x2806/432x243/filters:format(jpg)/2026/11/28/6b0ac0d2adc33023116121.jpg",
-      "sourceName": "franceinfo",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "Financial",
-      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Le numéro 2 de la Banque centrale européenne écarte un scénario à la grecque pour la dette française",
-          "description": "L'agence de notation S&P Global a abaissé vendredi la perspective de stable à négative, la menaçant d'une éventuelle dégradation à l'avenir, en raison des difficultés du pays à réduire son déficit.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "franceinfo",
-          "url": "https://www.franceinfo.fr/economie/crise/le-numero-2-de-la-banque-centrale-europeenne-ecarte-un-scenario-a-la-grecque-pour-la-dette-francaise_8304585.html#xtor=RSS-3-[lestitres]"
         }
       ],
       "sourceCount": 1,
@@ -394,10 +906,10 @@
       }
     },
     {
-      "title": "A un banquet du Canon français à Biarritz, des manifestants bloquent les participants, qu’ils accusent de véhiculer des idées d’extrême droite",
+      "title": "A un banquet du Canon français, à Biarritz, des manifestants bloquent les participants, qu’ils accusent de véhiculer des idées d’extrême droite",
       "link": "https://www.lemonde.fr/societe/article/2026/11/28/a-un-banquet-du-canon-francais-a-biarritz-des-manifestants-bloquent-les-participants-qu-ils-accusent-de-vehiculer-des-idees-d-extreme-droite_6816103_3224.html",
       "description": "Des convives de cet événement cofinancé par le milliardaire Pierre-Edouard Stérin ont été pris à partie par les manifestants, qui avaient annoncé un « rempart humain » pour empêcher les 1 500 participants attendus de rejoindre le site.",
-      "date": "2026-11-28T13:00:17+01:00",
+      "date": "2026-11-28T13:00:14+01:00",
       "image": "https://img.lemde.fr/2026/11/28/688/0/8256/4128/644/322/60/0/a6c9bbf_ftp-1-jljyi22hgabt-afp-d8vz8t8.jpg",
       "sourceName": "Le Monde",
       "language": "fr",
@@ -409,7 +921,7 @@
         "method": "rules",
         "version": 1,
         "input": {
-          "title": "A un banquet du Canon français à Biarritz, des manifestants bloquent les participants, qu’ils accusent de véhiculer des idées d’extrême droite",
+          "title": "A un banquet du Canon français, à Biarritz, des manifestants bloquent les participants, qu’ils accusent de véhiculer des idées d’extrême droite",
           "description": "Des convives de cet événement cofinancé par le milliardaire Pierre-Edouard Stérin ont été pris à partie par les manifestants, qui avaient annoncé un « rempart humain » pour empêcher les 1 500 participants attendus de rejoindre le site.",
           "sourceCategory": "France"
         }
@@ -418,6 +930,38 @@
         {
           "name": "Le Monde",
           "url": "https://www.lemonde.fr/societe/article/2026/11/28/a-un-banquet-du-canon-francais-a-biarritz-des-manifestants-bloquent-les-participants-qu-ils-accusent-de-vehiculer-des-idees-d-extreme-droite_6816103_3224.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
+      "title": "The outsider from Cannes shaking up France’s presidential race",
+      "link": "https://www.ft.com/content/7f3900c2-bce6-495e-a6c4-e1133a3c46e9?syn-25a6b1a6=1",
+      "description": "Rightwing mayor David Lisnard has surged in polls with punchy attacks on the bloated state and promises of radical spending cuts",
+      "date": "2026-11-28T12:00:03+00:00",
+      "image": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F28821c3f-7522-422d-bef9-35ec60a4c32f.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down",
+      "sourceName": "Financial Times",
+      "language": "en",
+      "category": "Global news and geopolitics",
+      "sourceCategory": "Global news and geopolitics",
+      "section": "France",
+      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "The outsider from Cannes shaking up France’s presidential race",
+          "description": "Rightwing mayor David Lisnard has surged in polls with punchy attacks on the bloated state and promises of radical spending cuts",
+          "sourceCategory": "Global news and geopolitics"
+        }
+      },
+      "sources": [
+        {
+          "name": "Financial Times",
+          "url": "https://www.ft.com/content/7f3900c2-bce6-495e-a6c4-e1133a3c46e9?syn-25a6b1a6=1"
         }
       ],
       "sourceCount": 1,
@@ -514,72 +1058,6 @@
         {
           "name": "BBC News",
           "url": "https://www.bbc.co.uk/sport/football/articles/cwzd9yj44190o?at_medium=RSS&at_campaign=rss"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Des centaines de personnes rassemblées à Biarritz contre la tenue d'un banquet du très controversé \"Canon français\"",
-      "link": "https://www.franceinfo.fr/societe/racisme/des-centaines-de-personnes-rassemblees-a-biarritz-contre-la-tenue-d-un-banquet-du-tres-controverse-canon-francais_8304570.html#xtor=RSS-3-[lestitres]",
-      "description": "Cofinancé par le milliardaire ultraconservateur Pierre-Édouard Stérin, le Canon français, est accusé de véhiculer des idées d'extrême droite derrière sa vitrine patriotique et franchouillarde.",
-      "date": "2026-11-28T12:49:14+01:00",
-      "image": "https://www.franceinfo.fr/pictures/ytny_1hFZL8fCKcZJ4AEC91kkr8/0x151:4712x2801/432x243/filters:format(jpg)/2026/11/28/6b0abe7be828b484753588.jpg",
-      "sourceName": "franceinfo",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "Financial",
-      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Des centaines de personnes rassemblées à Biarritz contre la tenue d'un banquet du très controversé \"Canon français\"",
-          "description": "Cofinancé par le milliardaire ultraconservateur Pierre-Édouard Stérin, le Canon français, est accusé de véhiculer des idées d'extrême droite derrière sa vitrine patriotique et franchouillarde.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "franceinfo",
-          "url": "https://www.franceinfo.fr/societe/racisme/des-centaines-de-personnes-rassemblees-a-biarritz-contre-la-tenue-d-un-banquet-du-tres-controverse-canon-francais_8304570.html#xtor=RSS-3-[lestitres]"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "BNP Paribas : Pascal Fischer succédera à Frank Roncey à la direction des Risques, quatre arrivées au comité exécutif - Revue économique de France",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOSEdkQkdVTk5JOWFlTEl5ZHVWN2d3TFptSFZaanhsQ2tNWnY5Nk5YSFBBSXByZEwzXzNSbndkVFNxUVRTNFRIRHVzeFBzQ2hESk5oZFdsVFQ5XzN4aVdoMG5idDNBVTNFQXZ4YTZyMF9aaGRSWFlWTTNCd2VXQzZyMTc2ZERSRC12?oc=5",
-      "description": "BNP Paribas : Pascal Fischer succédera à Frank Roncey à la direction des Risques, quatre arrivées au comité exécutif Revue économique de France",
-      "date": "2026-11-28T11:42:00+00:00",
-      "image": "",
-      "sourceName": "Revue économique de France",
-      "language": "fr",
-      "category": "Financial markets and economics",
-      "aggregator": true,
-      "subgroup": "BNP Paribas",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Financial",
-      "sectionReason": "content: BNP Paribas bank evidence",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "BNP Paribas : Pascal Fischer succédera à Frank Roncey à la direction des Risques, quatre arrivées au comité exécutif - Revue économique de France",
-          "description": "BNP Paribas : Pascal Fischer succédera à Frank Roncey à la direction des Risques, quatre arrivées au comité exécutif Revue économique de France",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "Revue économique de France",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOSEdkQkdVTk5JOWFlTEl5ZHVWN2d3TFptSFZaanhsQ2tNWnY5Nk5YSFBBSXByZEwzXzNSbndkVFNxUVRTNFRIRHVzeFBzQ2hESk5oZFdsVFQ5XzN4aVdoMG5idDNBVTNFQXZ4YTZyMF9aaGRSWFlWTTNCd2VXQzZyMTc2ZERSRC12?oc=5"
         }
       ],
       "sourceCount": 1,
@@ -740,40 +1218,6 @@
         {
           "name": "The Decoder",
           "url": "https://the-decoder.com/google-deepminds-humanitys-first-exam-shows-top-ai-models-still-fail-simple-everyday-tasks-under-repeated-runs/"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Łukasz Simlat, Sandra Drzymalska i Cezary Żak. Gwiazdy na 3. BNP Paribas Warsaw SerialCon! - Świat Seriali",
-      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPazFqLUM5VDd0OG8yWkhScnRiZGxYal9NQlZMVjEwdlU1Q21WeW1zQ1lMY3NzVFh2QWtMeGlLdDZCczZWSnlNa1d0WGJGbWhRQ29PV0g5TFVMaXdpVE0xWG90NDRvZEVTdUh2WnZvb0ZJcDc2cUxPZVQxX0ZWblJxanRtNzhhY3dOY2x2M19icGlBQ0tzTWtmNXEtWE81Y1FWbmVGWUExRjlINnR6ckRGUGRhZ3p6VlJwRmdidG1pV1BYQThHb01nNlBMRGkxVWU0?oc=5",
-      "description": "Łukasz Simlat, Sandra Drzymalska i Cezary Żak. Gwiazdy na 3. BNP Paribas Warsaw SerialCon! Świat Seriali",
-      "date": "2026-11-28T11:08:19+00:00",
-      "image": "",
-      "sourceName": "Świat Seriali",
-      "language": "pl",
-      "category": "Financial markets and economics",
-      "aggregator": true,
-      "subgroup": "BNP Paribas",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Financial",
-      "sectionReason": "content: BNP Paribas bank evidence",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Łukasz Simlat, Sandra Drzymalska i Cezary Żak. Gwiazdy na 3. BNP Paribas Warsaw SerialCon! - Świat Seriali",
-          "description": "Łukasz Simlat, Sandra Drzymalska i Cezary Żak. Gwiazdy na 3. BNP Paribas Warsaw SerialCon! Świat Seriali",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "Świat Seriali",
-          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPazFqLUM5VDd0OG8yWkhScnRiZGxYal9NQlZMVjEwdlU1Q21WeW1zQ1lMY3NzVFh2QWtMeGlLdDZCczZWSnlNa1d0WGJGbWhRQ29PV0g5TFVMaXdpVE0xWG90NDRvZEVTdUh2WnZvb0ZJcDc2cUxPZVQxX0ZWblJxanRtNzhhY3dOY2x2M19icGlBQ0tzTWtmNXEtWE81Y1FWbmVGWUExRjlINnR6ckRGUGRhZ3p6VlJwRmdidG1pV1BYQThHb01nNlBMRGkxVWU0?oc=5"
         }
       ],
       "sourceCount": 1,
@@ -1230,70 +1674,6 @@
       }
     },
     {
-      "title": "S&P maintient la note de la France mais menace de la dégrader, \"la faute à une politique économique qui soigne le mal par le mal\" selon Éric Coquerel",
-      "link": "https://www.franceinfo.fr/economie/crise/crise-de-la-dette/s-p-maintient-la-note-de-la-france-mais-menace-de-la-degrader-la-faute-a-une-politique-economique-qui-soigne-le-mal-par-le-mal-selon-eric-coquerel_8304498.html#xtor=RSS-3-[lestitres]",
-      "description": "Le président LFI de la commission des finances de l'Assemblée nationale accuse la politique menée par les gouvernements successifs d'Emmanuel Macron de \"mener la France dans le mur\".",
-      "date": "2026-11-28T11:23:44+01:00",
-      "image": "https://www.franceinfo.fr/pictures/lkLjaKZxYCg61np-hclpOkXMUvk/152x0:1152x562/432x243/filters:format(jpg)/2026/10/02/6abf52fa8f7d4643067930.jpg",
-      "sourceName": "franceinfo",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "Financial",
-      "sectionReason": "content: Financial subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "S&P maintient la note de la France mais menace de la dégrader, \"la faute à une politique économique qui soigne le mal par le mal\" selon Éric Coquerel",
-          "description": "Le président LFI de la commission des finances de l'Assemblée nationale accuse la politique menée par les gouvernements successifs d'Emmanuel Macron de \"mener la France dans le mur\".",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "franceinfo",
-          "url": "https://www.franceinfo.fr/economie/crise/crise-de-la-dette/s-p-maintient-la-note-de-la-france-mais-menace-de-la-degrader-la-faute-a-une-politique-economique-qui-soigne-le-mal-par-le-mal-selon-eric-coquerel_8304498.html#xtor=RSS-3-[lestitres]"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Dieudonné interdit de scène dans toute l'agglomération parisienne en décembre",
-      "link": "https://www.franceinfo.fr/societe/justice/dieudonne/dieudonne-interdit-de-scene-dans-toute-l-agglomeration-parisienne-en-decembre_8304396.html#xtor=RSS-3-[lestitres]",
-      "description": "La préfecture de police de Paris a pris la même décision que plusieurs départements du Sud-Ouest, où toute représentation de Dieudonné a été interdite, y compris dans les \"meetings\" du chanteur Francis Lalanne, candidat à l'élection présidentielle.",
-      "date": "2026-11-28T11:20:51+01:00",
-      "image": "https://www.franceinfo.fr/pictures/m_JRMDvOEGjaPLhccYLfDoWvf5E/0x0:6000x3375/432x243/filters:format(jpg)/2026/11/28/6b0aa63c54556812194753.jpg",
-      "sourceName": "franceinfo",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Dieudonné interdit de scène dans toute l'agglomération parisienne en décembre",
-          "description": "La préfecture de police de Paris a pris la même décision que plusieurs départements du Sud-Ouest, où toute représentation de Dieudonné a été interdite, y compris dans les \"meetings\" du chanteur Francis Lalanne, candidat à l'élection présidentielle.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "franceinfo",
-          "url": "https://www.franceinfo.fr/societe/justice/dieudonne/dieudonne-interdit-de-scene-dans-toute-l-agglomeration-parisienne-en-decembre_8304396.html#xtor=RSS-3-[lestitres]"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Modi Nears Majority Needed to Increase India’s Parliament Seats",
       "link": "https://www.bloomberg.com/news/articles/2026-11-28/modi-nears-majority-needed-to-increase-india-s-parliament-seats",
       "description": "Prime Minister Narendra Modi’s government moved closer to clearing a contentious law to expand the size of India’s parliament after a regional opposition party declared support for the legislation.",
@@ -1318,38 +1698,6 @@
         {
           "name": "Bloomberg",
           "url": "https://www.bloomberg.com/news/articles/2026-11-28/modi-nears-majority-needed-to-increase-india-s-parliament-seats"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Actor and comedian PJ Gallagher dies aged 51",
-      "link": "https://www.bbc.co.uk/news/articles/cwp83j2k31g3o?at_medium=RSS&at_campaign=rss",
-      "description": "PJ Gallagher appeared on Irish television for more than two decades with shows including Naked Camera and The Young Offenders.",
-      "date": "2026-11-28T10:17:01+00:00",
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/99b7/live/11b79e90-eb0b-11f1-a094-5fdc692f3e33.jpg",
-      "sourceName": "BBC News",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Actor and comedian PJ Gallagher dies aged 51",
-          "description": "PJ Gallagher appeared on Irish television for more than two decades with shows including Naked Camera and The Young Offenders.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "BBC News",
-          "url": "https://www.bbc.co.uk/news/articles/cwp83j2k31g3o?at_medium=RSS&at_campaign=rss"
         }
       ],
       "sourceCount": 1,
@@ -1486,38 +1834,6 @@
       }
     },
     {
-      "title": "Ukraine’s Deep Strikes Grow in Scale and Scope Across Russia and Beyond",
-      "link": "https://www.nytimes.com/2026/11/28/world/europe/ukraine-russia-long-range-strikes.html",
-      "description": "A campaign aimed at depriving Moscow’s war machine of fuel, weapons and money has been criticized by the Trump administration.",
-      "date": "2026-11-28T10:02:15+00:00",
-      "image": "https://static01.nyt.com/images/2026/11/28/multimedia/28int-ukraine-air-war-01-top-kgtp/28int-ukraine-air-war-01-top-kgtp-mediumSquareAt3X-v3.jpg",
-      "sourceName": "The New York Times",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Ukraine’s Deep Strikes Grow in Scale and Scope Across Russia and Beyond",
-          "description": "A campaign aimed at depriving Moscow’s war machine of fuel, weapons and money has been criticized by the Trump administration.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "The New York Times",
-          "url": "https://www.nytimes.com/2026/11/28/world/europe/ukraine-russia-long-range-strikes.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Canada’s Arctic Reservists Know the Land. Fewer Young People Do.",
       "link": "https://www.nytimes.com/2026/11/28/world/canada/canada-rangers-quebec-arctic-military.html",
       "description": "Canada relies on Inuit and First Nations Rangers’ traditional knowledge of the land to protect its most inhospitable corners. But that knowledge is disappearing.",
@@ -1574,38 +1890,6 @@
         {
           "name": "The New York Times",
           "url": "https://www.nytimes.com/2026/11/28/world/middleeast/freed-from-a-notorious-syrian-prison-but-still-trapped-by-its-terror.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Avec sa marque Arket, H&M mise sur le premium pour tenter d’enrayer la concurrence de Shein",
-      "link": "https://www.lemonde.fr/economie/article/2026/11/28/face-a-la-concurrence-de-shein-h-m-mise-sur-la-montee-en-gamme-avec-arket_6816096_3234.html",
-      "description": "En dépit de la crise que traverse le marché français de l’habillement, la marque premium du groupe suédois a ouvert un deuxième magasin à Paris.",
-      "date": "2026-11-28T11:00:05+01:00",
-      "image": "https://img.lemde.fr/2026/11/26/1715/0/2806/1403/644/322/60/0/5e69a55_upload-1-yxuyywpp4dd7-001arketparis-rgb-pr.jpg",
-      "sourceName": "Le Monde",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Avec sa marque Arket, H&M mise sur le premium pour tenter d’enrayer la concurrence de Shein",
-          "description": "En dépit de la crise que traverse le marché français de l’habillement, la marque premium du groupe suédois a ouvert un deuxième magasin à Paris.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "Le Monde",
-          "url": "https://www.lemonde.fr/economie/article/2026/11/28/face-a-la-concurrence-de-shein-h-m-mise-sur-la-montee-en-gamme-avec-arket_6816096_3234.html"
         }
       ],
       "sourceCount": 1,
@@ -1966,104 +2250,6 @@
       }
     },
     {
-      "title": "'I was trying to be someone I wasn't' – Steward on All Blacks shot",
-      "link": "https://www.bbc.co.uk/sport/rugby-union/articles/c67420k9jyxgo?at_medium=RSS&at_campaign=rss",
-      "description": "Freddie Steward says he has previously been distracted by comparisons with different sorts of players on previous England starts.",
-      "date": "2026-11-28T09:11:50+00:00",
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b392/live/8b7dcfe0-eb08-11f1-a1b8-23a74ada3757.jpg",
-      "sourceName": "BBC News",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "'I was trying to be someone I wasn't' – Steward on All Blacks shot",
-          "description": "Freddie Steward says he has previously been distracted by comparisons with different sorts of players on previous England starts.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "BBC News",
-          "url": "https://www.bbc.co.uk/sport/rugby-union/articles/c67420k9jyxgo?at_medium=RSS&at_campaign=rss"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Pensions and benefits services still down after 'cyber incident'",
-      "link": "https://www.bbc.co.uk/news/articles/cm1wrgqyq4d8o?at_medium=RSS&at_campaign=rss",
-      "description": "The UK's former chief technology officer says the Department for Work and Pensions may have been hit by hackers, but the government has not confirmed that.",
-      "date": "2026-11-28T09:10:32+00:00",
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6b20/live/d7c70ab0-eb21-11f1-99b6-a35a62fa4264.jpg",
-      "sourceName": "BBC News",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "Technology",
-      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Pensions and benefits services still down after 'cyber incident'",
-          "description": "The UK's former chief technology officer says the Department for Work and Pensions may have been hit by hackers, but the government has not confirmed that.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "BBC News",
-          "url": "https://www.bbc.co.uk/news/articles/cm1wrgqyq4d8o?at_medium=RSS&at_campaign=rss"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris - Boursorama",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1uYlMtclJJQjJfa19vbGVCdEZVYzk4akZZbjM0Snpocy1LUnRxWWJPUWdhRG45a0o2YnBuZWxTcHdJazQ2c0owMjFteVI5T0xENWc?oc=5",
-      "description": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris Boursorama",
-      "date": "2026-11-28T09:04:42+00:00",
-      "image": "",
-      "sourceName": "Boursorama",
-      "language": "fr",
-      "category": "Financial markets and economics",
-      "aggregator": true,
-      "subgroup": "BNP Paribas",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Financial",
-      "sectionReason": "content: BNP Paribas bank evidence",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris - Boursorama",
-          "description": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris Boursorama",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "Boursorama",
-          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1uYlMtclJJQjJfa19vbGVCdEZVYzk4akZZbjM0Snpocy1LUnRxWWJPUWdhRG45a0o2YnBuZWxTcHdJazQ2c0owMjFteVI5T0xENWc?oc=5"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Robert Pattinson dans « Le Monde », de jeune vampire énamouré à nouvelle incarnation de James Bond",
       "link": "https://www.lemonde.fr/m-le-mag/article/2026/11/28/robert-pattinson-dans-le-monde-de-jeune-vampire-enamoure-a-nouvelle-incarnation-de-james-bond_6816091_4500055.html",
       "description": "L’acteur britannique révélé dans la série de films « Twilight » va endosser le smoking du plus célèbre des agents secrets. C’est le 7 janvier 2009 que son nom apparaît dans le quotidien, lors de ses premiers pas dans la saga vampirique à succès.",
@@ -2256,38 +2442,6 @@
       }
     },
     {
-      "title": "La star du catch Bronson Reed meurt à l'âge de 38 ans",
-      "link": "https://www.franceinfo.fr/sports/la-star-du-catch-bronson-reed-decede-a-38-ans_8304387.html#xtor=RSS-3-[lestitres]",
-      "description": "Le catcheur né en Australie est mort à la suite de complications médicales, a annoncé la WWE, vendredi.",
-      "date": "2026-11-28T09:40:28+01:00",
-      "image": "https://www.franceinfo.fr/pictures/ZdUmPfkulPt-UMjfY1JIcpkGBl0/0x0:1996x1122/432x243/filters:format(jpg)/2026/11/28/6b0a929bc4688352164455.jpg",
-      "sourceName": "franceinfo",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "feed category fallback: France",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "La star du catch Bronson Reed meurt à l'âge de 38 ans",
-          "description": "Le catcheur né en Australie est mort à la suite de complications médicales, a annoncé la WWE, vendredi.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "franceinfo",
-          "url": "https://www.franceinfo.fr/sports/la-star-du-catch-bronson-reed-decede-a-38-ans_8304387.html#xtor=RSS-3-[lestitres]"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Set time aside for children to read for pleasure, schools to be told",
       "link": "https://www.bbc.co.uk/news/articles/c65y1vp4ndqjo?at_medium=RSS&at_campaign=rss",
       "description": "The government says its new cirriculum hopes to reverse declining literacy rates and combat \"mindless scrolling\".",
@@ -2352,30 +2506,30 @@
       }
     },
     {
-      "title": "63 proc. Polaków doświadczyło nieuczciwości finansowej",
-      "link": "https://www.bankier.pl/wiadomosc/63-proc-Polakow-doswiadczylo-nieuczciwosci-finansowej-9234582.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
-      "description": "63 proc. Polaków przyznało, że zostali oszukani lub niesprawiedliwie potraktowani w sprawach finansowych, natomiast rok temu było to 68 proc. - wynika z raportu przygotowanego przez BIG InfoMonitor i BIK. Pytane o przyczyny nieetycznych zachowań osoby te najczęściej wymieniały cwaniactwo.",
-      "date": "2026-11-28T09:00:00+01:00",
-      "image": "",
-      "sourceName": "Bankier.pl",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "Poland",
-      "sectionReason": "feed category fallback: Poland",
+      "title": "En Gironde, des viticulteurs se diversifient dans la culture de chanvre",
+      "link": "https://www.lemonde.fr/economie/article/2026/11/28/en-gironde-des-viticulteurs-se-diversifient-dans-la-culture-de-chanvre_6816084_3234.html",
+      "description": "Dans un département dominé par la vigne, des exploitants, déjà fragilisés par le recul de la consommation de vin bordelais et le réchauffement climatique, expérimentent la culture du chanvre. Si ses débouchés, notamment dans la construction, suscitent des espoirs, la filière reste à structurer.",
+      "date": "2026-11-28T09:00:04+01:00",
+      "image": "https://img.lemde.fr/2026/11/27/394/0/4724/2362/644/322/60/0/9657966_upload-1-1b0wwi6qnyqq-afp-20260927-hl-vfeuray-3309725-v1-highres-francehempcultivationapromisingsecto.jpg",
+      "sourceName": "Le Monde",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "France",
+      "sectionReason": "feed category fallback: France",
       "classification": {
         "method": "rules",
         "version": 1,
         "input": {
-          "title": "63 proc. Polaków doświadczyło nieuczciwości finansowej",
-          "description": "63 proc. Polaków przyznało, że zostali oszukani lub niesprawiedliwie potraktowani w sprawach finansowych, natomiast rok temu było to 68 proc. - wynika z raportu przygotowanego przez BIG InfoMonitor i BIK. Pytane o przyczyny nieetycznych zachowań osoby te najczęściej wymieniały cwaniactwo.",
-          "sourceCategory": "Poland"
+          "title": "En Gironde, des viticulteurs se diversifient dans la culture de chanvre",
+          "description": "Dans un département dominé par la vigne, des exploitants, déjà fragilisés par le recul de la consommation de vin bordelais et le réchauffement climatique, expérimentent la culture du chanvre. Si ses débouchés, notamment dans la construction, suscitent des espoirs, la filière reste à structurer.",
+          "sourceCategory": "France"
         }
       },
       "sources": [
         {
-          "name": "Bankier.pl",
-          "url": "https://www.bankier.pl/wiadomosc/63-proc-Polakow-doswiadczylo-nieuczciwosci-finansowej-9234582.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
+          "name": "Le Monde",
+          "url": "https://www.lemonde.fr/economie/article/2026/11/28/en-gironde-des-viticulteurs-se-diversifient-dans-la-culture-de-chanvre_6816084_3234.html"
         }
       ],
       "sourceCount": 1,
@@ -2448,38 +2602,6 @@
       }
     },
     {
-      "title": "Roland Lescure voit un \"avertissement\" dans la décision de S&P et maintient l'objectif d'un déficit public à 5% en 2027",
-      "link": "https://www.franceinfo.fr/economie/crise/crise-de-la-dette/roland-lescure-voit-un-avertissement-dans-la-decision-de-s-p-et-maintient-l-objectif-d-un-deficit-public-a-5-en-2027_8304339.html#xtor=RSS-3-[lestitres]",
-      "description": "L'agence de notation a maintenu vendredi la note de la France à A+, mais a abaissé la perspective de stable à négative, la menaçant donc d'une dégradation, en raison des difficultés du pays à réduire son déficit.",
-      "date": "2026-11-28T08:47:25+01:00",
-      "image": "https://www.franceinfo.fr/pictures/BG8Gkx1CMuSGA1o5n9SM4W6vJj4/0x0:1461x822/432x243/filters:format(jpg)/2026/07/23/6a61c444af4ec477863126.jpg",
-      "sourceName": "franceinfo",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "content: France subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Roland Lescure voit un \"avertissement\" dans la décision de S&P et maintient l'objectif d'un déficit public à 5% en 2027",
-          "description": "L'agence de notation a maintenu vendredi la note de la France à A+, mais a abaissé la perspective de stable à négative, la menaçant donc d'une dégradation, en raison des difficultés du pays à réduire son déficit.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "franceinfo",
-          "url": "https://www.franceinfo.fr/economie/crise/crise-de-la-dette/roland-lescure-voit-un-avertissement-dans-la-decision-de-s-p-et-maintient-l-objectif-d-un-deficit-public-a-5-en-2027_8304339.html#xtor=RSS-3-[lestitres]"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Dwie ustawy aborcyjne na biurku Nawrockiego. Prezydent musi zdecydować",
       "link": "https://www.bankier.pl/wiadomosc/Dwie-ustawy-aborcyjne-na-biurku-Nawrockiego-Prezydent-musi-zdecydowac-9236769.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
       "description": "Dwie ustawy o przerywaniu ciąży czekają na decyzję prezydenta Karola Nawrockiego. Środowiska antyaborcyjne przekonują głowę państwa do weta, a zwolennicy liberalizacji apelują o podpisanie ustaw.",
@@ -2512,38 +2634,6 @@
       }
     },
     {
-      "title": "Australian wrestler Bronson Reed dies aged 38, WWE says",
-      "link": "https://www.bbc.co.uk/news/articles/cvwy08g70ldko?at_medium=RSS&at_campaign=rss",
-      "description": "Tributes have flooded in for the 38-year-old Australian who is survived by his pregnant wife, Paige, their daughter.",
-      "date": "2026-11-28T07:31:14+00:00",
-      "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/297c/live/0c5c0a20-eafd-11f1-83de-2b6b9d423090.jpg",
-      "sourceName": "BBC News",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "feed category fallback: Global news and geopolitics",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Australian wrestler Bronson Reed dies aged 38, WWE says",
-          "description": "Tributes have flooded in for the 38-year-old Australian who is survived by his pregnant wife, Paige, their daughter.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "BBC News",
-          "url": "https://www.bbc.co.uk/news/articles/cvwy08g70ldko?at_medium=RSS&at_campaign=rss"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Au Vélodrome jeudi soir à Marseille, \"une dizaine de personnes m'a entouré et frappé\", raconte un supporter bulgare blessé au Vélodrome",
       "link": "https://www.franceinfo.fr/sports/foot/ligue-europa/temoignage-au-velodrome-jeudi-soir-a-marseille-une-dizaine-de-personnes-m-a-entoure-et-frappe-raconte-un-supporter-bulgare-blesse-au-velodrome_8304294.html#xtor=RSS-3-[lestitres]",
       "description": "Après les violents affrontements entre supporters marseillais et bulgares au Vélodrome, un supporter bulgare grièvement blessé met en cause le dispositif de sécurité.",
@@ -2568,38 +2658,6 @@
         {
           "name": "franceinfo",
           "url": "https://www.franceinfo.fr/sports/foot/ligue-europa/temoignage-au-velodrome-jeudi-soir-a-marseille-une-dizaine-de-personnes-m-a-entoure-et-frappe-raconte-un-supporter-bulgare-blesse-au-velodrome_8304294.html#xtor=RSS-3-[lestitres]"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "AI zagrożeniem dla wyborów? Estonia blokuje głosowanie przez aplikację",
-      "link": "https://www.bankier.pl/wiadomosc/AI-zagrozeniem-dla-wyborow-Estonia-blokuje-glosowanie-przez-aplikacje-9236752.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
-      "description": "Sąd Najwyższy Estonii uchylił decyzję Państwowej Komisji Wyborczej, która zezwalała - po raz pierwszy w historii kraju - na głosowanie na urządzeniach mobilnych w wyborach do Riigikogu (parlamentu), które odbędą się na początku marca 2027 r.",
-      "date": "2026-11-28T08:30:00+01:00",
-      "image": "",
-      "sourceName": "Bankier.pl",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "Technology",
-      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "AI zagrożeniem dla wyborów? Estonia blokuje głosowanie przez aplikację",
-          "description": "Sąd Najwyższy Estonii uchylił decyzję Państwowej Komisji Wyborczej, która zezwalała - po raz pierwszy w historii kraju - na głosowanie na urządzeniach mobilnych w wyborach do Riigikogu (parlamentu), które odbędą się na początku marca 2027 r.",
-          "sourceCategory": "Poland"
-        }
-      },
-      "sources": [
-        {
-          "name": "Bankier.pl",
-          "url": "https://www.bankier.pl/wiadomosc/AI-zagrozeniem-dla-wyborow-Estonia-blokuje-glosowanie-przez-aplikacje-9236752.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
         }
       ],
       "sourceCount": 1,
@@ -3088,6 +3146,38 @@
       }
     },
     {
+      "title": "L’IA, tremblement de terre dans les formations de création littéraire : « Dans quelle mesure l’utiliser me dépossède de mon œuvre ? »",
+      "link": "https://www.lemonde.fr/campus/article/2026/11/28/l-ia-tremblement-de-terre-dans-les-formations-de-creation-litteraire-dans-quelle-mesure-l-utiliser-me-depossede-de-mon-uvre_6816074_4401467.html",
+      "description": "Alors que les controverses sur l’usage des intelligences artificielles génératives secouent le monde de l’édition, les formations en création littéraire et métiers du livre cherchent leur posture, entre rejet critique et sensibilisation pragmatique.",
+      "date": "2026-11-28T07:00:09+01:00",
+      "image": "https://img.lemde.fr/2026/11/19/1114/0/3600/1800/644/322/60/0/ada116f_upload-1-wknv7shm5f5n-le-mondecampus-proust.jpg",
+      "sourceName": "Le Monde",
+      "language": "fr",
+      "category": "France",
+      "sourceCategory": "France",
+      "section": "France",
+      "sectionReason": "feed category fallback: France",
+      "classification": {
+        "method": "rules",
+        "version": 1,
+        "input": {
+          "title": "L’IA, tremblement de terre dans les formations de création littéraire : « Dans quelle mesure l’utiliser me dépossède de mon œuvre ? »",
+          "description": "Alors que les controverses sur l’usage des intelligences artificielles génératives secouent le monde de l’édition, les formations en création littéraire et métiers du livre cherchent leur posture, entre rejet critique et sensibilisation pragmatique.",
+          "sourceCategory": "France"
+        }
+      },
+      "sources": [
+        {
+          "name": "Le Monde",
+          "url": "https://www.lemonde.fr/campus/article/2026/11/28/l-ia-tremblement-de-terre-dans-les-formations-de-creation-litteraire-dans-quelle-mesure-l-utiliser-me-depossede-de-mon-uvre_6816074_4401467.html"
+        }
+      ],
+      "sourceCount": 1,
+      "importance": {
+        "sourceCount": 1
+      }
+    },
+    {
       "title": "A La Villette, le concert « 11 000 cordes » embarque dans une expérience cosmique : « Tout le monde est libre de ressentir ce qu’il veut »",
       "link": "https://www.lemonde.fr/culture/article/2026/11/28/a-la-villette-le-concert-11-000-cordes-embarque-dans-une-experience-cosmique-tout-le-monde-est-libre-de-ressentir-ce-qu-il-veut_6816075_3246.html",
       "description": "L’œuvre du compositeur Georg Friedrich Haas, qui réunit 50 pianos, chacun accordé un cinquantième de demi-ton plus haut que le précédent, accompagnés de 25 instrumentistes, fait l’objet de cinq « concerts performances » à Paris.",
@@ -3112,40 +3202,6 @@
         {
           "name": "Le Monde",
           "url": "https://www.lemonde.fr/culture/article/2026/11/28/a-la-villette-le-concert-11-000-cordes-embarque-dans-une-experience-cosmique-tout-le-monde-est-libre-de-ressentir-ce-qu-il-veut_6816075_3246.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "BNP Paribas, le Soudan et le droit suisse - L'Essentiel de l'Éco",
-      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBxc0lsZUxNOGMyeVlXNVlleERPdC1iNU14aTZvVm52UndtTUgxNXN0Zm9SRV9qX21VNlRNUVBBMmRQN3VmQ29wXzk5NHhpZGpXVk1JSi1Nd09wbmo1Tm1hZldadEhlcFFQSjVQMjI4Q0pqcGtKXzFqenhSWnE3ZFE?oc=5",
-      "description": "BNP Paribas, le Soudan et le droit suisse L'Essentiel de l'Éco",
-      "date": "2026-11-28T06:00:00+00:00",
-      "image": "",
-      "sourceName": "L'Essentiel de l'Éco",
-      "language": "fr",
-      "category": "Financial markets and economics",
-      "aggregator": true,
-      "subgroup": "BNP Paribas",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Financial",
-      "sectionReason": "content: BNP Paribas bank evidence",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "BNP Paribas, le Soudan et le droit suisse - L'Essentiel de l'Éco",
-          "description": "BNP Paribas, le Soudan et le droit suisse L'Essentiel de l'Éco",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "L'Essentiel de l'Éco",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBxc0lsZUxNOGMyeVlXNVlleERPdC1iNU14aTZvVm52UndtTUgxNXN0Zm9SRV9qX21VNlRNUVBBMmRQN3VmQ29wXzk5NHhpZGpXVk1JSi1Nd09wbmo1Tm1hZldadEhlcFFQSjVQMjI4Q0pqcGtKXzFqenhSWnE3ZFE?oc=5"
         }
       ],
       "sourceCount": 1,
@@ -4050,40 +4106,6 @@
       }
     },
     {
-      "title": "Wywiad wideo - BNP Paribas Warsaw SerialCon: Wywiad z Elizabeth McGovern - Filmweb",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNYXZ5bWtKai10X0NPLUlHOG1fTmh6UnhmbGlVXzk5aGlKbkp5Vm0zUC1DZUJmZVVYU2hvVkNFWGFuMF9LNWV6cDVJd04zUU5wWUM5N0FhMWpWQ2dyZW5JN29ya19COU9WaWxVUUxtRldwQ2Y0TGNtSDlVN2EyNlhXdkd6SExvUjAxN0NKV2lKa2hHVm9fejZVNTBUWTgxSFRqU0JnMHF0UlRJdzg?oc=5",
-      "description": "Wywiad wideo - BNP Paribas Warsaw SerialCon: Wywiad z Elizabeth McGovern Filmweb",
-      "date": "2026-11-28T01:45:28+00:00",
-      "image": "",
-      "sourceName": "Filmweb",
-      "language": "pl",
-      "category": "Financial markets and economics",
-      "aggregator": true,
-      "subgroup": "BNP Paribas",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Financial",
-      "sectionReason": "content: BNP Paribas bank evidence",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Wywiad wideo - BNP Paribas Warsaw SerialCon: Wywiad z Elizabeth McGovern - Filmweb",
-          "description": "Wywiad wideo - BNP Paribas Warsaw SerialCon: Wywiad z Elizabeth McGovern Filmweb",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "Filmweb",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNYXZ5bWtKai10X0NPLUlHOG1fTmh6UnhmbGlVXzk5aGlKbkp5Vm0zUC1DZUJmZVVYU2hvVkNFWGFuMF9LNWV6cDVJd04zUU5wWUM5N0FhMWpWQ2dyZW5JN29ya19COU9WaWxVUUxtRldwQ2Y0TGNtSDlVN2EyNlhXdkd6SExvUjAxN0NKV2lKa2hHVm9fejZVNTBUWTgxSFRqU0JnMHF0UlRJdzg?oc=5"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Citigroup’s $35 Billion Bookkeeping Snafu Sparks Shake-Up in Upper Ranks",
       "link": "https://www.wsj.com/finance/banking/citigroups-35-billion-bookkeeping-snafu-sparks-shake-up-in-upper-ranks-71d8afe9?mod=rss_markets_main",
       "description": "Several London-based executives are leaving as a top risk official oversees the cleanup from the bank’s trading hub.",
@@ -4628,38 +4650,6 @@
       }
     },
     {
-      "title": "The new iPad Mini is getting its first major discount for Black Friday",
-      "link": "https://www.theverge.com/gadgets/1042705/ipad-mini-black-friday-deal-sale-2026",
-      "description": "We were big fans of Apple’s new iPad Mini when we reviewed it in early November, but its steep starting price of $699 was hard to swallow. Thankfully, the small tablet is already getting a sizable discount for Black Friday. Right now, Amazon and Walmart are both selling the 2026 iPad Mini with Wi-Fi and […]",
-      "date": "2026-11-27T17:30:00-05:00",
-      "image": "",
-      "sourceName": "The Verge",
-      "language": "en",
-      "category": "Technology, AI and science",
-      "sourceCategory": "Technology, AI and science",
-      "section": "Technology",
-      "sectionReason": "feed category fallback: Technology, AI and science",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "The new iPad Mini is getting its first major discount for Black Friday",
-          "description": "We were big fans of Apple’s new iPad Mini when we reviewed it in early November, but its steep starting price of $699 was hard to swallow. Thankfully, the small tablet is already getting a sizable discount for Black Friday. Right now, Amazon and Walmart are both selling the 2026 iPad Mini with Wi-Fi and […]",
-          "sourceCategory": "Technology, AI and science"
-        }
-      },
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/gadgets/1042705/ipad-mini-black-friday-deal-sale-2026"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Managing $300B for Ultra Wealthy Families: Masters in Business with Holly MacDonald",
       "link": "https://www.bloomberg.com/news/videos/2026-11-27/masters-in-business-with-holly-macdonald-video",
       "description": "Barry speaks with Holly MacDonald, CEO of Bessemer Trust. They discuss her time working in Brazil and how investing in emerging markets shapes her investment philosophy. They also discuss the enduring strength of the US dollar, and how Bessemer evolved from a single family office to a $300 billion enterprise. They also discuss how they navigate building generational wealth and moderating family conflicts. (Source: Bloomberg)",
@@ -4812,40 +4802,6 @@
         {
           "name": "BBC News",
           "url": "https://www.bbc.co.uk/news/articles/c6jeqyqzy1y7o?at_medium=RSS&at_campaign=rss"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "View from the markets: Has central bank communication become counterproductive? - BNP Paribas Asset Management",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPc21DNnBoTk9na1FxdkxaYUVIZDhuT0ZKOVdMc0NubWZrU3c2T1NHM0lDMTBYS3FLNkNlTkxqd2NUWm5Lck9zZjc4VGVCUXB1ZmFwc3JENGx0V082NDJvTFpTbXU0amJ6X3JJSmR5aFhmODItZDB1anB3ejlCSS1YN1k3d3M5X01XY1VrcGttZGEtdm1tTFFtaDdkX0llOVJheVlnRG0tdzdnVktEeXo5QkVVWFVQY2o1QVRVWUEzUzAyWXlhRzRWUnNrU3JPa2M?oc=5",
-      "description": "View from the markets: Has central bank communication become counterproductive? BNP Paribas Asset Management",
-      "date": "2026-11-27T21:26:23+00:00",
-      "image": "",
-      "sourceName": "BNP Paribas Asset Management",
-      "language": "en",
-      "category": "Financial markets and economics",
-      "aggregator": true,
-      "subgroup": "BNP Paribas",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Financial",
-      "sectionReason": "content: BNP Paribas bank evidence",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "View from the markets: Has central bank communication become counterproductive? - BNP Paribas Asset Management",
-          "description": "View from the markets: Has central bank communication become counterproductive? BNP Paribas Asset Management",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "BNP Paribas Asset Management",
-          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPc21DNnBoTk9na1FxdkxaYUVIZDhuT0ZKOVdMc0NubWZrU3c2T1NHM0lDMTBYS3FLNkNlTkxqd2NUWm5Lck9zZjc4VGVCUXB1ZmFwc3JENGx0V082NDJvTFpTbXU0amJ6X3JJSmR5aFhmODItZDB1anB3ejlCSS1YN1k3d3M5X01XY1VrcGttZGEtdm1tTFFtaDdkX0llOVJheVlnRG0tdzdnVktEeXo5QkVVWFVQY2o1QVRVWUEzUzAyWXlhRzRWUnNrU3JPa2M?oc=5"
         }
       ],
       "sourceCount": 1,
@@ -5398,38 +5354,6 @@
       }
     },
     {
-      "title": "Journalistes et secret de l’instruction : comprendre ce que dit le droit après les déclarations de Marine Le Pen",
-      "link": "https://www.lemonde.fr/societe/article/2026/11/27/journalistes-et-secret-de-l-instruction-comprendre-ce-que-dit-le-droit-apres-les-declarations-de-marine-le-pen_6815927_3224.html",
-      "description": "La candidate du Rassemblement national à l’élection présidentielle veut « aggraver les peines qui existent » lorsqu’un journaliste est condamné pour recel de violation du secret de l’instruction.",
-      "date": "2026-11-27T20:14:46+01:00",
-      "image": "https://img.lemde.fr/2026/11/18/1390/0/6500/3250/644/322/60/0/37c7101_upload-1-huairz14qxe3-kzihnioglu-paris-bardella-lepen-17112026-102.jpg",
-      "sourceName": "Le Monde",
-      "language": "fr",
-      "category": "France",
-      "sourceCategory": "France",
-      "section": "France",
-      "sectionReason": "feed category fallback: France",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Journalistes et secret de l’instruction : comprendre ce que dit le droit après les déclarations de Marine Le Pen",
-          "description": "La candidate du Rassemblement national à l’élection présidentielle veut « aggraver les peines qui existent » lorsqu’un journaliste est condamné pour recel de violation du secret de l’instruction.",
-          "sourceCategory": "France"
-        }
-      },
-      "sources": [
-        {
-          "name": "Le Monde",
-          "url": "https://www.lemonde.fr/societe/article/2026/11/27/journalistes-et-secret-de-l-instruction-comprendre-ce-que-dit-le-droit-apres-les-declarations-de-marine-le-pen_6815927_3224.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Strata netto Kernel Holding w I kw. 2026/27 wyniosła 143 mln USD",
       "link": "https://www.bankier.pl/wiadomosc/Strata-netto-Kernel-Holding-w-I-kw-2026-27-wyniosla-143-mln-USD-9236693.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
       "description": "Strata netto j.d. Kernel Holding w I kwartale roku obrotowego 2026/27, zakończonym 30 września, wyniosła 143 mln USD wobec 95 mln USD zysku rok wcześniej - podała spółka w raporcie.",
@@ -5526,40 +5450,6 @@
       }
     },
     {
-      "title": "Gwiazdy zachwycają na ściance podczas 3. BNP Paribas Warsaw SerialCon. Co za kreacje - Pomponik",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPQzhQNDVxRjFCNmEwd1ZNVU12dGZaMnp6Wm04a0lPUXhOZlAxNVhZTjRKTDRMcUplVWZxTnN0U1lpWFZwWk9tc1RjemNnRllHTUs5UGJ2RmE1bkRoTnM3bEtPSTBrc0s2b08teXRHUUVqUEtUaEtZVlpaYUhWVVA0LWpqdlRZbG1jU2FMMVVMeERTYkxJUlhRbmt0Zmh0WDYzUk9QQzhJRDIyazE3OHc?oc=5",
-      "description": "Gwiazdy zachwycają na ściance podczas 3. BNP Paribas Warsaw SerialCon. Co za kreacje Pomponik",
-      "date": "2026-11-27T18:23:39+00:00",
-      "image": "",
-      "sourceName": "Pomponik",
-      "language": "pl",
-      "category": "Financial markets and economics",
-      "aggregator": true,
-      "subgroup": "BNP Paribas",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Financial",
-      "sectionReason": "content: BNP Paribas bank evidence",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Gwiazdy zachwycają na ściance podczas 3. BNP Paribas Warsaw SerialCon. Co za kreacje - Pomponik",
-          "description": "Gwiazdy zachwycają na ściance podczas 3. BNP Paribas Warsaw SerialCon. Co za kreacje Pomponik",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "Pomponik",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPQzhQNDVxRjFCNmEwd1ZNVU12dGZaMnp6Wm04a0lPUXhOZlAxNVhZTjRKTDRMcUplVWZxTnN0U1lpWFZwWk9tc1RjemNnRllHTUs5UGJ2RmE1bkRoTnM3bEtPSTBrc0s2b08teXRHUUVqUEtUaEtZVlpaYUhWVVA0LWpqdlRZbG1jU2FMMVVMeERTYkxJUlhRbmt0Zmh0WDYzUk9QQzhJRDIyazE3OHc?oc=5"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Auto & Transport Roundup: Market Talk",
       "link": "https://www.wsj.com/business/earnings/auto-transport-roundup-market-talk-7ba86b3a?mod=rss_markets_main",
       "description": "Gain insight on Gulf airlines, Canadian autoworkers and more in the latest Market Talks covering the auto and transport sector.",
@@ -5584,40 +5474,6 @@
         {
           "name": "The Wall Street Journal",
           "url": "https://www.wsj.com/business/earnings/auto-transport-roundup-market-talk-7ba86b3a?mod=rss_markets_main"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Sześć lat likwidacji funduszu BNP Paribas. Inwestorzy nadal czekają na pieniądze - Analizy.pl",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQNzBYSkZkaUZRaWdHWTFnaUl1R3lselp1NmYtSVEzRlU3dldiNVd1TVU4OUpsWnNGU0o2enJ1d05GMTVZNGFwTVNia2tNTE9DV1BYZTU2MXY2QmZzTnVMdG5mYjlqcDF0aHhCR2I1MHhGUTJOaWtrU0xscDhmVkt6VnVOVXlkYVJEZWEyR1N5dUNfNEt3OTZXTnI0UU5sbjBCd0o3VldUcHdpTjhidEhCQjBJZmFycUxxUFhn?oc=5",
-      "description": "Sześć lat likwidacji funduszu BNP Paribas. Inwestorzy nadal czekają na pieniądze Analizy.pl",
-      "date": "2026-11-27T18:20:37+00:00",
-      "image": "",
-      "sourceName": "Analizy.pl",
-      "language": "pl",
-      "category": "Financial markets and economics",
-      "aggregator": true,
-      "subgroup": "BNP Paribas",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Financial",
-      "sectionReason": "content: BNP Paribas bank evidence",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Sześć lat likwidacji funduszu BNP Paribas. Inwestorzy nadal czekają na pieniądze - Analizy.pl",
-          "description": "Sześć lat likwidacji funduszu BNP Paribas. Inwestorzy nadal czekają na pieniądze Analizy.pl",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "Analizy.pl",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQNzBYSkZkaUZRaWdHWTFnaUl1R3lselp1NmYtSVEzRlU3dldiNVd1TVU4OUpsWnNGU0o2enJ1d05GMTVZNGFwTVNia2tNTE9DV1BYZTU2MXY2QmZzTnVMdG5mYjlqcDF0aHhCR2I1MHhGUTJOaWtrU0xscDhmVkt6VnVOVXlkYVJEZWEyR1N5dUNfNEt3OTZXTnI0UU5sbjBCd0o3VldUcHdpTjhidEhCQjBJZmFycUxxUFhn?oc=5"
         }
       ],
       "sourceCount": 1,
@@ -6106,40 +5962,6 @@
       }
     },
     {
-      "title": "BNP Paribas en pince pour D’Ieteren, l’action sur les chapeaux de roue à Bruxelles - L'Echo",
-      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPelI5cHlsYjRlbDVjdWJabkRQNXFQNVNNTUNIczVfLXVSM3RlbHpQQTlGanZxM3doM0liT3p4S25UaDNpWThIaFpPTU1lQzk3d2dUV2tqMkRMMmZRWFRJYWVydzVpaFRRZjViUDFsWjNHYXV5cnNmWEJlc3Z2Sk9qWHNleEtrYWU4M21ybkxZZHlKZmQzaHR3VUJDNEdTVWNrV1FyTVl5MnJXd0NlbXJrMW5tMlJpa2dac21HdnRZRnkyck4zQ2VnbEZTQnlnNWItSkkxUktmMDI?oc=5",
-      "description": "BNP Paribas en pince pour D’Ieteren, l’action sur les chapeaux de roue à Bruxelles L'Echo",
-      "date": "2026-11-27T16:39:17+00:00",
-      "image": "",
-      "sourceName": "L'Echo",
-      "language": "fr",
-      "category": "Financial markets and economics",
-      "aggregator": true,
-      "subgroup": "BNP Paribas",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Financial",
-      "sectionReason": "content: BNP Paribas bank evidence",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "BNP Paribas en pince pour D’Ieteren, l’action sur les chapeaux de roue à Bruxelles - L'Echo",
-          "description": "BNP Paribas en pince pour D’Ieteren, l’action sur les chapeaux de roue à Bruxelles L'Echo",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "L'Echo",
-          "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPelI5cHlsYjRlbDVjdWJabkRQNXFQNVNNTUNIczVfLXVSM3RlbHpQQTlGanZxM3doM0liT3p4S25UaDNpWThIaFpPTU1lQzk3d2dUV2tqMkRMMmZRWFRJYWVydzVpaFRRZjViUDFsWjNHYXV5cnNmWEJlc3Z2Sk9qWHNleEtrYWU4M21ybkxZZHlKZmQzaHR3VUJDNEdTVWNrV1FyTVl5MnJXd0NlbXJrMW5tMlJpa2dac21HdnRZRnkyck4zQ2VnbEZTQnlnNWItSkkxUktmMDI?oc=5"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Colombia Peso Stumbles as Mounting Risks Test Rally",
       "link": "https://www.bloomberg.com/news/articles/2026-11-27/colombia-peso-stumbles-as-mounting-risks-test-carry-fueled-rally",
       "description": "The Colombian peso is headed for its worst month in more than four years as a toxic mix of trouble at home and abroad takes the shine off one of the year’s most resilient currencies.",
@@ -6556,74 +6378,6 @@
       }
     },
     {
-      "title": "Comment Belfius et BNP Paribas Fortis tentent de détourner les épargnants des bons d’État - Testachats",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPSmlFamt4MEJhR1NSdnBFajFQY0ZnTlk1bFFmTmRxbXNPcllWWjN3d2E1dnlLTEtEdlI1cE9NdTFnZzNKN1pkclMzakc0cnp0NFZLekxQWGJPQklPSGNUTkpZbmF6OHdZaGJaWjlxcjdHcHJTX1NaTTFnX3lEaU41el9Nanh0SlFLaFh0bUlOdERaMFFpVTZSdENwcnBxMldDcFhYY2sxbzV1Y2JsUU44?oc=5",
-      "description": "Comment Belfius et BNP Paribas Fortis tentent de détourner les épargnants des bons d’État Testachats",
-      "date": "2026-11-27T15:10:35+00:00",
-      "image": "",
-      "sourceName": "Testachats",
-      "language": "fr",
-      "category": "Financial markets and economics",
-      "aggregator": true,
-      "subgroup": "BNP Paribas",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Financial",
-      "sectionReason": "content: BNP Paribas bank evidence",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Comment Belfius et BNP Paribas Fortis tentent de détourner les épargnants des bons d’État - Testachats",
-          "description": "Comment Belfius et BNP Paribas Fortis tentent de détourner les épargnants des bons d’État Testachats",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "Testachats",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPSmlFamt4MEJhR1NSdnBFajFQY0ZnTlk1bFFmTmRxbXNPcllWWjN3d2E1dnlLTEtEdlI1cE9NdTFnZzNKN1pkclMzakc0cnp0NFZLekxQWGJPQklPSGNUTkpZbmF6OHdZaGJaWjlxcjdHcHJTX1NaTTFnX3lEaU41el9Nanh0SlFLaFh0bUlOdERaMFFpVTZSdENwcnBxMldDcFhYY2sxbzV1Y2JsUU44?oc=5"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "AM Best affirms BNP Paribas captive ratings - Captive International",
-      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPclZETmVNbzg4SE94SmxUTzRMRXlSUHpKN1ZLOUU0aXk3VXV0MldhTzVpUXU3aUtqZUtPakNXQkQ2cnhGSFhjeU5RQWRzOWMxWmlwOFdTNjAwNVNncG5aS3d2NFpIQ213WEZ6cmgxS2ZLVVpEQkhkVEpFNURBU2JJRHNfNkVTNFU?oc=5",
-      "description": "AM Best affirms BNP Paribas captive ratings Captive International",
-      "date": "2026-11-27T15:09:20+00:00",
-      "image": "",
-      "sourceName": "Captive International",
-      "language": "en",
-      "category": "Financial markets and economics",
-      "aggregator": true,
-      "subgroup": "BNP Paribas",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Financial",
-      "sectionReason": "content: BNP Paribas bank evidence",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "AM Best affirms BNP Paribas captive ratings - Captive International",
-          "description": "AM Best affirms BNP Paribas captive ratings Captive International",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "Captive International",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPclZETmVNbzg4SE94SmxUTzRMRXlSUHpKN1ZLOUU0aXk3VXV0MldhTzVpUXU3aUtqZUtPakNXQkQ2cnhGSFhjeU5RQWRzOWMxWmlwOFdTNjAwNVNncG5aS3d2NFpIQ213WEZ6cmgxS2ZLVVpEQkhkVEpFNURBU2JJRHNfNkVTNFU?oc=5"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
       "title": "Sánchez chwali się cudem gospodarczym. Dlaczego Hiszpanie są przekonani, że jest źle?",
       "link": "https://wyborcza.pl/7,75399,33152353,sanchez-chwali-sie-gospodarczym-cudem-wyborcy-nie-dowierzaja.html",
       "description": "Pensje rosną, bezrobocie spada, a gospodarka rozwija się szybciej niż w Niemczech czy Francji. - Ulica nie odczuwa tego wzrostu - mówi \"Wyborczej\" Héctor, dziennikarz z Barcelony.",
@@ -6680,40 +6434,6 @@
         {
           "name": "The Decoder",
           "url": "https://the-decoder.com/sap-plans-to-cut-at-least-10000-jobs-as-it-pivots-to-ai/"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Gwiazdy polskich seriali na 3. BNP Paribas Warsaw SerialCon. Kto pojawi się na festiwalu? - RMF24",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNU043Mml4d244Vm1IRTRCUjYxVEpxRmVyUVc4eDA4a2lwSHlXMjJKT2Qya1gzOURGbXZIWWp6ODkwcnZsQ1piRnFVMnlLX2FZUEFPbUVta2xMZXAzaWNYN05LNjE1ZWlnZ2ZzQmV0VkYtT3hGNUwtejl2S0duQzBUSU1rSHJpNTRTUjdBZGRkX1p2NTg4U0VzbTdTQ05iVmdhVjJHRUR0OFlNVXkwMklKa2tqSQ?oc=5",
-      "description": "Gwiazdy polskich seriali na 3. BNP Paribas Warsaw SerialCon. Kto pojawi się na festiwalu? RMF24",
-      "date": "2026-11-27T14:53:00+00:00",
-      "image": "",
-      "sourceName": "RMF24",
-      "language": "pl",
-      "category": "Financial markets and economics",
-      "aggregator": true,
-      "subgroup": "BNP Paribas",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Financial",
-      "sectionReason": "content: BNP Paribas bank evidence",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Gwiazdy polskich seriali na 3. BNP Paribas Warsaw SerialCon. Kto pojawi się na festiwalu? - RMF24",
-          "description": "Gwiazdy polskich seriali na 3. BNP Paribas Warsaw SerialCon. Kto pojawi się na festiwalu? RMF24",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "RMF24",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNU043Mml4d244Vm1IRTRCUjYxVEpxRmVyUVc4eDA4a2lwSHlXMjJKT2Qya1gzOURGbXZIWWp6ODkwcnZsQ1piRnFVMnlLX2FZUEFPbUVta2xMZXAzaWNYN05LNjE1ZWlnZ2ZzQmV0VkYtT3hGNUwtejl2S0duQzBUSU1rSHJpNTRTUjdBZGRkX1p2NTg4U0VzbTdTQ05iVmdhVjJHRUR0OFlNVXkwMklKa2tqSQ?oc=5"
         }
       ],
       "sourceCount": 1,
@@ -6810,40 +6530,6 @@
         {
           "name": "The New York Times",
           "url": "https://www.nytimes.com/2026/11/27/world/europe/santiago-abascal-vox-spain-far-right.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Łukasz Simlat, Sandra Drzymalska, Agnieszka Dygant i Cezary Żak. Gwiazdy polskich seriali na 3. BNP Paribas Warsaw SerialCon! - Rzeczpospolita",
-      "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQVFdJNDJxMVZMRTI1dVAyOE1wajdmUFZHQVg0a3UxYXJVYmIxUVdNZm45NW1TRlYtX1VlMVNJOUFxaXQ0OU1LNGZXMDNobUVrQWV0WUFTWUJhZk9waHFQTXpuc0hPUXY3OVQ0eTVSWDJfeWlLUWtHUHI2eldlbFUwUlpadDR3QThwc1haYVpBSVdoelc2OVctY0FrcEVyTHhPMHR2RzNxcVExckVrcmJFS1hiUHFTZEJmV3BBTXk4WUVxN0JDVWN6UnB6b09FVEZtOTkyQjhEVy1pNzlvV04tTzdOMWUtSVVILU8w?oc=5",
-      "description": "Łukasz Simlat, Sandra Drzymalska, Agnieszka Dygant i Cezary Żak. Gwiazdy polskich seriali na 3. BNP Paribas Warsaw SerialCon! Rzeczpospolita",
-      "date": "2026-11-27T14:42:00+00:00",
-      "image": "",
-      "sourceName": "Rzeczpospolita",
-      "language": "pl",
-      "category": "Financial markets and economics",
-      "aggregator": true,
-      "subgroup": "BNP Paribas",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Financial",
-      "sectionReason": "content: BNP Paribas bank evidence",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Łukasz Simlat, Sandra Drzymalska, Agnieszka Dygant i Cezary Żak. Gwiazdy polskich seriali na 3. BNP Paribas Warsaw SerialCon! - Rzeczpospolita",
-          "description": "Łukasz Simlat, Sandra Drzymalska, Agnieszka Dygant i Cezary Żak. Gwiazdy polskich seriali na 3. BNP Paribas Warsaw SerialCon! Rzeczpospolita",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "Rzeczpospolita",
-          "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQVFdJNDJxMVZMRTI1dVAyOE1wajdmUFZHQVg0a3UxYXJVYmIxUVdNZm45NW1TRlYtX1VlMVNJOUFxaXQ0OU1LNGZXMDNobUVrQWV0WUFTWUJhZk9waHFQTXpuc0hPUXY3OVQ0eTVSWDJfeWlLUWtHUHI2eldlbFUwUlpadDR3QThwc1haYVpBSVdoelc2OVctY0FrcEVyTHhPMHR2RzNxcVExckVrcmJFS1hiUHFTZEJmV3BBTXk4WUVxN0JDVWN6UnB6b09FVEZtOTkyQjhEVy1pNzlvV04tTzdOMWUtSVVILU8w?oc=5"
         }
       ],
       "sourceCount": 1,
@@ -7004,298 +6690,6 @@
         {
           "name": "Gazeta Wyborcza",
           "url": "https://wyborcza.pl/7,75398,33150575,godek-bedzie-blokowac-marsz-kobiet-na-palac-prezydencki-osk.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Prokurator Generalny przekazał do Sejmu wniosek o aresztowanie Ziobry",
-      "link": "https://wyborcza.pl/7,75398,33154306,prokurator-generalny-przekazal-wniosek-o-aresztowanie-ziobry.html",
-      "description": "Prokurator Generalny Waldemar Żurek przekazał marszałkowi Sejmu wniosek o wyrażenie zgody na zatrzymanie i tymczasowe aresztowanie Zbigniewa Ziobry.",
-      "date": "2026-11-27T13:55:00+00:00",
-      "image": "",
-      "sourceName": "Gazeta Wyborcza",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "Poland",
-      "sectionReason": "feed category fallback: Poland",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Prokurator Generalny przekazał do Sejmu wniosek o aresztowanie Ziobry",
-          "description": "Prokurator Generalny Waldemar Żurek przekazał marszałkowi Sejmu wniosek o wyrażenie zgody na zatrzymanie i tymczasowe aresztowanie Zbigniewa Ziobry.",
-          "sourceCategory": "Poland"
-        }
-      },
-      "sources": [
-        {
-          "name": "Gazeta Wyborcza",
-          "url": "https://wyborcza.pl/7,75398,33154306,prokurator-generalny-przekazal-wniosek-o-aresztowanie-ziobry.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Stock Futures Jump as AI Trade Set for Rebound",
-      "link": "https://www.wsj.com/finance/stocks/stock-futures-jump-as-ai-trade-set-for-rebound-98318fc0?mod=rss_markets_main",
-      "description": "Nasdaq futures were 2% higher, while contracts tied to the S&P 500 and the Dow Jones Industrial Average also rose ahead of a shortened trading session Friday.",
-      "date": "2026-11-27T13:46:00+00:00",
-      "image": "https://images.wsj.net/im-14953166",
-      "sourceName": "The Wall Street Journal",
-      "language": "en",
-      "category": "Financial markets and economics",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Technology",
-      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Stock Futures Jump as AI Trade Set for Rebound",
-          "description": "Nasdaq futures were 2% higher, while contracts tied to the S&P 500 and the Dow Jones Industrial Average also rose ahead of a shortened trading session Friday.",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "The Wall Street Journal",
-          "url": "https://www.wsj.com/finance/stocks/stock-futures-jump-as-ai-trade-set-for-rebound-98318fc0?mod=rss_markets_main"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Kosiniak-Kamysz o umowie z Palantirem: Naszą ambicją jest budowa najnowocześniejszej armii",
-      "link": "https://wyborcza.pl/7,75398,33154273,kosiniak-kamysz-o-umowie-z-palantirem-nasza-ambicja-jest-budowa.html",
-      "description": "- To jest moment przełomowy dla zdolności operacyjnych Sił Zbrojnych Rzeczpospolitej - powiedział wicepremier i minister obrony narodowej Władysław Kosiniak-Kamysz po podpisaniu umowy z firmą Palantir na dostawę oprogramowania opartego na sztucznej inteligencji.",
-      "date": "2026-11-27T13:40:00+00:00",
-      "image": "",
-      "sourceName": "Gazeta Wyborcza",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "Technology",
-      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Kosiniak-Kamysz o umowie z Palantirem: Naszą ambicją jest budowa najnowocześniejszej armii",
-          "description": "- To jest moment przełomowy dla zdolności operacyjnych Sił Zbrojnych Rzeczpospolitej - powiedział wicepremier i minister obrony narodowej Władysław Kosiniak-Kamysz po podpisaniu umowy z firmą Palantir na dostawę oprogramowania opartego na sztucznej inteligencji.",
-          "sourceCategory": "Poland"
-        }
-      },
-      "sources": [
-        {
-          "name": "Gazeta Wyborcza",
-          "url": "https://wyborcza.pl/7,75398,33154273,kosiniak-kamysz-o-umowie-z-palantirem-nasza-ambicja-jest-budowa.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Nie stać ich na mięso, ogrzewanie i nagłe wydatki. Tak żyją miliony Węgrów",
-      "link": "https://www.bankier.pl/wiadomosc/Nie-stac-ich-na-mieso-ogrzewanie-i-nagle-wydatki-Tak-zyja-miliony-Wegrow-9236419.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci",
-      "description": "Co trzeci dorosły mieszkaniec Węgier, czyli ok. 2,6 mln osób, zmaga się z trudnościami w pokryciu podstawowych kosztów utrzymania - wynika z opublikowanego w piątek przez portal Daily News Hungary badania think tanku Egyensuly Intezet.",
-      "date": "2026-11-27T14:36:00+01:00",
-      "image": "",
-      "sourceName": "Bankier.pl",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "Poland",
-      "sectionReason": "feed category fallback: Poland",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Nie stać ich na mięso, ogrzewanie i nagłe wydatki. Tak żyją miliony Węgrów",
-          "description": "Co trzeci dorosły mieszkaniec Węgier, czyli ok. 2,6 mln osób, zmaga się z trudnościami w pokryciu podstawowych kosztów utrzymania - wynika z opublikowanego w piątek przez portal Daily News Hungary badania think tanku Egyensuly Intezet.",
-          "sourceCategory": "Poland"
-        }
-      },
-      "sources": [
-        {
-          "name": "Bankier.pl",
-          "url": "https://www.bankier.pl/wiadomosc/Nie-stac-ich-na-mieso-ogrzewanie-i-nagle-wydatki-Tak-zyja-miliony-Wegrow-9236419.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Puma Shen, Critic of China, Could be the Next Mayor of Taipei",
-      "link": "https://www.nytimes.com/2026/11/27/world/asia/puma-shen-taiwan-election-china.html",
-      "description": "Puma Shen, who has been sanctioned by China for his efforts to prepare civilians for an invasion, could become Taiwan’s next political star if he wins.",
-      "date": "2026-11-27T13:33:49+00:00",
-      "image": "https://static01.nyt.com/images/2026/11/27/multimedia/27int-taiwan-election-bpwl/27int-taiwan-election-bpwl-mediumSquareAt3X.jpg",
-      "sourceName": "The New York Times",
-      "language": "en",
-      "category": "Global news and geopolitics",
-      "sourceCategory": "Global news and geopolitics",
-      "section": "World",
-      "sectionReason": "content: World subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Puma Shen, Critic of China, Could be the Next Mayor of Taipei",
-          "description": "Puma Shen, who has been sanctioned by China for his efforts to prepare civilians for an invasion, could become Taiwan’s next political star if he wins.",
-          "sourceCategory": "Global news and geopolitics"
-        }
-      },
-      "sources": [
-        {
-          "name": "The New York Times",
-          "url": "https://www.nytimes.com/2026/11/27/world/asia/puma-shen-taiwan-election-china.html"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "BNP Paribas prend le contrôle de la start-up française Mūcho - Dosya Haber",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOSHUxSUpoalU4ektxV2hXMmFjYWZOdEpTY3pVUFpHQjdVSHRmaV9iQjVQalNyalZ2OXBhTVVzQXJqOHlqZENNcWdKTXpwSGdlNTh1UVd6SjdDTFAwZExQR0FGcmdNdngzUGlyblNkQVJ0MjFNUUNKUURkSU1sbjFxZ05SdFJ3clFsaE9kYko5M21zdFNTdWRqTDBkZ242WmJ5NmluamlB?oc=5",
-      "description": "BNP Paribas prend le contrôle de la start-up française Mūcho Dosya Haber",
-      "date": "2026-11-27T13:21:05+00:00",
-      "image": "",
-      "sourceName": "Dosya Haber",
-      "language": "fr",
-      "category": "Financial markets and economics",
-      "aggregator": true,
-      "subgroup": "BNP Paribas",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Financial",
-      "sectionReason": "content: BNP Paribas bank evidence",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "BNP Paribas prend le contrôle de la start-up française Mūcho - Dosya Haber",
-          "description": "BNP Paribas prend le contrôle de la start-up française Mūcho Dosya Haber",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "Dosya Haber",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOSHUxSUpoalU4ektxV2hXMmFjYWZOdEpTY3pVUFpHQjdVSHRmaV9iQjVQalNyalZ2OXBhTVVzQXJqOHlqZENNcWdKTXpwSGdlNTh1UVd6SjdDTFAwZExQR0FGcmdNdngzUGlyblNkQVJ0MjFNUUNKUURkSU1sbjFxZ05SdFJ3clFsaE9kYko5M21zdFNTdWRqTDBkZ242WmJ5NmluamlB?oc=5"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "L'action BNP Paribas parmi les meilleures performances du CAC 40 ce vendredi - Idéal Investisseur",
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNUXlBVnlSRUs3VnlIdHhnQ3NCYjR2ZWhsNVowNEJFcUh5aDlhNUhCeHJDTDZxWmxob3pIWXlUaXp5N1ZON1lNelNsdUtWckdIeDhqRWZVRC1wTFl1dURwVzh5OWhXTnVoWGp2eGJFRUVQQWthTl9JdFM2MXNlYTB6anVKWFNWY2hRTnFjcFI3MUVNRlhxc2Uxa0VhUlBLZFdtbmp3aWZpSkYzYlBBc0UyR05paHZHbnI5WUMyVl8yWUlrWkRmY3Fsakhn?oc=5",
-      "description": "L'action BNP Paribas parmi les meilleures performances du CAC 40 ce vendredi Idéal Investisseur",
-      "date": "2026-11-27T13:03:00+00:00",
-      "image": "",
-      "sourceName": "Idéal Investisseur",
-      "language": "fr",
-      "category": "Financial markets and economics",
-      "aggregator": true,
-      "subgroup": "BNP Paribas",
-      "sourceCategory": "Financial markets and economics",
-      "section": "Financial",
-      "sectionReason": "content: BNP Paribas bank evidence",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "L'action BNP Paribas parmi les meilleures performances du CAC 40 ce vendredi - Idéal Investisseur",
-          "description": "L'action BNP Paribas parmi les meilleures performances du CAC 40 ce vendredi Idéal Investisseur",
-          "sourceCategory": "Financial markets and economics"
-        }
-      },
-      "sources": [
-        {
-          "name": "Idéal Investisseur",
-          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNUXlBVnlSRUs3VnlIdHhnQ3NCYjR2ZWhsNVowNEJFcUh5aDlhNUhCeHJDTDZxWmxob3pIWXlUaXp5N1ZON1lNelNsdUtWckdIeDhqRWZVRC1wTFl1dURwVzh5OWhXTnVoWGp2eGJFRUVQQWthTl9JdFM2MXNlYTB6anVKWFNWY2hRTnFjcFI3MUVNRlhxc2Uxa0VhUlBLZFdtbmp3aWZpSkYzYlBBc0UyR05paHZHbnI5WUMyVl8yWUlrWkRmY3Fsakhn?oc=5"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "The Download: Innovators Under 35 nominations are open, and a bionic window into the mind",
-      "link": "https://www.technologyreview.com/2026/11/27/1149960/the-download-the-download-innovators-under-35-nominations-bionic-hand/",
-      "description": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. Our 2027 Innovators Under 35 competition is now open Every year, MIT Technology Review honors 35 of the world’s brightest young scientists, entrepreneurs, and inventors in our Innovators Under 35 list.…",
-      "date": "2026-11-27T13:00:00+00:00",
-      "image": "",
-      "sourceName": "MIT Technology Review",
-      "language": "en",
-      "category": "Technology, AI and science",
-      "sourceCategory": "Technology, AI and science",
-      "section": "Technology",
-      "sectionReason": "content: Technology subject evidence (technology first; Poland wins geographic ties)",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "The Download: Innovators Under 35 nominations are open, and a bionic window into the mind",
-          "description": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. Our 2027 Innovators Under 35 competition is now open Every year, MIT Technology Review honors 35 of the world’s brightest young scientists, entrepreneurs, and inventors in our Innovators Under 35 list.…",
-          "sourceCategory": "Technology, AI and science"
-        }
-      },
-      "sources": [
-        {
-          "name": "MIT Technology Review",
-          "url": "https://www.technologyreview.com/2026/11/27/1149960/the-download-the-download-innovators-under-35-nominations-bionic-hand/"
-        }
-      ],
-      "sourceCount": 1,
-      "importance": {
-        "sourceCount": 1
-      }
-    },
-    {
-      "title": "Eksperci ustalili, że w Smoleńsku zamachu nie było. Ale Macierewicza nikt, nic i nigdy nie przekona",
-      "link": "https://wyborcza.pl/7,75968,33153974,eksperci-ustalili-ze-w-smolensku-zamachu-nie-bylo-ale-macierewicza.html",
-      "description": "Nie było wybuchów, nie było zamachu, były błędy i brawura. Ale Antoni Macierewicz już pokazał, że wierzy tylko w smoleński zamach. Wiadomo, religia nie karmi się faktami.",
-      "date": "2026-11-27T13:00:00+00:00",
-      "image": "",
-      "sourceName": "Gazeta Wyborcza",
-      "language": "pl",
-      "category": "Poland",
-      "sourceCategory": "Poland",
-      "section": "Poland",
-      "sectionReason": "feed category fallback: Poland",
-      "classification": {
-        "method": "rules",
-        "version": 1,
-        "input": {
-          "title": "Eksperci ustalili, że w Smoleńsku zamachu nie było. Ale Macierewicza nikt, nic i nigdy nie przekona",
-          "description": "Nie było wybuchów, nie było zamachu, były błędy i brawura. Ale Antoni Macierewicz już pokazał, że wierzy tylko w smoleński zamach. Wiadomo, religia nie karmi się faktami.",
-          "sourceCategory": "Poland"
-        }
-      },
-      "sources": [
-        {
-          "name": "Gazeta Wyborcza",
-          "url": "https://wyborcza.pl/7,75968,33153974,eksperci-ustalili-ze-w-smolensku-zamachu-nie-bylo-ale-macierewicza.html"
         }
       ],
       "sourceCount": 1,
